@@ -1,0 +1,2541 @@
+{
+  "team": {
+    "name": "Siddus Squad",
+    "manager": "Sid Raman",
+    "record": "5-13",
+    "seed": 12,
+    "pointsFor": 16344.3,
+    "pointsAgainst": 18368.7
+  },
+  "league": {
+    "name": "Lucas Basketball Association",
+    "season": "2025-26",
+    "teams": 12
+  },
+  "weeklyResults": [
+    {
+      "week": 1,
+      "result": "L",
+      "score": 810.6,
+      "oppScore": 961.7,
+      "opponent": "The Commish",
+      "standing": 11,
+      "event": "Picked up Collin Sexton, Brice Sensabaugh, Gradey Dick"
+    },
+    {
+      "week": 2,
+      "result": "W",
+      "score": 962.1,
+      "oppScore": 952.9,
+      "opponent": "Yash's Stout Team",
+      "standing": 9,
+      "event": "Picked up Jarace Walker"
+    },
+    {
+      "week": 3,
+      "result": "L",
+      "score": 938.2,
+      "oppScore": 1090.0,
+      "opponent": "May Not Need Minott",
+      "standing": 9,
+      "event": "Picked up Cason Wallace, Isaiah Joe"
+    },
+    {
+      "week": 4,
+      "result": "W",
+      "score": 1082.7,
+      "oppScore": 1046.3,
+      "opponent": "my left nuts",
+      "standing": 8,
+      "event": "Picked up Jaylon Tyson, Max Christie, Trendon Watford"
+    },
+    {
+      "week": 5,
+      "result": "L",
+      "score": 758.3,
+      "oppScore": 775.1,
+      "opponent": "White Cowards",
+      "standing": 9,
+      "event": "Picked up Marcus Smart, Dennis Schroder"
+    },
+    {
+      "week": 6,
+      "result": "L",
+      "score": 651.8,
+      "oppScore": 1066.3,
+      "opponent": "superbum",
+      "standing": 9,
+      "event": "Traded Jakob Poeltl + Neemias Queta for Derrick White + Jay Huff (+3 more)"
+    },
+    {
+      "week": 7,
+      "result": "L",
+      "score": 1024.6,
+      "oppScore": 1324.9,
+      "opponent": "enchant",
+      "standing": 9,
+      "event": "Picked up Malik Monk, Jared McCain"
+    },
+    {
+      "week": 8,
+      "result": "L",
+      "score": 526.8,
+      "oppScore": 584.2,
+      "opponent": "It's Teague Time",
+      "standing": 10,
+      "event": "Traded RJ Barrett + Domantas Sabonis for Evan Mobley + Jabari Smith Jr."
+    },
+    {
+      "week": 9,
+      "result": "W",
+      "score": 882.0,
+      "oppScore": 830.4,
+      "opponent": "Team Patel",
+      "standing": 10
+    },
+    {
+      "week": 10,
+      "result": "L",
+      "score": 1008.8,
+      "oppScore": 1082.3,
+      "opponent": " SPLASH \ud83d\udc4c",
+      "standing": 10,
+      "event": "Picked up Aaron Nesmith"
+    },
+    {
+      "week": 11,
+      "result": "L",
+      "score": 920.1,
+      "oppScore": 1211.0,
+      "opponent": "paddington bear",
+      "standing": 10
+    },
+    {
+      "week": 12,
+      "result": "L",
+      "score": 947.6,
+      "oppScore": 1258.4,
+      "opponent": "The Commish",
+      "standing": 11,
+      "event": "Picked up Micah Potter"
+    },
+    {
+      "week": 13,
+      "result": "L",
+      "score": 880.5,
+      "oppScore": 1031.7,
+      "opponent": "Yash's Stout Team",
+      "standing": 11,
+      "event": "Traded Jalen Duren + Evan Mobley + Derrick White + Dillon Brooks for Devin Vassell + Isaiah Stewart + Jalen Johnson + Donovan Mitchell (+2 more)"
+    },
+    {
+      "week": 14,
+      "result": "W",
+      "score": 1034.9,
+      "oppScore": 995.7,
+      "opponent": "May Not Need Minott",
+      "standing": 11
+    },
+    {
+      "week": 15,
+      "result": "L",
+      "score": 1057.5,
+      "oppScore": 1067.1,
+      "opponent": "my left nuts",
+      "standing": 11
+    },
+    {
+      "week": 16,
+      "result": "L",
+      "score": 862.8,
+      "oppScore": 979.2,
+      "opponent": "White Cowards",
+      "standing": 11
+    },
+    {
+      "week": 17,
+      "result": "L",
+      "score": 1167.9,
+      "oppScore": 1177.0,
+      "opponent": "It's Teague Time",
+      "standing": 12
+    },
+    {
+      "week": 18,
+      "result": "L",
+      "score": 827.1,
+      "oppScore": 934.5,
+      "opponent": "Yash's Stout Team",
+      "standing": 12
+    }
+  ],
+  "trades": [
+    {
+      "week": 6,
+      "partner": "White Cowards",
+      "sent": [
+        "Jakob Poeltl",
+        "Neemias Queta"
+      ],
+      "received": [
+        "Derrick White",
+        "Jay Huff"
+      ],
+      "sentPtsROS": 1173.5,
+      "receivedPtsROS": 2605.9,
+      "net": 1432.4,
+      "slotAdjustment": 0.0,
+      "sentStats": [
+        {
+          "player": "Jakob Poeltl",
+          "ptsROS": 248.8,
+          "gamesROS": 12,
+          "ppgROS": 20.7
+        },
+        {
+          "player": "Neemias Queta",
+          "ptsROS": 924.7,
+          "gamesROS": 33,
+          "ppgROS": 28.0
+        }
+      ],
+      "receivedStats": [
+        {
+          "player": "Derrick White",
+          "ptsROS": 1563.1,
+          "gamesROS": 41,
+          "ppgROS": 38.1
+        },
+        {
+          "player": "Jay Huff",
+          "ptsROS": 1042.8,
+          "gamesROS": 44,
+          "ppgROS": 23.7
+        }
+      ],
+      "weeklyBreakdown": [
+        {
+          "week": 6,
+          "sentPts": 140.7,
+          "receivedPts": 202.7
+        },
+        {
+          "week": 7,
+          "sentPts": 176.5,
+          "receivedPts": 249.7
+        },
+        {
+          "week": 8,
+          "sentPts": 49.3,
+          "receivedPts": 109.9
+        },
+        {
+          "week": 9,
+          "sentPts": 93.0,
+          "receivedPts": 180.9
+        },
+        {
+          "week": 10,
+          "sentPts": 76.1,
+          "receivedPts": 199.2
+        },
+        {
+          "week": 11,
+          "sentPts": 79.9,
+          "receivedPts": 212.7
+        },
+        {
+          "week": 12,
+          "sentPts": 120.9,
+          "receivedPts": 235.1
+        },
+        {
+          "week": 13,
+          "sentPts": 86.3,
+          "receivedPts": 173.8
+        },
+        {
+          "week": 14,
+          "sentPts": 115.0,
+          "receivedPts": 134.5
+        },
+        {
+          "week": 15,
+          "sentPts": 89.4,
+          "receivedPts": 185.2
+        },
+        {
+          "week": 16,
+          "sentPts": 105.1,
+          "receivedPts": 231.2
+        },
+        {
+          "week": 17,
+          "sentPts": 41.3,
+          "receivedPts": 252.5
+        },
+        {
+          "week": 18,
+          "sentPts": 0.0,
+          "receivedPts": 238.5
+        }
+      ]
+    },
+    {
+      "week": 6,
+      "partner": "The Commish",
+      "sent": [
+        "Franz Wagner"
+      ],
+      "received": [
+        "Jalen Duren"
+      ],
+      "sentPtsROS": 307.5,
+      "receivedPtsROS": 1259.5,
+      "net": 952.0,
+      "slotAdjustment": 0.0,
+      "sentStats": [
+        {
+          "player": "Franz Wagner",
+          "ptsROS": 307.5,
+          "gamesROS": 10,
+          "ppgROS": 30.8
+        }
+      ],
+      "receivedStats": [
+        {
+          "player": "Jalen Duren",
+          "ptsROS": 1259.5,
+          "gamesROS": 35,
+          "ppgROS": 36.0
+        }
+      ],
+      "weeklyBreakdown": [
+        {
+          "week": 6,
+          "sentPts": 72.4,
+          "receivedPts": 104.5
+        },
+        {
+          "week": 7,
+          "sentPts": 145.6,
+          "receivedPts": 116.2
+        },
+        {
+          "week": 8,
+          "sentPts": 0.0,
+          "receivedPts": 31.4
+        },
+        {
+          "week": 9,
+          "sentPts": 0.0,
+          "receivedPts": 96.9
+        },
+        {
+          "week": 10,
+          "sentPts": 0.0,
+          "receivedPts": 151.2
+        },
+        {
+          "week": 11,
+          "sentPts": 0.0,
+          "receivedPts": 56.6
+        },
+        {
+          "week": 12,
+          "sentPts": 0.0,
+          "receivedPts": 0.0
+        },
+        {
+          "week": 13,
+          "sentPts": 51.1,
+          "receivedPts": 78.2
+        },
+        {
+          "week": 14,
+          "sentPts": 0.0,
+          "receivedPts": 141.9
+        },
+        {
+          "week": 15,
+          "sentPts": 0.0,
+          "receivedPts": 159.8
+        },
+        {
+          "week": 16,
+          "sentPts": 0.0,
+          "receivedPts": 43.7
+        },
+        {
+          "week": 17,
+          "sentPts": 38.4,
+          "receivedPts": 73.6
+        },
+        {
+          "week": 18,
+          "sentPts": 0.0,
+          "receivedPts": 205.5
+        }
+      ]
+    },
+    {
+      "week": 6,
+      "partner": "paddington bear",
+      "sent": [
+        "Andrew Wiggins"
+      ],
+      "received": [
+        "Dillon Brooks"
+      ],
+      "sentPtsROS": 1249.2,
+      "receivedPtsROS": 1127.4,
+      "net": -121.8,
+      "slotAdjustment": 0.0,
+      "sentStats": [
+        {
+          "player": "Andrew Wiggins",
+          "ptsROS": 1249.2,
+          "gamesROS": 40,
+          "ppgROS": 31.2
+        }
+      ],
+      "receivedStats": [
+        {
+          "player": "Dillon Brooks",
+          "ptsROS": 1127.4,
+          "gamesROS": 39,
+          "ppgROS": 28.9
+        }
+      ],
+      "weeklyBreakdown": [
+        {
+          "week": 6,
+          "sentPts": 75.1,
+          "receivedPts": 110.4
+        },
+        {
+          "week": 7,
+          "sentPts": 127.3,
+          "receivedPts": 69.2
+        },
+        {
+          "week": 8,
+          "sentPts": 29.4,
+          "receivedPts": 60.5
+        },
+        {
+          "week": 9,
+          "sentPts": 72.2,
+          "receivedPts": 65.9
+        },
+        {
+          "week": 10,
+          "sentPts": 106.4,
+          "receivedPts": 77.4
+        },
+        {
+          "week": 11,
+          "sentPts": 134.9,
+          "receivedPts": 114.4
+        },
+        {
+          "week": 12,
+          "sentPts": 84.0,
+          "receivedPts": 115.3
+        },
+        {
+          "week": 13,
+          "sentPts": 82.8,
+          "receivedPts": 66.2
+        },
+        {
+          "week": 14,
+          "sentPts": 145.5,
+          "receivedPts": 120.7
+        },
+        {
+          "week": 15,
+          "sentPts": 109.4,
+          "receivedPts": 165.1
+        },
+        {
+          "week": 16,
+          "sentPts": 73.2,
+          "receivedPts": 88.4
+        },
+        {
+          "week": 17,
+          "sentPts": 106.3,
+          "receivedPts": 73.9
+        },
+        {
+          "week": 18,
+          "sentPts": 102.7,
+          "receivedPts": 0.0
+        }
+      ]
+    },
+    {
+      "week": 6,
+      "partner": "Team Patel",
+      "sent": [
+        "Max Christie"
+      ],
+      "received": [
+        "Malik Monk"
+      ],
+      "sentPtsROS": 436.3,
+      "receivedPtsROS": 652.9,
+      "net": 216.6,
+      "slotAdjustment": 0.0,
+      "sentStats": [
+        {
+          "player": "Max Christie",
+          "ptsROS": 436.3,
+          "gamesROS": 22,
+          "ppgROS": 19.8
+        }
+      ],
+      "receivedStats": [
+        {
+          "player": "Malik Monk",
+          "ptsROS": 652.9,
+          "gamesROS": 30,
+          "ppgROS": 21.8
+        }
+      ],
+      "weeklyBreakdown": [
+        {
+          "week": 6,
+          "sentPts": 46.6,
+          "receivedPts": 109.2
+        },
+        {
+          "week": 7,
+          "sentPts": 51.3,
+          "receivedPts": 50.1
+        },
+        {
+          "week": 8,
+          "sentPts": 0.0,
+          "receivedPts": 59.7
+        },
+        {
+          "week": 9,
+          "sentPts": 0.0,
+          "receivedPts": 0.0
+        },
+        {
+          "week": 10,
+          "sentPts": 0.0,
+          "receivedPts": 49.2
+        },
+        {
+          "week": 11,
+          "sentPts": 0.0,
+          "receivedPts": 0.0
+        },
+        {
+          "week": 12,
+          "sentPts": 58.0,
+          "receivedPts": 0.0
+        },
+        {
+          "week": 13,
+          "sentPts": 57.4,
+          "receivedPts": 92.4
+        },
+        {
+          "week": 14,
+          "sentPts": 98.9,
+          "receivedPts": 109.6
+        },
+        {
+          "week": 15,
+          "sentPts": 54.3,
+          "receivedPts": 34.4
+        },
+        {
+          "week": 16,
+          "sentPts": 0.0,
+          "receivedPts": 42.4
+        },
+        {
+          "week": 17,
+          "sentPts": 0.0,
+          "receivedPts": 47.2
+        },
+        {
+          "week": 18,
+          "sentPts": 69.8,
+          "receivedPts": 58.7
+        }
+      ]
+    },
+    {
+      "week": 8,
+      "partner": "The Commish",
+      "sent": [
+        "RJ Barrett",
+        "Domantas Sabonis"
+      ],
+      "received": [
+        "Evan Mobley",
+        "Jabari Smith Jr."
+      ],
+      "sentPtsROS": 843.6,
+      "receivedPtsROS": 2029.3,
+      "net": 1185.7,
+      "slotAdjustment": 0.0,
+      "sentStats": [
+        {
+          "player": "RJ Barrett",
+          "ptsROS": 580.9,
+          "gamesROS": 19,
+          "ppgROS": 30.6
+        },
+        {
+          "player": "Domantas Sabonis",
+          "ptsROS": 262.7,
+          "gamesROS": 8,
+          "ppgROS": 32.8
+        }
+      ],
+      "receivedStats": [
+        {
+          "player": "Evan Mobley",
+          "ptsROS": 875.4,
+          "gamesROS": 23,
+          "ppgROS": 38.1
+        },
+        {
+          "player": "Jabari Smith Jr.",
+          "ptsROS": 1153.9,
+          "gamesROS": 37,
+          "ppgROS": 31.2
+        }
+      ],
+      "weeklyBreakdown": [
+        {
+          "week": 8,
+          "sentPts": 0.0,
+          "receivedPts": 82.6
+        },
+        {
+          "week": 9,
+          "sentPts": 0.0,
+          "receivedPts": 129.4
+        },
+        {
+          "week": 10,
+          "sentPts": 26.4,
+          "receivedPts": 126.6
+        },
+        {
+          "week": 11,
+          "sentPts": 62.0,
+          "receivedPts": 258.4
+        },
+        {
+          "week": 12,
+          "sentPts": 109.4,
+          "receivedPts": 216.5
+        },
+        {
+          "week": 13,
+          "sentPts": 44.3,
+          "receivedPts": 275.9
+        },
+        {
+          "week": 14,
+          "sentPts": 161.0,
+          "receivedPts": 258.8
+        },
+        {
+          "week": 15,
+          "sentPts": 150.2,
+          "receivedPts": 175.5
+        },
+        {
+          "week": 16,
+          "sentPts": 112.3,
+          "receivedPts": 130.0
+        },
+        {
+          "week": 17,
+          "sentPts": 81.0,
+          "receivedPts": 171.8
+        },
+        {
+          "week": 18,
+          "sentPts": 97.0,
+          "receivedPts": 203.8
+        }
+      ]
+    },
+    {
+      "week": 13,
+      "partner": "Team Patel",
+      "sent": [
+        "Derrick White",
+        "Dillon Brooks",
+        "Jalen Duren",
+        "Evan Mobley"
+      ],
+      "received": [
+        "Isaiah Stewart",
+        "Jalen Johnson",
+        "Donovan Mitchell",
+        "Devin Vassell"
+      ],
+      "sentPtsROS": 2462.9,
+      "receivedPtsROS": 2269.1,
+      "net": -193.8,
+      "slotAdjustment": 0.0,
+      "sentStats": [
+        {
+          "player": "Derrick White",
+          "ptsROS": 735.9,
+          "gamesROS": 21,
+          "ppgROS": 35.0
+        },
+        {
+          "player": "Dillon Brooks",
+          "ptsROS": 514.3,
+          "gamesROS": 17,
+          "ppgROS": 30.3
+        },
+        {
+          "player": "Jalen Duren",
+          "ptsROS": 702.7,
+          "gamesROS": 18,
+          "ppgROS": 39.0
+        },
+        {
+          "player": "Evan Mobley",
+          "ptsROS": 510.0,
+          "gamesROS": 13,
+          "ppgROS": 39.2
+        }
+      ],
+      "receivedStats": [
+        {
+          "player": "Isaiah Stewart",
+          "ptsROS": 249.5,
+          "gamesROS": 14,
+          "ppgROS": 17.8
+        },
+        {
+          "player": "Jalen Johnson",
+          "ptsROS": 850.2,
+          "gamesROS": 18,
+          "ppgROS": 47.2
+        },
+        {
+          "player": "Donovan Mitchell",
+          "ptsROS": 822.9,
+          "gamesROS": 19,
+          "ppgROS": 43.3
+        },
+        {
+          "player": "Devin Vassell",
+          "ptsROS": 346.5,
+          "gamesROS": 15,
+          "ppgROS": 23.1
+        }
+      ],
+      "weeklyBreakdown": [
+        {
+          "week": 13,
+          "sentPts": 383.8,
+          "receivedPts": 252.9
+        },
+        {
+          "week": 14,
+          "sentPts": 526.0,
+          "receivedPts": 455.5
+        },
+        {
+          "week": 15,
+          "sentPts": 485.1,
+          "receivedPts": 432.4
+        },
+        {
+          "week": 16,
+          "sentPts": 267.0,
+          "receivedPts": 415.1
+        },
+        {
+          "week": 17,
+          "sentPts": 307.5,
+          "receivedPts": 491.8
+        },
+        {
+          "week": 18,
+          "sentPts": 493.5,
+          "receivedPts": 221.4
+        }
+      ]
+    }
+  ],
+  "waiverPickups": [
+    {
+      "player": "Jaylon Tyson",
+      "weekAdded": 4,
+      "addDate": 1763053213354,
+      "ptsAfterAdd": 1181.3,
+      "weeklyPoints": [
+        {
+          "week": 4,
+          "pts": 0.0
+        },
+        {
+          "week": 5,
+          "pts": 39.9
+        },
+        {
+          "week": 6,
+          "pts": 90.2
+        },
+        {
+          "week": 7,
+          "pts": 138.5
+        },
+        {
+          "week": 8,
+          "pts": 59.8
+        },
+        {
+          "week": 9,
+          "pts": 45.4
+        },
+        {
+          "week": 10,
+          "pts": 113.6
+        },
+        {
+          "week": 11,
+          "pts": 89.9
+        },
+        {
+          "week": 12,
+          "pts": 53.3
+        },
+        {
+          "week": 13,
+          "pts": 93.3
+        },
+        {
+          "week": 14,
+          "pts": 114.8
+        },
+        {
+          "week": 15,
+          "pts": 123.9
+        },
+        {
+          "week": 16,
+          "pts": 38.5
+        },
+        {
+          "week": 17,
+          "pts": 77.6
+        },
+        {
+          "week": 18,
+          "pts": 102.6
+        }
+      ]
+    },
+    {
+      "player": "Collin Sexton",
+      "weekAdded": 1,
+      "addDate": 1761494408263,
+      "ptsAfterAdd": 1062.5,
+      "weeklyPoints": [
+        {
+          "week": 1,
+          "pts": 0.0
+        },
+        {
+          "week": 2,
+          "pts": 92.6
+        },
+        {
+          "week": 3,
+          "pts": 22.5
+        },
+        {
+          "week": 4,
+          "pts": 96.0
+        },
+        {
+          "week": 5,
+          "pts": 92.7
+        },
+        {
+          "week": 6,
+          "pts": 93.2
+        },
+        {
+          "week": 7,
+          "pts": 35.4
+        },
+        {
+          "week": 8,
+          "pts": 0.0
+        },
+        {
+          "week": 9,
+          "pts": 0.0
+        },
+        {
+          "week": 10,
+          "pts": 34.2
+        },
+        {
+          "week": 11,
+          "pts": 117.1
+        },
+        {
+          "week": 12,
+          "pts": 81.6
+        },
+        {
+          "week": 13,
+          "pts": 59.5
+        },
+        {
+          "week": 14,
+          "pts": 65.6
+        },
+        {
+          "week": 15,
+          "pts": 84.6
+        },
+        {
+          "week": 16,
+          "pts": 26.6
+        },
+        {
+          "week": 17,
+          "pts": 94.9
+        },
+        {
+          "week": 18,
+          "pts": 66.0
+        }
+      ]
+    },
+    {
+      "player": "Dennis Schroder",
+      "weekAdded": 5,
+      "addDate": 1763398815198,
+      "ptsAfterAdd": 873.6,
+      "weeklyPoints": [
+        {
+          "week": 5,
+          "pts": 77.0
+        },
+        {
+          "week": 6,
+          "pts": 24.5
+        },
+        {
+          "week": 7,
+          "pts": 0.0
+        },
+        {
+          "week": 8,
+          "pts": 20.7
+        },
+        {
+          "week": 9,
+          "pts": 96.8
+        },
+        {
+          "week": 10,
+          "pts": 75.7
+        },
+        {
+          "week": 11,
+          "pts": 92.2
+        },
+        {
+          "week": 12,
+          "pts": 52.8
+        },
+        {
+          "week": 13,
+          "pts": 34.6
+        },
+        {
+          "week": 14,
+          "pts": 79.6
+        },
+        {
+          "week": 15,
+          "pts": 69.3
+        },
+        {
+          "week": 16,
+          "pts": 45.0
+        },
+        {
+          "week": 17,
+          "pts": 104.4
+        },
+        {
+          "week": 18,
+          "pts": 101.0
+        }
+      ]
+    },
+    {
+      "player": "Aaron Nesmith",
+      "weekAdded": 10,
+      "addDate": 1766682016994,
+      "ptsAfterAdd": 492.5,
+      "weeklyPoints": [
+        {
+          "week": 10,
+          "pts": 0.0
+        },
+        {
+          "week": 11,
+          "pts": 118.0
+        },
+        {
+          "week": 12,
+          "pts": 84.4
+        },
+        {
+          "week": 13,
+          "pts": 52.3
+        },
+        {
+          "week": 14,
+          "pts": 67.8
+        },
+        {
+          "week": 15,
+          "pts": 77.9
+        },
+        {
+          "week": 16,
+          "pts": 60.6
+        },
+        {
+          "week": 17,
+          "pts": 31.5
+        },
+        {
+          "week": 18,
+          "pts": 0.0
+        }
+      ]
+    },
+    {
+      "player": "Micah Potter",
+      "weekAdded": 12,
+      "addDate": 1767632416822,
+      "ptsAfterAdd": 414.7,
+      "weeklyPoints": [
+        {
+          "week": 12,
+          "pts": 35.2
+        },
+        {
+          "week": 13,
+          "pts": 36.8
+        },
+        {
+          "week": 14,
+          "pts": 39.4
+        },
+        {
+          "week": 15,
+          "pts": 27.6
+        },
+        {
+          "week": 16,
+          "pts": 49.3
+        },
+        {
+          "week": 17,
+          "pts": 126.2
+        },
+        {
+          "week": 18,
+          "pts": 100.2
+        }
+      ]
+    },
+    {
+      "player": "Cameron Johnson",
+      "weekAdded": 8,
+      "addDate": 1765472411422,
+      "ptsAfterAdd": 314.4,
+      "weeklyPoints": [
+        {
+          "week": 8,
+          "pts": 0.0
+        },
+        {
+          "week": 9,
+          "pts": 77.6
+        },
+        {
+          "week": 10,
+          "pts": 45.3
+        },
+        {
+          "week": 11,
+          "pts": 0.0
+        },
+        {
+          "week": 12,
+          "pts": 0.0
+        },
+        {
+          "week": 13,
+          "pts": 0.0
+        },
+        {
+          "week": 14,
+          "pts": 0.0
+        },
+        {
+          "week": 15,
+          "pts": 0.0
+        },
+        {
+          "week": 16,
+          "pts": 20.3
+        },
+        {
+          "week": 17,
+          "pts": 118.3
+        },
+        {
+          "week": 18,
+          "pts": 52.9
+        }
+      ]
+    },
+    {
+      "player": "Cason Wallace",
+      "weekAdded": 3,
+      "addDate": 1762189223276,
+      "ptsAfterAdd": 136.0,
+      "weeklyPoints": [
+        {
+          "week": 3,
+          "pts": 88.9
+        },
+        {
+          "week": 4,
+          "pts": 47.1
+        }
+      ]
+    },
+    {
+      "player": "Jarace Walker",
+      "weekAdded": 2,
+      "addDate": 1761840012073,
+      "ptsAfterAdd": 134.3,
+      "weeklyPoints": [
+        {
+          "week": 2,
+          "pts": 0.0
+        },
+        {
+          "week": 3,
+          "pts": 84.7
+        },
+        {
+          "week": 4,
+          "pts": 49.6
+        }
+      ]
+    },
+    {
+      "player": "Malik Monk",
+      "weekAdded": 7,
+      "addDate": 1764608414532,
+      "ptsAfterAdd": 109.8,
+      "weeklyPoints": [
+        {
+          "week": 7,
+          "pts": 50.1
+        },
+        {
+          "week": 8,
+          "pts": 59.7
+        }
+      ]
+    },
+    {
+      "player": "Jared McCain",
+      "weekAdded": 7,
+      "addDate": 1764608414532,
+      "ptsAfterAdd": 98.0,
+      "weeklyPoints": [
+        {
+          "week": 7,
+          "pts": 72.7
+        },
+        {
+          "week": 8,
+          "pts": 25.3
+        }
+      ]
+    }
+  ],
+  "scoringProfile": {
+    "PTS": {
+      "total": 8731.0,
+      "pct": 0.473
+    },
+    "REB": {
+      "total": 3466.8,
+      "pct": 0.188
+    },
+    "AST": {
+      "total": 2689.5,
+      "pct": 0.146
+    },
+    "STL": {
+      "total": 1485.0,
+      "pct": 0.081
+    },
+    "TO": {
+      "total": -1048.0,
+      "pct": -0.057
+    },
+    "BLK": {
+      "total": 1020.0,
+      "pct": 0.055
+    }
+  },
+  "allPlayRecord": {
+    "wins": 53,
+    "losses": 145,
+    "winPct": 0.268
+  },
+  "rosterHeatmap": [
+    {
+      "slot": "G",
+      "player": "Shaedon Sharpe",
+      "weeks": [
+        73.2,
+        83.5,
+        108.4,
+        171.5,
+        36.9,
+        29.7,
+        136.3,
+        83.7,
+        69.1,
+        129.5,
+        104.4,
+        148.8,
+        141.7,
+        81.3,
+        121.3,
+        27.1,
+        0,
+        0
+      ]
+    },
+    {
+      "slot": "G",
+      "player": "Jaylon Tyson",
+      "weeks": [
+        0,
+        0,
+        0,
+        0,
+        39.9,
+        90.2,
+        138.5,
+        59.8,
+        45.4,
+        113.6,
+        89.9,
+        53.3,
+        93.3,
+        114.8,
+        123.9,
+        38.5,
+        77.6,
+        102.6
+      ]
+    },
+    {
+      "slot": "F",
+      "player": "Jabari Smith Jr.",
+      "weeks": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        129.4,
+        84.5,
+        92.0,
+        107.2,
+        131.5,
+        88.1,
+        136.7,
+        130.0,
+        126.1,
+        93.4
+      ]
+    },
+    {
+      "slot": "G",
+      "player": "Collin Sexton",
+      "weeks": [
+        0,
+        92.6,
+        22.5,
+        96.0,
+        92.7,
+        93.2,
+        35.4,
+        0,
+        0,
+        34.2,
+        117.1,
+        81.6,
+        59.5,
+        65.6,
+        84.6,
+        26.6,
+        94.9,
+        66.0
+      ]
+    },
+    {
+      "slot": "G",
+      "player": "Jrue Holiday",
+      "weeks": [
+        106.9,
+        131.1,
+        111.6,
+        105.5,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        18.4,
+        70.5,
+        59.6,
+        59.4,
+        99.2,
+        157.6,
+        128.9
+      ]
+    },
+    {
+      "slot": "F/C",
+      "player": "Jay Huff",
+      "weeks": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        85.6,
+        96.0,
+        47.7,
+        84.9,
+        54.5,
+        71.2,
+        78.8,
+        41.8,
+        63.8,
+        96.3,
+        138.2,
+        60.9
+      ]
+    },
+    {
+      "slot": "G",
+      "player": "Coby White",
+      "weeks": [
+        0,
+        0,
+        0,
+        43.8,
+        68.3,
+        70.4,
+        43.3,
+        64.5,
+        97.1,
+        76.3,
+        3.0,
+        44.0,
+        92.0,
+        99.9,
+        114.5,
+        34.5,
+        0,
+        62.9
+      ]
+    },
+    {
+      "slot": "F",
+      "player": "Anthony Davis",
+      "weeks": [
+        157.2,
+        55.5,
+        0,
+        0,
+        0,
+        34.5,
+        186.2,
+        57.3,
+        88.8,
+        131.8,
+        80.5,
+        88.4,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "slot": "G",
+      "player": "Dennis Schroder",
+      "weeks": [
+        0,
+        0,
+        0,
+        0,
+        77.0,
+        24.5,
+        0,
+        20.7,
+        96.8,
+        75.7,
+        92.2,
+        52.8,
+        34.6,
+        79.6,
+        69.3,
+        45.0,
+        104.4,
+        101.0
+      ]
+    },
+    {
+      "slot": "F",
+      "player": "Jalen Johnson",
+      "weeks": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        84.9,
+        171.3,
+        152.9,
+        183.2,
+        213.7,
+        44.2
+      ]
+    },
+    {
+      "slot": "G",
+      "player": "Donovan Mitchell",
+      "weeks": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        128.3,
+        179.4,
+        153.4,
+        110.9,
+        209.9,
+        41.0
+      ]
+    },
+    {
+      "slot": "F",
+      "player": "Franz Wagner",
+      "weeks": [
+        107.9,
+        152.9,
+        105.5,
+        181.3,
+        154.6,
+        72.4,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "slot": "G",
+      "player": "Derrick White",
+      "weeks": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        164.1,
+        13.9,
+        133.2,
+        114.3,
+        158.2,
+        163.9,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "slot": "F",
+      "player": "Kristaps Porzingis",
+      "weeks": [
+        35.4,
+        135.1,
+        72.8,
+        70.4,
+        81.9,
+        33.1,
+        36.9,
+        0,
+        0,
+        0,
+        39.5,
+        36.3,
+        0,
+        0,
+        0,
+        0,
+        15.7,
+        0
+      ]
+    },
+    {
+      "slot": "G",
+      "player": "RJ Barrett",
+      "weeks": [
+        108.6,
+        125.6,
+        110.2,
+        87.8,
+        119.2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "slot": "F",
+      "player": "Andrew Wiggins",
+      "weeks": [
+        74.2,
+        103.9,
+        134.6,
+        99.6,
+        53.5,
+        75.1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "slot": "F",
+      "player": "Dillon Brooks",
+      "weeks": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        69.2,
+        60.5,
+        65.9,
+        77.4,
+        114.4,
+        115.3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "slot": "UT",
+      "player": "Neemias Queta",
+      "weeks": [
+        72.2,
+        102.9,
+        110.8,
+        93.9,
+        72.7,
+        44.6,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "slot": "F",
+      "player": "Aaron Nesmith",
+      "weeks": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        118.0,
+        84.4,
+        52.3,
+        67.8,
+        77.9,
+        60.6,
+        31.5,
+        0
+      ]
+    },
+    {
+      "slot": "F/C",
+      "player": "Jalen Duren",
+      "weeks": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        116.2,
+        31.4,
+        96.9,
+        151.2,
+        56.6,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "slot": "F",
+      "player": "Domantas Sabonis",
+      "weeks": [
+        64.2,
+        126.9,
+        82.0,
+        156.4,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "slot": "F/C",
+      "player": "Jakob Poeltl",
+      "weeks": [
+        60.8,
+        4.9,
+        48.3,
+        114.2,
+        78.2,
+        96.1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "slot": "F/C",
+      "player": "Devin Vassell",
+      "weeks": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        17.7,
+        58.1,
+        68.3,
+        66.2,
+        136.2
+      ]
+    },
+    {
+      "slot": "F",
+      "player": "Evan Mobley",
+      "weeks": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        42.1,
+        166.4,
+        109.3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "slot": "F",
+      "player": "Cameron Johnson",
+      "weeks": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        77.6,
+        45.3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        20.3,
+        118.3,
+        52.9
+      ]
+    },
+    {
+      "slot": "C",
+      "player": "Isaiah Stewart",
+      "weeks": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        39.7,
+        87.1,
+        68.0,
+        52.7,
+        2.0,
+        0
+      ]
+    },
+    {
+      "slot": "F",
+      "player": "Malik Monk",
+      "weeks": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        109.2,
+        50.1,
+        59.7,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "slot": "G",
+      "player": "Cason Wallace",
+      "weeks": [
+        0,
+        0,
+        88.9,
+        47.1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "slot": "UT",
+      "player": "Jarace Walker",
+      "weeks": [
+        0,
+        0,
+        84.7,
+        49.6,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "slot": "UT",
+      "player": "Jared McCain",
+      "weeks": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        72.7,
+        25.3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "slot": "UT",
+      "player": "Pelle Larsson",
+      "weeks": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        62.7,
+        20.4,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "slot": "G",
+      "player": "Max Christie",
+      "weeks": [
+        0,
+        0,
+        0,
+        0,
+        68.6,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "slot": "UT",
+      "player": "Isaiah Joe",
+      "weeks": [
+        0,
+        0,
+        37.1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "slot": "F",
+      "player": "Brice Sensabaugh",
+      "weeks": [
+        0,
+        34.6,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "slot": "F",
+      "player": "Caris LeVert",
+      "weeks": [
+        14.2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "slot": "BN",
+      "player": "Micah Potter",
+      "weeks": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        35.2,
+        36.8,
+        39.4,
+        27.6,
+        49.3,
+        126.2,
+        100.2
+      ]
+    },
+    {
+      "slot": "BN",
+      "player": "Ayo Dosunmu",
+      "weeks": [
+        40.2,
+        82.8,
+        34.6,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "slot": "BN",
+      "player": "Steven Adams",
+      "weeks": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        44.9,
+        47.2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "slot": "BN",
+      "player": "Herbert Jones",
+      "weeks": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        68.2,
+        19.4,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "slot": "BN",
+      "player": "Gradey Dick",
+      "weeks": [
+        0,
+        22.4,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "slot": "BN",
+      "player": "Trendon Watford",
+      "weeks": [
+        0,
+        0,
+        0,
+        16.6,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "slot": "BN",
+      "player": "Scoot Henderson",
+      "weeks": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  "pointsLeftOnBench": [
+    {
+      "week": 17,
+      "benchPlayer": "Micah Potter",
+      "benchPts": 126.2,
+      "startPlayer": "Aaron Nesmith",
+      "startPts": 31.5,
+      "diff": 94.7,
+      "wouldHaveWon": true,
+      "lossMargin": 9.1
+    },
+    {
+      "week": 5,
+      "benchPlayer": "Dennis Schroder",
+      "benchPts": 77.0,
+      "startPlayer": "Shaedon Sharpe",
+      "startPts": 36.9,
+      "diff": 40.1,
+      "wouldHaveWon": true,
+      "lossMargin": 16.8
+    },
+    {
+      "week": 15,
+      "benchPlayer": "Collin Sexton",
+      "benchPts": 84.6,
+      "startPlayer": "Devin Vassell",
+      "startPts": 58.1,
+      "diff": 26.5,
+      "wouldHaveWon": true,
+      "lossMargin": 9.6
+    },
+    {
+      "week": 3,
+      "benchPlayer": "Shaedon Sharpe",
+      "benchPts": 108.4,
+      "startPlayer": "Isaiah Joe",
+      "startPts": 37.1,
+      "diff": 71.3,
+      "wouldHaveWon": false,
+      "lossMargin": 151.8
+    },
+    {
+      "week": 2,
+      "benchPlayer": "Andrew Wiggins",
+      "benchPts": 103.9,
+      "startPlayer": "Brice Sensabaugh",
+      "startPts": 34.6,
+      "diff": 69.3,
+      "wouldHaveWon": false,
+      "lossMargin": null
+    }
+  ],
+  "headToHead": [
+    {
+      "opponent": "Team Patel",
+      "wins": 1,
+      "losses": 0,
+      "avgMargin": 52,
+      "playoffWins": 0,
+      "playoffLosses": 0
+    },
+    {
+      "opponent": "May Not Need Minott",
+      "wins": 1,
+      "losses": 1,
+      "avgMargin": -56,
+      "playoffWins": 0,
+      "playoffLosses": 0
+    },
+    {
+      "opponent": "my left nuts",
+      "wins": 1,
+      "losses": 1,
+      "avgMargin": 13,
+      "playoffWins": 0,
+      "playoffLosses": 0
+    },
+    {
+      "opponent": "Yash's Stout Team",
+      "wins": 1,
+      "losses": 2,
+      "avgMargin": -83,
+      "playoffWins": 0,
+      "playoffLosses": 0
+    },
+    {
+      "opponent": "superbum",
+      "wins": 0,
+      "losses": 1,
+      "avgMargin": -414,
+      "playoffWins": 0,
+      "playoffLosses": 0
+    },
+    {
+      "opponent": "enchant",
+      "wins": 0,
+      "losses": 1,
+      "avgMargin": -300,
+      "playoffWins": 0,
+      "playoffLosses": 0
+    },
+    {
+      "opponent": " SPLASH \ud83d\udc4c",
+      "wins": 0,
+      "losses": 1,
+      "avgMargin": -74,
+      "playoffWins": 0,
+      "playoffLosses": 0
+    },
+    {
+      "opponent": "paddington bear",
+      "wins": 0,
+      "losses": 1,
+      "avgMargin": -291,
+      "playoffWins": 0,
+      "playoffLosses": 0
+    },
+    {
+      "opponent": "The Commish",
+      "wins": 0,
+      "losses": 2,
+      "avgMargin": -231,
+      "playoffWins": 0,
+      "playoffLosses": 0
+    },
+    {
+      "opponent": "White Cowards",
+      "wins": 0,
+      "losses": 2,
+      "avgMargin": -67,
+      "playoffWins": 0,
+      "playoffLosses": 0
+    },
+    {
+      "opponent": "It's Teague Time",
+      "wins": 0,
+      "losses": 2,
+      "avgMargin": -33,
+      "playoffWins": 0,
+      "playoffLosses": 0
+    }
+  ],
+  "optimalLineup": {
+    "weeklyComparison": [
+      {
+        "week": 1,
+        "actualPts": 810.6,
+        "optimalPts": 865.4,
+        "diff": 54.8
+      },
+      {
+        "week": 2,
+        "actualPts": 962.1,
+        "optimalPts": 1137.3,
+        "diff": 175.2
+      },
+      {
+        "week": 3,
+        "actualPts": 938.2,
+        "optimalPts": 1009.5,
+        "diff": 71.3
+      },
+      {
+        "week": 4,
+        "actualPts": 1082.7,
+        "optimalPts": 1176.6,
+        "diff": 93.9
+      },
+      {
+        "week": 5,
+        "actualPts": 758.3,
+        "optimalPts": 866.7,
+        "diff": 108.4
+      },
+      {
+        "week": 6,
+        "actualPts": 651.8,
+        "optimalPts": 748.4,
+        "diff": 96.6
+      },
+      {
+        "week": 7,
+        "actualPts": 1024.6,
+        "optimalPts": 1062.2,
+        "diff": 37.6
+      },
+      {
+        "week": 8,
+        "actualPts": 526.8,
+        "optimalPts": 558.9,
+        "diff": 32.1
+      },
+      {
+        "week": 9,
+        "actualPts": 882.0,
+        "optimalPts": 923.0,
+        "diff": 41.0
+      },
+      {
+        "week": 10,
+        "actualPts": 1008.8,
+        "optimalPts": 1039.2,
+        "diff": 30.4
+      },
+      {
+        "week": 11,
+        "actualPts": 920.1,
+        "optimalPts": 1133.1,
+        "diff": 213.0
+      },
+      {
+        "week": 12,
+        "actualPts": 947.6,
+        "optimalPts": 1023.4,
+        "diff": 75.8
+      },
+      {
+        "week": 13,
+        "actualPts": 880.5,
+        "optimalPts": 932.8,
+        "diff": 52.3
+      },
+      {
+        "week": 14,
+        "actualPts": 1034.9,
+        "optimalPts": 1034.9,
+        "diff": 0.0
+      },
+      {
+        "week": 15,
+        "actualPts": 1057.5,
+        "optimalPts": 1102.5,
+        "diff": 45.0
+      },
+      {
+        "week": 16,
+        "actualPts": 862.8,
+        "optimalPts": 895.5,
+        "diff": 32.7
+      },
+      {
+        "week": 17,
+        "actualPts": 1167.9,
+        "optimalPts": 1366.9,
+        "diff": 199.0
+      },
+      {
+        "week": 18,
+        "actualPts": 827.1,
+        "optimalPts": 905.0,
+        "diff": 77.9
+      }
+    ],
+    "totalActual": 16344.3,
+    "totalOptimal": 17781.3,
+    "efficiency": 0.919
+  },
+  "awards": {
+    "mvp": {
+      "player": "Shaedon Sharpe",
+      "totalPts": 1546.4
+    },
+    "benchWarmer": {
+      "player": "Kristaps Porzingis",
+      "weeks": 10,
+      "totalPts": 557.1,
+      "avgPts": 55.7
+    },
+    "heartbreakLoss": {
+      "week": 17,
+      "opponent": "It's Teague Time",
+      "score": 1167.9,
+      "oppScore": 1177.0,
+      "margin": 9.1
+    },
+    "statementWin": {
+      "week": 9,
+      "opponent": "Team Patel",
+      "score": 882.0,
+      "oppScore": 830.4,
+      "margin": 51.6
+    },
+    "luckyWin": {
+      "week": 2,
+      "score": 962.1,
+      "leagueRank": 8,
+      "opponent": "Yash's Stout Team",
+      "oppScore": 952.9
+    },
+    "unluckyLoss": {
+      "week": 16,
+      "score": 862.8,
+      "leagueRank": 7,
+      "opponent": "White Cowards",
+      "oppScore": 979.2
+    }
+  },
+  "grades": {
+    "drafting": "C-",
+    "trading": "A+",
+    "waiverWire": "A+",
+    "luck": "F",
+    "consistency": "F",
+    "overall": "C"
+  }
+}

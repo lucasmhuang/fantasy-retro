@@ -1,0 +1,605 @@
+================================================================================
+LEAGUE INFO
+================================================================================
+Name:            Lucas Basketball Association
+Year:            2026
+Num teams:       12
+Scoring type:    H2H_POINTS
+Reg season len:  18
+Playoff teams:   6
+
+Settings attributes:
+['__class__',
+ '__delattr__',
+ '__dict__',
+ '__dir__',
+ '__doc__',
+ '__eq__',
+ '__format__',
+ '__ge__',
+ '__getattribute__',
+ '__gt__',
+ '__hash__',
+ '__init__',
+ '__init_subclass__',
+ '__le__',
+ '__lt__',
+ '__module__',
+ '__ne__',
+ '__new__',
+ '__reduce__',
+ '__reduce_ex__',
+ '__repr__',
+ '__setattr__',
+ '__sizeof__',
+ '__str__',
+ '__subclasshook__',
+ '__weakref__',
+ '_raw_schedule_settings',
+ '_raw_scoring_settings',
+ 'acquisition_budget',
+ 'division_map',
+ 'faab',
+ 'keeper_count',
+ 'matchup_periods',
+ 'median_scoring',
+ 'name',
+ 'playoff_matchup_period_length',
+ 'playoff_seed_tie_rule',
+ 'playoff_team_count',
+ 'playoff_tie_rule',
+ 'reg_season_count',
+ 'scoring_type',
+ 'team_count',
+ 'tie_rule',
+ 'trade_deadline',
+ 'veto_votes_required']
+
+================================================================================
+TEAMS
+================================================================================
+   1. The Commish                    Owner: [{'displayName': 'espn79422818', 'firstName': 'Lucas', 'id': '{6ABDA8F7-CED9-4AEA-88FB-8B8563C0BE1C}', 'lastName': 'Huang', 'notificationSettings': [{'enabled': True, 'id': '906301fc-f59e-3cec-9daf-7ecb7587ce12', 'type': 'TEAM_PLAYER_INJURY'}, {'enabled': True, 'id': 'b1e9d1a4-8d53-3a71-ba1b-d8977ed79458', 'type': 'TEAM_PLAYER_AVAILABILITY'}, {'enabled': True, 'id': '95977711-ef08-31a0-8e77-f4f9918e682c', 'type': 'TEAM_PLAYER_NEWS'}, {'enabled': True, 'id': '3a41265e-a7ce-32bc-a9f6-239d5178a267', 'type': 'TEAM_TRADE_OFFER'}, {'enabled': True, 'id': '910341cd-3f0d-3fdc-85d5-0c00644d8faa', 'type': 'DRAFT'}, {'enabled': True, 'id': '51ece257-e9fd-399e-87b7-ee86b7676239', 'type': 'TEAM_MATCHUP_SCORE'}, {'enabled': True, 'id': 'cbacdedb-e3cb-3084-bbf8-21977e9c9931', 'type': 'ACHIEVEMENT'}, {'enabled': True, 'id': '859f5fbf-7f78-35f1-a9d6-ef4a4fa0318e', 'type': 'ADD_DROP'}, {'enabled': True, 'id': '1f8dfeaa-4998-38b6-b8dc-f9981ea89cda', 'type': 'WEEKLY_RECAP'}, {'enabled': True, 'id': '1af7d27a-f7fb-3753-84e6-07bd01f638de', 'type': 'WAIVERS'}]}]  W-L: 11-7  Standing: 4
+   2. enchant                        Owner: [{'displayName': 'ESPNFAN3321401702', 'firstName': 'Ishan', 'id': '{3E1FC989-7B7F-4FBA-9E7B-F1C1EB1EF581}', 'lastName': 'Maunder', 'notificationSettings': [{'enabled': True, 'id': 'fa573506-02e2-381e-baa6-f3cef7d8e958', 'type': 'TEAM_PLAYER_INJURY'}, {'enabled': True, 'id': '1452caaf-33ce-37c6-9823-8f80ac009b65', 'type': 'TEAM_PLAYER_AVAILABILITY'}, {'enabled': True, 'id': 'f729d7f8-5eda-3388-8ec2-36566c3eaf03', 'type': 'TEAM_PLAYER_NEWS'}, {'enabled': True, 'id': '9450c448-99b8-3f91-8e27-7f34fbfa2fc1', 'type': 'TEAM_TRADE_OFFER'}, {'enabled': True, 'id': '0db32c12-bddc-3372-ac93-f47e91c599b4', 'type': 'DRAFT'}, {'enabled': True, 'id': '464c401c-01c6-3f98-8a3a-05dd28b968df', 'type': 'TEAM_MATCHUP_SCORE'}, {'enabled': True, 'id': '27fa2b6e-ba5b-39a9-a722-eff59b364d4a', 'type': 'ACHIEVEMENT'}, {'enabled': True, 'id': 'd3160ca7-dc81-355c-bd1b-d19dda85c3b3', 'type': 'ADD_DROP'}, {'enabled': True, 'id': 'cedd9fc3-aef3-34d4-972a-6da57d9b53c5', 'type': 'WEEKLY_RECAP'}, {'enabled': True, 'id': '9fd015c4-8064-3dc7-90f1-949067cb78ae', 'type': 'WAIVERS'}]}]  W-L: 10-8  Standing: 5
+   3. It's Teague Time               Owner: [{'displayName': 'daboot_', 'firstName': 'Nitin ', 'id': '{4B4A1CF6-F762-461F-8A1C-F6F762361FFD}', 'lastName': 'Sagi', 'notificationSettings': [{'enabled': True, 'id': '33d78910-0285-3b80-8d52-ee10f0b2d0bb', 'type': 'TEAM_PLAYER_INJURY'}, {'enabled': True, 'id': 'd471727f-09e1-30b0-bb30-ec9bf5c79d86', 'type': 'TEAM_PLAYER_AVAILABILITY'}, {'enabled': True, 'id': 'fa56a4d0-8206-3f0c-8fd3-bc4824e15c39', 'type': 'TEAM_PLAYER_NEWS'}, {'enabled': True, 'id': '22117cf3-5600-3fe2-9fa5-6b018016ad7f', 'type': 'TEAM_TRADE_OFFER'}, {'enabled': True, 'id': 'b22b0125-9d28-32c7-95e2-c7f9c6cdf300', 'type': 'DRAFT'}, {'enabled': True, 'id': 'c7948e46-638b-30aa-a753-d72bfc8e4f72', 'type': 'TEAM_MATCHUP_SCORE'}, {'enabled': True, 'id': '19982208-b401-3dc5-b445-ad5eab57e68e', 'type': 'ACHIEVEMENT'}, {'enabled': True, 'id': '40eabcbe-d041-3e47-a15c-e90faa7c9bf3', 'type': 'ADD_DROP'}, {'enabled': True, 'id': '9fd8a3d7-87f5-3957-bfc3-9a95528cdb46', 'type': 'WEEKLY_RECAP'}, {'enabled': True, 'id': '8c26b065-f8e4-3a6d-afae-4f65023fc08c', 'type': 'WAIVERS'}]}]  W-L: 8-10  Standing: 8
+   4. superbum                       Owner: [{'displayName': 'ESPNFAN6581216439', 'firstName': 'Abhi', 'id': '{596A1ACC-876A-43E2-B190-9E9AEBBCE7CC}', 'lastName': 'Upadhyay', 'notificationSettings': [{'enabled': True, 'id': 'b3f384e9-bc52-300d-ad8a-7fb1232c982b', 'type': 'TEAM_PLAYER_INJURY'}, {'enabled': True, 'id': '2566b011-065d-36ee-9311-a2f630050311', 'type': 'TEAM_PLAYER_AVAILABILITY'}, {'enabled': True, 'id': 'eb87adc8-f809-3976-a141-454b035c9696', 'type': 'TEAM_PLAYER_NEWS'}, {'enabled': True, 'id': '2e22e00a-03c3-3ab3-b870-d9d6a6af02e4', 'type': 'TEAM_TRADE_OFFER'}, {'enabled': True, 'id': '2516f533-800f-3a42-8577-c7a11f391a5b', 'type': 'DRAFT'}, {'enabled': True, 'id': '73c328a0-c1c4-321b-ae2e-237fcf4b63ee', 'type': 'TEAM_MATCHUP_SCORE'}, {'enabled': True, 'id': 'ef757ea8-d3b7-3daa-a199-cf064b4cb3de', 'type': 'ACHIEVEMENT'}, {'enabled': True, 'id': '5ee53e70-51f5-3593-b148-2586ee95247b', 'type': 'ADD_DROP'}, {'enabled': True, 'id': '60f278d2-b59e-39b8-900c-caad2303d951', 'type': 'WEEKLY_RECAP'}, {'enabled': True, 'id': 'e44fff0d-2575-3da7-a5e8-cb6aa806074b', 'type': 'WAIVERS'}]}]  W-L: 11-7  Standing: 3
+   5. Siddus Squad                   Owner: [{'displayName': 'League Sid', 'firstName': 'Sid', 'id': '{446B19B0-CDCF-4381-AB19-B0CDCFC3819D}', 'lastName': 'Raman', 'notificationSettings': [{'enabled': True, 'id': 'e6741653-9db4-33d1-b83c-f310ef72c04f', 'type': 'TEAM_PLAYER_INJURY'}, {'enabled': True, 'id': '5880c75c-a86e-3c95-bfc7-53615d7ac3bc', 'type': 'TEAM_PLAYER_AVAILABILITY'}, {'enabled': True, 'id': '329b073d-128e-3cea-865f-3a09da805f91', 'type': 'TEAM_PLAYER_NEWS'}, {'enabled': True, 'id': '45565726-6ba5-30b5-9962-81b1361fce73', 'type': 'TEAM_TRADE_OFFER'}, {'enabled': True, 'id': '02ab5c0f-e365-3458-8afa-f137cd4ed2d4', 'type': 'DRAFT'}, {'enabled': True, 'id': '425ad8cc-c052-3e0d-9c0b-6e05b5898e99', 'type': 'TEAM_MATCHUP_SCORE'}, {'enabled': True, 'id': '6df51953-bf5e-3546-a746-41d3b0a6af19', 'type': 'ACHIEVEMENT'}, {'enabled': True, 'id': 'd99b930f-1897-3989-9da1-fac3db902222', 'type': 'ADD_DROP'}, {'enabled': True, 'id': '36626a6d-fc83-3f25-afc0-af4932864a73', 'type': 'WEEKLY_RECAP'}, {'enabled': True, 'id': '2672de8a-3861-320a-9234-565e38bb0268', 'type': 'WAIVERS'}]}]  W-L: 5-13  Standing: 12
+   6. paddington bear                Owner: [{'displayName': 'espn70738785', 'firstName': 'Jonathan', 'id': '{7B68625D-92CD-46F8-92D4-73486D6C29AD}', 'lastName': 'Ko', 'notificationSettings': [{'enabled': True, 'id': '106222e0-e4d3-325b-be11-9878dc7dbdb8', 'type': 'TEAM_PLAYER_INJURY'}, {'enabled': True, 'id': '622e6728-7063-38fc-ae11-26e38a3f4ba5', 'type': 'TEAM_PLAYER_AVAILABILITY'}, {'enabled': True, 'id': 'dbd4c4ab-d20a-3419-873f-b0527da890fd', 'type': 'TEAM_PLAYER_NEWS'}, {'enabled': True, 'id': '775d0fce-bd28-30df-b746-8b2bbbe66691', 'type': 'TEAM_TRADE_OFFER'}, {'enabled': True, 'id': 'b55dcbaa-e258-310d-bd57-261c81b4088d', 'type': 'DRAFT'}, {'enabled': True, 'id': 'cb202ce5-1120-322c-9fc0-0f095ce98589', 'type': 'TEAM_MATCHUP_SCORE'}, {'enabled': True, 'id': '2b20b44b-575c-3a1d-837c-58a436134ffa', 'type': 'ACHIEVEMENT'}, {'enabled': True, 'id': '2656ad76-a124-3b51-a9d4-cea2ebad2ec9', 'type': 'ADD_DROP'}, {'enabled': True, 'id': 'ce068146-8d44-3fcd-889d-b87c15132bba', 'type': 'WEEKLY_RECAP'}, {'enabled': True, 'id': '638cefa1-0811-3b06-851c-5727ff0cd01e', 'type': 'WAIVERS'}]}]  W-L: 10-8  Standing: 6
+   7.  SPLASH 👌                      Owner: [{'displayName': 'ESPNFAN1555683564', 'firstName': 'Apurv', 'id': '{610B87B1-B779-463B-B1FD-B11B098ED7A0}', 'lastName': 'Prabhakar', 'notificationSettings': [{'enabled': True, 'id': 'fef8fd2c-bde0-36d3-8bd5-72472046b0db', 'type': 'TEAM_PLAYER_INJURY'}, {'enabled': True, 'id': 'c52e9d7c-61fe-3a22-b56e-00c3e90f8f93', 'type': 'TEAM_PLAYER_AVAILABILITY'}, {'enabled': True, 'id': '1b2a03a7-9b7d-37d7-988b-5f6c340109e8', 'type': 'TEAM_PLAYER_NEWS'}, {'enabled': True, 'id': '8db5e560-0ab6-3463-ac1a-c9494f60fc1f', 'type': 'TEAM_TRADE_OFFER'}, {'enabled': True, 'id': 'f58f7c9c-bbbf-3e33-af6e-ca5a00b0a1a1', 'type': 'DRAFT'}, {'enabled': True, 'id': 'c73ce663-529e-3bb1-ad02-980a7215a250', 'type': 'TEAM_MATCHUP_SCORE'}, {'enabled': True, 'id': 'c96c9c5f-7a6d-372f-be4a-44423eb59442', 'type': 'ACHIEVEMENT'}, {'enabled': True, 'id': 'e7544ded-859a-34df-9310-547bd5de1c39', 'type': 'ADD_DROP'}, {'enabled': True, 'id': '67ccc345-b2a4-348f-a231-4ac02bf45238', 'type': 'WEEKLY_RECAP'}, {'enabled': True, 'id': 'f9384c21-91f9-3948-9171-684bafa9631c', 'type': 'WAIVERS'}]}]  W-L: 5-13  Standing: 11
+   8. May Not Need Minott            Owner: [{'displayName': 'TejMat21', 'firstName': 'Tejas', 'id': '{B201EB33-8121-4478-81EB-3381212478BA}', 'lastName': 'Mattur', 'notificationSettings': [{'enabled': True, 'id': '5c5add0f-2ffd-3634-9000-5d08492bc4ec', 'type': 'TEAM_PLAYER_INJURY'}, {'enabled': True, 'id': '61f361ad-4f17-3246-9791-cebb50bc8385', 'type': 'TEAM_PLAYER_AVAILABILITY'}, {'enabled': True, 'id': 'b32713f1-1440-32e8-8faf-4176176f3634', 'type': 'TEAM_PLAYER_NEWS'}, {'enabled': True, 'id': 'f6783159-9a7a-3ced-bed2-54a66f2f3c2d', 'type': 'TEAM_TRADE_OFFER'}, {'enabled': True, 'id': 'e075afab-7a21-381d-8d7b-2074f94732ba', 'type': 'DRAFT'}, {'enabled': True, 'id': '7124174c-9125-3e4b-9e06-e35a67bc6152', 'type': 'TEAM_MATCHUP_SCORE'}, {'enabled': True, 'id': '19e3e8c1-ed3d-33fd-a411-869dafc299dd', 'type': 'ACHIEVEMENT'}, {'enabled': True, 'id': '34180c61-33d4-38a6-a956-6caf5e484670', 'type': 'ADD_DROP'}, {'enabled': True, 'id': '2f71a9b4-769f-3dab-b242-51259da0f4fe', 'type': 'WEEKLY_RECAP'}, {'enabled': True, 'id': 'dae9b848-1127-335d-8af4-64ebfc35393a', 'type': 'WAIVERS'}]}]  W-L: 14-4  Standing: 1
+   9. my left nuts                   Owner: [{'displayName': 'ESPNFAN8533420604', 'firstName': 'Rishi', 'id': '{C792F596-9390-49C1-AD24-32B9E3B77ABC}', 'lastName': 'Chillara', 'notificationSettings': [{'enabled': True, 'id': '9a97645a-ecb8-3a69-91bf-208cf3bd4e71', 'type': 'TEAM_PLAYER_INJURY'}, {'enabled': True, 'id': '0c0698d0-85fb-3c54-9098-cfe6b8dd9189', 'type': 'TEAM_PLAYER_AVAILABILITY'}, {'enabled': True, 'id': '67758d61-772e-3140-9f0b-2d5cb2eaa4f9', 'type': 'TEAM_PLAYER_NEWS'}, {'enabled': True, 'id': '03b7272b-30b9-3a7e-9b84-93b449758ca1', 'type': 'TEAM_TRADE_OFFER'}, {'enabled': True, 'id': '38473343-a4ca-3ae1-95b7-6ebbf0e8d5cc', 'type': 'DRAFT'}, {'enabled': True, 'id': '66f72d35-ceb9-362b-804e-42044ffb3842', 'type': 'TEAM_MATCHUP_SCORE'}, {'enabled': True, 'id': '475b7201-95b9-3c2c-afb6-18ac1155d1d5', 'type': 'ACHIEVEMENT'}, {'enabled': True, 'id': 'aa105724-8d41-3682-9b5c-9172e4b0e8ac', 'type': 'ADD_DROP'}, {'enabled': True, 'id': 'b681810d-fdca-3a49-96ec-60a0b6443161', 'type': 'WEEKLY_RECAP'}, {'enabled': True, 'id': '8803dcc6-3bdf-36ba-8456-f0d95a069edd', 'type': 'WAIVERS'}]}]  W-L: 6-12  Standing: 10
+  10. White Cowards                  Owner: [{'displayName': 'ESPNFAN8088457732', 'firstName': 'Mike', 'id': '{89D1BC0A-AF96-4BDF-ADA3-7E25B2FA14DF}', 'lastName': 'B', 'notificationSettings': [{'enabled': True, 'id': 'e0c4cc82-ac02-3eb9-afbf-8e5c52ad9796', 'type': 'TEAM_PLAYER_INJURY'}, {'enabled': True, 'id': '0c65a5b1-9323-37d4-8cd6-156def4653b8', 'type': 'TEAM_PLAYER_AVAILABILITY'}, {'enabled': True, 'id': 'd3512ded-0de7-30c8-af69-c9ad73f8ac01', 'type': 'TEAM_PLAYER_NEWS'}, {'enabled': True, 'id': '86f83d30-5552-3db1-8e84-6bab793539d6', 'type': 'TEAM_TRADE_OFFER'}, {'enabled': True, 'id': 'a249a10e-a340-370f-b905-96d02957cb6e', 'type': 'DRAFT'}, {'enabled': True, 'id': 'd2896554-b0a9-380c-a422-072ab0a5e79a', 'type': 'TEAM_MATCHUP_SCORE'}, {'enabled': True, 'id': 'e9deeec5-c482-3ae4-8193-80ba58e9a51e', 'type': 'ACHIEVEMENT'}, {'enabled': True, 'id': '5d1bd483-1981-3696-aa8f-725da03b150e', 'type': 'ADD_DROP'}, {'enabled': True, 'id': 'cd87fd51-e6c6-3eca-b3a8-761b3842d768', 'type': 'WEEKLY_RECAP'}, {'enabled': True, 'id': '136c3cf7-95b3-3ad2-b271-1bf232b0f8f4', 'type': 'WAIVERS'}]}]  W-L: 9-9  Standing: 7
+  11. Team Patel                     Owner: [{'displayName': 'Vraj Patel', 'firstName': 'Vraj', 'id': '{E60D5E60-EC45-4D77-A971-8E59191D87AA}', 'lastName': 'Patel', 'notificationSettings': [{'enabled': True, 'id': '1248123b-f870-3a4b-9c9c-9f5fd1dac357', 'type': 'TEAM_PLAYER_INJURY'}, {'enabled': True, 'id': 'a721c195-c4eb-36b5-be40-65fc5460e455', 'type': 'TEAM_PLAYER_AVAILABILITY'}, {'enabled': True, 'id': '55f9f472-74d9-3991-9c5f-aecc099468c2', 'type': 'TEAM_PLAYER_NEWS'}, {'enabled': True, 'id': 'd5e44478-54f9-36a5-98a3-fd55f83a14bb', 'type': 'TEAM_TRADE_OFFER'}, {'enabled': True, 'id': '9f32b3dd-ec73-36d6-9cf3-931c6258a24b', 'type': 'DRAFT'}, {'enabled': True, 'id': 'c91b9d6f-13ff-354e-b57c-e3fb4e958bb8', 'type': 'TEAM_MATCHUP_SCORE'}, {'enabled': True, 'id': 'cc7c4c81-d9d1-384e-a4e6-245c1b35930d', 'type': 'ACHIEVEMENT'}, {'enabled': True, 'id': '0e426683-47b1-358c-b9de-4f34709e11ed', 'type': 'ADD_DROP'}, {'enabled': True, 'id': '89281420-98e8-3322-a6ea-c445dd5c2bfd', 'type': 'WEEKLY_RECAP'}, {'enabled': True, 'id': '2b0ebd1c-e4a2-3d9b-8197-3cc1407dd8db', 'type': 'WAIVERS'}]}]  W-L: 12-6  Standing: 2
+  12. Yash's Stout Team              Owner: [{'displayName': 'espn41066729', 'firstName': 'Yash', 'id': '{0607F216-B9A5-439F-814A-2E902C4CEF81}', 'lastName': 'Gupta', 'notificationSettings': [{'enabled': True, 'id': 'f4fb9e51-7585-3ecf-90d8-01166d02a5c8', 'type': 'TEAM_PLAYER_INJURY'}, {'enabled': True, 'id': '6a6121dc-b17b-3710-9a8e-b04887a6bab6', 'type': 'TEAM_PLAYER_AVAILABILITY'}, {'enabled': True, 'id': 'a5158be0-737a-39ad-be19-7c568672bc82', 'type': 'TEAM_PLAYER_NEWS'}, {'enabled': True, 'id': 'b4e44479-5c09-3ddc-bd6c-a12c9f08d741', 'type': 'TEAM_TRADE_OFFER'}, {'enabled': True, 'id': '75f6f951-6c39-3255-a160-832ab04524dd', 'type': 'DRAFT'}, {'enabled': True, 'id': 'f01668c5-836b-3457-b5ec-d4d098a819f4', 'type': 'TEAM_MATCHUP_SCORE'}, {'enabled': True, 'id': '089c0a73-ff0d-36af-830c-0a613d428ff6', 'type': 'ACHIEVEMENT'}, {'enabled': True, 'id': '10f77af6-4e40-32f0-b5c0-0fc95d3be6c1', 'type': 'ADD_DROP'}, {'enabled': True, 'id': 'c97d9a07-ee0f-39c5-b993-a8683bdcf394', 'type': 'WEEKLY_RECAP'}, {'enabled': True, 'id': '08286e4d-d7e9-325b-88e1-ac4dca8b576b', 'type': 'WAIVERS'}]}]  W-L: 7-11  Standing: 9
+
+First team attributes:
+['__class__',
+ '__delattr__',
+ '__dict__',
+ '__dir__',
+ '__doc__',
+ '__eq__',
+ '__format__',
+ '__ge__',
+ '__getattribute__',
+ '__gt__',
+ '__hash__',
+ '__init__',
+ '__init_subclass__',
+ '__le__',
+ '__lt__',
+ '__module__',
+ '__ne__',
+ '__new__',
+ '__reduce__',
+ '__reduce_ex__',
+ '__repr__',
+ '__setattr__',
+ '__sizeof__',
+ '__str__',
+ '__subclasshook__',
+ '__weakref__',
+ '_fetch_roster',
+ '_fetch_schedule',
+ 'acquisition_budget_spent',
+ 'acquisitions',
+ 'division_id',
+ 'division_name',
+ 'drops',
+ 'final_standing',
+ 'logo_url',
+ 'losses',
+ 'owners',
+ 'points_against',
+ 'points_for',
+ 'roster',
+ 'schedule',
+ 'standing',
+ 'stats',
+ 'team_abbrev',
+ 'team_id',
+ 'team_name',
+ 'ties',
+ 'trades',
+ 'wins']
+
+================================================================================
+SCORING SETTINGS
+================================================================================
+No scoring_settings attribute found on league.settings
+Checking for scoring-related attrs...
+  _raw_scoring_settings = {'allowOutOfPositionScoring': False, 'homeTeamBonus': 0, 'matchupTieRule': 'NONE', 'matchupTieRuleBy': 0, 'playerRankType': 'STANDARD', 'playoffHomeTeamBonus': 0, 'playoffMatchupTieRule': 'NONE', 'playoffMatchupTieRuleBy': 0, 'scoringItems': [{'isReverseItem': False, 'leagueRanking': 0.0, 'leagueTotal': 0.0, 'points': 1.2, 'statId': 6}, {'isReverseItem': False, 'leagueRanking': 0.0, 'leagueTotal': 0.0, 'points': 3.0, 'statId': 1}, {'isReverseItem': False, 'leagueRanking': 0.0, 'leagueTotal': 0.0, 'points': 3.0, 'statId': 2}, {'isReverseItem': False, 'leagueRanking': 0.0, 'leagueTotal': 0.0, 'points': -1.0, 'statId': 11}, {'isReverseItem': False, 'leagueRanking': 0.0, 'leagueTotal': 0.0, 'points': 1.5, 'statId': 3}, {'isReverseItem': False, 'leagueRanking': 0.0, 'leagueTotal': 0.0, 'points': 1.0, 'pointsOverrides': {}, 'statId': 0}], 'scoringType': 'H2H_POINTS'}
+  median_scoring = False
+  scoring_type = H2H_POINTS
+
+================================================================================
+BOX SCORES — WEEK 1
+================================================================================
+Number of matchups: 6
+
+Home: paddington bear  Score: 935.7
+Away:  SPLASH 👌  Score: 845.1
+
+Matchup attributes:
+['__abstractmethods__',
+ '__class__',
+ '__delattr__',
+ '__dict__',
+ '__dir__',
+ '__doc__',
+ '__eq__',
+ '__format__',
+ '__ge__',
+ '__getattribute__',
+ '__gt__',
+ '__hash__',
+ '__init__',
+ '__init_subclass__',
+ '__le__',
+ '__lt__',
+ '__module__',
+ '__ne__',
+ '__new__',
+ '__reduce__',
+ '__reduce_ex__',
+ '__repr__',
+ '__setattr__',
+ '__sizeof__',
+ '__slots__',
+ '__str__',
+ '__subclasshook__',
+ '__weakref__',
+ '_abc_impl',
+ '_get_player_lineup',
+ '_get_team_data',
+ 'away_lineup',
+ 'away_projected',
+ 'away_score',
+ 'away_team',
+ 'home_lineup',
+ 'home_projected',
+ 'home_score',
+ 'home_team',
+ 'scoring_period',
+ 'winner']
+
+--- Home lineup (first 2 players) ---
+  Name:           Ausar Thompson
+  Points:         114.6
+  Slot position:  PG
+  Position:       SF
+  Pro team:       DET
+
+  points_breakdown:
+{   'AST': 21.0,
+    'BLK': 6.0,
+    'PTS': 51.0,
+    'REB': 27.599999999999998,
+    'STL': 12.0,
+    'TO': -3.0}
+
+  Player stats (raw):
+{   '0': {   'applied_avg': 0,
+             'applied_total': 114.6,
+             'avg': None,
+             'date': None,
+             'team': None,
+             'total': {   '3PA': 5.0,
+                          '3PG': 0.33333333,
+                          '3PM': 1.0,
+                          '3PMI': 4.0,
+                          '3PT%': 0.2,
+                          'A/TO': 4.66666667,
+                          'AFG%': 0.5375,
+                          'APG': 4.66666667,
+                          'AST': 14.0,
+                          'BLK': 2.0,
+                          'BPG': 0.66666667,
+                          'DD': 1.0,
+                          'DQ': 0.0,
+                          'DREB': 18.0,
+                          'EJ': 0.0,
+                          'FF': 0.0,
+                          'FG%': 0.525,
+                          'FGA': 40.0,
+                          'FGM': 21.0,
+                          'FGMI': 19.0,
+                          'FT%': 0.61538462,
+                          'FTA': 13.0,
+                          'FTM': 8.0,
+                          'FTMI': 5.0,
+                          'FTR': 0.325,
+                          'GP': 3.0,
+                          'GS': 3.0,
+                          'MIN': 93.0,
+                          'MPG': 31.0,
+                          'OREB': 5.0,
+                          'PF': 10.0,
+                          'PPG': 17.0,
+                          'PPM': 0.5483871,
+                          'PTS': 51.0,
+                          'QD': 0.0,
+                          'REB': 23.0,
+                          'RPG': 7.66666667,
+                          'SPG': 1.33333333,
+                          'STL': 4.0,
+                          'STR': 1.33333333,
+                          'TD': 0.0,
+                          'TF': 1.0,
+                          'TO': 3.0,
+                          'TOPG': 1.0,
+                          'TW': 2.0}}}
+
+  All player attributes:
+['__class__',
+ '__delattr__',
+ '__dict__',
+ '__dir__',
+ '__doc__',
+ '__eq__',
+ '__format__',
+ '__ge__',
+ '__getattribute__',
+ '__gt__',
+ '__hash__',
+ '__init__',
+ '__init_subclass__',
+ '__le__',
+ '__lt__',
+ '__module__',
+ '__ne__',
+ '__new__',
+ '__reduce__',
+ '__reduce_ex__',
+ '__repr__',
+ '__setattr__',
+ '__sizeof__',
+ '__str__',
+ '__subclasshook__',
+ '__weakref__',
+ '_stat_id_pretty',
+ 'acquisitionType',
+ 'avg_points',
+ 'eligibleSlots',
+ 'expected_return_date',
+ 'game_played',
+ 'injured',
+ 'injuryStatus',
+ 'lineupSlot',
+ 'name',
+ 'news',
+ 'nine_cat_averages',
+ 'playerId',
+ 'points',
+ 'points_breakdown',
+ 'posRank',
+ 'position',
+ 'proTeam',
+ 'pro_opponent',
+ 'projected_avg_points',
+ 'projected_total_points',
+ 'schedule',
+ 'slot_position',
+ 'stats',
+ 'total_points',
+ 'year']
+
+  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -
+  Name:           Amen Thompson
+  Points:         46.6
+  Slot position:  PG
+  Position:       SF
+  Pro team:       HOU
+
+  points_breakdown:
+{'AST': 9.0, 'BLK': 3.0, 'PTS': 28.0, 'REB': 9.6, 'STL': 3.0, 'TO': -6.0}
+
+  Player stats (raw):
+{   '0': {   'applied_avg': 0,
+             'applied_total': 46.6,
+             'avg': None,
+             'date': None,
+             'team': None,
+             'total': {   '3PA': 8.0,
+                          '3PG': 0.0,
+                          '3PM': 0.0,
+                          '3PMI': 8.0,
+                          '3PT%': 0.0,
+                          'A/TO': 1.0,
+                          'AFG%': 0.4,
+                          'APG': 3.0,
+                          'AST': 6.0,
+                          'BLK': 1.0,
+                          'BPG': 0.5,
+                          'DD': 0.0,
+                          'DQ': 0.0,
+                          'DREB': 5.0,
+                          'EJ': 0.0,
+                          'FF': 0.0,
+                          'FG%': 0.4,
+                          'FGA': 25.0,
+                          'FGM': 10.0,
+                          'FGMI': 15.0,
+                          'FT%': 0.66666667,
+                          'FTA': 12.0,
+                          'FTM': 8.0,
+                          'FTMI': 4.0,
+                          'FTR': 0.48,
+                          'GP': 2.0,
+                          'GS': 2.0,
+                          'MIN': 69.0,
+                          'MPG': 34.5,
+                          'OREB': 3.0,
+                          'PF': 8.0,
+                          'PPG': 14.0,
+                          'PPM': 0.4057971,
+                          'PTS': 28.0,
+                          'QD': 0.0,
+                          'REB': 8.0,
+                          'RPG': 4.0,
+                          'SPG': 0.5,
+                          'STL': 1.0,
+                          'STR': 0.16666667,
+                          'TD': 0.0,
+                          'TF': 0.0,
+                          'TO': 6.0,
+                          'TOPG': 3.0,
+                          'TW': 0.0}}}
+
+  All player attributes:
+['__class__',
+ '__delattr__',
+ '__dict__',
+ '__dir__',
+ '__doc__',
+ '__eq__',
+ '__format__',
+ '__ge__',
+ '__getattribute__',
+ '__gt__',
+ '__hash__',
+ '__init__',
+ '__init_subclass__',
+ '__le__',
+ '__lt__',
+ '__module__',
+ '__ne__',
+ '__new__',
+ '__reduce__',
+ '__reduce_ex__',
+ '__repr__',
+ '__setattr__',
+ '__sizeof__',
+ '__str__',
+ '__subclasshook__',
+ '__weakref__',
+ '_stat_id_pretty',
+ 'acquisitionType',
+ 'avg_points',
+ 'eligibleSlots',
+ 'expected_return_date',
+ 'game_played',
+ 'injured',
+ 'injuryStatus',
+ 'lineupSlot',
+ 'name',
+ 'news',
+ 'nine_cat_averages',
+ 'playerId',
+ 'points',
+ 'points_breakdown',
+ 'posRank',
+ 'position',
+ 'proTeam',
+ 'pro_opponent',
+ 'projected_avg_points',
+ 'projected_total_points',
+ 'schedule',
+ 'slot_position',
+ 'stats',
+ 'total_points',
+ 'year']
+
+  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -  -
+================================================================================
+RECENT ACTIVITY (5 items)
+================================================================================
+
+Activity 1:
+  Date:    1773680907933
+  Actions: []
+
+  First activity attributes:
+['__class__',
+ '__delattr__',
+ '__dict__',
+ '__dir__',
+ '__doc__',
+ '__eq__',
+ '__format__',
+ '__ge__',
+ '__getattribute__',
+ '__gt__',
+ '__hash__',
+ '__init__',
+ '__init_subclass__',
+ '__le__',
+ '__lt__',
+ '__module__',
+ '__ne__',
+ '__new__',
+ '__reduce__',
+ '__reduce_ex__',
+ '__repr__',
+ '__setattr__',
+ '__sizeof__',
+ '__str__',
+ '__subclasshook__',
+ '__weakref__',
+ 'actions',
+ 'date']
+
+Activity 2:
+  Date:    1773680885030
+  Actions: []
+
+Activity 3:
+  Date:    1773680862457
+  Actions: []
+
+Activity 4:
+  Date:    1773676812903
+  Actions: [(Team(paddington bear), 'WAIVER ADDED', 'Taylor Hendricks', '')]
+    Raw action (4 elements): (Team(paddington bear), 'WAIVER ADDED', 'Taylor Hendricks', '')
+
+Activity 5:
+  Date:    1773676812903
+  Actions: [(Team(paddington bear), 'WAIVER ADDED', 'Bub Carrington', '')]
+    Raw action (4 elements): (Team(paddington bear), 'WAIVER ADDED', 'Bub Carrington', '')
+
+================================================================================
+TEAM SCHEDULE (first team, first 3 matchups)
+================================================================================
+Team: The Commish
+Schedule length: 21
+
+  Matchup 1:
+{   'away_final_score': 810.6,
+    'away_team': Team(Siddus Squad),
+    'away_team_cats': {   'AST': {'result': None, 'score': 80.0},
+                          'BLK': {'result': None, 'score': 17.0},
+                          'PTS': {'result': None, 'score': 419.0},
+                          'REB': {'result': None, 'score': 163.0},
+                          'STL': {'result': None, 'score': 30.0},
+                          'TO': {'result': None, 'score': 65.0}},
+    'away_team_live_score': 0.0,
+    'home_final_score': 961.7,
+    'home_team': Team(The Commish),
+    'home_team_cats': {   'AST': {'result': None, 'score': 125.0},
+                          'BLK': {'result': None, 'score': 25.0},
+                          'PTS': {'result': None, 'score': 448.0},
+                          'REB': {'result': None, 'score': 191.0},
+                          'STL': {'result': None, 'score': 30.0},
+                          'TO': {'result': None, 'score': 68.0}},
+    'home_team_live_score': 0.0,
+    'winner': 'HOME'}
+  Attributes: ['__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_fetch_matchup_info', 'away_final_score', 'away_team', 'away_team_cats', 'away_team_live_score', 'home_final_score', 'home_team', 'home_team_cats', 'home_team_live_score', 'winner']
+
+  Matchup 2:
+{   'away_final_score': 1395.5,
+    'away_team': Team(The Commish),
+    'away_team_cats': {   'AST': {'result': None, 'score': 187.0},
+                          'BLK': {'result': None, 'score': 34.0},
+                          'PTS': {'result': None, 'score': 672.0},
+                          'REB': {'result': None, 'score': 250.0},
+                          'STL': {'result': None, 'score': 43.0},
+                          'TO': {'result': None, 'score': 88.0}},
+    'away_team_live_score': 0.0,
+    'home_final_score': 1175.6,
+    'home_team': Team(May Not Need Minott),
+    'home_team_cats': {   'AST': {'result': None, 'score': 138.0},
+                          'BLK': {'result': None, 'score': 27.0},
+                          'PTS': {'result': None, 'score': 588.0},
+                          'REB': {'result': None, 'score': 233.0},
+                          'STL': {'result': None, 'score': 31.0},
+                          'TO': {'result': None, 'score': 73.0}},
+    'home_team_live_score': 0.0,
+    'winner': 'AWAY'}
+  Attributes: ['__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_fetch_matchup_info', 'away_final_score', 'away_team', 'away_team_cats', 'away_team_live_score', 'home_final_score', 'home_team', 'home_team_cats', 'home_team_live_score', 'winner']
+
+  Matchup 3:
+{   'away_final_score': 1237.9,
+    'away_team': Team(The Commish),
+    'away_team_cats': {   'AST': {'result': None, 'score': 159.0},
+                          'BLK': {'result': None, 'score': 29.0},
+                          'PTS': {'result': None, 'score': 621.0},
+                          'REB': {'result': None, 'score': 217.0},
+                          'STL': {'result': None, 'score': 37.0},
+                          'TO': {'result': None, 'score': 80.0}},
+    'away_team_live_score': 0.0,
+    'home_final_score': 1171.9,
+    'home_team': Team(my left nuts),
+    'home_team_cats': {   'AST': {'result': None, 'score': 115.0},
+                          'BLK': {'result': None, 'score': 36.0},
+                          'PTS': {'result': None, 'score': 601.0},
+                          'REB': {'result': None, 'score': 212.0},
+                          'STL': {'result': None, 'score': 37.0},
+                          'TO': {'result': None, 'score': 75.0}},
+    'home_team_live_score': 0.0,
+    'winner': 'AWAY'}
+  Attributes: ['__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_fetch_matchup_info', 'away_final_score', 'away_team', 'away_team_cats', 'away_team_live_score', 'home_final_score', 'home_team', 'home_team_cats', 'home_team_live_score', 'winner']
+
+================================================================================
+DRAFT (first 5 picks)
+================================================================================
+  Round 1, Pick 1: Nikola Jokic              -> enchant
+  Round 1, Pick 2: Shai Gilgeous-Alexander   -> Yash's Stout Team
+  Round 1, Pick 3: Victor Wembanyama         -> superbum
+  Round 1, Pick 4: Giannis Antetokounmpo     -> Team Patel
+  Round 1, Pick 5: Luka Doncic               -> May Not Need Minott
+
+First pick attributes:
+['__class__',
+ '__delattr__',
+ '__dict__',
+ '__dir__',
+ '__doc__',
+ '__eq__',
+ '__format__',
+ '__ge__',
+ '__getattribute__',
+ '__gt__',
+ '__hash__',
+ '__init__',
+ '__init_subclass__',
+ '__le__',
+ '__lt__',
+ '__module__',
+ '__ne__',
+ '__new__',
+ '__reduce__',
+ '__reduce_ex__',
+ '__repr__',
+ '__setattr__',
+ '__sizeof__',
+ '__str__',
+ '__subclasshook__',
+ '__weakref__',
+ 'auction_repr',
+ 'bid_amount',
+ 'keeper_status',
+ 'nominatingTeam',
+ 'playerId',
+ 'playerName',
+ 'round_num',
+ 'round_pick',
+ 'team']
+
+First pick vars:
+{'bid_amount': 0,
+ 'keeper_status': False,
+ 'nominatingTeam': None,
+ 'playerId': 3112335,
+ 'playerName': 'Nikola Jokic',
+ 'round_num': 1,
+ 'round_pick': 1,
+ 'team': Team(enchant)}

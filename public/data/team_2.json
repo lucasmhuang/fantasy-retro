@@ -1,0 +1,1687 @@
+{
+  "team": {
+    "name": "enchant",
+    "manager": "Ishan Maunder",
+    "record": "10-8",
+    "seed": 5,
+    "pointsFor": 19890.9,
+    "pointsAgainst": 18473.1
+  },
+  "league": {
+    "name": "Lucas Basketball Association",
+    "season": "2025-26",
+    "teams": 12
+  },
+  "weeklyResults": [
+    {
+      "week": 1,
+      "result": "W",
+      "score": 845.1,
+      "oppScore": 699.5,
+      "opponent": "It's Teague Time",
+      "standing": 6
+    },
+    {
+      "week": 2,
+      "result": "L",
+      "score": 1306.8,
+      "oppScore": 1397.8,
+      "opponent": "paddington bear",
+      "standing": 5,
+      "event": "Picked up Jeremy Sochan"
+    },
+    {
+      "week": 3,
+      "result": "W",
+      "score": 1290.9,
+      "oppScore": 821.0,
+      "opponent": " SPLASH \ud83d\udc4c",
+      "standing": 3
+    },
+    {
+      "week": 4,
+      "result": "L",
+      "score": 1133.9,
+      "oppScore": 1158.4,
+      "opponent": "Team Patel",
+      "standing": 7
+    },
+    {
+      "week": 5,
+      "result": "W",
+      "score": 1379.2,
+      "oppScore": 1166.4,
+      "opponent": "superbum",
+      "standing": 5,
+      "event": "Picked up Jordan Goodwin"
+    },
+    {
+      "week": 6,
+      "result": "W",
+      "score": 1096.7,
+      "oppScore": 1026.6,
+      "opponent": "White Cowards",
+      "standing": 4
+    },
+    {
+      "week": 7,
+      "result": "W",
+      "score": 1324.9,
+      "oppScore": 1024.6,
+      "opponent": "Siddus Squad",
+      "standing": 4,
+      "event": "Picked up T.J. McConnell"
+    },
+    {
+      "week": 8,
+      "result": "W",
+      "score": 654.4,
+      "oppScore": 386.2,
+      "opponent": "my left nuts",
+      "standing": 3,
+      "event": "Traded Nikola Vucevic for Isaiah Hartenstein"
+    },
+    {
+      "week": 9,
+      "result": "L",
+      "score": 762.8,
+      "oppScore": 893.1,
+      "opponent": "Yash's Stout Team",
+      "standing": 4
+    },
+    {
+      "week": 10,
+      "result": "L",
+      "score": 1190.1,
+      "oppScore": 1272.5,
+      "opponent": "The Commish",
+      "standing": 5
+    },
+    {
+      "week": 11,
+      "result": "L",
+      "score": 1015.0,
+      "oppScore": 1307.3,
+      "opponent": "May Not Need Minott",
+      "standing": 5
+    },
+    {
+      "week": 12,
+      "result": "L",
+      "score": 1037.8,
+      "oppScore": 1115.0,
+      "opponent": "It's Teague Time",
+      "standing": 5,
+      "event": "Traded Josh Hart + Ja Morant for Brandon Ingram + Cedric Coward"
+    },
+    {
+      "week": 13,
+      "result": "W",
+      "score": 1247.2,
+      "oppScore": 1060.9,
+      "opponent": "paddington bear",
+      "standing": 5,
+      "event": "Traded Bilal Coulibaly + Nikola Jokic for Nic Claxton + Scottie Barnes + LaMelo Ball"
+    },
+    {
+      "week": 14,
+      "result": "W",
+      "score": 1169.7,
+      "oppScore": 663.2,
+      "opponent": " SPLASH \ud83d\udc4c",
+      "standing": 4,
+      "event": "Picked up Luke Kornet"
+    },
+    {
+      "week": 15,
+      "result": "L",
+      "score": 1094.8,
+      "oppScore": 1362.4,
+      "opponent": "Team Patel",
+      "standing": 5
+    },
+    {
+      "week": 16,
+      "result": "L",
+      "score": 1142.3,
+      "oppScore": 1237.7,
+      "opponent": "superbum",
+      "standing": 7
+    },
+    {
+      "week": 17,
+      "result": "W",
+      "score": 1190.5,
+      "oppScore": 951.3,
+      "opponent": "Yash's Stout Team",
+      "standing": 7
+    },
+    {
+      "week": 18,
+      "result": "W",
+      "score": 1008.8,
+      "oppScore": 929.2,
+      "opponent": "White Cowards",
+      "standing": 5
+    },
+    {
+      "week": 19,
+      "result": "W",
+      "score": 1140.6,
+      "oppScore": 877.9,
+      "opponent": "The Commish",
+      "standing": 0,
+      "event": "Picked up Alondes Williams"
+    },
+    {
+      "week": 20,
+      "result": "L",
+      "score": 1041.5,
+      "oppScore": 1511.7,
+      "opponent": "May Not Need Minott",
+      "standing": 0,
+      "event": "Picked up Alex Sarr, Quentin Grimes"
+    }
+  ],
+  "trades": [
+    {
+      "week": 8,
+      "partner": "paddington bear",
+      "sent": [
+        "Nikola Vucevic"
+      ],
+      "received": [
+        "Isaiah Hartenstein"
+      ],
+      "sentPtsROS": 1222.5,
+      "receivedPtsROS": 453.7,
+      "net": -768.8,
+      "slotAdjustment": 0.0,
+      "sentStats": [
+        {
+          "player": "Nikola Vucevic",
+          "ptsROS": 1222.5,
+          "gamesROS": 37,
+          "ppgROS": 33.0
+        }
+      ],
+      "receivedStats": [
+        {
+          "player": "Isaiah Hartenstein",
+          "ptsROS": 453.7,
+          "gamesROS": 18,
+          "ppgROS": 25.2
+        }
+      ],
+      "weeklyBreakdown": [
+        {
+          "week": 8,
+          "sentPts": 52.2,
+          "receivedPts": 25.3
+        },
+        {
+          "week": 9,
+          "sentPts": 133.8,
+          "receivedPts": 14.0
+        },
+        {
+          "week": 10,
+          "sentPts": 91.8,
+          "receivedPts": 70.4
+        },
+        {
+          "week": 11,
+          "sentPts": 148.0,
+          "receivedPts": 0.0
+        },
+        {
+          "week": 12,
+          "sentPts": 132.6,
+          "receivedPts": 0.0
+        },
+        {
+          "week": 13,
+          "sentPts": 174.7,
+          "receivedPts": 0.0
+        },
+        {
+          "week": 14,
+          "sentPts": 108.1,
+          "receivedPts": 0.0
+        },
+        {
+          "week": 15,
+          "sentPts": 134.9,
+          "receivedPts": 29.5
+        },
+        {
+          "week": 16,
+          "sentPts": 54.6,
+          "receivedPts": 70.1
+        },
+        {
+          "week": 17,
+          "sentPts": 84.3,
+          "receivedPts": 117.6
+        },
+        {
+          "week": 18,
+          "sentPts": 107.5,
+          "receivedPts": 94.9
+        },
+        {
+          "week": 19,
+          "sentPts": 0.0,
+          "receivedPts": 8.0
+        },
+        {
+          "week": 20,
+          "sentPts": 0.0,
+          "receivedPts": 23.9
+        }
+      ]
+    },
+    {
+      "week": 12,
+      "partner": "White Cowards",
+      "sent": [
+        "Josh Hart",
+        "Ja Morant"
+      ],
+      "received": [
+        "Brandon Ingram",
+        "Cedric Coward"
+      ],
+      "sentPtsROS": 709.9,
+      "receivedPtsROS": 1495.5,
+      "net": 785.6,
+      "slotAdjustment": 0.0,
+      "sentStats": [
+        {
+          "player": "Josh Hart",
+          "ptsROS": 609.0,
+          "gamesROS": 27,
+          "ppgROS": 22.6
+        },
+        {
+          "player": "Ja Morant",
+          "ptsROS": 100.9,
+          "gamesROS": 2,
+          "ppgROS": 50.5
+        }
+      ],
+      "receivedStats": [
+        {
+          "player": "Brandon Ingram",
+          "ptsROS": 1053.7,
+          "gamesROS": 29,
+          "ppgROS": 36.3
+        },
+        {
+          "player": "Cedric Coward",
+          "ptsROS": 441.8,
+          "gamesROS": 18,
+          "ppgROS": 24.5
+        }
+      ],
+      "weeklyBreakdown": [
+        {
+          "week": 12,
+          "sentPts": 35.6,
+          "receivedPts": 116.2
+        },
+        {
+          "week": 13,
+          "sentPts": 100.0,
+          "receivedPts": 207.7
+        },
+        {
+          "week": 14,
+          "sentPts": 133.5,
+          "receivedPts": 198.8
+        },
+        {
+          "week": 15,
+          "sentPts": 142.3,
+          "receivedPts": 221.8
+        },
+        {
+          "week": 16,
+          "sentPts": 66.8,
+          "receivedPts": 186.7
+        },
+        {
+          "week": 17,
+          "sentPts": 144.4,
+          "receivedPts": 115.1
+        },
+        {
+          "week": 18,
+          "sentPts": 87.3,
+          "receivedPts": 105.9
+        },
+        {
+          "week": 19,
+          "sentPts": 0.0,
+          "receivedPts": 141.9
+        },
+        {
+          "week": 20,
+          "sentPts": 0.0,
+          "receivedPts": 201.4
+        }
+      ]
+    },
+    {
+      "week": 13,
+      "partner": "May Not Need Minott",
+      "sent": [
+        "Bilal Coulibaly",
+        "Nikola Jokic"
+      ],
+      "received": [
+        "Nic Claxton",
+        "Scottie Barnes",
+        "LaMelo Ball"
+      ],
+      "sentPtsROS": 2060.7,
+      "receivedPtsROS": 2802.4,
+      "net": 741.7,
+      "slotAdjustment": 632.8,
+      "sentStats": [
+        {
+          "player": "Bilal Coulibaly",
+          "ptsROS": 359.7,
+          "gamesROS": 19,
+          "ppgROS": 18.9
+        },
+        {
+          "player": "Nikola Jokic",
+          "ptsROS": 1068.2,
+          "gamesROS": 20,
+          "ppgROS": 53.4
+        }
+      ],
+      "receivedStats": [
+        {
+          "player": "Nic Claxton",
+          "ptsROS": 693.7,
+          "gamesROS": 26,
+          "ppgROS": 26.7
+        },
+        {
+          "player": "Scottie Barnes",
+          "ptsROS": 1071.1,
+          "gamesROS": 26,
+          "ppgROS": 41.2
+        },
+        {
+          "player": "LaMelo Ball",
+          "ptsROS": 1037.6,
+          "gamesROS": 29,
+          "ppgROS": 35.8
+        }
+      ],
+      "weeklyBreakdown": [
+        {
+          "week": 13,
+          "sentPts": 5.4,
+          "receivedPts": 447.1
+        },
+        {
+          "week": 14,
+          "sentPts": 0.0,
+          "receivedPts": 407.5
+        },
+        {
+          "week": 15,
+          "sentPts": 196.9,
+          "receivedPts": 363.5
+        },
+        {
+          "week": 16,
+          "sentPts": 241.8,
+          "receivedPts": 322.2
+        },
+        {
+          "week": 17,
+          "sentPts": 418.8,
+          "receivedPts": 358.3
+        },
+        {
+          "week": 18,
+          "sentPts": 270.6,
+          "receivedPts": 303.4
+        },
+        {
+          "week": 19,
+          "sentPts": 0.0,
+          "receivedPts": 290.0
+        },
+        {
+          "week": 20,
+          "sentPts": 294.4,
+          "receivedPts": 310.4
+        }
+      ]
+    }
+  ],
+  "waiverPickups": [
+    {
+      "player": "T.J. McConnell",
+      "weekAdded": 7,
+      "addDate": 1764608414532,
+      "ptsAfterAdd": 631.3,
+      "weeklyPoints": [
+        {
+          "week": 7,
+          "pts": 58.5
+        },
+        {
+          "week": 8,
+          "pts": 50.4
+        },
+        {
+          "week": 9,
+          "pts": 62.3
+        },
+        {
+          "week": 10,
+          "pts": 46.1
+        },
+        {
+          "week": 11,
+          "pts": 81.6
+        },
+        {
+          "week": 12,
+          "pts": 96.5
+        },
+        {
+          "week": 13,
+          "pts": 60.8
+        },
+        {
+          "week": 14,
+          "pts": 50.5
+        },
+        {
+          "week": 15,
+          "pts": 68.1
+        },
+        {
+          "week": 16,
+          "pts": 56.5
+        }
+      ]
+    },
+    {
+      "player": "Jordan Goodwin",
+      "weekAdded": 5,
+      "addDate": 1763658016118,
+      "ptsAfterAdd": 492.7,
+      "weeklyPoints": [
+        {
+          "week": 5,
+          "pts": 0.0
+        },
+        {
+          "week": 6,
+          "pts": 81.3
+        },
+        {
+          "week": 7,
+          "pts": 46.7
+        },
+        {
+          "week": 8,
+          "pts": 55.8
+        },
+        {
+          "week": 9,
+          "pts": 46.4
+        },
+        {
+          "week": 10,
+          "pts": 66.7
+        },
+        {
+          "week": 11,
+          "pts": 107.6
+        },
+        {
+          "week": 12,
+          "pts": 88.2
+        },
+        {
+          "week": 13,
+          "pts": 0.0
+        },
+        {
+          "week": 14,
+          "pts": 0.0
+        },
+        {
+          "week": 15,
+          "pts": 0.0
+        },
+        {
+          "week": 16,
+          "pts": 0.0
+        },
+        {
+          "week": 17,
+          "pts": 0.0
+        },
+        {
+          "week": 18,
+          "pts": 0.0
+        },
+        {
+          "week": 19,
+          "pts": 0.0
+        },
+        {
+          "week": 20,
+          "pts": 0.0
+        }
+      ]
+    },
+    {
+      "player": "Luke Kornet",
+      "weekAdded": 12,
+      "addDate": 1767632416822,
+      "ptsAfterAdd": 336.5,
+      "weeklyPoints": [
+        {
+          "week": 12,
+          "pts": 81.9
+        },
+        {
+          "week": 13,
+          "pts": 0.0
+        },
+        {
+          "week": 14,
+          "pts": 41.8
+        },
+        {
+          "week": 15,
+          "pts": 39.6
+        },
+        {
+          "week": 16,
+          "pts": 43.3
+        },
+        {
+          "week": 17,
+          "pts": 83.4
+        },
+        {
+          "week": 18,
+          "pts": 46.5
+        },
+        {
+          "week": 19,
+          "pts": 0.0
+        }
+      ]
+    },
+    {
+      "player": "Luke Kornet",
+      "weekAdded": 14,
+      "addDate": 1768842031307,
+      "ptsAfterAdd": 254.6,
+      "weeklyPoints": [
+        {
+          "week": 14,
+          "pts": 41.8
+        },
+        {
+          "week": 15,
+          "pts": 39.6
+        },
+        {
+          "week": 16,
+          "pts": 43.3
+        },
+        {
+          "week": 17,
+          "pts": 83.4
+        },
+        {
+          "week": 18,
+          "pts": 46.5
+        },
+        {
+          "week": 19,
+          "pts": 0.0
+        }
+      ]
+    },
+    {
+      "player": "Jeremy Sochan",
+      "weekAdded": 2,
+      "addDate": 1761840012073,
+      "ptsAfterAdd": 92.3,
+      "weeklyPoints": [
+        {
+          "week": 2,
+          "pts": 0.0
+        },
+        {
+          "week": 3,
+          "pts": 51.4
+        },
+        {
+          "week": 4,
+          "pts": 40.9
+        },
+        {
+          "week": 5,
+          "pts": 0.0
+        }
+      ]
+    }
+  ],
+  "scoringProfile": {
+    "PTS": {
+      "total": 10299.0,
+      "pct": 0.461
+    },
+    "AST": {
+      "total": 4063.5,
+      "pct": 0.182
+    },
+    "REB": {
+      "total": 3836.4,
+      "pct": 0.172
+    },
+    "STL": {
+      "total": 1980.0,
+      "pct": 0.089
+    },
+    "TO": {
+      "total": -1230.0,
+      "pct": -0.055
+    },
+    "BLK": {
+      "total": 942.0,
+      "pct": 0.042
+    }
+  },
+  "allPlayRecord": {
+    "wins": 132,
+    "losses": 65,
+    "winPct": 0.67
+  },
+  "rosterHeatmap": [
+    {
+      "slot": "G",
+      "player": "Tyrese Maxey",
+      "weeks": [
+        109.1,
+        230.7,
+        213.0,
+        96.4,
+        228.6,
+        140.4,
+        205.1,
+        0,
+        98.3,
+        120.3,
+        187.0,
+        202.8,
+        131.7,
+        213.7,
+        149.8,
+        182.6,
+        225.4,
+        182.7,
+        132.9,
+        0
+      ]
+    },
+    {
+      "slot": "F",
+      "player": "Trey Murphy III",
+      "weeks": [
+        76.4,
+        105.9,
+        127.7,
+        153.5,
+        148.8,
+        64.6,
+        139.9,
+        128.8,
+        67.8,
+        132.9,
+        106.0,
+        149.5,
+        174.2,
+        113.6,
+        91.5,
+        141.1,
+        68.7,
+        25.9,
+        161.4,
+        74.6
+      ]
+    },
+    {
+      "slot": "UT",
+      "player": "Russell Westbrook",
+      "weeks": [
+        66.1,
+        99.2,
+        157.0,
+        128.3,
+        107.3,
+        140.1,
+        63.5,
+        127.9,
+        118.3,
+        107.7,
+        124.7,
+        86.7,
+        155.7,
+        118.9,
+        23.3,
+        70.1,
+        41.5,
+        89.7,
+        138.5,
+        86.3
+      ]
+    },
+    {
+      "slot": "C",
+      "player": "Nikola Jokic",
+      "weeks": [
+        112.9,
+        180.5,
+        278.5,
+        209.8,
+        269.9,
+        151.6,
+        252.7,
+        67.4,
+        168.6,
+        303.4,
+        37.0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "slot": "G",
+      "player": "CJ McCollum",
+      "weeks": [
+        75.3,
+        73.1,
+        95.5,
+        103.0,
+        81.0,
+        80.2,
+        122.3,
+        70.0,
+        95.9,
+        84.1,
+        116.7,
+        60.7,
+        94.7,
+        81.9,
+        129.0,
+        72.0,
+        179.6,
+        88.0,
+        65.5,
+        87.2
+      ]
+    },
+    {
+      "slot": "F",
+      "player": "Lauri Markkanen",
+      "weeks": [
+        72.0,
+        210.0,
+        90.0,
+        201.5,
+        117.1,
+        94.7,
+        113.5,
+        40.8,
+        73.7,
+        124.4,
+        87.5,
+        135.3,
+        50.4,
+        0,
+        119.8,
+        97.0,
+        62.0,
+        39.6,
+        0,
+        0
+      ]
+    },
+    {
+      "slot": "F",
+      "player": "Jerami Grant",
+      "weeks": [
+        88.9,
+        97.2,
+        91.7,
+        82.0,
+        89.2,
+        100.2,
+        149.1,
+        61.1,
+        38.3,
+        0,
+        0,
+        0,
+        55.5,
+        34.4,
+        79.8,
+        98.3,
+        112.7,
+        104.6,
+        113.1,
+        65.6
+      ]
+    },
+    {
+      "slot": "UT",
+      "player": "Jalen Suggs",
+      "weeks": [
+        42.4,
+        77.0,
+        91.1,
+        54.3,
+        110.2,
+        70.8,
+        149.3,
+        68.5,
+        0,
+        0,
+        47.7,
+        0,
+        0,
+        18.2,
+        121.4,
+        140.7,
+        110.9,
+        33.8,
+        134.4,
+        104.2
+      ]
+    },
+    {
+      "slot": "F",
+      "player": "Draymond Green",
+      "weeks": [
+        89.6,
+        97.5,
+        61.1,
+        94.0,
+        67.7,
+        57.6,
+        38.4,
+        38.1,
+        39.8,
+        74.2,
+        75.7,
+        119.1,
+        68.5,
+        61.5,
+        48.1,
+        53.2,
+        68.1,
+        54.6,
+        74.7,
+        59.3
+      ]
+    },
+    {
+      "slot": "F",
+      "player": "Scottie Barnes",
+      "weeks": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        173.9,
+        193.0,
+        126.9,
+        143.5,
+        86.2,
+        110.7,
+        89.5,
+        147.4
+      ]
+    },
+    {
+      "slot": "G",
+      "player": "LaMelo Ball",
+      "weeks": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        148.0,
+        99.1,
+        125.3,
+        113.0,
+        190.0,
+        107.7,
+        149.2,
+        105.3
+      ]
+    },
+    {
+      "slot": "F",
+      "player": "Brandon Ingram",
+      "weeks": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        158.8,
+        141.8,
+        125.3,
+        115.9,
+        105.0,
+        105.9,
+        95.6,
+        147.1
+      ]
+    },
+    {
+      "slot": "UT",
+      "player": "Josh Hart",
+      "weeks": [
+        42.8,
+        48.8,
+        83.9,
+        89.6,
+        96.0,
+        195.4,
+        142.1,
+        74.4,
+        64.5,
+        66.5,
+        0,
+        35.6,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "slot": "F/C",
+      "player": "Nikola Vucevic",
+      "weeks": [
+        76.4,
+        173.4,
+        86.7,
+        90.7,
+        131.1,
+        72.9,
+        111.4,
+        52.2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "slot": "G",
+      "player": "T.J. McConnell",
+      "weeks": [
+        0,
+        0,
+        0,
+        46.1,
+        59.0,
+        0,
+        58.5,
+        50.4,
+        62.3,
+        46.1,
+        81.6,
+        96.5,
+        60.8,
+        50.5,
+        68.1,
+        56.5,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "slot": "C",
+      "player": "Nic Claxton",
+      "weeks": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        125.2,
+        115.4,
+        111.3,
+        65.7,
+        82.1,
+        85.0,
+        51.3,
+        57.7
+      ]
+    },
+    {
+      "slot": "UT",
+      "player": "Bilal Coulibaly",
+      "weeks": [
+        0,
+        64.0,
+        34.3,
+        27.6,
+        62.3,
+        47.4,
+        41.0,
+        0,
+        10.8,
+        106.2,
+        110.8,
+        113.6,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "slot": "G",
+      "player": "Ja Morant",
+      "weeks": [
+        102.1,
+        109.9,
+        147.1,
+        36.8,
+        0,
+        0,
+        0,
+        39.8,
+        26.6,
+        64.3,
+        88.0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "slot": "G",
+      "player": "Jordan Goodwin",
+      "weeks": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        81.3,
+        46.7,
+        55.8,
+        46.4,
+        66.7,
+        107.6,
+        88.2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "slot": "F/C",
+      "player": "Isaiah Hartenstein",
+      "weeks": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        14.0,
+        70.4,
+        0,
+        0,
+        0,
+        0,
+        29.5,
+        70.1,
+        117.6,
+        94.9,
+        8.0,
+        23.9
+      ]
+    },
+    {
+      "slot": "F/C",
+      "player": "Cedric Coward",
+      "weeks": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        48.9,
+        57.0,
+        96.5,
+        70.8,
+        10.1,
+        0,
+        46.3,
+        54.3
+      ]
+    },
+    {
+      "slot": "C",
+      "player": "Luke Kornet",
+      "weeks": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        81.9,
+        0,
+        41.8,
+        39.6,
+        43.3,
+        83.4,
+        46.5,
+        0,
+        0
+      ]
+    },
+    {
+      "slot": "G",
+      "player": "Quentin Grimes",
+      "weeks": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        181.4
+      ]
+    },
+    {
+      "slot": "F",
+      "player": "Jeremy Sochan",
+      "weeks": [
+        0,
+        0,
+        51.4,
+        40.9,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "slot": "BN",
+      "player": "Alondes Williams",
+      "weeks": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  "pointsLeftOnBench": [
+    {
+      "week": 4,
+      "benchPlayer": "CJ McCollum",
+      "benchPts": 103.0,
+      "startPlayer": "Ja Morant",
+      "startPts": 36.8,
+      "diff": 66.2,
+      "wouldHaveWon": true,
+      "lossMargin": 24.5
+    },
+    {
+      "week": 15,
+      "benchPlayer": "Brandon Ingram",
+      "benchPts": 125.3,
+      "startPlayer": "Russell Westbrook",
+      "startPts": 23.3,
+      "diff": 102.0,
+      "wouldHaveWon": false,
+      "lossMargin": 267.6
+    },
+    {
+      "week": 7,
+      "benchPlayer": "Trey Murphy III",
+      "benchPts": 139.9,
+      "startPlayer": "Draymond Green",
+      "startPts": 38.4,
+      "diff": 101.5,
+      "wouldHaveWon": false,
+      "lossMargin": null
+    },
+    {
+      "week": 11,
+      "benchPlayer": "Jordan Goodwin",
+      "benchPts": 107.6,
+      "startPlayer": "Nikola Jokic",
+      "startPts": 37.0,
+      "diff": 70.6,
+      "wouldHaveWon": false,
+      "lossMargin": 292.3
+    },
+    {
+      "week": 17,
+      "benchPlayer": "Brandon Ingram",
+      "benchPts": 105.0,
+      "startPlayer": "Russell Westbrook",
+      "startPts": 41.5,
+      "diff": 63.5,
+      "wouldHaveWon": false,
+      "lossMargin": null
+    }
+  ],
+  "headToHead": [
+    {
+      "opponent": " SPLASH \ud83d\udc4c",
+      "wins": 2,
+      "losses": 0,
+      "avgMargin": 488,
+      "playoffWins": 0,
+      "playoffLosses": 0
+    },
+    {
+      "opponent": "White Cowards",
+      "wins": 2,
+      "losses": 0,
+      "avgMargin": 75,
+      "playoffWins": 0,
+      "playoffLosses": 0
+    },
+    {
+      "opponent": "Siddus Squad",
+      "wins": 1,
+      "losses": 0,
+      "avgMargin": 300,
+      "playoffWins": 0,
+      "playoffLosses": 0
+    },
+    {
+      "opponent": "my left nuts",
+      "wins": 1,
+      "losses": 0,
+      "avgMargin": 268,
+      "playoffWins": 0,
+      "playoffLosses": 0
+    },
+    {
+      "opponent": "It's Teague Time",
+      "wins": 1,
+      "losses": 1,
+      "avgMargin": 34,
+      "playoffWins": 0,
+      "playoffLosses": 0
+    },
+    {
+      "opponent": "paddington bear",
+      "wins": 1,
+      "losses": 1,
+      "avgMargin": 48,
+      "playoffWins": 0,
+      "playoffLosses": 0
+    },
+    {
+      "opponent": "superbum",
+      "wins": 1,
+      "losses": 1,
+      "avgMargin": 59,
+      "playoffWins": 0,
+      "playoffLosses": 0
+    },
+    {
+      "opponent": "Yash's Stout Team",
+      "wins": 1,
+      "losses": 1,
+      "avgMargin": 54,
+      "playoffWins": 0,
+      "playoffLosses": 0
+    },
+    {
+      "opponent": "The Commish",
+      "wins": 0,
+      "losses": 1,
+      "avgMargin": -82,
+      "playoffWins": 1,
+      "playoffLosses": 0
+    },
+    {
+      "opponent": "May Not Need Minott",
+      "wins": 0,
+      "losses": 1,
+      "avgMargin": -292,
+      "playoffWins": 0,
+      "playoffLosses": 1
+    },
+    {
+      "opponent": "Team Patel",
+      "wins": 0,
+      "losses": 2,
+      "avgMargin": -146,
+      "playoffWins": 0,
+      "playoffLosses": 0
+    }
+  ],
+  "optimalLineup": {
+    "weeklyComparison": [
+      {
+        "week": 1,
+        "actualPts": 845.1,
+        "optimalPts": 868.8,
+        "diff": 23.7
+      },
+      {
+        "week": 2,
+        "actualPts": 1306.8,
+        "optimalPts": 1381.3,
+        "diff": 74.5
+      },
+      {
+        "week": 3,
+        "actualPts": 1290.9,
+        "optimalPts": 1378.3,
+        "diff": 87.4
+      },
+      {
+        "week": 4,
+        "actualPts": 1133.9,
+        "optimalPts": 1248.8,
+        "diff": 114.9
+      },
+      {
+        "week": 5,
+        "actualPts": 1379.2,
+        "optimalPts": 1379.2,
+        "diff": 0.0
+      },
+      {
+        "week": 6,
+        "actualPts": 1096.7,
+        "optimalPts": 1127.6,
+        "diff": 30.9
+      },
+      {
+        "week": 7,
+        "actualPts": 1324.9,
+        "optimalPts": 1448.9,
+        "diff": 124.0
+      },
+      {
+        "week": 8,
+        "actualPts": 654.4,
+        "optimalPts": 756.5,
+        "diff": 102.1
+      },
+      {
+        "week": 9,
+        "actualPts": 762.8,
+        "optimalPts": 835.6,
+        "diff": 72.8
+      },
+      {
+        "week": 10,
+        "actualPts": 1190.1,
+        "optimalPts": 1190.3,
+        "diff": 0.2
+      },
+      {
+        "week": 11,
+        "actualPts": 1015.0,
+        "optimalPts": 1041.0,
+        "diff": 26.0
+      },
+      {
+        "week": 12,
+        "actualPts": 1037.8,
+        "optimalPts": 1134.3,
+        "diff": 96.5
+      },
+      {
+        "week": 13,
+        "actualPts": 1247.2,
+        "optimalPts": 1291.5,
+        "diff": 44.3
+      },
+      {
+        "week": 14,
+        "actualPts": 1169.7,
+        "optimalPts": 1195.9,
+        "diff": 26.2
+      },
+      {
+        "week": 15,
+        "actualPts": 1094.8,
+        "optimalPts": 1196.8,
+        "diff": 102.0
+      },
+      {
+        "week": 16,
+        "actualPts": 1142.3,
+        "optimalPts": 1174.2,
+        "diff": 31.9
+      },
+      {
+        "week": 17,
+        "actualPts": 1190.5,
+        "optimalPts": 1292.9,
+        "diff": 102.4
+      },
+      {
+        "week": 18,
+        "actualPts": 1008.8,
+        "optimalPts": 1023.8,
+        "diff": 15.0
+      },
+      {
+        "week": 19,
+        "actualPts": 1140.6,
+        "optimalPts": 1154.8,
+        "diff": 14.2
+      },
+      {
+        "week": 20,
+        "actualPts": 1041.5,
+        "optimalPts": 1058.4,
+        "diff": 16.9
+      }
+    ],
+    "totalActual": 22073.0,
+    "totalOptimal": 23178.9,
+    "efficiency": 0.952
+  },
+  "awards": {
+    "mvp": {
+      "player": "Tyrese Maxey",
+      "totalPts": 3050.5
+    },
+    "benchWarmer": {
+      "player": "Isaiah Hartenstein",
+      "weeks": 8,
+      "totalPts": 428.4,
+      "avgPts": 53.5
+    },
+    "heartbreakLoss": {
+      "week": 4,
+      "opponent": "Team Patel",
+      "score": 1133.9,
+      "oppScore": 1158.4,
+      "margin": 24.5
+    },
+    "statementWin": {
+      "week": 14,
+      "opponent": " SPLASH \ud83d\udc4c",
+      "score": 1169.7,
+      "oppScore": 663.2,
+      "margin": 506.5
+    },
+    "luckyWin": {
+      "week": 1,
+      "score": 845.1,
+      "leagueRank": 8,
+      "opponent": "It's Teague Time",
+      "oppScore": 699.5
+    },
+    "unluckyLoss": {
+      "week": 10,
+      "score": 1190.1,
+      "leagueRank": 2,
+      "opponent": "The Commish",
+      "oppScore": 1272.5
+    }
+  },
+  "grades": {
+    "drafting": "B",
+    "trading": "A+",
+    "waiverWire": "A+",
+    "luck": "F",
+    "consistency": "F",
+    "overall": "C+"
+  }
+}

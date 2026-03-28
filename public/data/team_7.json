@@ -1,0 +1,1816 @@
+{
+  "team": {
+    "name": " SPLASH \ud83d\udc4c",
+    "manager": "Apurv Prabhakar",
+    "record": "5-13",
+    "seed": 11,
+    "pointsFor": 16041.0,
+    "pointsAgainst": 18591.7
+  },
+  "league": {
+    "name": "Lucas Basketball Association",
+    "season": "2025-26",
+    "teams": 12
+  },
+  "weeklyResults": [
+    {
+      "week": 1,
+      "result": "L",
+      "score": 845.1,
+      "oppScore": 935.7,
+      "opponent": "paddington bear",
+      "standing": 9,
+      "event": "Picked up Ronald Holland II, Isaiah Stewart, Khris Middleton"
+    },
+    {
+      "week": 2,
+      "result": "L",
+      "score": 931.7,
+      "oppScore": 1025.5,
+      "opponent": "superbum",
+      "standing": 11
+    },
+    {
+      "week": 3,
+      "result": "L",
+      "score": 821.0,
+      "oppScore": 1290.9,
+      "opponent": "enchant",
+      "standing": 11,
+      "event": "Picked up Jared McCain, Collin Gillespie"
+    },
+    {
+      "week": 4,
+      "result": "W",
+      "score": 1190.3,
+      "oppScore": 693.7,
+      "opponent": "It's Teague Time",
+      "standing": 10,
+      "event": "Picked up Luke Kornet, Davion Mitchell"
+    },
+    {
+      "week": 5,
+      "result": "W",
+      "score": 1200.6,
+      "oppScore": 1094.4,
+      "opponent": "Team Patel",
+      "standing": 8
+    },
+    {
+      "week": 6,
+      "result": "L",
+      "score": 949.3,
+      "oppScore": 999.9,
+      "opponent": "Yash's Stout Team",
+      "standing": 8
+    },
+    {
+      "week": 7,
+      "result": "L",
+      "score": 1074.4,
+      "oppScore": 1420.2,
+      "opponent": "The Commish",
+      "standing": 8,
+      "event": "Traded Jabari Smith Jr. + Stephen Curry for Josh Giddey"
+    },
+    {
+      "week": 8,
+      "result": "L",
+      "score": 648.2,
+      "oppScore": 780.0,
+      "opponent": "May Not Need Minott",
+      "standing": 8
+    },
+    {
+      "week": 9,
+      "result": "W",
+      "score": 863.1,
+      "oppScore": 801.2,
+      "opponent": "White Cowards",
+      "standing": 8
+    },
+    {
+      "week": 10,
+      "result": "W",
+      "score": 1082.3,
+      "oppScore": 1008.8,
+      "opponent": "Siddus Squad",
+      "standing": 8
+    },
+    {
+      "week": 11,
+      "result": "W",
+      "score": 1107.2,
+      "oppScore": 904.1,
+      "opponent": "my left nuts",
+      "standing": 7,
+      "event": "Picked up Bruce Brown, Spencer Jones"
+    },
+    {
+      "week": 12,
+      "result": "L",
+      "score": 985.5,
+      "oppScore": 1095.4,
+      "opponent": "paddington bear",
+      "standing": 8,
+      "event": "Traded James Harden + Collin Gillespie + Mark Williams for Keyonte George + RJ Barrett + Matas Buzelis"
+    },
+    {
+      "week": 13,
+      "result": "L",
+      "score": 739.2,
+      "oppScore": 1010.4,
+      "opponent": "superbum",
+      "standing": 9,
+      "event": "Picked up Jonathan Kuminga, Christian Braun, Malik Monk"
+    },
+    {
+      "week": 14,
+      "result": "L",
+      "score": 663.2,
+      "oppScore": 1169.7,
+      "opponent": "enchant",
+      "standing": 9
+    },
+    {
+      "week": 15,
+      "result": "L",
+      "score": 743.3,
+      "oppScore": 1206.5,
+      "opponent": "It's Teague Time",
+      "standing": 10
+    },
+    {
+      "week": 16,
+      "result": "L",
+      "score": 491.8,
+      "oppScore": 1019.3,
+      "opponent": "Team Patel",
+      "standing": 10
+    },
+    {
+      "week": 17,
+      "result": "L",
+      "score": 955.2,
+      "oppScore": 1163.2,
+      "opponent": "my left nuts",
+      "standing": 10
+    },
+    {
+      "week": 18,
+      "result": "L",
+      "score": 749.6,
+      "oppScore": 972.8,
+      "opponent": "my left nuts",
+      "standing": 11
+    }
+  ],
+  "trades": [
+    {
+      "week": 7,
+      "partner": "The Commish",
+      "sent": [
+        "Jabari Smith Jr.",
+        "Stephen Curry"
+      ],
+      "received": [
+        "Josh Giddey"
+      ],
+      "sentPtsROS": 2195.7,
+      "receivedPtsROS": 1773.9,
+      "net": -421.8,
+      "slotAdjustment": 949.2,
+      "sentStats": [
+        {
+          "player": "Jabari Smith Jr.",
+          "ptsROS": 1269.4,
+          "gamesROS": 41,
+          "ppgROS": 31.0
+        },
+        {
+          "player": "Stephen Curry",
+          "ptsROS": 926.3,
+          "gamesROS": 23,
+          "ppgROS": 40.3
+        }
+      ],
+      "receivedStats": [
+        {
+          "player": "Josh Giddey",
+          "ptsROS": 824.7,
+          "gamesROS": 23,
+          "ppgROS": 35.9
+        }
+      ],
+      "weeklyBreakdown": [
+        {
+          "week": 7,
+          "sentPts": 115.5,
+          "receivedPts": 159.0
+        },
+        {
+          "week": 8,
+          "sentPts": 149.1,
+          "receivedPts": 73.8
+        },
+        {
+          "week": 9,
+          "sentPts": 214.7,
+          "receivedPts": 147.2
+        },
+        {
+          "week": 10,
+          "sentPts": 206.3,
+          "receivedPts": 112.3
+        },
+        {
+          "week": 11,
+          "sentPts": 204.2,
+          "receivedPts": 19.3
+        },
+        {
+          "week": 12,
+          "sentPts": 291.8,
+          "receivedPts": 0.0
+        },
+        {
+          "week": 13,
+          "sentPts": 228.0,
+          "receivedPts": 0.0
+        },
+        {
+          "week": 14,
+          "sentPts": 241.5,
+          "receivedPts": 63.3
+        },
+        {
+          "week": 15,
+          "sentPts": 195.1,
+          "receivedPts": 59.0
+        },
+        {
+          "week": 16,
+          "sentPts": 130.0,
+          "receivedPts": 0.0
+        },
+        {
+          "week": 17,
+          "sentPts": 126.1,
+          "receivedPts": 80.4
+        },
+        {
+          "week": 18,
+          "sentPts": 93.4,
+          "receivedPts": 110.4
+        }
+      ]
+    },
+    {
+      "week": 12,
+      "partner": "The Commish",
+      "sent": [
+        "James Harden",
+        "Collin Gillespie",
+        "Mark Williams"
+      ],
+      "received": [
+        "Keyonte George",
+        "RJ Barrett",
+        "Matas Buzelis"
+      ],
+      "sentPtsROS": 1981.5,
+      "receivedPtsROS": 1889.5,
+      "net": -92.0,
+      "slotAdjustment": 0.0,
+      "sentStats": [
+        {
+          "player": "James Harden",
+          "ptsROS": 846.8,
+          "gamesROS": 20,
+          "ppgROS": 42.3
+        },
+        {
+          "player": "Collin Gillespie",
+          "ptsROS": 517.3,
+          "gamesROS": 19,
+          "ppgROS": 27.2
+        },
+        {
+          "player": "Mark Williams",
+          "ptsROS": 617.4,
+          "gamesROS": 25,
+          "ppgROS": 24.7
+        }
+      ],
+      "receivedStats": [
+        {
+          "player": "Keyonte George",
+          "ptsROS": 575.0,
+          "gamesROS": 16,
+          "ppgROS": 35.9
+        },
+        {
+          "player": "RJ Barrett",
+          "ptsROS": 492.5,
+          "gamesROS": 16,
+          "ppgROS": 30.8
+        },
+        {
+          "player": "Matas Buzelis",
+          "ptsROS": 822.0,
+          "gamesROS": 26,
+          "ppgROS": 31.6
+        }
+      ],
+      "weeklyBreakdown": [
+        {
+          "week": 12,
+          "sentPts": 320.6,
+          "receivedPts": 340.0
+        },
+        {
+          "week": 13,
+          "sentPts": 329.5,
+          "receivedPts": 277.7
+        },
+        {
+          "week": 14,
+          "sentPts": 377.8,
+          "receivedPts": 313.4
+        },
+        {
+          "week": 15,
+          "sentPts": 275.8,
+          "receivedPts": 308.0
+        },
+        {
+          "week": 16,
+          "sentPts": 235.5,
+          "receivedPts": 181.2
+        },
+        {
+          "week": 17,
+          "sentPts": 293.4,
+          "receivedPts": 224.1
+        },
+        {
+          "week": 18,
+          "sentPts": 148.9,
+          "receivedPts": 245.1
+        }
+      ]
+    }
+  ],
+  "waiverPickups": [
+    {
+      "player": "Davion Mitchell",
+      "weekAdded": 4,
+      "addDate": 1762794017564,
+      "ptsAfterAdd": 950.4,
+      "weeklyPoints": [
+        {
+          "week": 4,
+          "pts": 85.3
+        },
+        {
+          "week": 5,
+          "pts": 106.9
+        },
+        {
+          "week": 6,
+          "pts": 75.1
+        },
+        {
+          "week": 7,
+          "pts": 83.2
+        },
+        {
+          "week": 8,
+          "pts": 27.9
+        },
+        {
+          "week": 9,
+          "pts": 76.9
+        },
+        {
+          "week": 10,
+          "pts": 45.8
+        },
+        {
+          "week": 11,
+          "pts": 104.0
+        },
+        {
+          "week": 12,
+          "pts": 57.2
+        },
+        {
+          "week": 13,
+          "pts": 23.6
+        },
+        {
+          "week": 14,
+          "pts": 48.8
+        },
+        {
+          "week": 15,
+          "pts": 29.4
+        },
+        {
+          "week": 16,
+          "pts": 56.5
+        },
+        {
+          "week": 17,
+          "pts": 72.1
+        },
+        {
+          "week": 18,
+          "pts": 57.7
+        }
+      ]
+    },
+    {
+      "player": "Collin Gillespie",
+      "weekAdded": 3,
+      "addDate": 1762189223276,
+      "ptsAfterAdd": 925.1,
+      "weeklyPoints": [
+        {
+          "week": 3,
+          "pts": 65.7
+        },
+        {
+          "week": 4,
+          "pts": 87.8
+        },
+        {
+          "week": 5,
+          "pts": 99.6
+        },
+        {
+          "week": 6,
+          "pts": 122.3
+        },
+        {
+          "week": 7,
+          "pts": 63.2
+        },
+        {
+          "week": 8,
+          "pts": 75.1
+        },
+        {
+          "week": 9,
+          "pts": 72.7
+        },
+        {
+          "week": 10,
+          "pts": 114.8
+        },
+        {
+          "week": 11,
+          "pts": 132.5
+        },
+        {
+          "week": 12,
+          "pts": 91.4
+        },
+        {
+          "week": 13,
+          "pts": 0.0
+        },
+        {
+          "week": 14,
+          "pts": 0.0
+        },
+        {
+          "week": 15,
+          "pts": 0.0
+        },
+        {
+          "week": 16,
+          "pts": 0.0
+        },
+        {
+          "week": 17,
+          "pts": 0.0
+        },
+        {
+          "week": 18,
+          "pts": 0.0
+        }
+      ]
+    },
+    {
+      "player": "Isaiah Stewart",
+      "weekAdded": 1,
+      "addDate": 1761235216615,
+      "ptsAfterAdd": 684.0,
+      "weeklyPoints": [
+        {
+          "week": 1,
+          "pts": 0.0
+        },
+        {
+          "week": 2,
+          "pts": 64.9
+        },
+        {
+          "week": 3,
+          "pts": 94.6
+        },
+        {
+          "week": 4,
+          "pts": 21.9
+        },
+        {
+          "week": 5,
+          "pts": 71.6
+        },
+        {
+          "week": 6,
+          "pts": 75.1
+        },
+        {
+          "week": 7,
+          "pts": 95.9
+        },
+        {
+          "week": 8,
+          "pts": 30.5
+        },
+        {
+          "week": 9,
+          "pts": 78.7
+        },
+        {
+          "week": 10,
+          "pts": 79.0
+        },
+        {
+          "week": 11,
+          "pts": 71.8
+        }
+      ]
+    },
+    {
+      "player": "Luke Kornet",
+      "weekAdded": 4,
+      "addDate": 1763053213354,
+      "ptsAfterAdd": 396.9,
+      "weeklyPoints": [
+        {
+          "week": 4,
+          "pts": 0.0
+        },
+        {
+          "week": 5,
+          "pts": 46.6
+        },
+        {
+          "week": 6,
+          "pts": 78.3
+        },
+        {
+          "week": 7,
+          "pts": 63.6
+        },
+        {
+          "week": 8,
+          "pts": 56.3
+        },
+        {
+          "week": 9,
+          "pts": 89.2
+        },
+        {
+          "week": 10,
+          "pts": 62.9
+        }
+      ]
+    },
+    {
+      "player": "Malik Monk",
+      "weekAdded": 13,
+      "addDate": 1768237229316,
+      "ptsAfterAdd": 384.7,
+      "weeklyPoints": [
+        {
+          "week": 13,
+          "pts": 92.4
+        },
+        {
+          "week": 14,
+          "pts": 109.6
+        },
+        {
+          "week": 15,
+          "pts": 34.4
+        },
+        {
+          "week": 16,
+          "pts": 42.4
+        },
+        {
+          "week": 17,
+          "pts": 47.2
+        },
+        {
+          "week": 18,
+          "pts": 58.7
+        },
+        {
+          "week": 19,
+          "pts": 0.0
+        }
+      ]
+    },
+    {
+      "player": "Christian Braun",
+      "weekAdded": 13,
+      "addDate": 1768237229316,
+      "ptsAfterAdd": 275.3,
+      "weeklyPoints": [
+        {
+          "week": 13,
+          "pts": 0.0
+        },
+        {
+          "week": 14,
+          "pts": 0.0
+        },
+        {
+          "week": 15,
+          "pts": 0.0
+        },
+        {
+          "week": 16,
+          "pts": 54.2
+        },
+        {
+          "week": 17,
+          "pts": 138.4
+        },
+        {
+          "week": 18,
+          "pts": 82.7
+        }
+      ]
+    },
+    {
+      "player": "Jonathan Kuminga",
+      "weekAdded": 13,
+      "addDate": 1768237229316,
+      "ptsAfterAdd": 166.8,
+      "weeklyPoints": [
+        {
+          "week": 13,
+          "pts": 0.0
+        },
+        {
+          "week": 14,
+          "pts": 50.2
+        },
+        {
+          "week": 15,
+          "pts": 0.0
+        },
+        {
+          "week": 16,
+          "pts": 0.0
+        },
+        {
+          "week": 17,
+          "pts": 0.0
+        },
+        {
+          "week": 18,
+          "pts": 116.6
+        }
+      ]
+    },
+    {
+      "player": "Ronald Holland II",
+      "weekAdded": 1,
+      "addDate": 1761494408263,
+      "ptsAfterAdd": 136.1,
+      "weeklyPoints": [
+        {
+          "week": 1,
+          "pts": 0.0
+        },
+        {
+          "week": 2,
+          "pts": 55.2
+        },
+        {
+          "week": 3,
+          "pts": 80.9
+        }
+      ]
+    },
+    {
+      "player": "Bruce Brown",
+      "weekAdded": 11,
+      "addDate": 1767286816729,
+      "ptsAfterAdd": 78.2,
+      "weeklyPoints": [
+        {
+          "week": 11,
+          "pts": 0.0
+        },
+        {
+          "week": 12,
+          "pts": 78.2
+        },
+        {
+          "week": 13,
+          "pts": 0.0
+        }
+      ]
+    },
+    {
+      "player": "Khris Middleton",
+      "weekAdded": 1,
+      "addDate": 1761235216615,
+      "ptsAfterAdd": 60.7,
+      "weeklyPoints": [
+        {
+          "week": 1,
+          "pts": 0.0
+        },
+        {
+          "week": 2,
+          "pts": 50.3
+        },
+        {
+          "week": 3,
+          "pts": 10.4
+        },
+        {
+          "week": 4,
+          "pts": 0.0
+        }
+      ]
+    }
+  ],
+  "scoringProfile": {
+    "PTS": {
+      "total": 8430.0,
+      "pct": 0.467
+    },
+    "AST": {
+      "total": 3180.0,
+      "pct": 0.176
+    },
+    "REB": {
+      "total": 3024.0,
+      "pct": 0.167
+    },
+    "STL": {
+      "total": 1593.0,
+      "pct": 0.088
+    },
+    "TO": {
+      "total": -1014.0,
+      "pct": -0.056
+    },
+    "BLK": {
+      "total": 828.0,
+      "pct": 0.046
+    }
+  },
+  "allPlayRecord": {
+    "wins": 59,
+    "losses": 138,
+    "winPct": 0.299
+  },
+  "rosterHeatmap": [
+    {
+      "slot": "G",
+      "player": "Desmond Bane",
+      "weeks": [
+        85.7,
+        87.9,
+        86.3,
+        136.1,
+        150.0,
+        87.0,
+        121.0,
+        89.4,
+        70.1,
+        147.8,
+        150.1,
+        113.5,
+        55.6,
+        64.3,
+        137.5,
+        90.6,
+        206.6,
+        115.7
+      ]
+    },
+    {
+      "slot": "UT",
+      "player": "Dyson Daniels",
+      "weeks": [
+        61.7,
+        139.3,
+        112.9,
+        110.6,
+        147.9,
+        111.2,
+        114.4,
+        91.5,
+        86.6,
+        61.8,
+        171.0,
+        154.4,
+        50.6,
+        97.8,
+        161.0,
+        66.6,
+        116.9,
+        121.1
+      ]
+    },
+    {
+      "slot": "F",
+      "player": "Norman Powell",
+      "weeks": [
+        126.9,
+        0,
+        116.0,
+        123.3,
+        141.1,
+        54.7,
+        104.6,
+        40.4,
+        134.2,
+        118.1,
+        146.4,
+        37.7,
+        112.9,
+        132.5,
+        50.4,
+        70.4,
+        66.0,
+        38.8
+      ]
+    },
+    {
+      "slot": "G",
+      "player": "James Harden",
+      "weeks": [
+        128.5,
+        82.3,
+        117.1,
+        239.3,
+        198.2,
+        149.5,
+        156.1,
+        41.1,
+        75.4,
+        127.5,
+        108.8,
+        129.8,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "slot": "F",
+      "player": "Santi Aldama",
+      "weeks": [
+        72.9,
+        123.0,
+        100.0,
+        98.3,
+        111.3,
+        121.3,
+        76.2,
+        39.4,
+        89.1,
+        139.8,
+        100.6,
+        109.4,
+        47.0,
+        0,
+        27.4,
+        27.2,
+        0,
+        0
+      ]
+    },
+    {
+      "slot": "UT",
+      "player": "Ace Bailey",
+      "weeks": [
+        12.7,
+        54.9,
+        42.4,
+        97.4,
+        70.1,
+        68.3,
+        89.2,
+        17.8,
+        62.0,
+        44.8,
+        0,
+        6.2,
+        92.3,
+        107.9,
+        106.2,
+        96.1,
+        112.2,
+        89.5
+      ]
+    },
+    {
+      "slot": "F/C",
+      "player": "Mark Williams",
+      "weeks": [
+        33.4,
+        143.9,
+        103.4,
+        62.0,
+        100.5,
+        81.0,
+        48.3,
+        97.1,
+        37.8,
+        106.0,
+        64.8,
+        99.4,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "slot": "UT",
+      "player": "Davion Mitchell",
+      "weeks": [
+        0,
+        0,
+        0,
+        85.3,
+        106.9,
+        75.1,
+        83.2,
+        27.9,
+        76.9,
+        45.8,
+        104.0,
+        57.2,
+        23.6,
+        48.8,
+        29.4,
+        56.5,
+        72.1,
+        57.7
+      ]
+    },
+    {
+      "slot": "G",
+      "player": "Collin Gillespie",
+      "weeks": [
+        0,
+        0,
+        65.7,
+        87.8,
+        99.6,
+        122.3,
+        63.2,
+        75.1,
+        72.7,
+        114.8,
+        132.5,
+        91.4,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "slot": "C",
+      "player": "Jalen Williams",
+      "weeks": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        76.9,
+        118.3,
+        69.9,
+        67.1,
+        131.6,
+        138.7,
+        145.4,
+        72.6,
+        0,
+        0,
+        0,
+        68.4,
+        0
+      ]
+    },
+    {
+      "slot": "UT",
+      "player": "Jordan Poole",
+      "weeks": [
+        53.3,
+        95.7,
+        19.4,
+        0,
+        0,
+        0,
+        0,
+        62.1,
+        54.6,
+        66.6,
+        119.6,
+        55.9,
+        64.3,
+        35.7,
+        0,
+        0,
+        49.4,
+        52.7
+      ]
+    },
+    {
+      "slot": "F",
+      "player": "Matas Buzelis",
+      "weeks": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        115.8,
+        95.2,
+        135.6,
+        107.7,
+        143.1,
+        122.7
+      ]
+    },
+    {
+      "slot": "F",
+      "player": "Isaiah Stewart",
+      "weeks": [
+        0,
+        64.9,
+        94.6,
+        21.9,
+        71.6,
+        75.1,
+        95.9,
+        30.5,
+        78.7,
+        79.0,
+        71.8,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "slot": "F",
+      "player": "Cam Thomas",
+      "weeks": [
+        106.5,
+        69.8,
+        38.4,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        39.6,
+        56.0,
+        48.6,
+        58.5,
+        21.6,
+        59.6,
+        9.0,
+        107.9,
+        54.4
+      ]
+    },
+    {
+      "slot": "G",
+      "player": "Josh Giddey",
+      "weeks": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        73.8,
+        147.2,
+        112.3,
+        19.3,
+        0,
+        0,
+        63.3,
+        59.0,
+        0,
+        80.4,
+        110.4
+      ]
+    },
+    {
+      "slot": "G",
+      "player": "Stephen Curry",
+      "weeks": [
+        161.6,
+        124.9,
+        41.3,
+        154.0,
+        98.5,
+        72.5,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "slot": "F",
+      "player": "Jabari Smith Jr.",
+      "weeks": [
+        50.2,
+        102.5,
+        66.7,
+        93.6,
+        68.0,
+        86.6,
+        115.5,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "slot": "G",
+      "player": "Keyonte George",
+      "weeks": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        161.9,
+        167.3,
+        82.0,
+        9.7,
+        0,
+        25.4
+      ]
+    },
+    {
+      "slot": "F/C",
+      "player": "Luke Kornet",
+      "weeks": [
+        0,
+        0,
+        0,
+        0,
+        46.6,
+        78.3,
+        63.6,
+        56.3,
+        89.2,
+        62.9,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "slot": "F",
+      "player": "RJ Barrett",
+      "weeks": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        50.9,
+        90.4,
+        63.8,
+        81.0,
+        97.0
+      ]
+    },
+    {
+      "slot": "F",
+      "player": "Ronald Holland II",
+      "weeks": [
+        0,
+        55.2,
+        80.9,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "slot": "C",
+      "player": "Yang Hansen",
+      "weeks": [
+        14.6,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "slot": "BN",
+      "player": "Malik Monk",
+      "weeks": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        92.4,
+        109.6,
+        34.4,
+        42.4,
+        47.2,
+        58.7
+      ]
+    },
+    {
+      "slot": "BN",
+      "player": "Christian Braun",
+      "weeks": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        54.2,
+        138.4,
+        82.7
+      ]
+    },
+    {
+      "slot": "BN",
+      "player": "Jonathan Kuminga",
+      "weeks": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        50.2,
+        0,
+        0,
+        0,
+        116.6
+      ]
+    },
+    {
+      "slot": "BN",
+      "player": "Dejounte Murray",
+      "weeks": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        92.5
+      ]
+    },
+    {
+      "slot": "BN",
+      "player": "Bruce Brown",
+      "weeks": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        78.2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "slot": "BN",
+      "player": "Khris Middleton",
+      "weeks": [
+        0,
+        50.3,
+        10.4,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "slot": "BN",
+      "player": "Spencer Jones",
+      "weeks": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        40.6,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "slot": "BN",
+      "player": "Jared McCain",
+      "weeks": [
+        0,
+        0,
+        0,
+        1.7,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  "pointsLeftOnBench": [
+    {
+      "week": 17,
+      "benchPlayer": "Christian Braun",
+      "benchPts": 138.4,
+      "startPlayer": "Jordan Poole",
+      "startPts": 49.4,
+      "diff": 89.0,
+      "wouldHaveWon": false,
+      "lossMargin": 208.0
+    },
+    {
+      "week": 14,
+      "benchPlayer": "Malik Monk",
+      "benchPts": 109.6,
+      "startPlayer": "Cam Thomas",
+      "startPts": 21.6,
+      "diff": 88.0,
+      "wouldHaveWon": false,
+      "lossMargin": 506.5
+    },
+    {
+      "week": 11,
+      "benchPlayer": "Davion Mitchell",
+      "benchPts": 104.0,
+      "startPlayer": "Josh Giddey",
+      "startPts": 19.3,
+      "diff": 84.7,
+      "wouldHaveWon": false,
+      "lossMargin": null
+    },
+    {
+      "week": 15,
+      "benchPlayer": "Ace Bailey",
+      "benchPts": 106.2,
+      "startPlayer": "Santi Aldama",
+      "startPts": 27.4,
+      "diff": 78.8,
+      "wouldHaveWon": false,
+      "lossMargin": 463.2
+    },
+    {
+      "week": 18,
+      "benchPlayer": "Jonathan Kuminga",
+      "benchPts": 116.6,
+      "startPlayer": "Norman Powell",
+      "startPts": 38.8,
+      "diff": 77.8,
+      "wouldHaveWon": false,
+      "lossMargin": 223.2
+    }
+  ],
+  "headToHead": [
+    {
+      "opponent": "White Cowards",
+      "wins": 1,
+      "losses": 0,
+      "avgMargin": 62,
+      "playoffWins": 0,
+      "playoffLosses": 0
+    },
+    {
+      "opponent": "Siddus Squad",
+      "wins": 1,
+      "losses": 0,
+      "avgMargin": 74,
+      "playoffWins": 0,
+      "playoffLosses": 0
+    },
+    {
+      "opponent": "It's Teague Time",
+      "wins": 1,
+      "losses": 1,
+      "avgMargin": 17,
+      "playoffWins": 0,
+      "playoffLosses": 0
+    },
+    {
+      "opponent": "Team Patel",
+      "wins": 1,
+      "losses": 1,
+      "avgMargin": -211,
+      "playoffWins": 0,
+      "playoffLosses": 0
+    },
+    {
+      "opponent": "Yash's Stout Team",
+      "wins": 0,
+      "losses": 1,
+      "avgMargin": -51,
+      "playoffWins": 0,
+      "playoffLosses": 0
+    },
+    {
+      "opponent": "The Commish",
+      "wins": 0,
+      "losses": 1,
+      "avgMargin": -346,
+      "playoffWins": 0,
+      "playoffLosses": 0
+    },
+    {
+      "opponent": "May Not Need Minott",
+      "wins": 0,
+      "losses": 1,
+      "avgMargin": -132,
+      "playoffWins": 0,
+      "playoffLosses": 0
+    },
+    {
+      "opponent": "my left nuts",
+      "wins": 1,
+      "losses": 2,
+      "avgMargin": -76,
+      "playoffWins": 0,
+      "playoffLosses": 0
+    },
+    {
+      "opponent": "paddington bear",
+      "wins": 0,
+      "losses": 2,
+      "avgMargin": -100,
+      "playoffWins": 0,
+      "playoffLosses": 0
+    },
+    {
+      "opponent": "superbum",
+      "wins": 0,
+      "losses": 2,
+      "avgMargin": -182,
+      "playoffWins": 0,
+      "playoffLosses": 0
+    },
+    {
+      "opponent": "enchant",
+      "wins": 0,
+      "losses": 2,
+      "avgMargin": -488,
+      "playoffWins": 0,
+      "playoffLosses": 0
+    }
+  ],
+  "optimalLineup": {
+    "weeklyComparison": [
+      {
+        "week": 1,
+        "actualPts": 845.1,
+        "optimalPts": 880.7,
+        "diff": 35.6
+      },
+      {
+        "week": 2,
+        "actualPts": 931.7,
+        "optimalPts": 1034.2,
+        "diff": 102.5
+      },
+      {
+        "week": 3,
+        "actualPts": 821.0,
+        "optimalPts": 943.6,
+        "diff": 122.6
+      },
+      {
+        "week": 4,
+        "actualPts": 1190.3,
+        "optimalPts": 1225.7,
+        "diff": 35.4
+      },
+      {
+        "week": 5,
+        "actualPts": 1200.6,
+        "optimalPts": 1225.6,
+        "diff": 25.0
+      },
+      {
+        "week": 6,
+        "actualPts": 949.3,
+        "optimalPts": 989.2,
+        "diff": 39.9
+      },
+      {
+        "week": 7,
+        "actualPts": 1074.4,
+        "optimalPts": 1074.4,
+        "diff": 0.0
+      },
+      {
+        "week": 8,
+        "actualPts": 648.2,
+        "optimalPts": 696.7,
+        "diff": 48.5
+      },
+      {
+        "week": 9,
+        "actualPts": 863.1,
+        "optimalPts": 920.1,
+        "diff": 57.0
+      },
+      {
+        "week": 10,
+        "actualPts": 1082.3,
+        "optimalPts": 1143.5,
+        "diff": 61.2
+      },
+      {
+        "week": 11,
+        "actualPts": 1107.2,
+        "optimalPts": 1243.5,
+        "diff": 136.3
+      },
+      {
+        "week": 12,
+        "actualPts": 985.5,
+        "optimalPts": 1034.6,
+        "diff": 49.1
+      },
+      {
+        "week": 13,
+        "actualPts": 739.2,
+        "optimalPts": 876.9,
+        "diff": 137.7
+      },
+      {
+        "week": 14,
+        "actualPts": 663.2,
+        "optimalPts": 888.8,
+        "diff": 225.6
+      },
+      {
+        "week": 15,
+        "actualPts": 743.3,
+        "optimalPts": 909.1,
+        "diff": 165.8
+      },
+      {
+        "week": 16,
+        "actualPts": 491.8,
+        "optimalPts": 675.5,
+        "diff": 183.7
+      },
+      {
+        "week": 17,
+        "actualPts": 955.2,
+        "optimalPts": 1127.0,
+        "diff": 171.8
+      },
+      {
+        "week": 18,
+        "actualPts": 749.6,
+        "optimalPts": 948.2,
+        "diff": 198.6
+      }
+    ],
+    "totalActual": 16041.0,
+    "totalOptimal": 17837.3,
+    "efficiency": 0.899
+  },
+  "awards": {
+    "mvp": {
+      "player": "Desmond Bane",
+      "totalPts": 1995.2
+    },
+    "benchWarmer": {
+      "player": "Cam Thomas",
+      "weeks": 12,
+      "totalPts": 669.9,
+      "avgPts": 55.8
+    },
+    "heartbreakLoss": {
+      "week": 6,
+      "opponent": "Yash's Stout Team",
+      "score": 949.3,
+      "oppScore": 999.9,
+      "margin": 50.6
+    },
+    "statementWin": {
+      "week": 4,
+      "opponent": "It's Teague Time",
+      "score": 1190.3,
+      "oppScore": 693.7,
+      "margin": 496.6
+    },
+    "luckyWin": {
+      "week": 11,
+      "score": 1107.2,
+      "leagueRank": 8,
+      "opponent": "my left nuts",
+      "oppScore": 904.1
+    },
+    "unluckyLoss": {
+      "week": 8,
+      "score": 648.2,
+      "leagueRank": 5,
+      "opponent": "May Not Need Minott",
+      "oppScore": 780.0
+    }
+  },
+  "grades": {
+    "drafting": "C+",
+    "trading": "F",
+    "waiverWire": "A+",
+    "luck": "D",
+    "consistency": "F",
+    "overall": "D"
+  }
+}

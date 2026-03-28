@@ -1,0 +1,16 @@
+target-version = "py312"
+line-length = 120
+src = ["data"]
+
+exclude = [
+    "data/debug_*.py",
+    "data/explore*.py",
+    "data/validate*.py",
+]
+
+[lint]
+select = ["E", "F", "W", "I"]
+
+[format]
+quote-style = "double"
+indent-style = "space"
