@@ -37,8 +37,9 @@ interface WaiverCatalogProps {
 export function WaiverCatalog({ pickups, nameMap = {}, teamGrades, enabled = true, batchKey }: WaiverCatalogProps) {
   const n = (name: string) => nameMap[name] || name;
   const { ref: gradesBatchRef } = useScrollBatch({ stagger: 0.05, enabled, key: batchKey });
-  const { ref: pickupsBatchRef } = useScrollBatch({ stagger: 0.03, enabled, key: batchKey });
   const [teamFilter, setTeamFilter] = useState<string | null>(null);
+  const [filterTick, setFilterTick] = useState(0);
+  const { ref: pickupsBatchRef } = useScrollBatch({ stagger: 0.03, enabled, key: (batchKey ?? 0) + filterTick });
   const [playerSearch, setPlayerSearch] = useState('');
   const [sortBy, setSortBy] = useState<SortKey>('pts');
   const [sortAsc, setSortAsc] = useState(false);
@@ -133,7 +134,7 @@ export function WaiverCatalog({ pickups, nameMap = {}, teamGrades, enabled = tru
         <div className="flex flex-wrap gap-2">
           <button
             type="button"
-            onClick={() => setTeamFilter(null)}
+            onClick={() => { setTeamFilter(null); setFilterTick((t) => t + 1); }}
             className={`font-mono text-xs uppercase tracking-widest px-3 py-1.5 border transition-colors ${
               !teamFilter ? 'border-gold text-gold' : 'border-border/50 text-muted-foreground hover:text-foreground'
             }`}
@@ -144,7 +145,7 @@ export function WaiverCatalog({ pickups, nameMap = {}, teamGrades, enabled = tru
             <button
               type="button"
               key={team}
-              onClick={() => setTeamFilter(teamFilter === team ? null : team)}
+              onClick={() => { setTeamFilter(teamFilter === team ? null : team); setFilterTick((t) => t + 1); }}
               className={`font-mono text-xs uppercase tracking-widest px-3 py-1.5 border transition-colors ${
                 teamFilter === team ? 'border-gold text-gold' : 'border-border/50 text-muted-foreground hover:text-foreground'
               }`}

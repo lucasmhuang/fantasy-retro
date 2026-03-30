@@ -66,9 +66,10 @@ export function DraftRetrospective({
   const [sortKey, setSortKey] = useState<SortKey>('value');
   const [sortAsc, setSortAsc] = useState(false);
   const { ref: gradesBatchRef } = useScrollBatch({ stagger: 0.05, enabled, key: batchKey });
-  const { ref: picksBatchRef } = useScrollBatch({ stagger: 0.03, enabled, key: batchKey });
-  const { ref: roundsBatchRef } = useScrollBatch({ stagger: 0.06, enabled, key: batchKey });
   const [teamFilter, setTeamFilter] = useState<string | null>(null);
+  const [filterTick, setFilterTick] = useState(0);
+  const { ref: picksBatchRef } = useScrollBatch({ stagger: 0.03, enabled, key: (batchKey ?? 0) + filterTick });
+  const { ref: roundsBatchRef } = useScrollBatch({ stagger: 0.06, enabled, key: (batchKey ?? 0) + filterTick });
 
   const maxRound = Math.max(...picks.map((p) => p.round));
   const rounds = Array.from({ length: maxRound }, (_, i) => i + 1);
@@ -240,7 +241,7 @@ export function DraftRetrospective({
           <div className="flex gap-0 border border-border/50">
             <button
               type="button"
-              onClick={() => setBoardView('round')}
+              onClick={() => { setBoardView('round'); setFilterTick((t) => t + 1); }}
               className={`font-mono text-xs uppercase tracking-widest px-3 py-1.5 transition-colors ${
                 boardView === 'round'
                   ? 'bg-gold/20 text-gold'
@@ -251,7 +252,7 @@ export function DraftRetrospective({
             </button>
             <button
               type="button"
-              onClick={() => setBoardView('value')}
+              onClick={() => { setBoardView('value'); setFilterTick((t) => t + 1); }}
               className={`font-mono text-xs uppercase tracking-widest px-3 py-1.5 border-l border-border/50 transition-colors ${
                 boardView === 'value'
                   ? 'bg-gold/20 text-gold'
@@ -325,7 +326,7 @@ export function DraftRetrospective({
               <div className="flex flex-wrap gap-2">
                 <button
                   type="button"
-                  onClick={() => setTeamFilter(null)}
+                  onClick={() => { setTeamFilter(null); setFilterTick((t) => t + 1); }}
                   className={`font-mono text-xs uppercase tracking-widest px-3 py-1.5 border transition-colors ${
                     !teamFilter
                       ? 'border-gold text-gold'
@@ -338,9 +339,10 @@ export function DraftRetrospective({
                   <button
                     type="button"
                     key={team}
-                    onClick={() =>
-                      setTeamFilter(teamFilter === team ? null : team)
-                    }
+                    onClick={() => {
+                      setTeamFilter(teamFilter === team ? null : team);
+                      setFilterTick((t) => t + 1);
+                    }}
                     className={`font-mono text-xs uppercase tracking-widest px-3 py-1.5 border transition-colors ${
                       teamFilter === team
                         ? 'border-gold text-gold'

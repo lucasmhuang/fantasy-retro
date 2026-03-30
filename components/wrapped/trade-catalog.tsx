@@ -56,7 +56,8 @@ export function TradeCatalog({ trades, replacementFPW, nameMap = {}, teamGrades,
   const [playerSearch, setPlayerSearch] = useState('');
   const [sortBy, setSortBy] = useState<SortKey>('week');
   const [sortAsc, setSortAsc] = useState(true);
-  const { ref: batchRef } = useScrollBatch({ enabled, key: batchKey });
+  const [filterTick, setFilterTick] = useState(0);
+  const { ref: batchRef } = useScrollBatch({ enabled, key: (batchKey ?? 0) + filterTick });
 
   const allTeams = useMemo(() => {
     const names = new Set<string>();
@@ -172,7 +173,7 @@ export function TradeCatalog({ trades, replacementFPW, nameMap = {}, teamGrades,
         <div className="flex flex-wrap gap-2">
           <button
             type="button"
-            onClick={() => setTeamFilter(null)}
+            onClick={() => { setTeamFilter(null); setFilterTick((t) => t + 1); }}
             className={`font-mono text-xs uppercase tracking-widest px-3 py-1.5 border transition-colors ${
               !teamFilter
                 ? 'border-gold text-gold'
@@ -185,7 +186,7 @@ export function TradeCatalog({ trades, replacementFPW, nameMap = {}, teamGrades,
             <button
               type="button"
               key={team}
-              onClick={() => setTeamFilter(teamFilter === team ? null : team)}
+              onClick={() => { setTeamFilter(teamFilter === team ? null : team); setFilterTick((t) => t + 1); }}
               className={`font-mono text-xs uppercase tracking-widest px-3 py-1.5 border transition-colors ${
                 teamFilter === team
                   ? 'border-gold text-gold'
