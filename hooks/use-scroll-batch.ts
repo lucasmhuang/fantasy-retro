@@ -27,7 +27,7 @@ export function useScrollBatch(options: UseScrollBatchOptions = {}) {
     key = 0,
   } = options
   const ref = useRef<HTMLDivElement>(null)
-  const cleanupRef = useRef<(() => void) | null>(null)
+  const hasPlayedRef = useRef(false)
 
   useLayoutEffect(() => {
     const el = ref.current
@@ -36,41 +36,39 @@ export function useScrollBatch(options: UseScrollBatchOptions = {}) {
     const children = el.querySelectorAll(childSelector)
     if (children.length === 0) return
 
-    gsap.set(children, from)
-
-    const triggers = ScrollTrigger.batch(children, {
-      onEnter: (batch) => {
-        gsap.to(batch, { ...to, stagger })
-      },
-      onEnterBack: once
-        ? undefined
-        : (batch) => {
-            gsap.to(batch, { ...to, stagger })
-          },
-      onLeave: once
-        ? undefined
-        : (batch) => {
-            gsap.set(batch, from)
-          },
-      onLeaveBack: once
-        ? undefined
-        : (batch) => {
-            gsap.set(batch, from)
-          },
-      start: 'top 85%',
-    })
-
-    const cleanup = () => {
-      if (Array.isArray(triggers)) {
-        triggers.forEach((t) => t.kill())
+    const ctx = gsap.context(() => {
+      if (hasPlayedRef.current) {
+        gsap.fromTo(children, from, { ...to, stagger })
+        return
       }
-      gsap.set(children, { clearProps: 'all' })
-    }
 
-    cleanupRef.current = cleanup
+      gsap.set(children, from)
+      ScrollTrigger.batch(children, {
+        onEnter: (batch) => {
+          gsap.to(batch, { ...to, stagger })
+          if (once) hasPlayedRef.current = true
+        },
+        onEnterBack: once
+          ? undefined
+          : (batch) => {
+              gsap.to(batch, { ...to, stagger })
+            },
+        onLeave: once
+          ? undefined
+          : (batch) => {
+              gsap.set(batch, from)
+            },
+        onLeaveBack: once
+          ? undefined
+          : (batch) => {
+              gsap.set(batch, from)
+            },
+        start: 'top 85%',
+      })
+    }, el)
 
-    return cleanup
+    return () => ctx.revert()
   }, [childSelector, stagger, once, enabled, key])
 
-  return { ref, kill: () => cleanupRef.current?.() }
+  return { ref }
 }

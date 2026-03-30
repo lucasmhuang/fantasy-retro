@@ -37,7 +37,9 @@ export default function HomePage() {
       return next;
     });
     setBatchKeys((prev) => ({ ...prev, [tab]: prev[tab] + 1 }));
-    requestAnimationFrame(() => ScrollTrigger.refresh());
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => ScrollTrigger.refresh());
+    });
   }, []);
 
   useEffect(() => {
