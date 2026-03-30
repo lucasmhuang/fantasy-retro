@@ -5822,8 +5822,8 @@
       "record": "14-4",
       "standing": 1,
       "finalPlacement": 1,
-      "pointsFor": 20926.6,
-      "pointsAgainst": 18245.3
+      "pointsFor": 20770.8,
+      "pointsAgainst": 18230.3
     },
     {
       "id": 6,
@@ -5832,8 +5832,8 @@
       "record": "10-8",
       "standing": 6,
       "finalPlacement": 2,
-      "pointsFor": 18376.6,
-      "pointsAgainst": 18466.3
+      "pointsFor": 18250.5,
+      "pointsAgainst": 18193.8
     },
     {
       "id": 2,
@@ -5842,8 +5842,8 @@
       "record": "10-8",
       "standing": 5,
       "finalPlacement": 3,
-      "pointsFor": 19885.4,
-      "pointsAgainst": 18497.6
+      "pointsFor": 19890.9,
+      "pointsAgainst": 18473.1
     },
     {
       "id": 11,
@@ -5852,8 +5852,8 @@
       "record": "12-6",
       "standing": 2,
       "finalPlacement": 4,
-      "pointsFor": 19711.7,
-      "pointsAgainst": 18083.6
+      "pointsFor": 19519.7,
+      "pointsAgainst": 17946.6
     },
     {
       "id": 1,
@@ -5862,8 +5862,8 @@
       "record": "11-7",
       "standing": 4,
       "finalPlacement": 5,
-      "pointsFor": 19831.0,
-      "pointsAgainst": 18787.2
+      "pointsFor": 19520.3,
+      "pointsAgainst": 18577.0
     },
     {
       "id": 4,
@@ -5872,18 +5872,18 @@
       "record": "11-7",
       "standing": 3,
       "finalPlacement": 6,
-      "pointsFor": 19913.3,
-      "pointsAgainst": 18745.8
+      "pointsFor": 19829.9,
+      "pointsAgainst": 18508.7
     },
     {
       "id": 10,
       "name": "White Cowards",
-      "manager": "Mike B",
+      "manager": "Michael B",
       "record": "9-9",
       "standing": 7,
       "finalPlacement": 7,
       "pointsFor": 18129.3,
-      "pointsAgainst": 18253.5
+      "pointsAgainst": 18079.2
     },
     {
       "id": 3,
@@ -5892,8 +5892,8 @@
       "record": "8-10",
       "standing": 8,
       "finalPlacement": 8,
-      "pointsFor": 17184.9,
-      "pointsAgainst": 18095.0
+      "pointsFor": 17138.7,
+      "pointsAgainst": 17940.9
     },
     {
       "id": 12,
@@ -5903,7 +5903,7 @@
       "standing": 9,
       "finalPlacement": 9,
       "pointsFor": 17211.1,
-      "pointsAgainst": 17933.9
+      "pointsAgainst": 17747.8
     },
     {
       "id": 9,
@@ -5912,8 +5912,8 @@
       "record": "6-12",
       "standing": 10,
       "finalPlacement": 10,
-      "pointsFor": 16240.9,
-      "pointsAgainst": 18020.5
+      "pointsFor": 16018.8,
+      "pointsAgainst": 18007.5
     },
     {
       "id": 7,
@@ -5922,8 +5922,8 @@
       "record": "5-13",
       "standing": 11,
       "finalPlacement": 11,
-      "pointsFor": 16060.8,
-      "pointsAgainst": 18628.0
+      "pointsFor": 16041.0,
+      "pointsAgainst": 18591.7
     },
     {
       "id": 5,
@@ -5932,8 +5932,8 @@
       "record": "5-13",
       "standing": 12,
       "finalPlacement": 12,
-      "pointsFor": 16692.1,
-      "pointsAgainst": 18407.0
+      "pointsFor": 16344.3,
+      "pointsAgainst": 18368.7
     }
   ]
 }
