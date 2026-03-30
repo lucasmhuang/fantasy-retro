@@ -6,7 +6,7 @@ __v0_jsx-dev-runtime.ts
 .v0-trash/
 .vercel/
 next.user-config.*
-
+next-env.d.ts
 notes/*
 
 # Environment variables
@@ -24,3 +24,4 @@ node_modules
 .next/
 .DS_Store
 *.tsbuildinfo
+next-env.d.ts

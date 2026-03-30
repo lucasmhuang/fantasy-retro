@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { motion, useScroll, useTransform } from 'framer-motion';
@@ -8,6 +9,7 @@ import { Users, ArrowLeftRight, Gavel, ClipboardList } from 'lucide-react';
 import { useScrollBatch } from '@/hooks/use-scroll-batch';
 import { useCountUp } from '@/hooks/use-count-up';
 import { buildNameLookup } from '@/lib/team-colors';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Marquee } from '@/components/ui/marquee';
 import { SmoothScrollProvider } from '@/components/providers/smooth-scroll-provider';
 import { DraftRetrospective } from '@/components/wrapped/draft-retrospective';
@@ -174,6 +176,7 @@ function CountUpDisplay({ value, decimals = 0, prefix = '' }: { value: number; d
 
 function HeroSection({ league }: { league: LeagueMeta }) {
   const heroRef = useRef(null)
+  const router = useRouter()
   const { scrollYProgress } = useScroll({
     target: heroRef,
     offset: ['start start', 'end start'],
@@ -213,6 +216,20 @@ function HeroSection({ league }: { league: LeagueMeta }) {
             <p className="font-mono text-xs text-muted-foreground uppercase tracking-widest">Champion</p>
           </div>
         </div>
+        <div className="mt-8">
+          <Select onValueChange={(id) => router.push(`/team/${id}`)}>
+            <SelectTrigger size="sm" className="font-mono text-[0.7rem] uppercase tracking-widest bg-transparent border-border/30 hover:border-gold/50 transition-colors w-auto px-2.5">
+              <SelectValue placeholder="Select your team" />
+            </SelectTrigger>
+            <SelectContent className="font-mono text-[0.7rem]">
+              {league.teams.map((team) => (
+                <SelectItem key={team.id} value={String(team.id)}>
+                  {team.manager}
+                </SelectItem>
+              ))}
+            </SelectContent>
+          </Select>
+        </div>
       </motion.div>
     </section>
   )
@@ -244,7 +261,7 @@ function TeamGrid({
             key={team.id}
             data-batch-item
             href={`/team/${team.id}`}
-            className="group relative bg-background p-8 transition-all duration-300 hover:bg-card"
+            className="group relative bg-background p-8 transition-all duration-300 hover:bg-card border border-border/20"
             onMouseEnter={() => setHoveredTeam(team.id)}
             onMouseLeave={() => setHoveredTeam(null)}
           >
