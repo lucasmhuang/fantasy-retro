@@ -30,12 +30,14 @@ interface WaiverCatalogProps {
   pickups: LeaguePickup[];
   nameMap?: Record<string, string>;
   teamGrades?: Record<string, WaiverGrade>;
+  enabled?: boolean;
+  batchKey?: number;
 }
 
-export function WaiverCatalog({ pickups, nameMap = {}, teamGrades }: WaiverCatalogProps) {
+export function WaiverCatalog({ pickups, nameMap = {}, teamGrades, enabled = true, batchKey }: WaiverCatalogProps) {
   const n = (name: string) => nameMap[name] || name;
-  const { ref: gradesBatchRef } = useScrollBatch({ stagger: 0.05 });
-  const { ref: pickupsBatchRef } = useScrollBatch({ stagger: 0.03 });
+  const { ref: gradesBatchRef } = useScrollBatch({ stagger: 0.05, enabled, key: batchKey });
+  const { ref: pickupsBatchRef } = useScrollBatch({ stagger: 0.03, enabled, key: batchKey });
   const [teamFilter, setTeamFilter] = useState<string | null>(null);
   const [playerSearch, setPlayerSearch] = useState('');
   const [sortBy, setSortBy] = useState<SortKey>('pts');

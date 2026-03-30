@@ -246,6 +246,18 @@ export interface LeaguePickup {
   faabBid: number;
 }
 
+export interface TradeTeamGrade {
+  team: string;
+  grade: string;
+  netPts: number;
+}
+
+export interface WaiverTeamGrade {
+  team: string;
+  grade: string;
+  totalPts: number;
+}
+
 export interface LeagueMeta {
   name: string;
   season: string;
@@ -261,4 +273,6 @@ export interface LeagueMeta {
   draftAnalysis?: DraftPick[];
   draftMeta?: DraftMeta;
   draftGrades?: Record<string, DraftTeamGrade>;
+  tradeGrades?: Record<string, TradeTeamGrade>;
+  waiverGrades?: Record<string, WaiverTeamGrade>;
 }

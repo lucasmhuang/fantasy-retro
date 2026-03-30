@@ -40,6 +40,8 @@ interface TradeCatalogProps {
   replacementFPW?: number;
   nameMap?: Record<string, string>;
   teamGrades?: Record<string, TeamGrade>;
+  enabled?: boolean;
+  batchKey?: number;
 }
 
 function CountUp({ value, decimals = 0 }: { value: number; decimals?: number }) {
@@ -47,14 +49,14 @@ function CountUp({ value, decimals = 0 }: { value: number; decimals?: number }) 
   return <span ref={ref}>{displayValue}</span>;
 }
 
-export function TradeCatalog({ trades, replacementFPW, nameMap = {}, teamGrades }: TradeCatalogProps) {
+export function TradeCatalog({ trades, replacementFPW, nameMap = {}, teamGrades, enabled = true, batchKey }: TradeCatalogProps) {
   const n = (name: string) => nameMap[name] || name;
-  const { ref: gradesBatchRef } = useScrollBatch({ stagger: 0.05 });
+  const { ref: gradesBatchRef } = useScrollBatch({ stagger: 0.05, enabled, key: batchKey });
   const [teamFilter, setTeamFilter] = useState<string | null>(null);
   const [playerSearch, setPlayerSearch] = useState('');
   const [sortBy, setSortBy] = useState<SortKey>('week');
   const [sortAsc, setSortAsc] = useState(true);
-  const { ref: batchRef } = useScrollBatch();
+  const { ref: batchRef } = useScrollBatch({ enabled, key: batchKey });
 
   const allTeams = useMemo(() => {
     const names = new Set<string>();

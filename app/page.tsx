@@ -1,7 +1,8 @@
 'use client';
 
 import Link from 'next/link';
-import { useEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { Users, ArrowLeftRight, Gavel, ClipboardList } from 'lucide-react';
 import { useScrollBatch } from '@/hooks/use-scroll-batch';
@@ -20,6 +21,22 @@ export default function HomePage() {
   const [league, setLeague] = useState<LeagueMeta | null>(null);
   const [hoveredTeam, setHoveredTeam] = useState<number | null>(null);
   const [activeTab, setActiveTab] = useState<Tab>('teams');
+  const [activatedTabs, setActivatedTabs] = useState<Set<Tab>>(new Set(['teams']));
+  const [batchKeys, setBatchKeys] = useState<Record<Tab, number>>({
+    teams: 0, trades: 0, waivers: 0, draft: 0,
+  });
+
+  const handleTabChange = useCallback((tab: Tab) => {
+    setActiveTab(tab);
+    setActivatedTabs((prev) => {
+      if (prev.has(tab)) return prev;
+      const next = new Set(prev);
+      next.add(tab);
+      return next;
+    });
+    setBatchKeys((prev) => ({ ...prev, [tab]: prev[tab] + 1 }));
+    requestAnimationFrame(() => ScrollTrigger.refresh());
+  }, []);
 
   useEffect(() => {
     fetch('/data/league_meta.json')
@@ -68,7 +85,7 @@ export default function HomePage() {
               <button
                 type="button"
                 key={tab.id}
-                onClick={() => setActiveTab(tab.id)}
+                onClick={() => handleTabChange(tab.id)}
                 className={`font-mono text-sm uppercase tracking-widest px-3 md:px-6 py-3 transition-colors duration-200 border-b-2 -mb-px ${
                   activeTab === tab.id
                     ? 'text-gold border-gold'
@@ -84,38 +101,49 @@ export default function HomePage() {
           </div>
 
           {/* Tab Content */}
-          {activeTab === 'teams' && (
+          <div hidden={activeTab !== 'teams'}>
             <TeamGrid
               teams={league.teams}
               hoveredTeam={hoveredTeam}
               setHoveredTeam={setHoveredTeam}
+              enabled={activatedTabs.has('teams')}
+              batchKey={batchKeys.teams}
             />
-          )}
+          </div>
 
-          {activeTab === 'trades' && (
+          <div hidden={activeTab !== 'trades'}>
             <TradeCatalog
               trades={league.leagueTrades || []}
               replacementFPW={league.draftMeta?.replacementFPW}
               nameMap={nameMap}
               teamGrades={league.tradeGrades}
+              enabled={activatedTabs.has('trades')}
+              batchKey={batchKeys.trades}
             />
-          )}
+          </div>
 
-          {activeTab === 'waivers' && (
-            <WaiverCatalog pickups={league.leaguePickups || []} nameMap={nameMap} teamGrades={league.waiverGrades} />
-          )}
+          <div hidden={activeTab !== 'waivers'}>
+            <WaiverCatalog
+              pickups={league.leaguePickups || []}
+              nameMap={nameMap}
+              teamGrades={league.waiverGrades}
+              enabled={activatedTabs.has('waivers')}
+              batchKey={batchKeys.waivers}
+            />
+          </div>
 
-          {activeTab === 'draft' &&
-            league.draftAnalysis &&
-            league.draftMeta &&
-            league.draftGrades && (
+          <div hidden={activeTab !== 'draft'}>
+            {league.draftAnalysis && league.draftMeta && league.draftGrades && (
               <DraftRetrospective
                 picks={league.draftAnalysis}
                 meta={league.draftMeta}
                 teamGrades={league.draftGrades}
                 nameMap={nameMap}
+                enabled={activatedTabs.has('draft')}
+                batchKey={batchKeys.draft}
               />
             )}
+          </div>
         </section>
 
         {/* Spacer */}
@@ -194,12 +222,16 @@ function TeamGrid({
   teams,
   hoveredTeam,
   setHoveredTeam,
+  enabled = true,
+  batchKey,
 }: {
   teams: LeagueMeta['teams'];
   hoveredTeam: number | null;
   setHoveredTeam: (id: number | null) => void;
+  enabled?: boolean;
+  batchKey?: number;
 }) {
-  const { ref: batchRef } = useScrollBatch({ stagger: 0.05 });
+  const { ref: batchRef } = useScrollBatch({ stagger: 0.05, enabled, key: batchKey });
   return (
     <div ref={batchRef} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-background">
       {teams.map((team) => {

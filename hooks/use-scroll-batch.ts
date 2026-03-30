@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useRef } from 'react'
+import { useLayoutEffect, useRef } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
@@ -12,6 +12,8 @@ interface UseScrollBatchOptions {
   from?: gsap.TweenVars
   to?: gsap.TweenVars
   once?: boolean
+  enabled?: boolean
+  key?: number
 }
 
 export function useScrollBatch(options: UseScrollBatchOptions = {}) {
@@ -21,12 +23,15 @@ export function useScrollBatch(options: UseScrollBatchOptions = {}) {
     from = { opacity: 0, y: 30 },
     to = { opacity: 1, y: 0, duration: 0.6, ease: 'power2.out' },
     once = true,
+    enabled = true,
+    key = 0,
   } = options
   const ref = useRef<HTMLDivElement>(null)
+  const cleanupRef = useRef<(() => void) | null>(null)
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const el = ref.current
-    if (!el) return
+    if (!el || !enabled) return
 
     const children = el.querySelectorAll(childSelector)
     if (children.length === 0) return
@@ -55,13 +60,17 @@ export function useScrollBatch(options: UseScrollBatchOptions = {}) {
       start: 'top 85%',
     })
 
-    return () => {
+    const cleanup = () => {
       if (Array.isArray(triggers)) {
         triggers.forEach((t) => t.kill())
       }
       gsap.set(children, { clearProps: 'all' })
     }
-  }, [childSelector, stagger, once])
 
-  return { ref }
+    cleanupRef.current = cleanup
+
+    return cleanup
+  }, [childSelector, stagger, once, enabled, key])
+
+  return { ref, kill: () => cleanupRef.current?.() }
 }

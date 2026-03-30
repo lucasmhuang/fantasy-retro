@@ -21,6 +21,8 @@ interface DraftRetrospectiveProps {
   picks: DraftPick[];
   meta: DraftMeta;
   teamGrades: Record<string, DraftTeamGrade>;
+  enabled?: boolean;
+  batchKey?: number;
 }
 
 const LABEL_CONFIG: Record<string, { color: string; bg: string }> = {
@@ -54,6 +56,8 @@ export function DraftRetrospective({
   meta,
   teamGrades,
   nameMap = {},
+  enabled = true,
+  batchKey,
 }: DraftRetrospectiveProps & { nameMap?: Record<string, string> }) {
   const n = (name: string) => nameMap[name] || name;
   const [expandedRound, setExpandedRound] = useState<number | null>(1);
@@ -61,9 +65,9 @@ export function DraftRetrospective({
   const [boardView, setBoardView] = useState<BoardView>('round');
   const [sortKey, setSortKey] = useState<SortKey>('value');
   const [sortAsc, setSortAsc] = useState(false);
-  const { ref: gradesBatchRef } = useScrollBatch({ stagger: 0.05 });
-  const { ref: picksBatchRef } = useScrollBatch({ stagger: 0.03 });
-  const { ref: roundsBatchRef } = useScrollBatch({ stagger: 0.06 });
+  const { ref: gradesBatchRef } = useScrollBatch({ stagger: 0.05, enabled, key: batchKey });
+  const { ref: picksBatchRef } = useScrollBatch({ stagger: 0.03, enabled, key: batchKey });
+  const { ref: roundsBatchRef } = useScrollBatch({ stagger: 0.06, enabled, key: batchKey });
   const [teamFilter, setTeamFilter] = useState<string | null>(null);
 
   const maxRound = Math.max(...picks.map((p) => p.round));
@@ -305,7 +309,6 @@ export function DraftRetrospective({
                         <DraftPickRow
                           key={pick.overall}
                           pick={pick}
-                          meta={meta}
                           nameMap={nameMap}
                         />
                       ))}
