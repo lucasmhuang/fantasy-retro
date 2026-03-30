@@ -1373,16 +1373,6 @@
   ],
   "pointsLeftOnBench": [
     {
-      "week": 9,
-      "benchPlayer": "Kel'el Ware",
-      "benchPts": 174.1,
-      "startPlayer": "Robert Williams III",
-      "startPts": 44.5,
-      "diff": 129.6,
-      "wouldHaveWon": true,
-      "lossMargin": 89.0
-    },
-    {
       "week": 19,
       "benchPlayer": "Cooper Flagg",
       "benchPts": 127.2,
@@ -1419,6 +1409,16 @@
       "startPlayer": "Ben Sheppard",
       "startPts": 37.1,
       "diff": 100.0,
+      "wouldHaveWon": false,
+      "lossMargin": null
+    },
+    {
+      "week": 17,
+      "benchPlayer": "Kel'el Ware",
+      "benchPts": 117.5,
+      "startPlayer": "Cooper Flagg",
+      "startPts": 36.0,
+      "diff": 81.5,
       "wouldHaveWon": false,
       "lossMargin": null
     }
@@ -1564,12 +1564,6 @@
         "diff": 57.2
       },
       {
-        "week": 9,
-        "actualPts": 1006.0,
-        "optimalPts": 1197.8,
-        "diff": 191.8
-      },
-      {
         "week": 10,
         "actualPts": 1071.7,
         "optimalPts": 1099.7,
@@ -1630,9 +1624,9 @@
         "diff": 88.6
       }
     ],
-    "totalActual": 21147.3,
-    "totalOptimal": 22471.8,
-    "efficiency": 0.941
+    "totalActual": 20141.3,
+    "totalOptimal": 21274.0,
+    "efficiency": 0.947
   },
   "awards": {
     "mvp": {

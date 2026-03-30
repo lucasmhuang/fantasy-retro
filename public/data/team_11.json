@@ -2553,26 +2553,6 @@
   ],
   "pointsLeftOnBench": [
     {
-      "week": 11,
-      "benchPlayer": "Jalen Johnson",
-      "benchPts": 157.4,
-      "startPlayer": "Devin Vassell",
-      "startPts": 10.8,
-      "diff": 146.6,
-      "wouldHaveWon": true,
-      "lossMargin": 19.9
-    },
-    {
-      "week": 9,
-      "benchPlayer": "Maxime Raynaud",
-      "benchPts": 111.7,
-      "startPlayer": "Donovan Mitchell",
-      "startPts": 37.7,
-      "diff": 74.0,
-      "wouldHaveWon": true,
-      "lossMargin": 51.6
-    },
-    {
       "week": 16,
       "benchPlayer": "Isaiah Collier",
       "benchPts": 158.3,
@@ -2599,6 +2579,26 @@
       "startPlayer": "Jalen Duren",
       "startPts": 73.6,
       "diff": 86.4,
+      "wouldHaveWon": false,
+      "lossMargin": null
+    },
+    {
+      "week": 12,
+      "benchPlayer": "Cam Spencer",
+      "benchPts": 138.3,
+      "startPlayer": "Nikola Jovic",
+      "startPts": 54.3,
+      "diff": 84.0,
+      "wouldHaveWon": false,
+      "lossMargin": null
+    },
+    {
+      "week": 2,
+      "benchPlayer": "Ryan Rollins",
+      "benchPts": 125.8,
+      "startPlayer": "Chet Holmgren",
+      "startPts": 43.2,
+      "diff": 82.6,
       "wouldHaveWon": false,
       "lossMargin": null
     }
@@ -2720,12 +2720,6 @@
         "diff": 39.0
       },
       {
-        "week": 5,
-        "actualPts": 1094.4,
-        "optimalPts": 1153.5,
-        "diff": 59.1
-      },
-      {
         "week": 6,
         "actualPts": 935.6,
         "optimalPts": 1124.1,
@@ -2744,22 +2738,10 @@
         "diff": 40.5
       },
       {
-        "week": 9,
-        "actualPts": 830.4,
-        "optimalPts": 984.3,
-        "diff": 153.9
-      },
-      {
         "week": 10,
         "actualPts": 1039.7,
         "optimalPts": 1087.8,
         "diff": 48.1
-      },
-      {
-        "week": 11,
-        "actualPts": 1125.7,
-        "optimalPts": 1339.8,
-        "diff": 214.1
       },
       {
         "week": 12,
@@ -2816,9 +2798,9 @@
         "diff": 36.2
       }
     ],
-    "totalActual": 20568.1,
-    "totalOptimal": 22250.8,
-    "efficiency": 0.924
+    "totalActual": 17517.6,
+    "totalOptimal": 18773.2,
+    "efficiency": 0.933
   },
   "awards": {
     "mvp": {

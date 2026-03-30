@@ -33,9 +33,9 @@ export function SectionNav({ sections, activeSection }: SectionNavProps) {
           <button
             key={section.id}
             onClick={() => scrollToSection(section.id)}
-            className={`font-mono text-[10px] tracking-widest uppercase transition-all duration-300 ${
+            className={`font-mono text-xs tracking-widest uppercase transition-all duration-300 ${
               isActive
-                ? 'text-gold translate-x-0'
+                ? 'text-team-primary translate-x-0'
                 : 'text-muted-foreground/40 hover:text-muted-foreground translate-x-2'
             }`}
           >

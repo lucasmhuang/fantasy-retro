@@ -1,13 +1,16 @@
 'use client'
 
 import { useState, useMemo } from 'react'
+import { createPortal } from 'react-dom'
 import { RosterRow, WeeklyResult } from '@/lib/types'
 import { ChevronDown, ChevronUp } from 'lucide-react'
 import { ParallaxNumber } from '@/components/ui/parallax-number'
+import { useScrollBatch } from '@/hooks/use-scroll-batch'
 
 interface RosterHeatmapProps {
   heatmap: RosterRow[]
   weeklyResults: WeeklyResult[]
+  nameMap?: Record<string, string>
 }
 
 type HoverData = {
@@ -18,10 +21,11 @@ type HoverData = {
   opponent: string
 } | null
 
-export function RosterHeatmap({ heatmap, weeklyResults }: RosterHeatmapProps) {
+export function RosterHeatmap({ heatmap, weeklyResults, nameMap = {} }: RosterHeatmapProps) {
   const [showAll, setShowAll] = useState(false)
   const [hovered, setHovered] = useState<HoverData>(null)
   const [tooltipPos, setTooltipPos] = useState({ x: 0, y: 0 })
+  const { ref: batchRef } = useScrollBatch({ childSelector: '[data-batch-item]', stagger: 0.04 })
 
   const allValues = heatmap.flatMap(row => row.weeks.filter(v => v > 0))
   const maxValue = Math.max(...allValues)
@@ -63,13 +67,13 @@ export function RosterHeatmap({ heatmap, weeklyResults }: RosterHeatmapProps) {
   return (
     <section className="relative min-h-screen px-6 py-24 md:px-12 lg:px-24">
       <div className="mb-16">
-        <ParallaxNumber className="font-mono text-6xl md:text-8xl font-bold text-muted-foreground/10">
+        <ParallaxNumber gradient className="font-mono text-6xl md:text-8xl font-bold text-muted-foreground/10">
           04
         </ParallaxNumber>
         <h2 className="font-mono text-3xl md:text-4xl font-bold tracking-tight text-foreground uppercase -mt-8 md:-mt-12">
           Roster Heatmap
         </h2>
-        <p className="font-mono text-sm text-muted-foreground mt-2">
+        <p className="font-mono text-base text-muted-foreground mt-2">
           Every player, every week. Color intensity = fantasy points.
         </p>
       </div>
@@ -93,19 +97,21 @@ export function RosterHeatmap({ heatmap, weeklyResults }: RosterHeatmapProps) {
         </div>
       </div>
 
+      {hovered && typeof document !== 'undefined' && createPortal(
+        <div
+          className="fixed z-50 pointer-events-none px-3 py-2 bg-card border border-border shadow-xl"
+          style={{ left: tooltipPos.x + 12, top: tooltipPos.y - 60 }}
+        >
+          <p className="font-mono text-xs font-bold text-foreground">{hovered.player}</p>
+          <p className="font-mono text-xs text-muted-foreground">Week {hovered.week} · {nameMap[hovered.opponent] || hovered.opponent}</p>
+          <p className={`font-mono text-sm font-bold ${hovered.pts === 0 ? 'text-muted-foreground' : 'text-gold'}`}>
+            {hovered.pts === 0 ? 'Inactive' : `${hovered.pts.toFixed(1)} pts`}
+          </p>
+        </div>,
+        document.body
+      )}
+
       <div className="overflow-x-auto relative">
-        {hovered && (
-          <div
-            className="fixed z-50 pointer-events-none px-3 py-2 bg-card border border-border shadow-xl"
-            style={{ left: tooltipPos.x + 12, top: tooltipPos.y - 60 }}
-          >
-            <p className="font-mono text-xs font-bold text-foreground">{hovered.player}</p>
-            <p className="font-mono text-[10px] text-muted-foreground">Week {hovered.week} · {hovered.opponent}</p>
-            <p className={`font-mono text-sm font-bold ${hovered.pts === 0 ? 'text-muted-foreground' : 'text-gold'}`}>
-              {hovered.pts === 0 ? 'Inactive' : `${hovered.pts.toFixed(1)} pts`}
-            </p>
-          </div>
-        )}
 
         <div className="min-w-[900px]">
           <div className="flex items-center mb-2">
@@ -114,7 +120,7 @@ export function RosterHeatmap({ heatmap, weeklyResults }: RosterHeatmapProps) {
             <div className="flex-1 flex">
               {weeklyResults.map((week) => (
                 <div key={week.week} className="flex-1 min-w-[28px] text-center">
-                  <span className={`font-mono text-[10px] ${
+                  <span className={`font-mono text-xs ${
                     week.result === 'W' ? 'text-win' : 'text-loss'
                   }`}>
                     {week.week}
@@ -123,14 +129,15 @@ export function RosterHeatmap({ heatmap, weeklyResults }: RosterHeatmapProps) {
               ))}
             </div>
             <div className="w-16 shrink-0 text-right">
-              <span className="font-mono text-[10px] text-muted-foreground">Total</span>
+              <span className="font-mono text-xs text-muted-foreground">Total</span>
             </div>
           </div>
 
-          <div className="space-y-px">
+          <div ref={batchRef} className="space-y-px">
             {displayedRows.map((row, index) => (
               <div
                 key={index}
+                data-batch-item
                 className="flex items-center group hover:bg-card/50 transition-colors"
               >
                 <div className="w-32 shrink-0 pr-2">
@@ -140,7 +147,7 @@ export function RosterHeatmap({ heatmap, weeklyResults }: RosterHeatmapProps) {
                 </div>
 
                 <div className="w-10 shrink-0">
-                  <span className={`font-mono text-[10px] font-bold uppercase ${getSlotColor(row.slot)}`}>
+                  <span className={`font-mono text-xs font-bold uppercase ${getSlotColor(row.slot)}`}>
                     {row.slot}
                   </span>
                 </div>

@@ -13,7 +13,7 @@ export function BenchMisplays({ misplays }: BenchMisplaysProps) {
     return (
       <section className="relative min-h-[60vh] px-6 py-24 md:px-12 lg:px-24 flex flex-col justify-center">
         <div className="mb-16">
-          <ParallaxNumber className="font-mono text-6xl md:text-8xl font-bold text-muted-foreground/10">
+          <ParallaxNumber gradient className="font-mono text-6xl md:text-8xl font-bold text-muted-foreground/10">
             08
           </ParallaxNumber>
           <h2 className="font-mono text-3xl md:text-4xl font-bold tracking-tight text-foreground uppercase -mt-8 md:-mt-12">
@@ -47,13 +47,13 @@ export function BenchMisplays({ misplays }: BenchMisplaysProps) {
     <section className="relative min-h-screen px-6 py-24 md:px-12 lg:px-24">
       {/* Section Header */}
       <div className="mb-16">
-        <ParallaxNumber className="font-mono text-6xl md:text-8xl font-bold text-muted-foreground/10">
+        <ParallaxNumber gradient className="font-mono text-6xl md:text-8xl font-bold text-muted-foreground/10">
           08
         </ParallaxNumber>
         <h2 className="font-mono text-3xl md:text-4xl font-bold tracking-tight text-foreground uppercase -mt-8 md:-mt-12">
           Bench Misplays
         </h2>
-        <p className="font-mono text-sm text-muted-foreground mt-2">
+        <p className="font-mono text-base text-muted-foreground mt-2">
           The ones that got away. Points left on the bench when it mattered.
         </p>
       </div>
@@ -144,7 +144,7 @@ export function BenchMisplays({ misplays }: BenchMisplaysProps) {
                     Week {misplay.week}
                   </p>
                   {misplay.wouldHaveWon && (
-                    <span className="inline-flex items-center gap-1 px-2 py-1 bg-win text-background font-mono text-[10px] font-bold uppercase tracking-wider">
+                    <span className="inline-flex items-center gap-1 px-2 py-1 bg-win text-background font-mono text-xs font-bold uppercase tracking-wider">
                       <Skull className="w-3 h-3" />
                       Would Have Won
                     </span>

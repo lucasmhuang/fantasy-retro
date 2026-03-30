@@ -1,9 +1,13 @@
 'use client'
 
+import { useState, useCallback, useEffect, useRef } from 'react'
+import { useChartTooltip } from '@/hooks/use-chart-tooltip'
+import { ChartTooltipPortal } from '@/components/ui/chart-tooltip-portal'
 import { ScoringProfile as ScoringProfileType } from '@/lib/types'
 import { RadarChart, PolarGrid, PolarAngleAxis, Radar, ResponsiveContainer, Tooltip } from 'recharts'
 import { TrendingUp, TrendingDown, Minus } from 'lucide-react'
 import { ParallaxNumber } from '@/components/ui/parallax-number'
+import { useScrollPin } from '@/hooks/use-scroll-pin'
 
 interface ScoringProfileProps {
   profile: ScoringProfileType
@@ -11,6 +15,27 @@ interface ScoringProfileProps {
 }
 
 export function ScoringProfile({ profile, leagueAvg }: ScoringProfileProps) {
+  const [radarScale, setRadarScale] = useState(0)
+  const [breakdownReveal, setBreakdownReveal] = useState(0)
+  const [teamColor, setTeamColor] = useState('oklch(0.80 0.18 85)')
+  const colorRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    if (!colorRef.current) return
+    const raw = getComputedStyle(colorRef.current).getPropertyValue('--team-primary').trim()
+    if (raw) setTeamColor(raw)
+  }, [])
+
+  const onProgress = useCallback((p: number) => {
+    setRadarScale(Math.min(p / 0.5, 1))
+    setBreakdownReveal(Math.max(0, Math.min((p - 0.4) / 0.3, 1)))
+  }, [])
+
+  const { ref: pinRef } = useScrollPin({
+    endOffset: '+=100%',
+    onProgress,
+  })
+  const { pos: tooltipPos, onMouseMove: onChartMouseMove } = useChartTooltip()
   const categories = ['PTS', 'REB', 'AST', 'STL', 'BLK'] // Exclude TO for radar
   
   const radarData = categories.map(cat => {
@@ -18,9 +43,10 @@ export function ScoringProfile({ profile, leagueAvg }: ScoringProfileProps) {
     const leagueRaw = leagueAvg[cat] * 100
     const diff = youRaw - leagueRaw
     const scaledYou = 50 + diff * 8
+    const finalYou = Math.max(5, Math.min(95, scaledYou))
     return {
       category: cat,
-      you: Math.max(5, Math.min(95, scaledYou)),
+      you: 50 + (finalYou - 50) * radarScale,
       league: 50,
       youRaw,
       leagueRaw,
@@ -62,21 +88,21 @@ export function ScoringProfile({ profile, leagueAvg }: ScoringProfileProps) {
   const belowAvg = comparisons.filter(c => c.diff < -0.5 && c.category !== 'TO')
 
   return (
-    <section className="relative min-h-screen px-6 py-24 md:px-12 lg:px-24">
+    <section ref={(el) => { (pinRef as React.MutableRefObject<HTMLDivElement | null>).current = el; (colorRef as React.MutableRefObject<HTMLDivElement | null>).current = el; }} className="relative min-h-screen px-6 py-24 md:px-12 lg:px-24">
       {/* Section Header */}
       <div className="mb-16">
-        <ParallaxNumber className="font-mono text-6xl md:text-8xl font-bold text-muted-foreground/10">
+        <ParallaxNumber gradient className="font-mono text-6xl md:text-8xl font-bold text-muted-foreground/10">
           05
         </ParallaxNumber>
         <h2 className="font-mono text-3xl md:text-4xl font-bold tracking-tight text-foreground uppercase -mt-8 md:-mt-12">
           Scoring Profile
         </h2>
-        <p className="font-mono text-sm text-muted-foreground mt-2">
+        <p className="font-mono text-base text-muted-foreground mt-2">
           Where your fantasy points came from, vs league average.
         </p>
       </div>
 
-      <div className="grid lg:grid-cols-2 gap-12">
+      <div className="grid lg:grid-cols-2 gap-12" onMouseMove={onChartMouseMove}>
         {/* Radar Chart */}
         <div className="h-[400px] lg:h-[500px]">
           <ResponsiveContainer width="100%" height="100%">
@@ -99,7 +125,7 @@ export function ScoringProfile({ profile, leagueAvg }: ScoringProfileProps) {
                   if (!active || !payload || !payload[0]) return null
                   const data = payload[0].payload
                   return (
-                    <div className="bg-card border border-border px-4 py-3">
+                    <ChartTooltipPortal active pos={tooltipPos}>
                       <p className="font-mono text-sm text-foreground font-bold mb-2">{data.fullName}</p>
                       <div className="space-y-1">
                         <p className="font-mono text-xs">
@@ -114,7 +140,7 @@ export function ScoringProfile({ profile, leagueAvg }: ScoringProfileProps) {
                           {data.youRaw > data.leagueRaw ? '+' : ''}{(data.youRaw - data.leagueRaw).toFixed(1)}% vs avg
                         </p>
                       </div>
-                    </div>
+                    </ChartTooltipPortal>
                   )
                 }}
               />
@@ -131,8 +157,8 @@ export function ScoringProfile({ profile, leagueAvg }: ScoringProfileProps) {
               <Radar
                 name="You"
                 dataKey="you"
-                stroke="oklch(0.80 0.18 85)"
-                fill="oklch(0.80 0.18 85)"
+                stroke={teamColor}
+                fill={teamColor}
                 fillOpacity={0.2}
                 strokeWidth={2}
               />
@@ -141,7 +167,7 @@ export function ScoringProfile({ profile, leagueAvg }: ScoringProfileProps) {
         </div>
 
         {/* Category Breakdown */}
-        <div className="space-y-6">
+        <div className="space-y-6" style={{ opacity: breakdownReveal, transform: `translateY(${(1 - breakdownReveal) * 20}px)` }}>
           {/* Legend */}
           <div className="flex items-center gap-6 mb-8">
             <div className="flex items-center gap-2">
@@ -153,7 +179,7 @@ export function ScoringProfile({ profile, leagueAvg }: ScoringProfileProps) {
               <span className="font-mono text-xs text-muted-foreground">League Average (circle)</span>
             </div>
           </div>
-          <p className="font-mono text-[10px] text-muted-foreground/60 -mt-4 mb-4">Differences are amplified for visibility. Hover for exact values.</p>
+          <p className="font-mono text-xs text-muted-foreground/60 -mt-4 mb-4">Differences are amplified for visibility. Hover for exact values.</p>
 
           {/* Above Average */}
           {aboveAvg.length > 0 && (
@@ -166,7 +192,7 @@ export function ScoringProfile({ profile, leagueAvg }: ScoringProfileProps) {
                 {aboveAvg.map(comp => (
                   <div key={comp.category} className="flex items-center justify-between p-4 border border-win/30 bg-win/5">
                     <div>
-                      <p className="font-mono text-lg font-bold text-foreground">{comp.fullName}</p>
+                      <p className="font-mono text-lg font-semibold text-foreground">{comp.fullName}</p>
                       <p className="font-mono text-xs text-muted-foreground">{comp.total.toFixed(1)} total pts</p>
                     </div>
                     <div className="text-right">
@@ -192,7 +218,7 @@ export function ScoringProfile({ profile, leagueAvg }: ScoringProfileProps) {
                 {belowAvg.map(comp => (
                   <div key={comp.category} className="flex items-center justify-between p-4 border border-loss/30 bg-loss/5">
                     <div>
-                      <p className="font-mono text-lg font-bold text-foreground">{comp.fullName}</p>
+                      <p className="font-mono text-lg font-semibold text-foreground">{comp.fullName}</p>
                       <p className="font-mono text-xs text-muted-foreground">{comp.total.toFixed(1)} total pts</p>
                     </div>
                     <div className="text-right">

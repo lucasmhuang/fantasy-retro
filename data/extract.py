@@ -60,6 +60,28 @@ MATCHUP_DATES = [
 
 BENCH_SLOTS = frozenset({"BE", "Bench", "BN", "IR"})
 
+# LM score adjustments confirmed from league adjustment records.
+# Weeks where the LM manually adjusted a team's matchup score (injury subs).
+# These weeks are excluded from bench misplays and optimal lineup calculations
+# because the box_cache stores pre-adjustment scores that don't reflect the
+# actual final matchup result.
+ADJUSTED_WEEKS = frozenset({
+    (5, 2), (7, 2),                                     # Week 2
+    (3, 3), (5, 3), (6, 3),                              # Week 3
+    (1, 4), (5, 4), (6, 4),                              # Week 4
+    (2, 5), (5, 5), (6, 5), (11, 5),                     # Week 5
+    (5, 6), (6, 6),                                       # Week 6
+    (5, 7), (9, 7),                                       # Week 7
+    (1, 8), (6, 8), (9, 8),                               # Week 8
+    (1, 9), (4, 9), (8, 9), (11, 9),                      # Week 9
+    (1, 10), (5, 10), (6, 10), (8, 10), (9, 10),          # Week 10
+    (1, 11), (5, 11), (11, 11),                            # Week 11
+    (2, 12),                                               # Week 12
+    (2, 13),                                               # Week 13
+    (2, 14), (6, 14), (9, 14),                             # Week 14
+    (1, 15), (6, 15),                                      # Week 15
+})  # 38 (team_id, week) pairs across 14 weeks
+
 ESPN_STAT_ID_MAP = {
     0: "PTS",
     1: "BLK",
@@ -1293,15 +1315,9 @@ def extract_roster_heatmap(team_id, box_cache, total_weeks):
 # ---------------------------------------------------------------------------
 
 
-def _week_has_adjustment(team_id, box_cache, week):
-    """Detect if a week had manual point adjustments (starter sum != team score)."""
-    for box in box_cache.get(week, []):
-        lineup, team_score, _, _ = find_team_in_matchup(box, team_id)
-        if lineup is None or team_score is None:
-            continue
-        starter_sum = sum(p.points or 0 for p in lineup if p.slot_position not in BENCH_SLOTS)
-        return abs(starter_sum - team_score) > 1.0
-    return False
+def _week_has_adjustment(team_id, week):
+    """Check if a (team, week) pair had an LM score adjustment."""
+    return (team_id, week) in ADJUSTED_WEEKS
 
 
 def extract_bench_points(team_id, box_cache, weekly_results, reg_weeks):
@@ -1313,7 +1329,7 @@ def extract_bench_points(team_id, box_cache, weekly_results, reg_weeks):
             loss_margins[w["week"]] = round(w["oppScore"] - w["score"], 1)
 
     for week in range(1, reg_weeks + 1):
-        if _week_has_adjustment(team_id, box_cache, week):
+        if _week_has_adjustment(team_id, week):
             continue
 
         for box in box_cache.get(week, []):
@@ -1501,7 +1517,7 @@ def extract_optimal_lineup(team_id, box_cache, reg_weeks):
     total_actual, total_optimal = 0.0, 0.0
 
     for week in range(1, reg_weeks + 1):
-        if _week_has_adjustment(team_id, box_cache, week):
+        if _week_has_adjustment(team_id, week):
             continue
         optimal, actual = compute_optimal_lineup(team_id, box_cache, week)
         weekly.append(

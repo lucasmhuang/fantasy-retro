@@ -2143,26 +2143,6 @@
   ],
   "pointsLeftOnBench": [
     {
-      "week": 8,
-      "benchPlayer": "Stephen Curry",
-      "benchPts": 114.1,
-      "startPlayer": "Cade Cunningham",
-      "startPts": 36.2,
-      "diff": 77.9,
-      "wouldHaveWon": true,
-      "lossMargin": 66.4
-    },
-    {
-      "week": 4,
-      "benchPlayer": "Kyshawn George",
-      "benchPts": 111.4,
-      "startPlayer": "Jalen Duren",
-      "startPts": 41.3,
-      "diff": 70.1,
-      "wouldHaveWon": true,
-      "lossMargin": 44.9
-    },
-    {
       "week": 14,
       "benchPlayer": "Jusuf Nurkic",
       "benchPts": 199.1,
@@ -2183,14 +2163,34 @@
       "lossMargin": null
     },
     {
-      "week": 11,
-      "benchPlayer": "Matas Buzelis",
-      "benchPts": 132.6,
-      "startPlayer": "Jusuf Nurkic",
-      "startPts": 44.6,
-      "diff": 88.0,
+      "week": 1,
+      "benchPlayer": "Kyshawn George",
+      "benchPts": 128.1,
+      "startPlayer": "Brandin Podziemski",
+      "startPts": 56.5,
+      "diff": 71.6,
       "wouldHaveWon": false,
-      "lossMargin": 226.8
+      "lossMargin": null
+    },
+    {
+      "week": 19,
+      "benchPlayer": "Scoot Henderson",
+      "benchPts": 68.7,
+      "startPlayer": "Moses Moody",
+      "startPts": 17.1,
+      "diff": 51.6,
+      "wouldHaveWon": false,
+      "lossMargin": 262.7
+    },
+    {
+      "week": 16,
+      "benchPlayer": "Justin Champagnie",
+      "benchPts": 99.4,
+      "startPlayer": "Domantas Sabonis",
+      "startPts": 48.5,
+      "diff": 50.9,
+      "wouldHaveWon": false,
+      "lossMargin": null
     }
   ],
   "headToHead": [
@@ -2304,12 +2304,6 @@
         "diff": 56.7
       },
       {
-        "week": 4,
-        "actualPts": 1047.4,
-        "optimalPts": 1167.4,
-        "diff": 120.0
-      },
-      {
         "week": 5,
         "actualPts": 1122.9,
         "optimalPts": 1265.9,
@@ -2328,24 +2322,6 @@
         "diff": 44.9
       },
       {
-        "week": 8,
-        "actualPts": 418.2,
-        "optimalPts": 590.1,
-        "diff": 171.9
-      },
-      {
-        "week": 9,
-        "actualPts": 1095.0,
-        "optimalPts": 1095.0,
-        "diff": 0.0
-      },
-      {
-        "week": 11,
-        "actualPts": 996.8,
-        "optimalPts": 1169.8,
-        "diff": 173.0
-      },
-      {
         "week": 12,
         "actualPts": 1258.4,
         "optimalPts": 1305.5,
@@ -2362,12 +2338,6 @@
         "actualPts": 1110.4,
         "optimalPts": 1297.1,
         "diff": 186.7
-      },
-      {
-        "week": 15,
-        "actualPts": 1111.5,
-        "optimalPts": 1199.8,
-        "diff": 88.3
       },
       {
         "week": 16,
@@ -2394,9 +2364,9 @@
         "diff": 52.0
       }
     ],
-    "totalActual": 19125.7,
-    "totalOptimal": 20680.2,
-    "efficiency": 0.925
+    "totalActual": 14456.8,
+    "totalOptimal": 15458.1,
+    "efficiency": 0.935
   },
   "awards": {
     "mvp": {

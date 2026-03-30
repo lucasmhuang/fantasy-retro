@@ -5,19 +5,22 @@ import { WaiverPickup } from '@/lib/types'
 import { ChevronDown, ChevronUp, Star } from 'lucide-react'
 import { BarChart, Bar, XAxis, YAxis, ResponsiveContainer, Cell, Tooltip } from 'recharts'
 import { ParallaxNumber } from '@/components/ui/parallax-number'
+import { useChartTooltip } from '@/hooks/use-chart-tooltip'
+import { ChartTooltipPortal } from '@/components/ui/chart-tooltip-portal'
 
 interface WaiverWireProps {
   pickups: WaiverPickup[]
 }
 
 export function WaiverWire({ pickups }: WaiverWireProps) {
+  const { pos: tooltipPos, onMouseMove: onChartMouseMove } = useChartTooltip()
   const [expandedPickup, setExpandedPickup] = useState<number | null>(null)
 
   if (pickups.length === 0) {
     return (
       <section className="relative min-h-[60vh] px-6 py-24 md:px-12 lg:px-24 flex flex-col justify-center">
         <div className="mb-16">
-          <ParallaxNumber className="font-mono text-6xl md:text-8xl font-bold text-muted-foreground/10">
+          <ParallaxNumber gradient className="font-mono text-6xl md:text-8xl font-bold text-muted-foreground/10">
             03
           </ParallaxNumber>
           <h2 className="font-mono text-3xl md:text-4xl font-bold tracking-tight text-foreground uppercase -mt-8 md:-mt-12">
@@ -47,13 +50,13 @@ export function WaiverWire({ pickups }: WaiverWireProps) {
     <section className="relative min-h-screen px-6 py-24 md:px-12 lg:px-24">
       {/* Section Header */}
       <div className="mb-16">
-        <ParallaxNumber className="font-mono text-6xl md:text-8xl font-bold text-muted-foreground/10">
+        <ParallaxNumber gradient className="font-mono text-6xl md:text-8xl font-bold text-muted-foreground/10">
           03
         </ParallaxNumber>
         <h2 className="font-mono text-3xl md:text-4xl font-bold tracking-tight text-foreground uppercase -mt-8 md:-mt-12">
           Waiver Wire
         </h2>
-        <p className="font-mono text-sm text-muted-foreground mt-2">
+        <p className="font-mono text-base text-muted-foreground mt-2">
           {pickups.length} pickup{pickups.length !== 1 ? "s" : ""} that made an impact.
         </p>
       </div>
@@ -101,30 +104,30 @@ export function WaiverWire({ pickups }: WaiverWireProps) {
         </div>
 
         {/* MVP Weekly Chart */}
-        <div className="h-[150px] mt-6">
+        <div className="h-[150px] mt-6" onMouseMove={onChartMouseMove}>
           <ResponsiveContainer width="100%" height="100%">
             <BarChart data={mvpPickup.weeklyPoints}>
               <XAxis
                 dataKey="week"
                 axisLine={false}
                 tickLine={false}
-                tick={{ fill: 'oklch(0.60 0 0)', fontSize: 10, fontFamily: 'var(--font-barlow-condensed)' }}
+                tick={{ fill: 'oklch(0.60 0 0)', fontSize: 12, fontFamily: 'var(--font-barlow-condensed)' }}
                 tickFormatter={(value) => `W${value}`}
               />
               <YAxis
                 axisLine={false}
                 tickLine={false}
-                tick={{ fill: 'oklch(0.60 0 0)', fontSize: 10, fontFamily: 'var(--font-barlow-condensed)' }}
+                tick={{ fill: 'oklch(0.60 0 0)', fontSize: 12, fontFamily: 'var(--font-barlow-condensed)' }}
               />
               <Tooltip
                 content={({ active, payload }) => {
                   if (!active || !payload || !payload[0]) return null
                   const data = payload[0].payload
                   return (
-                    <div className="bg-card border border-border px-3 py-2">
+                    <ChartTooltipPortal active pos={tooltipPos}>
                       <p className="font-mono text-xs text-muted-foreground">Week {data.week}</p>
                       <p className="font-mono text-lg font-bold text-gold">{data.pts.toFixed(1)}</p>
-                    </div>
+                    </ChartTooltipPortal>
                   )
                 }}
               />
@@ -157,13 +160,13 @@ export function WaiverWire({ pickups }: WaiverWireProps) {
                         {pickup.player}
                       </h3>
                     </div>
-                    <div className="text-right">
-                      <p className="font-mono text-2xl font-bold text-win">
+                    <div className="text-right flex items-baseline gap-4">
+                      <span className="font-mono text-sm text-muted-foreground border border-border px-2 py-0.5">
+                        {avgPts.toFixed(1)} avg/wk
+                      </span>
+                      <span className="font-mono text-2xl font-bold text-win">
                         +{pickup.ptsAfterAdd.toFixed(1)}
-                      </p>
-                      <p className="font-mono text-xs text-muted-foreground">
-                        {avgPts.toFixed(1)} avg
-                      </p>
+                      </span>
                     </div>
                   </div>
 
@@ -178,30 +181,40 @@ export function WaiverWire({ pickups }: WaiverWireProps) {
 
                 {isExpanded && (
                   <div className="px-6 pb-6 border-t border-border">
-                    <div className="h-[120px] mt-4">
+                    <div className="flex items-center gap-4 mt-4 mb-2">
+                      <div className="flex items-center gap-1.5">
+                        <div className="w-3 h-3 bg-win" />
+                        <span className="font-mono text-xs text-muted-foreground">Above avg</span>
+                      </div>
+                      <div className="flex items-center gap-1.5">
+                        <div className="w-3 h-3" style={{ background: 'oklch(0.40 0 0)' }} />
+                        <span className="font-mono text-xs text-muted-foreground">Below avg</span>
+                      </div>
+                    </div>
+                    <div className="h-[120px]" onMouseMove={onChartMouseMove}>
                       <ResponsiveContainer width="100%" height="100%">
                         <BarChart data={pickup.weeklyPoints}>
                           <XAxis
                             dataKey="week"
                             axisLine={false}
                             tickLine={false}
-                            tick={{ fill: 'oklch(0.60 0 0)', fontSize: 10, fontFamily: 'var(--font-barlow-condensed)' }}
+                            tick={{ fill: 'oklch(0.60 0 0)', fontSize: 12, fontFamily: 'var(--font-barlow-condensed)' }}
                             tickFormatter={(value) => `W${value}`}
                           />
                           <YAxis
                             axisLine={false}
                             tickLine={false}
-                            tick={{ fill: 'oklch(0.60 0 0)', fontSize: 10, fontFamily: 'var(--font-barlow-condensed)' }}
+                            tick={{ fill: 'oklch(0.60 0 0)', fontSize: 12, fontFamily: 'var(--font-barlow-condensed)' }}
                           />
                           <Tooltip
                             content={({ active, payload }) => {
                               if (!active || !payload || !payload[0]) return null
                               const data = payload[0].payload
                               return (
-                                <div className="bg-card border border-border px-3 py-2">
+                                <ChartTooltipPortal active pos={tooltipPos}>
                                   <p className="font-mono text-xs text-muted-foreground">Week {data.week}</p>
                                   <p className="font-mono text-lg font-bold text-foreground">{data.pts.toFixed(1)}</p>
-                                </div>
+                                </ChartTooltipPortal>
                               )
                             }}
                           />

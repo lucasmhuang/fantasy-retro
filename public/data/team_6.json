@@ -3157,16 +3157,6 @@
       "lossMargin": 254.4
     },
     {
-      "week": 10,
-      "benchPlayer": "Karl-Anthony Towns",
-      "benchPts": 141.9,
-      "startPlayer": "Jock Landale",
-      "startPts": 57.6,
-      "diff": 84.3,
-      "wouldHaveWon": false,
-      "lossMargin": 105.3
-    },
-    {
       "week": 18,
       "benchPlayer": "Moussa Diabate",
       "benchPts": 112.8,
@@ -3177,22 +3167,32 @@
       "lossMargin": 156.3
     },
     {
-      "week": 4,
-      "benchPlayer": "Derrick Jones Jr.",
-      "benchPts": 95.2,
-      "startPlayer": "Jonathan Kuminga",
-      "startPts": 24.4,
-      "diff": 70.8,
+      "week": 16,
+      "benchPlayer": "Austin Reaves",
+      "benchPts": 103.5,
+      "startPlayer": "Sam Hauser",
+      "startPts": 37.6,
+      "diff": 65.9,
       "wouldHaveWon": false,
-      "lossMargin": 238.3
+      "lossMargin": 296.5
     },
     {
-      "week": 6,
-      "benchPlayer": "Brandon Miller",
-      "benchPts": 90.7,
-      "startPlayer": "Isaiah Hartenstein",
-      "startPts": 32.4,
-      "diff": 58.3,
+      "week": 1,
+      "benchPlayer": "Jonathan Kuminga",
+      "benchPts": 93.4,
+      "startPlayer": "Brandon Miller",
+      "startPts": 44.0,
+      "diff": 49.4,
+      "wouldHaveWon": false,
+      "lossMargin": null
+    },
+    {
+      "week": 11,
+      "benchPlayer": "Isaiah Collier",
+      "benchPts": 98.9,
+      "startPlayer": "Moussa Diabate",
+      "startPts": 54.4,
+      "diff": 44.5,
       "wouldHaveWon": false,
       "lossMargin": null
     }
@@ -3302,40 +3302,16 @@
         "diff": 17.3
       },
       {
-        "week": 4,
-        "actualPts": 984.2,
-        "optimalPts": 1069.3,
-        "diff": 85.1
-      },
-      {
-        "week": 5,
-        "actualPts": 972.7,
-        "optimalPts": 1028.2,
-        "diff": 55.5
-      },
-      {
-        "week": 6,
-        "actualPts": 1143.7,
-        "optimalPts": 1202.0,
-        "diff": 58.3
-      },
-      {
-        "week": 8,
-        "actualPts": 484.6,
-        "optimalPts": 585.4,
-        "diff": 100.8
+        "week": 7,
+        "actualPts": 951.9,
+        "optimalPts": 1010.1,
+        "diff": 58.2
       },
       {
         "week": 9,
         "actualPts": 1002.0,
         "optimalPts": 1012.4,
         "diff": 10.4
-      },
-      {
-        "week": 10,
-        "actualPts": 948.8,
-        "optimalPts": 1107.7,
-        "diff": 158.9
       },
       {
         "week": 11,
@@ -3356,10 +3332,10 @@
         "diff": 53.8
       },
       {
-        "week": 14,
-        "actualPts": 1031.9,
-        "optimalPts": 1062.2,
-        "diff": 30.3
+        "week": 16,
+        "actualPts": 728.5,
+        "optimalPts": 846.7,
+        "diff": 118.2
       },
       {
         "week": 17,
@@ -3392,9 +3368,9 @@
         "diff": 37.7
       }
     ],
-    "totalActual": 18060.5,
-    "totalOptimal": 19165.5,
-    "efficiency": 0.942
+    "totalActual": 14175.0,
+    "totalOptimal": 14967.5,
+    "efficiency": 0.947
   },
   "awards": {
     "mvp": {

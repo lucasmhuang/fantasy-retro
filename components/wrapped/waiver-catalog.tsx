@@ -2,15 +2,23 @@
 
 import { ArrowDown, ArrowUp, Search } from 'lucide-react';
 import { useMemo, useState } from 'react';
+import { useCountUp } from '@/hooks/use-count-up';
 import type { LeaguePickup } from '@/lib/types';
+
+function CountUp({ value, decimals = 0 }: { value: number; decimals?: number }) {
+  const { ref, displayValue } = useCountUp(value, { decimals });
+  return <span ref={ref}>{displayValue}</span>;
+}
 
 type SortKey = 'ppg' | 'pts';
 
 interface WaiverCatalogProps {
   pickups: LeaguePickup[];
+  nameMap?: Record<string, string>;
 }
 
-export function WaiverCatalog({ pickups }: WaiverCatalogProps) {
+export function WaiverCatalog({ pickups, nameMap = {} }: WaiverCatalogProps) {
+  const n = (name: string) => nameMap[name] || name;
   const [teamFilter, setTeamFilter] = useState<string | null>(null);
   const [playerSearch, setPlayerSearch] = useState('');
   const [sortBy, setSortBy] = useState<SortKey>('pts');
@@ -57,7 +65,7 @@ export function WaiverCatalog({ pickups }: WaiverCatalogProps) {
       <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
         <div>
           <p className="font-mono text-xs text-muted-foreground uppercase tracking-widest mb-1">Total Pickups</p>
-          <p className="font-mono text-5xl font-bold text-foreground">{pickups.length}</p>
+          <p className="font-mono text-5xl font-bold text-foreground"><CountUp value={pickups.length} /></p>
         </div>
         <div>
           <p className="font-mono text-xs text-muted-foreground uppercase tracking-widest mb-1">Best Pickup</p>
@@ -75,7 +83,7 @@ export function WaiverCatalog({ pickups }: WaiverCatalogProps) {
 
       {/* Team Waiver Summary */}
       <div>
-        <h3 className="font-mono text-sm font-bold text-foreground uppercase tracking-widest mb-4">
+        <h3 className="font-mono text-sm font-medium text-foreground uppercase tracking-widest mb-4">
           Team Waiver Activity
         </h3>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
@@ -94,7 +102,7 @@ export function WaiverCatalog({ pickups }: WaiverCatalogProps) {
               .map(([team, stats]) => (
                 <div key={team} className="border border-border/50 p-4 flex items-center justify-between">
                   <div>
-                    <p className="font-mono text-sm font-bold text-foreground truncate max-w-[140px]">{team}</p>
+                    <p className="font-mono text-sm font-bold text-foreground truncate max-w-[140px]">{n(team)}</p>
                     <p className="font-mono text-xs text-muted-foreground mt-1">
                       {stats.pickups} pickups &middot; {stats.pts.toFixed(0)} pts
                     </p>
@@ -116,7 +124,7 @@ export function WaiverCatalog({ pickups }: WaiverCatalogProps) {
           <button
             type="button"
             onClick={() => setTeamFilter(null)}
-            className={`font-mono text-[10px] uppercase tracking-widest px-3 py-1.5 border transition-colors ${
+            className={`font-mono text-xs uppercase tracking-widest px-3 py-1.5 border transition-colors ${
               !teamFilter ? 'border-gold text-gold' : 'border-border/50 text-muted-foreground hover:text-foreground'
             }`}
           >
@@ -127,11 +135,11 @@ export function WaiverCatalog({ pickups }: WaiverCatalogProps) {
               type="button"
               key={team}
               onClick={() => setTeamFilter(teamFilter === team ? null : team)}
-              className={`font-mono text-[10px] uppercase tracking-widest px-3 py-1.5 border transition-colors ${
+              className={`font-mono text-xs uppercase tracking-widest px-3 py-1.5 border transition-colors ${
                 teamFilter === team ? 'border-gold text-gold' : 'border-border/50 text-muted-foreground hover:text-foreground'
               }`}
             >
-              {team}
+              {n(team)}
             </button>
           ))}
         </div>
@@ -160,7 +168,7 @@ export function WaiverCatalog({ pickups }: WaiverCatalogProps) {
                     setSortAsc(false);
                   }
                 }}
-                className={`flex items-center gap-1 font-mono text-[10px] uppercase tracking-widest px-2 py-1 border transition-colors ${
+                className={`flex items-center gap-1 font-mono text-xs uppercase tracking-widest px-2 py-1 border transition-colors ${
                   active ? 'border-foreground/30 text-foreground' : 'border-border/50 text-muted-foreground hover:text-foreground'
                 }`}
               >
@@ -191,7 +199,7 @@ export function WaiverCatalog({ pickups }: WaiverCatalogProps) {
             <div className="flex-1 min-w-0">
               <p className="font-mono text-sm font-bold text-foreground truncate">{pickup.player}</p>
               <p className="font-mono text-xs text-muted-foreground truncate">
-                {pickup.team} &mdash; Week {pickup.weekAdded ?? '?'}
+                {n(pickup.team)} &mdash; Week {pickup.weekAdded ?? '?'}
                 {pickup.faabBid > 0 && (
                   <span className="text-gold ml-2">${pickup.faabBid}</span>
                 )}

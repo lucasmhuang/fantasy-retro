@@ -4,6 +4,8 @@ import { useEffect, useState } from 'react'
 import { useParams } from 'next/navigation'
 import Link from 'next/link'
 import { TeamData, LeagueMeta } from '@/lib/types'
+import { getTeamCSSVars, buildNameLookup } from '@/lib/team-colors'
+import { AmbientHalo } from '@/components/ui/ambient-halo'
 import { SmoothScrollProvider } from '@/components/providers/smooth-scroll-provider'
 import { ScrollReveal } from '@/components/ui/scroll-reveal'
 import { HeroSection } from '@/components/wrapped/hero-section'
@@ -70,6 +72,8 @@ export default function TeamWrappedPage() {
     )
   }
 
+  const { byName: nameMap } = buildNameLookup(leagueMeta.teams)
+
   const sections = [
     { id: 'hero', label: 'Overview' },
     { id: 'timeline', label: '01 Timeline' },
@@ -87,7 +91,12 @@ export default function TeamWrappedPage() {
 
   return (
     <SmoothScrollProvider>
-      <main className="min-h-screen bg-background relative">
+      <main
+        className="min-h-screen relative"
+        style={getTeamCSSVars(Number(teamId))}
+      >
+        <AmbientHalo sectionCount={sections.length} />
+
         <Link
           href="/"
           className="fixed top-6 left-6 z-50 flex items-center gap-2 font-mono text-xs text-muted-foreground hover:text-foreground transition-colors uppercase tracking-widest"
@@ -103,14 +112,12 @@ export default function TeamWrappedPage() {
         </div>
 
         <div data-section id="timeline">
-          <ScrollReveal>
-            <SeasonTimeline weeklyResults={teamData.weeklyResults} />
-          </ScrollReveal>
+          <SeasonTimeline weeklyResults={teamData.weeklyResults} nameMap={nameMap} />
         </div>
 
         <div data-section id="trades">
           <ScrollReveal>
-            <TradeCenter trades={teamData.trades} replacementFPW={leagueMeta?.draftMeta?.replacementFPW} />
+            <TradeCenter trades={teamData.trades} replacementFPW={leagueMeta?.draftMeta?.replacementFPW} nameMap={nameMap} />
           </ScrollReveal>
         </div>
 
@@ -121,15 +128,13 @@ export default function TeamWrappedPage() {
         </div>
 
         <div data-section id="heatmap">
-          <ScrollReveal>
-            <RosterHeatmap heatmap={teamData.rosterHeatmap} weeklyResults={teamData.weeklyResults} />
+          <ScrollReveal variant="blur">
+            <RosterHeatmap heatmap={teamData.rosterHeatmap} weeklyResults={teamData.weeklyResults} nameMap={nameMap} />
           </ScrollReveal>
         </div>
 
         <div data-section id="scoring">
-          <ScrollReveal>
-            <ScoringProfile profile={teamData.scoringProfile} leagueAvg={leagueMeta.leagueAvgScoringProfile} />
-          </ScrollReveal>
+          <ScoringProfile profile={teamData.scoringProfile} leagueAvg={leagueMeta.leagueAvgScoringProfile} />
         </div>
 
         <div data-section id="allplay">
@@ -151,17 +156,17 @@ export default function TeamWrappedPage() {
         </div>
 
         <div data-section id="awards">
-          <AwardsSection awards={teamData.awards} />
+          <AwardsSection awards={teamData.awards} nameMap={nameMap} />
         </div>
 
         <div data-section id="h2h">
           <ScrollReveal>
-            <HeadToHead records={teamData.headToHead} />
+            <HeadToHead records={teamData.headToHead} nameMap={nameMap} />
           </ScrollReveal>
         </div>
 
         <div data-section id="grades">
-          <ScrollReveal>
+          <ScrollReveal variant="scale">
             <ReportCard grades={teamData.grades} allPlay={teamData.allPlayRecord} />
           </ScrollReveal>
         </div>

@@ -8,6 +8,13 @@ import {
   Info,
 } from 'lucide-react';
 import { useMemo, useState } from 'react';
+import { useScrollBatch } from '@/hooks/use-scroll-batch';
+import { useCountUp } from '@/hooks/use-count-up';
+
+function CountUp({ value, decimals = 0 }: { value: number; decimals?: number }) {
+  const { ref, displayValue } = useCountUp(value, { decimals });
+  return <span ref={ref}>{displayValue}</span>;
+}
 import type { DraftMeta, DraftPick, DraftTeamGrade } from '@/lib/types';
 
 interface DraftRetrospectiveProps {
@@ -46,12 +53,15 @@ export function DraftRetrospective({
   picks,
   meta,
   teamGrades,
-}: DraftRetrospectiveProps) {
+  nameMap = {},
+}: DraftRetrospectiveProps & { nameMap?: Record<string, string> }) {
+  const n = (name: string) => nameMap[name] || name;
   const [expandedRound, setExpandedRound] = useState<number | null>(1);
   const [showMethodology, setShowMethodology] = useState(false);
   const [boardView, setBoardView] = useState<BoardView>('round');
   const [sortKey, setSortKey] = useState<SortKey>('value');
   const [sortAsc, setSortAsc] = useState(false);
+  const { ref: gradesBatchRef } = useScrollBatch({ stagger: 0.05 });
   const [teamFilter, setTeamFilter] = useState<string | null>(null);
 
   const maxRound = Math.max(...picks.map((p) => p.round));
@@ -109,7 +119,7 @@ export function DraftRetrospective({
             Players Drafted
           </p>
           <p className="font-mono text-5xl font-bold text-foreground">
-            {picks.length}
+            <CountUp value={picks.length} />
           </p>
         </div>
         <div>
@@ -117,7 +127,7 @@ export function DraftRetrospective({
             Rounds
           </p>
           <p className="font-mono text-5xl font-bold text-foreground">
-            {maxRound}
+            <CountUp value={maxRound} />
           </p>
         </div>
         {steals[0] && (
@@ -178,19 +188,20 @@ export function DraftRetrospective({
 
       {/* Team Draft Grades */}
       <div>
-        <h3 className="font-mono text-sm font-bold text-foreground uppercase tracking-widest mb-4">
+        <h3 className="font-mono text-sm font-medium text-foreground uppercase tracking-widest mb-4">
           Team Draft Grades
         </h3>
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
+        <div ref={gradesBatchRef} className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
           {sortedTeamGrades.map(
             ([tid, tg]) => (
               <div
                 key={tid}
+                data-batch-item
                 className="border border-border/50 p-4 flex items-center justify-between"
               >
                 <div>
                   <p className="font-mono text-sm font-bold text-foreground truncate max-w-[140px]">
-                    {tg.team}
+                    {n(tg.team)}
                   </p>
                   <p className="font-mono text-xs text-muted-foreground">
                     {tg.avgValueOverDraft >= 0 ? '+' : ''}
@@ -224,7 +235,7 @@ export function DraftRetrospective({
             <button
               type="button"
               onClick={() => setBoardView('round')}
-              className={`font-mono text-[10px] uppercase tracking-widest px-3 py-1.5 transition-colors ${
+              className={`font-mono text-xs uppercase tracking-widest px-3 py-1.5 transition-colors ${
                 boardView === 'round'
                   ? 'bg-gold/20 text-gold'
                   : 'text-muted-foreground hover:text-foreground'
@@ -235,13 +246,13 @@ export function DraftRetrospective({
             <button
               type="button"
               onClick={() => setBoardView('value')}
-              className={`font-mono text-[10px] uppercase tracking-widest px-3 py-1.5 border-l border-border/50 transition-colors ${
+              className={`font-mono text-xs uppercase tracking-widest px-3 py-1.5 border-l border-border/50 transition-colors ${
                 boardView === 'value'
                   ? 'bg-gold/20 text-gold'
                   : 'text-muted-foreground hover:text-foreground'
               }`}
             >
-              By Value
+              All Picks
             </button>
           </div>
         </div>
@@ -309,7 +320,7 @@ export function DraftRetrospective({
                 <button
                   type="button"
                   onClick={() => setTeamFilter(null)}
-                  className={`font-mono text-[10px] uppercase tracking-widest px-3 py-1.5 border transition-colors ${
+                  className={`font-mono text-xs uppercase tracking-widest px-3 py-1.5 border transition-colors ${
                     !teamFilter
                       ? 'border-gold text-gold'
                       : 'border-border/50 text-muted-foreground hover:text-foreground'
@@ -324,13 +335,13 @@ export function DraftRetrospective({
                     onClick={() =>
                       setTeamFilter(teamFilter === team ? null : team)
                     }
-                    className={`font-mono text-[10px] uppercase tracking-widest px-3 py-1.5 border transition-colors ${
+                    className={`font-mono text-xs uppercase tracking-widest px-3 py-1.5 border transition-colors ${
                       teamFilter === team
                         ? 'border-gold text-gold'
                         : 'border-border/50 text-muted-foreground hover:text-foreground'
                     }`}
                   >
-                    {team}
+                    {n(team)}
                   </button>
                 ))}
               </div>
@@ -341,7 +352,7 @@ export function DraftRetrospective({
                       type="button"
                       key={key}
                       onClick={() => toggleSort(key)}
-                      className={`flex items-center gap-1 font-mono text-[10px] uppercase tracking-widest px-2 py-1 border transition-colors ${
+                      className={`flex items-center gap-1 font-mono text-xs uppercase tracking-widest px-2 py-1 border transition-colors ${
                         sortKey === key
                           ? 'border-foreground/30 text-foreground'
                           : 'border-border/50 text-muted-foreground hover:text-foreground'
@@ -406,7 +417,7 @@ function PickList({
                   </p>
                   <p className="font-mono text-xs text-muted-foreground">
                     Pick {pick.overall} &rarr; Rank {pick.seasonRank} &mdash;{' '}
-                    {pick.team}
+                    {n(pick.team)}
                   </p>
                 </div>
               </div>
@@ -439,13 +450,13 @@ function DraftPickRow({ pick }: { pick: DraftPick }) {
             {pick.player}
           </p>
           <span
-            className={`font-mono text-[10px] uppercase tracking-wider px-1.5 py-0.5 ${labelCfg.bg} ${labelCfg.color}`}
+            className={`font-mono text-xs uppercase tracking-wider px-1.5 py-0.5 ${labelCfg.bg} ${labelCfg.color}`}
           >
             {pick.label}
           </span>
         </div>
         <p className="font-mono text-xs text-muted-foreground truncate">
-          {pick.team}
+          {n(pick.team)}
         </p>
       </div>
       <div className="text-right shrink-0">

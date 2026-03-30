@@ -571,14 +571,14 @@
       "lossMargin": null
     },
     {
-      "week": 10,
-      "benchPlayer": "Trae Young",
-      "benchPts": 115.1,
-      "startPlayer": "Myles Turner",
-      "startPts": 61.3,
-      "diff": 53.8,
+      "week": 11,
+      "benchPlayer": "Jarrett Allen",
+      "benchPts": 105.6,
+      "startPlayer": "P.J. Washington",
+      "startPts": 56.2,
+      "diff": 49.4,
       "wouldHaveWon": false,
-      "lossMargin": 198.9
+      "lossMargin": 203.1
     }
   ],
   "headToHead": [
@@ -710,28 +710,10 @@
         "diff": 121.5
       },
       {
-        "week": 7,
-        "actualPts": 928.8,
-        "optimalPts": 989.2,
-        "diff": 60.4
-      },
-      {
-        "week": 8,
-        "actualPts": 386.2,
-        "optimalPts": 418.1,
-        "diff": 31.9
-      },
-      {
         "week": 9,
         "actualPts": 753.5,
         "optimalPts": 889.1,
         "diff": 135.6
-      },
-      {
-        "week": 10,
-        "actualPts": 840.8,
-        "optimalPts": 989.3,
-        "diff": 148.5
       },
       {
         "week": 11,
@@ -750,12 +732,6 @@
         "actualPts": 844.5,
         "optimalPts": 854.6,
         "diff": 10.1
-      },
-      {
-        "week": 14,
-        "actualPts": 928.4,
-        "optimalPts": 974.7,
-        "diff": 46.3
       },
       {
         "week": 15,
@@ -782,9 +758,9 @@
         "diff": 32.2
       }
     ],
-    "totalActual": 16018.8,
-    "totalOptimal": 17271.9,
-    "efficiency": 0.927
+    "totalActual": 12934.6,
+    "totalOptimal": 13900.6,
+    "efficiency": 0.931
   },
   "awards": {
     "mvp": {

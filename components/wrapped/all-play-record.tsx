@@ -46,13 +46,13 @@ export function AllPlayRecord({ allPlay, actualRecord }: AllPlayRecordProps) {
     <section className="relative min-h-screen px-6 py-24 md:px-12 lg:px-24">
       {/* Section Header */}
       <div className="mb-16">
-        <ParallaxNumber className="font-mono text-6xl md:text-8xl font-bold text-muted-foreground/10">
+        <ParallaxNumber gradient className="font-mono text-6xl md:text-8xl font-bold text-muted-foreground/10">
           06
         </ParallaxNumber>
         <h2 className="font-mono text-3xl md:text-4xl font-bold tracking-tight text-foreground uppercase -mt-8 md:-mt-12">
           All-Play Record
         </h2>
-        <p className="font-mono text-sm text-muted-foreground mt-2">
+        <p className="font-mono text-base text-muted-foreground mt-2">
           If you played every team every week: how would you really stack up?
         </p>
       </div>

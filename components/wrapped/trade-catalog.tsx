@@ -11,6 +11,8 @@ import {
   Trophy,
 } from 'lucide-react';
 import { useMemo, useState } from 'react';
+import { useScrollBatch } from '@/hooks/use-scroll-batch';
+import { useCountUp } from '@/hooks/use-count-up';
 import {
   Tooltip,
   TooltipContent,
@@ -23,13 +25,21 @@ type SortKey = 'week' | 'value';
 interface TradeCatalogProps {
   trades: LeagueTrade[];
   replacementFPW?: number;
+  nameMap?: Record<string, string>;
 }
 
-export function TradeCatalog({ trades, replacementFPW }: TradeCatalogProps) {
+function CountUp({ value, decimals = 0 }: { value: number; decimals?: number }) {
+  const { ref, displayValue } = useCountUp(value, { decimals });
+  return <span ref={ref}>{displayValue}</span>;
+}
+
+export function TradeCatalog({ trades, replacementFPW, nameMap = {} }: TradeCatalogProps) {
+  const n = (name: string) => nameMap[name] || name;
   const [teamFilter, setTeamFilter] = useState<string | null>(null);
   const [playerSearch, setPlayerSearch] = useState('');
   const [sortBy, setSortBy] = useState<SortKey>('week');
   const [sortAsc, setSortAsc] = useState(true);
+  const { ref: batchRef } = useScrollBatch();
 
   const allTeams = useMemo(() => {
     const names = new Set<string>();
@@ -87,7 +97,7 @@ export function TradeCatalog({ trades, replacementFPW }: TradeCatalogProps) {
             Total Trades
           </p>
           <p className="font-mono text-5xl font-bold text-foreground">
-            {trades.length}
+            <CountUp value={trades.length} />
           </p>
         </div>
         <div>
@@ -98,8 +108,8 @@ export function TradeCatalog({ trades, replacementFPW }: TradeCatalogProps) {
             +{biggestWin.net.toFixed(1)} pts
           </p>
           <p className="font-mono text-xs text-muted-foreground mt-1">
-            {biggestWin.winner} dunked on{' '}
-            {biggestWin.winner === biggestWin.team1 ? biggestWin.team2 : biggestWin.team1}
+            {n(biggestWin.winner)} dunked on{' '}
+            {n(biggestWin.winner === biggestWin.team1 ? biggestWin.team2 : biggestWin.team1)}
           </p>
         </div>
         <div className="hidden md:block">
@@ -107,14 +117,14 @@ export function TradeCatalog({ trades, replacementFPW }: TradeCatalogProps) {
             Most Active
           </p>
           <p className="font-mono text-2xl font-bold text-foreground">
-            {mostActiveTrader(trades)}
+            {n(mostActiveTrader(trades))}
           </p>
         </div>
       </div>
 
       {/* Team Trade Summary */}
       <div>
-        <h3 className="font-mono text-sm font-bold text-foreground uppercase tracking-widest mb-4">
+        <h3 className="font-mono text-sm font-medium text-foreground uppercase tracking-widest mb-4">
           Team Trade Activity
         </h3>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
@@ -141,7 +151,7 @@ export function TradeCatalog({ trades, replacementFPW }: TradeCatalogProps) {
               .map(([team, stats]) => (
                 <div key={team} className="border border-border/50 p-4 flex items-center justify-between">
                   <div>
-                    <p className="font-mono text-sm font-bold text-foreground truncate max-w-[140px]">{team}</p>
+                    <p className="font-mono text-sm font-bold text-foreground truncate max-w-[140px]">{n(team)}</p>
                     <p className="font-mono text-xs text-muted-foreground mt-1">
                       {stats.trades} trades &middot; {stats.wins}W-{stats.trades - stats.wins}L
                     </p>
@@ -161,7 +171,7 @@ export function TradeCatalog({ trades, replacementFPW }: TradeCatalogProps) {
           <button
             type="button"
             onClick={() => setTeamFilter(null)}
-            className={`font-mono text-[10px] uppercase tracking-widest px-3 py-1.5 border transition-colors ${
+            className={`font-mono text-xs uppercase tracking-widest px-3 py-1.5 border transition-colors ${
               !teamFilter
                 ? 'border-gold text-gold'
                 : 'border-border/50 text-muted-foreground hover:text-foreground'
@@ -174,13 +184,13 @@ export function TradeCatalog({ trades, replacementFPW }: TradeCatalogProps) {
               type="button"
               key={team}
               onClick={() => setTeamFilter(teamFilter === team ? null : team)}
-              className={`font-mono text-[10px] uppercase tracking-widest px-3 py-1.5 border transition-colors ${
+              className={`font-mono text-xs uppercase tracking-widest px-3 py-1.5 border transition-colors ${
                 teamFilter === team
                   ? 'border-gold text-gold'
                   : 'border-border/50 text-muted-foreground hover:text-foreground'
               }`}
             >
-              {team}
+              {n(team)}
             </button>
           ))}
         </div>
@@ -210,7 +220,7 @@ export function TradeCatalog({ trades, replacementFPW }: TradeCatalogProps) {
                     setSortAsc(defaultAsc);
                   }
                 }}
-                className={`flex items-center gap-1 font-mono text-[10px] uppercase tracking-widest px-2 py-1 border transition-colors ${
+                className={`flex items-center gap-1 font-mono text-xs uppercase tracking-widest px-2 py-1 border transition-colors ${
                   active ? 'border-foreground/30 text-foreground' : 'border-border/50 text-muted-foreground hover:text-foreground'
                 }`}
               >
@@ -230,13 +240,14 @@ export function TradeCatalog({ trades, replacementFPW }: TradeCatalogProps) {
       )}
 
       {/* Trade Cards */}
-      <div className="space-y-6">
+      <div ref={batchRef} className="space-y-6">
         {filtered.map((trade, index) => (
           <TradeCard
             key={`${index}-${trade.week}-${trade.team1}`}
             trade={trade}
             rank={index + 1}
             replacementFPW={replacementFPW}
+            nameMap={nameMap}
           />
         ))}
       </div>
@@ -265,18 +276,21 @@ function TradeCard({
   trade,
   rank,
   replacementFPW,
+  nameMap = {},
 }: {
   trade: LeagueTrade;
   rank: number;
   replacementFPW?: number;
+  nameMap?: Record<string, string>;
 }) {
+  const n = (name: string) => nameMap[name] || name;
   const team1ReceivedPts = trade.team2PtsROS;
   const team2ReceivedPts = trade.team1PtsROS;
   const team1Won = team1ReceivedPts > team2ReceivedPts;
   const team1Net = team1ReceivedPts - team2ReceivedPts;
 
   return (
-    <div className="border border-border/50 hover:border-border transition-colors duration-300">
+    <div data-batch-item className="border border-border/50 hover:border-border transition-colors duration-300">
       {/* Header */}
       <div className="flex items-center justify-between p-6 pb-4">
         <div className="flex items-center gap-4">
@@ -288,9 +302,9 @@ function TradeCard({
               Week {trade.week ?? '?'}
             </p>
             <div className="flex items-center gap-2 font-mono text-lg font-bold text-foreground">
-              {trade.team1}
+              {n(trade.team1)}
               <ArrowLeftRight className="w-4 h-4 text-muted-foreground" />
-              {trade.team2}
+              {n(trade.team2)}
             </div>
           </div>
         </div>
@@ -298,7 +312,7 @@ function TradeCard({
           {trade.slotAdjustment ? (
             <Tooltip>
               <TooltipTrigger asChild>
-                <span className="inline-flex items-center gap-1 font-mono text-[10px] uppercase tracking-wider px-2 py-1 bg-muted/30 text-muted-foreground border border-border/50 cursor-help">
+                <span className="inline-flex items-center gap-1 font-mono text-xs uppercase tracking-wider px-2 py-1 bg-muted/30 text-muted-foreground border border-border/50 cursor-help">
                   <Info className="w-3 h-3" />
                   Roster-adjusted
                 </span>
@@ -325,7 +339,7 @@ function TradeCard({
       {/* Trade Details — each side shows what that team RECEIVED */}
       <div className="flex flex-col md:flex-row items-stretch gap-4 px-6 pb-6">
         <TradeTeamSide
-          teamName={trade.team1}
+          teamName={n(trade.team1)}
           stats={trade.team2Stats || []}
           ptsROS={team1ReceivedPts}
           net={team1Net}
@@ -335,7 +349,7 @@ function TradeCard({
           <div className="w-px h-full bg-border" />
         </div>
         <TradeTeamSide
-          teamName={trade.team2}
+          teamName={n(trade.team2)}
           stats={trade.team1Stats || []}
           ptsROS={team2ReceivedPts}
           net={-team1Net}
@@ -381,7 +395,7 @@ function TradeTeamSide({
           {net.toFixed(1)}
         </div>
       </div>
-      <p className="font-mono text-[10px] text-muted-foreground/50 uppercase tracking-widest mb-3">
+      <p className="font-mono text-xs text-muted-foreground/50 uppercase tracking-widest mb-3">
         Received
       </p>
       <div className="space-y-2">

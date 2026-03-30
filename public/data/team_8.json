@@ -2077,16 +2077,6 @@
       "lossMargin": 294.3
     },
     {
-      "week": 10,
-      "benchPlayer": "Luka Doncic",
-      "benchPts": 102.0,
-      "startPlayer": "Keegan Murray",
-      "startPts": 13.7,
-      "diff": 88.3,
-      "wouldHaveWon": false,
-      "lossMargin": null
-    },
-    {
       "week": 16,
       "benchPlayer": "Dylan Cardwell",
       "benchPts": 98.2,
@@ -2115,6 +2105,16 @@
       "diff": 73.8,
       "wouldHaveWon": false,
       "lossMargin": 219.9
+    },
+    {
+      "week": 17,
+      "benchPlayer": "Brandin Podziemski",
+      "benchPts": 141.2,
+      "startPlayer": "Anfernee Simons",
+      "startPts": 73.7,
+      "diff": 67.5,
+      "wouldHaveWon": false,
+      "lossMargin": null
     }
   ],
   "headToHead": [
@@ -2258,16 +2258,10 @@
         "diff": 34.3
       },
       {
-        "week": 9,
-        "actualPts": 871.7,
-        "optimalPts": 967.6,
-        "diff": 95.9
-      },
-      {
-        "week": 10,
-        "actualPts": 1139.9,
-        "optimalPts": 1228.2,
-        "diff": 88.3
+        "week": 11,
+        "actualPts": 1300.7,
+        "optimalPts": 1438.0,
+        "diff": 137.3
       },
       {
         "week": 12,
@@ -2330,8 +2324,8 @@
         "diff": 51.9
       }
     ],
-    "totalActual": 22495.5,
-    "totalOptimal": 23923.0,
+    "totalActual": 21784.6,
+    "totalOptimal": 23165.2,
     "efficiency": 0.94
   },
   "awards": {

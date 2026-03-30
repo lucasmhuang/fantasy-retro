@@ -1536,12 +1536,6 @@
         "diff": 114.9
       },
       {
-        "week": 5,
-        "actualPts": 1379.2,
-        "optimalPts": 1379.2,
-        "diff": 0.0
-      },
-      {
         "week": 6,
         "actualPts": 1096.7,
         "optimalPts": 1127.6,
@@ -1576,24 +1570,6 @@
         "actualPts": 1015.0,
         "optimalPts": 1041.0,
         "diff": 26.0
-      },
-      {
-        "week": 12,
-        "actualPts": 1037.8,
-        "optimalPts": 1134.3,
-        "diff": 96.5
-      },
-      {
-        "week": 13,
-        "actualPts": 1247.2,
-        "optimalPts": 1291.5,
-        "diff": 44.3
-      },
-      {
-        "week": 14,
-        "actualPts": 1169.7,
-        "optimalPts": 1195.9,
-        "diff": 26.2
       },
       {
         "week": 15,
@@ -1632,9 +1608,9 @@
         "diff": 16.9
       }
     ],
-    "totalActual": 22073.0,
-    "totalOptimal": 23178.9,
-    "efficiency": 0.952
+    "totalActual": 17239.1,
+    "totalOptimal": 18178.0,
+    "efficiency": 0.948
   },
   "awards": {
     "mvp": {

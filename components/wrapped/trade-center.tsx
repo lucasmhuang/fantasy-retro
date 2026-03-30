@@ -9,6 +9,9 @@ import {
   TrendingUp,
 } from 'lucide-react';
 import { useState } from 'react';
+import { useScrollBatch } from '@/hooks/use-scroll-batch';
+import { useChartTooltip } from '@/hooks/use-chart-tooltip';
+import { ChartTooltipPortal } from '@/components/ui/chart-tooltip-portal';
 import {
   Line,
   LineChart,
@@ -28,10 +31,13 @@ import type { Trade } from '@/lib/types';
 interface TradeCenterProps {
   trades: Trade[];
   replacementFPW?: number;
+  nameMap?: Record<string, string>;
 }
 
-export function TradeCenter({ trades, replacementFPW }: TradeCenterProps) {
+export function TradeCenter({ trades, replacementFPW, nameMap = {} }: TradeCenterProps) {
   const [expandedTrade, setExpandedTrade] = useState<number | null>(null);
+  const { ref: batchRef } = useScrollBatch();
+  const { pos: tooltipPos, onMouseMove: onChartMouseMove } = useChartTooltip();
 
   const totalNet = trades.reduce((acc, t) => acc + t.net, 0);
   const isPositiveOverall = totalNet >= 0;
@@ -40,7 +46,7 @@ export function TradeCenter({ trades, replacementFPW }: TradeCenterProps) {
     return (
       <section className="relative min-h-[60vh] px-6 py-24 md:px-12 lg:px-24 flex flex-col justify-center">
         <div className="mb-16">
-          <ParallaxNumber className="font-mono text-6xl md:text-8xl font-bold text-muted-foreground/10">
+          <ParallaxNumber gradient className="font-mono text-6xl md:text-8xl font-bold text-muted-foreground/10">
             02
           </ParallaxNumber>
           <h2 className="font-mono text-3xl md:text-4xl font-bold tracking-tight text-foreground uppercase -mt-8 md:-mt-12">
@@ -67,13 +73,13 @@ export function TradeCenter({ trades, replacementFPW }: TradeCenterProps) {
     <section className="relative min-h-screen px-6 py-24 md:px-12 lg:px-24">
       {/* Section Header */}
       <div className="mb-16">
-        <ParallaxNumber className="font-mono text-6xl md:text-8xl font-bold text-muted-foreground/10">
+        <ParallaxNumber gradient className="font-mono text-6xl md:text-8xl font-bold text-muted-foreground/10">
           02
         </ParallaxNumber>
         <h2 className="font-mono text-3xl md:text-4xl font-bold tracking-tight text-foreground uppercase -mt-8 md:-mt-12">
           Trade Center
         </h2>
-        <p className="font-mono text-sm text-muted-foreground mt-2">
+        <p className="font-mono text-base text-muted-foreground mt-2">
           {trades.length} trade{trades.length !== 1 ? 's' : ''} executed this
           season.
         </p>
@@ -113,7 +119,7 @@ export function TradeCenter({ trades, replacementFPW }: TradeCenterProps) {
       </div>
 
       {/* Trade Cards */}
-      <div className="space-y-6">
+      <div ref={batchRef} className="space-y-6">
         {trades.map((trade, index) => {
           const isExpanded = expandedTrade === index;
           const isPositive = trade.net >= 0;
@@ -136,6 +142,7 @@ export function TradeCenter({ trades, replacementFPW }: TradeCenterProps) {
           return (
             <div
               key={index}
+              data-batch-item
               className={`border transition-all duration-300 ${
                 isPositive
                   ? 'border-win/30 hover:border-win/50'
@@ -147,7 +154,7 @@ export function TradeCenter({ trades, replacementFPW }: TradeCenterProps) {
                 <div className="flex items-start justify-between mb-6">
                   <div>
                     <p className="font-mono text-xs text-muted-foreground uppercase tracking-widest mb-1">
-                      Week {trade.week ?? '?'} &mdash; with {trade.partner}
+                      Week {trade.week ?? '?'} &mdash; with {nameMap[trade.partner] || trade.partner}
                     </p>
                     <div
                       className={`inline-flex items-center gap-2 font-mono text-2xl font-bold ${isPositive ? 'text-win' : 'text-loss'}`}
@@ -201,7 +208,7 @@ export function TradeCenter({ trades, replacementFPW }: TradeCenterProps) {
                     trade.received.length > trade.sent.length ? (
                       <InfoTooltip>
                         <TooltipTrigger asChild>
-                          <span className="inline-flex items-center gap-1 font-mono text-[10px] text-muted-foreground/60 mt-1 cursor-help">
+                          <span className="inline-flex items-center gap-1 font-mono text-xs text-muted-foreground/60 mt-1 cursor-help">
                             <Info className="w-3 h-3" />+
                             {trade.slotAdjustment.toFixed(1)} roster spot value
                           </span>
@@ -258,7 +265,7 @@ export function TradeCenter({ trades, replacementFPW }: TradeCenterProps) {
                     {trade.slotAdjustment &&
                     trade.sent.length > trade.received.length ? (
                       <span
-                        className="inline-flex items-center gap-1 font-mono text-[10px] text-muted-foreground/60 mt-1"
+                        className="inline-flex items-center gap-1 font-mono text-xs text-muted-foreground/60 mt-1"
                         title={`This trade was uneven — the freed roster spot is valued at replacement-level production (~${replacementFPW ?? '?'} fantasy points per week) for the remaining weeks.`}
                       >
                         <Info className="w-3 h-3" />+
@@ -288,7 +295,7 @@ export function TradeCenter({ trades, replacementFPW }: TradeCenterProps) {
                   <p className="font-mono text-xs text-muted-foreground uppercase tracking-widest mt-6 mb-4">
                     Cumulative Net Impact
                   </p>
-                  <div className="h-[200px]">
+                  <div className="h-[200px]" onMouseMove={onChartMouseMove}>
                     <ResponsiveContainer width="100%" height="100%">
                       <LineChart data={cumulativeData}>
                         <XAxis
@@ -297,7 +304,7 @@ export function TradeCenter({ trades, replacementFPW }: TradeCenterProps) {
                           tickLine={false}
                           tick={{
                             fill: 'oklch(0.60 0 0)',
-                            fontSize: 10,
+                            fontSize: 12,
                             fontFamily: 'var(--font-barlow-condensed)',
                           }}
                           tickFormatter={(value) => `W${value}`}
@@ -307,7 +314,7 @@ export function TradeCenter({ trades, replacementFPW }: TradeCenterProps) {
                           tickLine={false}
                           tick={{
                             fill: 'oklch(0.60 0 0)',
-                            fontSize: 10,
+                            fontSize: 12,
                             fontFamily: 'var(--font-barlow-condensed)',
                           }}
                         />
@@ -316,7 +323,7 @@ export function TradeCenter({ trades, replacementFPW }: TradeCenterProps) {
                             if (!active || !payload || !payload[0]) return null;
                             const data = payload[0].payload;
                             return (
-                              <div className="bg-card border border-border px-4 py-3">
+                              <ChartTooltipPortal active pos={tooltipPos}>
                                 <p className="font-mono text-xs text-muted-foreground mb-1">
                                   Week {data.week}
                                 </p>
@@ -330,7 +337,7 @@ export function TradeCenter({ trades, replacementFPW }: TradeCenterProps) {
                                   Week net: {data.weekNet >= 0 ? '+' : ''}
                                   {data.weekNet.toFixed(1)}
                                 </p>
-                              </div>
+                              </ChartTooltipPortal>
                             );
                           }}
                         />

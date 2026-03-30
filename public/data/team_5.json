@@ -2245,16 +2245,6 @@
       "lossMargin": 9.1
     },
     {
-      "week": 5,
-      "benchPlayer": "Dennis Schroder",
-      "benchPts": 77.0,
-      "startPlayer": "Shaedon Sharpe",
-      "startPts": 36.9,
-      "diff": 40.1,
-      "wouldHaveWon": true,
-      "lossMargin": 16.8
-    },
-    {
       "week": 15,
       "benchPlayer": "Collin Sexton",
       "benchPts": 84.6,
@@ -2265,24 +2255,34 @@
       "lossMargin": 9.6
     },
     {
-      "week": 3,
-      "benchPlayer": "Shaedon Sharpe",
-      "benchPts": 108.4,
-      "startPlayer": "Isaiah Joe",
-      "startPts": 37.1,
-      "diff": 71.3,
+      "week": 18,
+      "benchPlayer": "Micah Potter",
+      "benchPts": 100.2,
+      "startPlayer": "Donovan Mitchell",
+      "startPts": 41.0,
+      "diff": 59.2,
       "wouldHaveWon": false,
-      "lossMargin": 151.8
+      "lossMargin": 107.4
     },
     {
-      "week": 2,
-      "benchPlayer": "Andrew Wiggins",
-      "benchPts": 103.9,
-      "startPlayer": "Brice Sensabaugh",
-      "startPts": 34.6,
-      "diff": 69.3,
+      "week": 13,
+      "benchPlayer": "Coby White",
+      "benchPts": 92.0,
+      "startPlayer": "Isaiah Stewart",
+      "startPts": 39.7,
+      "diff": 52.3,
       "wouldHaveWon": false,
-      "lossMargin": null
+      "lossMargin": 151.2
+    },
+    {
+      "week": 1,
+      "benchPlayer": "Domantas Sabonis",
+      "benchPts": 64.2,
+      "startPlayer": "Caris LeVert",
+      "startPts": 14.2,
+      "diff": 50.0,
+      "wouldHaveWon": false,
+      "lossMargin": 151.1
     }
   ],
   "headToHead": [
@@ -2384,42 +2384,6 @@
         "diff": 54.8
       },
       {
-        "week": 2,
-        "actualPts": 962.1,
-        "optimalPts": 1137.3,
-        "diff": 175.2
-      },
-      {
-        "week": 3,
-        "actualPts": 938.2,
-        "optimalPts": 1009.5,
-        "diff": 71.3
-      },
-      {
-        "week": 4,
-        "actualPts": 1082.7,
-        "optimalPts": 1176.6,
-        "diff": 93.9
-      },
-      {
-        "week": 5,
-        "actualPts": 758.3,
-        "optimalPts": 866.7,
-        "diff": 108.4
-      },
-      {
-        "week": 6,
-        "actualPts": 651.8,
-        "optimalPts": 748.4,
-        "diff": 96.6
-      },
-      {
-        "week": 7,
-        "actualPts": 1024.6,
-        "optimalPts": 1062.2,
-        "diff": 37.6
-      },
-      {
         "week": 8,
         "actualPts": 526.8,
         "optimalPts": 558.9,
@@ -2430,18 +2394,6 @@
         "actualPts": 882.0,
         "optimalPts": 923.0,
         "diff": 41.0
-      },
-      {
-        "week": 10,
-        "actualPts": 1008.8,
-        "optimalPts": 1039.2,
-        "diff": 30.4
-      },
-      {
-        "week": 11,
-        "actualPts": 920.1,
-        "optimalPts": 1133.1,
-        "diff": 213.0
       },
       {
         "week": 12,
@@ -2486,9 +2438,9 @@
         "diff": 77.9
       }
     ],
-    "totalActual": 16344.3,
-    "totalOptimal": 17781.3,
-    "efficiency": 0.919
+    "totalActual": 8997.7,
+    "totalOptimal": 9608.3,
+    "efficiency": 0.936
   },
   "awards": {
     "mvp": {

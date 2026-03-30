@@ -1,20 +1,21 @@
 'use client'
 
 import { Awards } from '@/lib/types'
-import { Crown, Armchair, HeartCrack, Flame, Clover, CloudRain } from 'lucide-react'
+import { Star, Armchair, HeartCrack, Zap, Clover, CloudLightning } from 'lucide-react'
 import { motion } from 'framer-motion'
 import { ParallaxNumber } from '@/components/ui/parallax-number'
 
 interface AwardsSectionProps {
   awards: Awards
+  nameMap?: Record<string, string>
 }
 
-export function AwardsSection({ awards }: AwardsSectionProps) {
+export function AwardsSection({ awards, nameMap = {} }: AwardsSectionProps) {
   const awardCards = [
     {
       key: 'mvp',
       title: 'Season MVP',
-      icon: Crown,
+      icon: Star,
       data: awards.mvp,
       color: 'gold',
       bgClass: 'border-gold/50 bg-gold/5',
@@ -40,7 +41,7 @@ export function AwardsSection({ awards }: AwardsSectionProps) {
           <p className="font-mono text-2xl md:text-3xl font-bold text-muted-foreground mb-2">{awards.benchWarmer.player}</p>
           <div className="grid grid-cols-2 gap-4 mt-4">
             <div>
-              <p className="font-mono text-xs text-muted-foreground">Avg Pts</p>
+              <p className="font-mono text-xs text-muted-foreground">Avg Pts/Week</p>
               <p className="font-mono text-xl font-bold text-foreground">{awards.benchWarmer.avgPts.toFixed(1)}</p>
             </div>
             <div>
@@ -61,7 +62,7 @@ export function AwardsSection({ awards }: AwardsSectionProps) {
       render: awards.heartbreakLoss ? (
         <>
           <p className="font-mono text-sm text-loss mb-2">Week {awards.heartbreakLoss.week}</p>
-          <p className="font-mono text-2xl md:text-3xl font-bold text-foreground mb-1">vs {awards.heartbreakLoss.opponent}</p>
+          <p className="font-mono text-2xl md:text-3xl font-bold text-foreground mb-1">vs {nameMap[awards.heartbreakLoss.opponent] || awards.heartbreakLoss.opponent}</p>
           <p className="font-mono text-sm text-muted-foreground">{awards.heartbreakLoss.score.toFixed(1)} – {awards.heartbreakLoss.oppScore.toFixed(1)}</p>
           <p className="font-mono text-4xl font-bold text-loss">-{awards.heartbreakLoss.margin.toFixed(1)}</p>
         </>
@@ -70,14 +71,14 @@ export function AwardsSection({ awards }: AwardsSectionProps) {
     {
       key: 'statementWin',
       title: 'Statement Win',
-      icon: Flame,
+      icon: Zap,
       data: awards.statementWin,
       color: 'orange',
       bgClass: 'border-chart-3/50 bg-chart-3/5',
       render: awards.statementWin ? (
         <>
           <p className="font-mono text-sm text-chart-3 mb-2">Week {awards.statementWin.week}</p>
-          <p className="font-mono text-2xl md:text-3xl font-bold text-foreground mb-1">vs {awards.statementWin.opponent}</p>
+          <p className="font-mono text-2xl md:text-3xl font-bold text-foreground mb-1">vs {nameMap[awards.statementWin.opponent] || awards.statementWin.opponent}</p>
           <p className="font-mono text-sm text-muted-foreground">{awards.statementWin.score.toFixed(1)} – {awards.statementWin.oppScore.toFixed(1)}</p>
           <p className="font-mono text-4xl font-bold text-win">+{awards.statementWin.margin.toFixed(1)}</p>
         </>
@@ -93,7 +94,7 @@ export function AwardsSection({ awards }: AwardsSectionProps) {
       render: awards.luckyWin ? (
         <>
           <p className="font-mono text-sm text-win mb-2">Week {awards.luckyWin.week}</p>
-          <p className="font-mono text-2xl md:text-3xl font-bold text-foreground mb-1">vs {awards.luckyWin.opponent}</p>
+          <p className="font-mono text-2xl md:text-3xl font-bold text-foreground mb-1">vs {nameMap[awards.luckyWin.opponent] || awards.luckyWin.opponent}</p>
           <p className="font-mono text-sm text-muted-foreground mt-2">
             League rank #{awards.luckyWin.leagueRank} that week — still won
           </p>
@@ -104,14 +105,14 @@ export function AwardsSection({ awards }: AwardsSectionProps) {
     {
       key: 'unluckyLoss',
       title: 'Unlucky Loss',
-      icon: CloudRain,
+      icon: CloudLightning,
       data: awards.unluckyLoss,
       color: 'loss',
       bgClass: 'border-loss/50 bg-loss/5',
       render: awards.unluckyLoss ? (
         <>
           <p className="font-mono text-sm text-loss mb-2">Week {awards.unluckyLoss.week}</p>
-          <p className="font-mono text-2xl md:text-3xl font-bold text-foreground mb-1">vs {awards.unluckyLoss.opponent}</p>
+          <p className="font-mono text-2xl md:text-3xl font-bold text-foreground mb-1">vs {nameMap[awards.unluckyLoss.opponent] || awards.unluckyLoss.opponent}</p>
           <p className="font-mono text-sm text-muted-foreground mt-2">
             League rank #{awards.unluckyLoss.leagueRank} that week — still lost
           </p>
@@ -126,13 +127,13 @@ export function AwardsSection({ awards }: AwardsSectionProps) {
   return (
     <section className="relative min-h-screen px-6 py-24 md:px-12 lg:px-24">
       <div className="mb-16">
-        <ParallaxNumber className="font-mono text-6xl md:text-8xl font-bold text-muted-foreground/10">
+        <ParallaxNumber gradient className="font-mono text-6xl md:text-8xl font-bold text-muted-foreground/10">
           09
         </ParallaxNumber>
         <h2 className="font-mono text-3xl md:text-4xl font-bold tracking-tight text-foreground uppercase -mt-8 md:-mt-12">
           Awards
         </h2>
-        <p className="font-mono text-sm text-muted-foreground mt-2">
+        <p className="font-mono text-base text-muted-foreground mt-2">
           The highs, the lows, and everything in between.
         </p>
       </div>

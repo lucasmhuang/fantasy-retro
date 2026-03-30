@@ -2,10 +2,12 @@
 
 import { Crosshair, Target } from 'lucide-react';
 import { ParallaxNumber } from '@/components/ui/parallax-number';
+import { useScrollBatch } from '@/hooks/use-scroll-batch';
 import type { HeadToHeadRecord } from '@/lib/types';
 
 interface HeadToHeadProps {
   records: HeadToHeadRecord[];
+  nameMap?: Record<string, string>;
 }
 
 function totalWins(r: HeadToHeadRecord) {
@@ -20,7 +22,9 @@ function hasPlayoff(r: HeadToHeadRecord) {
   return (r.playoffWins || 0) + (r.playoffLosses || 0) > 0;
 }
 
-export function HeadToHead({ records }: HeadToHeadProps) {
+export function HeadToHead({ records, nameMap = {} }: HeadToHeadProps) {
+  const n = (name: string) => nameMap[name] || name;
+  const { ref: batchRef } = useScrollBatch({ childSelector: '[data-batch-item]' });
   const rival = records.reduce((worst, r) =>
     totalLosses(r) > totalLosses(worst) ||
     (totalLosses(r) === totalLosses(worst) && r.avgMargin < worst.avgMargin)
@@ -59,13 +63,13 @@ export function HeadToHead({ records }: HeadToHeadProps) {
     <section className="relative min-h-screen px-6 py-24 md:px-12 lg:px-24">
       {/* Section Header */}
       <div className="mb-16">
-        <ParallaxNumber className="font-mono text-6xl md:text-8xl font-bold text-muted-foreground/10">
+        <ParallaxNumber gradient className="font-mono text-6xl md:text-8xl font-bold text-muted-foreground/10">
           10
         </ParallaxNumber>
         <h2 className="font-mono text-3xl md:text-4xl font-bold tracking-tight text-foreground uppercase -mt-8 md:-mt-12">
           Head-to-Head
         </h2>
-        <p className="font-mono text-sm text-muted-foreground mt-2">
+        <p className="font-mono text-base text-muted-foreground mt-2">
           Your record against every team in the league.
         </p>
       </div>
@@ -81,7 +85,7 @@ export function HeadToHead({ records }: HeadToHeadProps) {
             </p>
           </div>
           <p className="font-mono text-2xl md:text-3xl font-bold text-foreground mb-2">
-            {rival.opponent}
+            {n(rival.opponent)}
           </p>
           <p className="font-mono text-4xl font-bold text-loss">
             {totalWins(rival)}-{totalLosses(rival)}
@@ -107,7 +111,7 @@ export function HeadToHead({ records }: HeadToHeadProps) {
             </p>
           </div>
           <p className="font-mono text-2xl md:text-3xl font-bold text-foreground mb-2">
-            {punchingBag.opponent}
+            {n(punchingBag.opponent)}
           </p>
           <p className="font-mono text-4xl font-bold text-win">
             {totalWins(punchingBag)}-{totalLosses(punchingBag)}
@@ -126,7 +130,7 @@ export function HeadToHead({ records }: HeadToHeadProps) {
       </div>
 
       {/* Full Table */}
-      <div className="overflow-x-auto">
+      <div ref={batchRef} className="overflow-x-auto">
         <table className="w-full min-w-[600px]">
           <thead>
             <tr className="border-b border-border">
@@ -155,12 +159,13 @@ export function HeadToHead({ records }: HeadToHeadProps) {
 
               return (
                 <tr
-                  key={record.opponent}
+                  key={n(record.opponent)}
+                  data-batch-item
                   className="border-b border-border/50 hover:bg-card/50 transition-colors"
                 >
                   <td className="py-4">
                     <p className="font-mono text-lg text-foreground">
-                      {record.opponent}
+                      {n(record.opponent)}
                     </p>
                   </td>
                   <td className="py-4 text-center">
@@ -176,7 +181,7 @@ export function HeadToHead({ records }: HeadToHeadProps) {
                       {tw}-{tl}
                     </span>
                     {playoff && (
-                      <span className="block font-mono text-[10px] text-muted-foreground mt-0.5">
+                      <span className="block font-mono text-xs text-muted-foreground mt-0.5">
                         Reg {record.wins}-{record.losses}
                       </span>
                     )}
@@ -191,14 +196,14 @@ export function HeadToHead({ records }: HeadToHeadProps) {
                   </td>
                   <td className="py-4 text-right space-x-1">
                     {playoff && (
-                      <span className="inline-block px-2 py-1 font-mono text-[10px] font-bold uppercase tracking-widest bg-gold/20 text-gold">
+                      <span className="inline-block px-2 py-1 font-mono text-xs font-bold uppercase tracking-widest bg-gold/20 text-gold">
                         Playoffs {record.playoffWins || 0}-
                         {record.playoffLosses || 0}
                       </span>
                     )}
                     {badge && (
                       <span
-                        className={`inline-block px-2 py-1 font-mono text-[10px] font-bold uppercase tracking-widest ${
+                        className={`inline-block px-2 py-1 font-mono text-xs font-bold uppercase tracking-widest ${
                           badge === 'SWEPT'
                             ? 'bg-win text-background'
                             : badge === 'GOT SWEPT'

@@ -1,20 +1,23 @@
 'use client'
 
 import { OptimalLineup as OptimalLineupType } from '@/lib/types'
-import { ComposedChart, Bar, Line, XAxis, YAxis, ResponsiveContainer, Tooltip, ReferenceLine } from 'recharts'
+import { ComposedChart, Bar, Cell, Line, XAxis, YAxis, ResponsiveContainer, Tooltip, ReferenceLine } from 'recharts'
 import { ParallaxNumber } from '@/components/ui/parallax-number'
+import { useChartTooltip } from '@/hooks/use-chart-tooltip'
+import { ChartTooltipPortal } from '@/components/ui/chart-tooltip-portal'
 
 interface OptimalLineupProps {
   data: OptimalLineupType
 }
 
 export function OptimalLineup({ data }: OptimalLineupProps) {
+  const { pos: tooltipPos, onMouseMove: onChartMouseMove } = useChartTooltip()
   const chartData = data.weeklyComparison.map(week => ({
     week: week.week,
     actual: week.actualPts,
     optimal: week.optimalPts,
     diff: week.diff,
-    isBigGap: week.diff > 50,
+    isBigGap: week.diff > 75,
   }))
 
   const totalDiff = data.totalOptimal - data.totalActual
@@ -35,13 +38,13 @@ export function OptimalLineup({ data }: OptimalLineupProps) {
     <section className="relative min-h-screen px-6 py-24 md:px-12 lg:px-24">
       {/* Section Header */}
       <div className="mb-16">
-        <ParallaxNumber className="font-mono text-6xl md:text-8xl font-bold text-muted-foreground/10">
+        <ParallaxNumber gradient className="font-mono text-6xl md:text-8xl font-bold text-muted-foreground/10">
           07
         </ParallaxNumber>
         <h2 className="font-mono text-3xl md:text-4xl font-bold tracking-tight text-foreground uppercase -mt-8 md:-mt-12">
           Optimal Lineup
         </h2>
-        <p className="font-mono text-sm text-muted-foreground mt-2">
+        <p className="font-mono text-base text-muted-foreground mt-2">
           How close did you get to your ceiling each week?
         </p>
       </div>
@@ -88,20 +91,20 @@ export function OptimalLineup({ data }: OptimalLineupProps) {
       </div>
 
       {/* Chart */}
-      <div className="h-[400px] mb-8">
+      <div className="h-[400px] mb-8" onMouseMove={onChartMouseMove}>
         <ResponsiveContainer width="100%" height="100%">
           <ComposedChart data={chartData} barGap={0}>
             <XAxis
               dataKey="week"
               axisLine={false}
               tickLine={false}
-              tick={{ fill: 'oklch(0.60 0 0)', fontSize: 10, fontFamily: 'var(--font-barlow-condensed)' }}
+              tick={{ fill: 'oklch(0.60 0 0)', fontSize: 12, fontFamily: 'var(--font-barlow-condensed)' }}
               tickFormatter={(value) => `W${value}`}
             />
             <YAxis
               axisLine={false}
               tickLine={false}
-              tick={{ fill: 'oklch(0.60 0 0)', fontSize: 10, fontFamily: 'var(--font-barlow-condensed)' }}
+              tick={{ fill: 'oklch(0.60 0 0)', fontSize: 12, fontFamily: 'var(--font-barlow-condensed)' }}
               domain={['dataMin - 100', 'dataMax + 50']}
             />
             <Tooltip
@@ -109,7 +112,7 @@ export function OptimalLineup({ data }: OptimalLineupProps) {
                 if (!active || !payload || !payload[0]) return null
                 const data = payload[0].payload
                 return (
-                  <div className="bg-card border border-border px-4 py-3">
+                  <ChartTooltipPortal active pos={tooltipPos}>
                     <p className="font-mono text-xs text-muted-foreground mb-2">Week {data.week}</p>
                     <div className="space-y-1">
                       <p className="font-mono text-sm">
@@ -124,7 +127,7 @@ export function OptimalLineup({ data }: OptimalLineupProps) {
                         Gap: -{data.diff.toFixed(1)}
                       </p>
                     </div>
-                  </div>
+                  </ChartTooltipPortal>
                 )
               }}
             />
@@ -132,12 +135,10 @@ export function OptimalLineup({ data }: OptimalLineupProps) {
             <Bar
               dataKey="actual"
               radius={[2, 2, 0, 0]}
-              fill="oklch(0.40 0 0)"
             >
               {chartData.map((entry, index) => (
-                <Bar
+                <Cell
                   key={index}
-                  dataKey="actual"
                   fill={entry.isBigGap ? 'oklch(0.55 0.22 25)' : 'oklch(0.40 0 0)'}
                 />
               ))}
@@ -162,7 +163,7 @@ export function OptimalLineup({ data }: OptimalLineupProps) {
         </div>
         <div className="flex items-center gap-2">
           <div className="w-4 h-4 bg-loss" />
-          <span className="font-mono text-xs text-muted-foreground">Big Gap (50+ pts)</span>
+          <span className="font-mono text-xs text-muted-foreground">Big Gap (75+ pts)</span>
         </div>
         <div className="flex items-center gap-2">
           <div className="w-8 h-px border-t-2 border-dashed border-gold" />
