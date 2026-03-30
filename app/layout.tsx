@@ -16,7 +16,7 @@ const barlowCondensed = Barlow_Condensed({
 })
 
 export const metadata: Metadata = {
-  title: 'Fantasy Wrapped | Buckets & Boards 2024-25',
+  title: 'Fantasy Wrapped | Lucas Basketball Association 2025-26',
   description: 'Your personalized end-of-season fantasy basketball recap. Stats, trades, awards, and more.',
   generator: 'v0.app',
   icons: {
