@@ -4,6 +4,7 @@
     "manager": "Mike B",
     "record": "9-9",
     "seed": 7,
+    "finalPlacement": 7,
     "pointsFor": 18129.3,
     "pointsAgainst": 18079.2
   },
@@ -2956,10 +2957,10 @@
   },
   "grades": {
     "drafting": "C",
-    "trading": "F",
-    "waiverWire": "A+",
-    "luck": "C-",
-    "consistency": "F",
-    "overall": "D+"
+    "trading": "C-",
+    "waiverWire": "B+",
+    "luck": "B+",
+    "coaching": "A-",
+    "overall": "C+"
   }
 }

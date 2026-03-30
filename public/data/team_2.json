@@ -4,6 +4,7 @@
     "manager": "Ishan Maunder",
     "record": "10-8",
     "seed": 5,
+    "finalPlacement": 3,
     "pointsFor": 19890.9,
     "pointsAgainst": 18473.1
   },
@@ -1654,10 +1655,10 @@
   },
   "grades": {
     "drafting": "B",
-    "trading": "A+",
-    "waiverWire": "A+",
+    "trading": "B",
+    "waiverWire": "D",
     "luck": "F",
-    "consistency": "F",
-    "overall": "C+"
+    "coaching": "A-",
+    "overall": "B-"
   }
 }

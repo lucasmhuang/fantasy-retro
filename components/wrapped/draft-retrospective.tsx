@@ -62,6 +62,8 @@ export function DraftRetrospective({
   const [sortKey, setSortKey] = useState<SortKey>('value');
   const [sortAsc, setSortAsc] = useState(false);
   const { ref: gradesBatchRef } = useScrollBatch({ stagger: 0.05 });
+  const { ref: picksBatchRef } = useScrollBatch({ stagger: 0.03 });
+  const { ref: roundsBatchRef } = useScrollBatch({ stagger: 0.06 });
   const [teamFilter, setTeamFilter] = useState<string | null>(null);
 
   const maxRound = Math.max(...picks.map((p) => p.round));
@@ -221,8 +223,8 @@ export function DraftRetrospective({
 
       {/* Steals & Busts */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <PickList title="Top Steals" picks={steals} variant="win" />
-        <PickList title="Biggest Busts" picks={busts} variant="loss" />
+        <PickList title="Top Steals" picks={steals} variant="win" nameMap={nameMap} />
+        <PickList title="Biggest Busts" picks={busts} variant="loss" nameMap={nameMap} />
       </div>
 
       {/* Draft Board */}
@@ -258,7 +260,7 @@ export function DraftRetrospective({
         </div>
 
         {boardView === 'round' ? (
-          <div className="space-y-2">
+          <div ref={roundsBatchRef} className="space-y-2">
             {rounds.map((round) => {
               const roundPicks = picks
                 .filter((p) => p.round === round)
@@ -268,7 +270,7 @@ export function DraftRetrospective({
                 roundPicks.reduce((s, p) => s + p.valueOverDraft, 0) /
                 roundPicks.length;
               return (
-                <div key={round} className="border border-border/50">
+                <div key={round} data-batch-item className="border border-border/50">
                   <button
                     type="button"
                     onClick={() => setExpandedRound(isExpanded ? null : round)}
@@ -304,6 +306,7 @@ export function DraftRetrospective({
                           key={pick.overall}
                           pick={pick}
                           meta={meta}
+                          nameMap={nameMap}
                         />
                       ))}
                     </div>
@@ -345,7 +348,7 @@ export function DraftRetrospective({
                   </button>
                 ))}
               </div>
-              <div className="flex gap-2">
+              <div className="flex flex-wrap gap-2">
                 {(['value', 'seasonPts', 'ppg', 'overall'] as SortKey[]).map(
                   (key) => (
                     <button
@@ -369,9 +372,9 @@ export function DraftRetrospective({
                 )}
               </div>
             </div>
-            <div className="border border-border/50">
+            <div ref={picksBatchRef} className="border border-border/50">
               {valueSorted.map((pick) => (
-                <DraftPickRow key={pick.overall} pick={pick} />
+                <DraftPickRow key={pick.overall} pick={pick} nameMap={nameMap} />
               ))}
             </div>
           </div>
@@ -385,11 +388,15 @@ function PickList({
   title,
   picks,
   variant,
+  nameMap = {},
 }: {
   title: string;
   picks: DraftPick[];
   variant: 'win' | 'loss';
+  nameMap?: Record<string, string>;
 }) {
+  const n = (name: string) => nameMap[name] || name;
+  const { ref: listBatchRef } = useScrollBatch({ stagger: 0.06 });
   return (
     <div
       className={`border p-6 ${variant === 'win' ? 'border-win/30' : 'border-loss/30'}`}
@@ -399,12 +406,13 @@ function PickList({
       >
         {title}
       </h3>
-      <div className="space-y-3">
+      <div ref={listBatchRef} className="space-y-3">
         {picks.map((pick, i) => {
           const delta = pick.overall - pick.seasonRank;
           return (
             <div
               key={pick.overall}
+              data-batch-item
               className="flex items-center justify-between"
             >
               <div className="flex items-center gap-3">
@@ -435,12 +443,13 @@ function PickList({
   );
 }
 
-function DraftPickRow({ pick }: { pick: DraftPick }) {
+function DraftPickRow({ pick, nameMap = {} }: { pick: DraftPick; nameMap?: Record<string, string> }) {
+  const n = (name: string) => nameMap[name] || name;
   const labelCfg = LABEL_CONFIG[pick.label] || LABEL_CONFIG.fair;
   const delta = pick.valueOverDraft;
 
   return (
-    <div className="flex items-center gap-4 px-4 py-3 hover:bg-card/30 transition-colors border-b border-border/30 last:border-b-0">
+    <div data-batch-item className="flex items-center gap-4 px-4 py-3 hover:bg-card/30 transition-colors border-b border-border/30 last:border-b-0">
       <span className="font-mono text-xs text-muted-foreground w-8 text-right shrink-0">
         #{pick.overall}
       </span>
@@ -459,7 +468,7 @@ function DraftPickRow({ pick }: { pick: DraftPick }) {
           {n(pick.team)}
         </p>
       </div>
-      <div className="text-right shrink-0">
+      <div className="text-right shrink-0 hidden md:block">
         <p className="font-mono text-sm font-bold text-foreground">
           {pick.seasonPts.toFixed(0)} pts
         </p>
@@ -467,7 +476,7 @@ function DraftPickRow({ pick }: { pick: DraftPick }) {
           {pick.gamesPlayed} GP &middot; {pick.ppg} PPG
         </p>
       </div>
-      <div className="text-right shrink-0 w-16">
+      <div className="text-right shrink-0 w-10 md:w-16">
         <p
           className={`font-mono text-lg font-bold ${GRADE_COLORS[pick.grade] || 'text-foreground'}`}
         >

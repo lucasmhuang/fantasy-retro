@@ -11,7 +11,7 @@ interface OptimalLineupProps {
 }
 
 export function OptimalLineup({ data }: OptimalLineupProps) {
-  const { pos: tooltipPos, onMouseMove: onChartMouseMove } = useChartTooltip()
+  const { pos: tooltipPos, onMouseMove: onChartMouseMove, isMobile } = useChartTooltip()
   const chartData = data.weeklyComparison.map(week => ({
     week: week.week,
     actual: week.actualPts,
@@ -25,20 +25,11 @@ export function OptimalLineup({ data }: OptimalLineupProps) {
   const worstWeek = data.weeklyComparison.reduce((worst, w) => w.diff > worst.diff ? w : worst)
   const bestWeek = data.weeklyComparison.reduce((best, w) => w.diff < best.diff ? w : best)
 
-  const efficiencyGrade = data.efficiency >= 0.98 ? 'A+' :
-    data.efficiency >= 0.96 ? 'A' :
-    data.efficiency >= 0.94 ? 'A-' :
-    data.efficiency >= 0.92 ? 'B+' :
-    data.efficiency >= 0.90 ? 'B' :
-    data.efficiency >= 0.88 ? 'B-' :
-    data.efficiency >= 0.85 ? 'C+' :
-    data.efficiency >= 0.82 ? 'C' : 'D'
-
   return (
     <section className="relative min-h-screen px-6 py-24 md:px-12 lg:px-24">
       {/* Section Header */}
       <div className="mb-16">
-        <ParallaxNumber gradient className="font-mono text-6xl md:text-8xl font-bold text-muted-foreground/10">
+        <ParallaxNumber gradient className="font-mono text-4xl md:text-6xl lg:text-8xl font-bold text-muted-foreground/10">
           07
         </ParallaxNumber>
         <h2 className="font-mono text-3xl md:text-4xl font-bold tracking-tight text-foreground uppercase -mt-8 md:-mt-12">
@@ -56,7 +47,6 @@ export function OptimalLineup({ data }: OptimalLineupProps) {
           <p className="font-mono text-5xl md:text-6xl font-bold text-gold">
             {(data.efficiency * 100).toFixed(1)}%
           </p>
-          <p className="font-mono text-lg font-bold text-gold mt-2">{efficiencyGrade}</p>
         </div>
         
         <div>
@@ -91,7 +81,7 @@ export function OptimalLineup({ data }: OptimalLineupProps) {
       </div>
 
       {/* Chart */}
-      <div className="h-[400px] mb-8" onMouseMove={onChartMouseMove}>
+      <div className="h-[250px] md:h-[400px] mb-8" onMouseMove={onChartMouseMove}>
         <ResponsiveContainer width="100%" height="100%">
           <ComposedChart data={chartData} barGap={0}>
             <XAxis
@@ -112,7 +102,7 @@ export function OptimalLineup({ data }: OptimalLineupProps) {
                 if (!active || !payload || !payload[0]) return null
                 const data = payload[0].payload
                 return (
-                  <ChartTooltipPortal active pos={tooltipPos}>
+                  <ChartTooltipPortal active pos={tooltipPos} isMobile={isMobile}>
                     <p className="font-mono text-xs text-muted-foreground mb-2">Week {data.week}</p>
                     <div className="space-y-1">
                       <p className="font-mono text-sm">

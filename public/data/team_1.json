@@ -4,6 +4,7 @@
     "manager": "Lucas Huang",
     "record": "11-7",
     "seed": 4,
+    "finalPlacement": 5,
     "pointsFor": 19520.3,
     "pointsAgainst": 18577.0
   },
@@ -2411,9 +2412,9 @@
   "grades": {
     "drafting": "B+",
     "trading": "F",
-    "waiverWire": "A+",
-    "luck": "F",
-    "consistency": "F",
-    "overall": "D"
+    "waiverWire": "B",
+    "luck": "C",
+    "coaching": "B-",
+    "overall": "C+"
   }
 }

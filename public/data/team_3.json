@@ -4,6 +4,7 @@
     "manager": "Nitin Sagi",
     "record": "8-10",
     "seed": 8,
+    "finalPlacement": 8,
     "pointsFor": 17138.7,
     "pointsAgainst": 17940.9
   },
@@ -1166,10 +1167,10 @@
   },
   "grades": {
     "drafting": "B-",
-    "trading": "C",
-    "waiverWire": "A+",
-    "luck": "C-",
-    "consistency": "F",
+    "trading": "C+",
+    "waiverWire": "D+",
+    "luck": "B+",
+    "coaching": "C-",
     "overall": "C-"
   }
 }

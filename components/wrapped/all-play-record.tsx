@@ -37,23 +37,23 @@ export function AllPlayRecord({ allPlay, actualRecord }: AllPlayRecordProps) {
   }
 
   const luckMessages = {
-    lucky: 'Fortune smiled upon you. Your schedule worked in your favor this season.',
-    unlucky: 'Bad luck plagued your season. A tougher schedule hurt your record.',
-    fair: 'Lady Luck was neutral. Your record reflects your true strength.',
+    lucky: 'You caught breaks all year. Easy matchups, opponent off-weeks, no matter what the schedule had your back.',
+    unlucky: 'You ran into buzzsaw after buzzsaw. Better team than your record shows.',
+    fair: 'No luck to blame, no luck to thank. Your record is your resume.',
   }
 
   return (
     <section className="relative min-h-screen px-6 py-24 md:px-12 lg:px-24">
       {/* Section Header */}
       <div className="mb-16">
-        <ParallaxNumber gradient className="font-mono text-6xl md:text-8xl font-bold text-muted-foreground/10">
+        <ParallaxNumber gradient className="font-mono text-4xl md:text-6xl lg:text-8xl font-bold text-muted-foreground/10">
           06
         </ParallaxNumber>
         <h2 className="font-mono text-3xl md:text-4xl font-bold tracking-tight text-foreground uppercase -mt-8 md:-mt-12">
-          All-Play Record
+          Luck
         </h2>
         <p className="font-mono text-base text-muted-foreground mt-2">
-          If you played every team every week: how would you really stack up?
+          If you played all 11 other teams every week, how would you really stack up?
         </p>
       </div>
 
@@ -118,12 +118,6 @@ export function AllPlayRecord({ allPlay, actualRecord }: AllPlayRecordProps) {
         </div>
       </div>
 
-      {/* Explanation */}
-      <div className="mt-12 p-6 border border-border bg-card/50">
-        <p className="font-mono text-sm text-muted-foreground leading-relaxed">
-          <span className="text-foreground font-bold">What is All-Play? </span> Your all-play record shows how you would have performed if you played all 11 other team in the league every week, giving a truer measure of your team&apos;s strength than head-to-head luck.
-        </p>
-      </div>
     </section>
   )
 }

@@ -4,6 +4,7 @@
     "manager": "Rishi Chillara",
     "record": "6-12",
     "seed": 10,
+    "finalPlacement": 10,
     "pointsFor": 16018.8,
     "pointsAgainst": 18007.5
   },
@@ -804,10 +805,10 @@
   },
   "grades": {
     "drafting": "C",
-    "trading": "C",
+    "trading": "C+",
     "waiverWire": "F",
-    "luck": "B",
-    "consistency": "F",
-    "overall": "F"
+    "luck": "A+",
+    "coaching": "B-",
+    "overall": "D+"
   }
 }

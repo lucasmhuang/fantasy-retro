@@ -4,6 +4,7 @@
     "manager": "Tejas Mattur",
     "record": "14-4",
     "seed": 1,
+    "finalPlacement": 1,
     "pointsFor": 20770.8,
     "pointsAgainst": 18230.3
   },
@@ -2370,10 +2371,10 @@
   },
   "grades": {
     "drafting": "A-",
-    "trading": "D+",
-    "waiverWire": "A+",
-    "luck": "D",
-    "consistency": "F",
-    "overall": "C"
+    "trading": "C",
+    "waiverWire": "A",
+    "luck": "C+",
+    "coaching": "B",
+    "overall": "B+"
   }
 }

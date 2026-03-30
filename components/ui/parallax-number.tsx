@@ -2,6 +2,7 @@
 
 import { useRef } from 'react'
 import { motion, useScroll, useTransform } from 'framer-motion'
+import { useIsMobile } from '@/hooks/use-mobile'
 
 interface ParallaxNumberProps {
   children: React.ReactNode
@@ -11,6 +12,24 @@ interface ParallaxNumberProps {
 }
 
 export function ParallaxNumber({ children, className = '', speed = 0.3, gradient = false }: ParallaxNumberProps) {
+  const isMobile = useIsMobile()
+  const gradientClass = gradient ? 'text-gradient-team opacity-20' : ''
+
+  if (isMobile) {
+    return (
+      <span
+        style={{ display: 'block', position: 'relative' }}
+        className={`${className} ${gradientClass}`}
+      >
+        {children}
+      </span>
+    )
+  }
+
+  return <ParallaxNumberAnimated className={className} speed={speed} gradientClass={gradientClass}>{children}</ParallaxNumberAnimated>
+}
+
+function ParallaxNumberAnimated({ children, className, speed, gradientClass }: { children: React.ReactNode; className: string; speed: number; gradientClass: string }) {
   const ref = useRef(null)
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -23,7 +42,7 @@ export function ParallaxNumber({ children, className = '', speed = 0.3, gradient
     <motion.span
       ref={ref}
       style={{ y, display: 'block', position: 'relative' }}
-      className={`${className} ${gradient ? 'text-gradient-team opacity-20' : ''}`}
+      className={`${className} ${gradientClass}`}
     >
       {children}
     </motion.span>

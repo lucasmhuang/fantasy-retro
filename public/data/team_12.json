@@ -4,6 +4,7 @@
     "manager": "Yash Gupta",
     "record": "7-11",
     "seed": 9,
+    "finalPlacement": 9,
     "pointsFor": 17211.1,
     "pointsAgainst": 17747.8
   },
@@ -1108,10 +1109,10 @@
   },
   "grades": {
     "drafting": "C+",
-    "trading": "C",
-    "waiverWire": "A+",
-    "luck": "C",
-    "consistency": "D",
-    "overall": "C"
+    "trading": "C+",
+    "waiverWire": "C",
+    "luck": "B+",
+    "coaching": "F",
+    "overall": "D+"
   }
 }

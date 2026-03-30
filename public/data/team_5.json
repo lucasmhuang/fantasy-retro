@@ -4,6 +4,7 @@
     "manager": "Sid Raman",
     "record": "5-13",
     "seed": 12,
+    "finalPlacement": 12,
     "pointsFor": 16344.3,
     "pointsAgainst": 18368.7
   },
@@ -2485,9 +2486,9 @@
   "grades": {
     "drafting": "C-",
     "trading": "A+",
-    "waiverWire": "A+",
-    "luck": "F",
-    "consistency": "F",
-    "overall": "C"
+    "waiverWire": "B",
+    "luck": "C-",
+    "coaching": "B",
+    "overall": "C+"
   }
 }

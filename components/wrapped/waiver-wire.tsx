@@ -13,14 +13,14 @@ interface WaiverWireProps {
 }
 
 export function WaiverWire({ pickups }: WaiverWireProps) {
-  const { pos: tooltipPos, onMouseMove: onChartMouseMove } = useChartTooltip()
+  const { pos: tooltipPos, onMouseMove: onChartMouseMove, isMobile } = useChartTooltip()
   const [expandedPickup, setExpandedPickup] = useState<number | null>(null)
 
   if (pickups.length === 0) {
     return (
       <section className="relative min-h-[60vh] px-6 py-24 md:px-12 lg:px-24 flex flex-col justify-center">
         <div className="mb-16">
-          <ParallaxNumber gradient className="font-mono text-6xl md:text-8xl font-bold text-muted-foreground/10">
+          <ParallaxNumber gradient className="font-mono text-4xl md:text-6xl lg:text-8xl font-bold text-muted-foreground/10">
             03
           </ParallaxNumber>
           <h2 className="font-mono text-3xl md:text-4xl font-bold tracking-tight text-foreground uppercase -mt-8 md:-mt-12">
@@ -29,7 +29,7 @@ export function WaiverWire({ pickups }: WaiverWireProps) {
         </div>
 
         <div className="flex flex-col items-center justify-center py-20">
-          <p className="font-mono text-6xl md:text-8xl font-bold text-muted-foreground/20">0</p>
+          <p className="font-mono text-4xl md:text-6xl lg:text-8xl font-bold text-muted-foreground/20">0</p>
           <p className="font-mono text-lg text-muted-foreground mt-4">No waiver pickups</p>
           <p className="font-mono text-sm text-muted-foreground/60 mt-2">
             Who needs FAAB when you can just draft the best players?
@@ -50,14 +50,14 @@ export function WaiverWire({ pickups }: WaiverWireProps) {
     <section className="relative min-h-screen px-6 py-24 md:px-12 lg:px-24">
       {/* Section Header */}
       <div className="mb-16">
-        <ParallaxNumber gradient className="font-mono text-6xl md:text-8xl font-bold text-muted-foreground/10">
+        <ParallaxNumber gradient className="font-mono text-4xl md:text-6xl lg:text-8xl font-bold text-muted-foreground/10">
           03
         </ParallaxNumber>
         <h2 className="font-mono text-3xl md:text-4xl font-bold tracking-tight text-foreground uppercase -mt-8 md:-mt-12">
           Waiver Wire
         </h2>
         <p className="font-mono text-base text-muted-foreground mt-2">
-          {pickups.length} pickup{pickups.length !== 1 ? "s" : ""} that made an impact.
+          The hidden gems you found on the wire. {pickups.length} pickup{pickups.length !== 1 ? "s" : ""} that moved the needle.
         </p>
       </div>
 
@@ -104,7 +104,7 @@ export function WaiverWire({ pickups }: WaiverWireProps) {
         </div>
 
         {/* MVP Weekly Chart */}
-        <div className="h-[150px] mt-6" onMouseMove={onChartMouseMove}>
+        <div className="h-[120px] md:h-[150px] mt-6" onMouseMove={onChartMouseMove}>
           <ResponsiveContainer width="100%" height="100%">
             <BarChart data={mvpPickup.weeklyPoints}>
               <XAxis
@@ -124,7 +124,7 @@ export function WaiverWire({ pickups }: WaiverWireProps) {
                   if (!active || !payload || !payload[0]) return null
                   const data = payload[0].payload
                   return (
-                    <ChartTooltipPortal active pos={tooltipPos}>
+                    <ChartTooltipPortal active pos={tooltipPos} isMobile={isMobile}>
                       <p className="font-mono text-xs text-muted-foreground">Week {data.week}</p>
                       <p className="font-mono text-lg font-bold text-gold">{data.pts.toFixed(1)}</p>
                     </ChartTooltipPortal>
@@ -191,7 +191,7 @@ export function WaiverWire({ pickups }: WaiverWireProps) {
                         <span className="font-mono text-xs text-muted-foreground">Below avg</span>
                       </div>
                     </div>
-                    <div className="h-[120px]" onMouseMove={onChartMouseMove}>
+                    <div className="h-[100px] md:h-[120px]" onMouseMove={onChartMouseMove}>
                       <ResponsiveContainer width="100%" height="100%">
                         <BarChart data={pickup.weeklyPoints}>
                           <XAxis
@@ -211,7 +211,7 @@ export function WaiverWire({ pickups }: WaiverWireProps) {
                               if (!active || !payload || !payload[0]) return null
                               const data = payload[0].payload
                               return (
-                                <ChartTooltipPortal active pos={tooltipPos}>
+                                <ChartTooltipPortal active pos={tooltipPos} isMobile={isMobile}>
                                   <p className="font-mono text-xs text-muted-foreground">Week {data.week}</p>
                                   <p className="font-mono text-lg font-bold text-foreground">{data.pts.toFixed(1)}</p>
                                 </ChartTooltipPortal>

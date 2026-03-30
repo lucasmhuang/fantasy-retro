@@ -4,6 +4,7 @@
     "manager": "Vraj Patel",
     "record": "12-6",
     "seed": 2,
+    "finalPlacement": 4,
     "pointsFor": 19519.7,
     "pointsAgainst": 17946.6
   },
@@ -2845,9 +2846,9 @@
   "grades": {
     "drafting": "C+",
     "trading": "C+",
-    "waiverWire": "A+",
-    "luck": "F",
-    "consistency": "F",
-    "overall": "C"
+    "waiverWire": "B+",
+    "luck": "C-",
+    "coaching": "B-",
+    "overall": "B-"
   }
 }

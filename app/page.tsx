@@ -48,7 +48,7 @@ export default function HomePage() {
 
   return (
     <SmoothScrollProvider>
-      <main className="min-h-screen bg-background">
+      <main className="min-h-screen bg-background overflow-x-hidden">
         {/* Hero Section */}
         <HeroSection league={league} />
 
@@ -69,14 +69,14 @@ export default function HomePage() {
                 type="button"
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id)}
-                className={`font-mono text-sm uppercase tracking-widest px-6 py-3 transition-colors duration-200 border-b-2 -mb-px ${
+                className={`font-mono text-sm uppercase tracking-widest px-3 md:px-6 py-3 transition-colors duration-200 border-b-2 -mb-px ${
                   activeTab === tab.id
                     ? 'text-gold border-gold'
                     : 'text-muted-foreground border-transparent hover:text-foreground'
                 }`}
               >
                 <span className="flex items-center gap-1.5">
-                  <tab.icon className="w-4 h-4" />
+                  <tab.icon className="w-4 h-4 hidden md:block" />
                   {tab.label}
                 </span>
               </button>
@@ -97,11 +97,12 @@ export default function HomePage() {
               trades={league.leagueTrades || []}
               replacementFPW={league.draftMeta?.replacementFPW}
               nameMap={nameMap}
+              teamGrades={league.tradeGrades}
             />
           )}
 
           {activeTab === 'waivers' && (
-            <WaiverCatalog pickups={league.leaguePickups || []} nameMap={nameMap} />
+            <WaiverCatalog pickups={league.leaguePickups || []} nameMap={nameMap} teamGrades={league.waiverGrades} />
           )}
 
           {activeTab === 'draft' &&

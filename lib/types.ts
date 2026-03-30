@@ -3,6 +3,7 @@ export interface Team {
   manager: string;
   record: string;
   seed: number;
+  finalPlacement: number;
   pointsFor: number;
   pointsAgainst: number;
 }
@@ -158,7 +159,7 @@ export interface Grades {
   trading: string;
   waiverWire: string;
   luck: string;
-  consistency: string;
+  coaching: string;
   overall: string;
 }
 

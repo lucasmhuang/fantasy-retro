@@ -81,7 +81,7 @@ export default function TeamWrappedPage() {
     { id: 'waivers', label: '03 Waivers' },
     { id: 'heatmap', label: '04 Roster' },
     { id: 'scoring', label: '05 Scoring' },
-    { id: 'allplay', label: '06 All-Play' },
+    { id: 'allplay', label: '06 Luck' },
     { id: 'optimal', label: '07 Optimal' },
     { id: 'bench', label: '08 Bench' },
     { id: 'awards', label: '09 Awards' },
@@ -92,7 +92,7 @@ export default function TeamWrappedPage() {
   return (
     <SmoothScrollProvider>
       <main
-        className="min-h-screen relative"
+        className="min-h-screen relative overflow-x-hidden"
         style={getTeamCSSVars(Number(teamId))}
       >
         <AmbientHalo sectionCount={sections.length} />
@@ -167,7 +167,7 @@ export default function TeamWrappedPage() {
 
         <div data-section id="grades">
           <ScrollReveal variant="scale">
-            <ReportCard grades={teamData.grades} allPlay={teamData.allPlayRecord} />
+            <ReportCard grades={teamData.grades} allPlay={teamData.allPlayRecord} finalPlacement={teamData.team.finalPlacement} />
           </ScrollReveal>
         </div>
 

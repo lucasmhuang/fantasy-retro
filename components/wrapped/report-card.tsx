@@ -1,11 +1,12 @@
 'use client'
 
-import { Grades, AllPlayRecord } from '@/lib/types'
+import { Grades, AllPlayRecord, Team } from '@/lib/types'
 import { ParallaxNumber } from '@/components/ui/parallax-number'
 
 interface ReportCardProps {
   grades: Grades
   allPlay: AllPlayRecord
+  finalPlacement?: number
 }
 
 function getGradeClass(grade: string): string {
@@ -37,37 +38,47 @@ function getGradeDescription(category: string, grade: string, allPlay?: AllPlayR
   
   switch (category) {
     case 'drafting':
-      if (isGood) return 'Strong draft picks formed your foundation.'
-      if (isBad) return 'Draft picks underperformed expectations.'
-      return 'Solid draft with room for improvement.'
+      if (isGood) return 'Your draft class carried you. Built different from day one.'
+      if (isBad) return 'The draft board wasn\'t kind. Rebuilding starts in October.'
+      return 'Some hits, some misses. A draft you can live with.'
     case 'trading':
-      if (isGood) return 'Excellent trade decisions boosted your roster.'
-      if (isBad) return 'Trades hurt more than they helped.'
-      return 'Trades were a mixed bag overall.'
+      if (isGood) return 'You fleeced the league. Next Sam Presti in the making.'
+      if (isBad) return 'The trade market ate you alive this year.'
+      return 'Dealt some, got dealt some. The trade game was a wash.'
     case 'waiverWire':
-      if (isGood) return 'Great pickups from the wire added depth.'
-      if (isBad) return 'Missed opportunities on the waiver wire.'
-      return 'Average waiver wire activity.'
+      if (isGood) return 'Waiver wire assassin. You found gems nobody else saw coming.'
+      if (isBad) return 'The wire was dry for you. Slim pickings all season.'
+      return 'Decent pickups here and there. Nothing league-winning.'
     case 'luck':
-      if (isGood) return 'The schedule gods favored you this season.'
-      if (isBad) return 'The schedule gods were not kind to you.'
-      return 'Luck was neither here nor there.'
-    case 'consistency':
-      if (isGood) return 'Reliable weekly scoring kept you competitive.'
-      if (isBad) return 'Boom-or-bust performances hurt your record.'
-      return 'Some good weeks, some bad weeks.'
+      if (isGood) return 'The schedule smiled on you. You dodged the big guns when it counted.'
+      if (isBad) return 'You caught every team on their best week. Brutal scheduling.'
+      return 'No excuses either way. Your record is what you earned.'
+    case 'coaching':
+      if (isGood) return 'Your lineup instincts were sharp. Right starters, right matchups.'
+      if (isBad) return 'Points rotted on your bench all season. Start your studs.'
+      return 'Some weeks you nailed it, some weeks you didn\'t. Par for the course.'
     default:
       return ''
   }
 }
 
-export function ReportCard({ grades, allPlay }: ReportCardProps) {
+function getPlacementFlavor(p: number): { label: string; description: string } {
+  if (p === 1) return { label: 'Champion', description: 'Raised the trophy. The rest is just details.' }
+  if (p === 2) return { label: 'Runner-Up', description: 'So close you could taste it. Next year.' }
+  if (p <= 4) return { label: 'Top 4', description: 'Deep playoff run. One bounce away from the finals.' }
+  if (p <= 6) return { label: 'Playoffs', description: 'Made the dance, but the music stopped early.' }
+  if (p <= 8) return { label: 'Bubble', description: 'On the outside looking in. Painful place to be.' }
+  if (p <= 10) return { label: 'Lottery', description: 'A season to forget. Time to hit the draft board.' }
+  return { label: 'Bottom', description: 'Nowhere to go but up.' }
+}
+
+export function ReportCard({ grades, allPlay, finalPlacement }: ReportCardProps) {
   const categories = [
     { key: 'drafting', label: 'Drafting' },
     { key: 'trading', label: 'Trading' },
     { key: 'waiverWire', label: 'Waiver Wire' },
+    { key: 'coaching', label: 'Coaching' },
     { key: 'luck', label: 'Luck' },
-    { key: 'consistency', label: 'Consistency' },
   ]
 
   const overallProgress = getGradeProgress(grades.overall)
@@ -76,21 +87,21 @@ export function ReportCard({ grades, allPlay }: ReportCardProps) {
     <section className="relative min-h-screen px-6 py-24 md:px-12 lg:px-24">
       {/* Section Header */}
       <div className="mb-16">
-        <ParallaxNumber gradient className="font-mono text-6xl md:text-8xl font-bold text-muted-foreground/10">
+        <ParallaxNumber gradient className="font-mono text-4xl md:text-6xl lg:text-8xl font-bold text-muted-foreground/10">
           11
         </ParallaxNumber>
         <h2 className="font-mono text-3xl md:text-4xl font-bold tracking-tight text-foreground uppercase -mt-8 md:-mt-12">
           Report Card
         </h2>
         <p className="font-mono text-base text-muted-foreground mt-2">
-          Your final season grades across all categories.
+          The verdict is in. Here's how your season stacks up.
         </p>
       </div>
 
       {/* Overall Grade - Hero */}
       <div className="flex flex-col items-center justify-center py-16 mb-12 border border-gold/50 bg-gold/5">
         <p className="font-mono text-xs text-gold uppercase tracking-widest mb-4">Overall Grade</p>
-        <p className={`font-mono text-[12rem] md:text-[16rem] font-bold leading-none ${getGradeClass(grades.overall)}`}>
+        <p className={`font-mono text-[6rem] md:text-[12rem] lg:text-[16rem] font-bold leading-none ${getGradeClass(grades.overall)}`}>
           {grades.overall}
         </p>
         <div className="w-full max-w-md mt-8 px-8">
@@ -140,6 +151,30 @@ export function ReportCard({ grades, allPlay }: ReportCardProps) {
             </div>
           )
         })}
+
+        {finalPlacement && (() => {
+          const { label, description } = getPlacementFlavor(finalPlacement)
+          return (
+            <div className="p-6 border border-gold/50 bg-gold/5">
+              <div className="flex items-start justify-between mb-4">
+                <div>
+                  <p className="font-mono text-sm text-gold uppercase tracking-widest">
+                    Finish
+                  </p>
+                  <p className="font-mono text-xs text-muted-foreground mt-1">
+                    {label}
+                  </p>
+                </div>
+                <p className="font-mono text-4xl md:text-5xl font-bold text-gold">
+                  #{finalPlacement}
+                </p>
+              </div>
+              <p className="font-mono text-xs text-muted-foreground leading-relaxed">
+                {description}
+              </p>
+            </div>
+          )
+        })()}
       </div>
     </section>
   )

@@ -127,7 +127,7 @@ export function AwardsSection({ awards, nameMap = {} }: AwardsSectionProps) {
   return (
     <section className="relative min-h-screen px-6 py-24 md:px-12 lg:px-24">
       <div className="mb-16">
-        <ParallaxNumber gradient className="font-mono text-6xl md:text-8xl font-bold text-muted-foreground/10">
+        <ParallaxNumber gradient className="font-mono text-4xl md:text-6xl lg:text-8xl font-bold text-muted-foreground/10">
           09
         </ParallaxNumber>
         <h2 className="font-mono text-3xl md:text-4xl font-bold tracking-tight text-foreground uppercase -mt-8 md:-mt-12">
@@ -189,7 +189,7 @@ export function AwardsSection({ awards, nameMap = {} }: AwardsSectionProps) {
 
       {validAwards.length === 0 && (
         <div className="flex flex-col items-center justify-center py-20">
-          <p className="font-mono text-6xl md:text-8xl font-bold text-muted-foreground/20">?</p>
+          <p className="font-mono text-4xl md:text-6xl lg:text-8xl font-bold text-muted-foreground/20">?</p>
           <p className="font-mono text-lg text-muted-foreground mt-4">No awards data available</p>
         </div>
       )}

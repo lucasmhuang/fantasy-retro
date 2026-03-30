@@ -4,6 +4,7 @@
     "manager": "Jonathan Ko",
     "record": "10-8",
     "seed": 6,
+    "finalPlacement": 2,
     "pointsFor": 18250.5,
     "pointsAgainst": 18193.8
   },
@@ -3414,10 +3415,10 @@
   },
   "grades": {
     "drafting": "C+",
-    "trading": "A-",
-    "waiverWire": "A+",
-    "luck": "C+",
-    "consistency": "F",
-    "overall": "C"
+    "trading": "B",
+    "waiverWire": "B",
+    "luck": "A",
+    "coaching": "B+",
+    "overall": "B"
   }
 }

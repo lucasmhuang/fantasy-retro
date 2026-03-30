@@ -4,6 +4,7 @@
     "manager": "Apurv Prabhakar",
     "record": "5-13",
     "seed": 11,
+    "finalPlacement": 11,
     "pointsFor": 16041.0,
     "pointsAgainst": 18591.7
   },
@@ -1801,10 +1802,10 @@
   },
   "grades": {
     "drafting": "C+",
-    "trading": "F",
-    "waiverWire": "A+",
-    "luck": "D",
-    "consistency": "F",
-    "overall": "D"
+    "trading": "C-",
+    "waiverWire": "C+",
+    "luck": "C",
+    "coaching": "F",
+    "overall": "D+"
   }
 }

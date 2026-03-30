@@ -22,10 +22,24 @@ import type { LeagueTrade, PlayerTradeStats } from '@/lib/types';
 
 type SortKey = 'week' | 'value';
 
+interface TeamGrade {
+  team: string;
+  grade: string;
+  netPts: number;
+}
+
+const GRADE_COLORS: Record<string, string> = {
+  'A+': 'text-win', A: 'text-win', 'A-': 'text-win',
+  'B+': 'text-win/70', B: 'text-win/70', 'B-': 'text-win/70',
+  'C+': 'text-muted-foreground', C: 'text-muted-foreground', 'C-': 'text-muted-foreground',
+  'D+': 'text-loss/70', D: 'text-loss/70', F: 'text-loss',
+};
+
 interface TradeCatalogProps {
   trades: LeagueTrade[];
   replacementFPW?: number;
   nameMap?: Record<string, string>;
+  teamGrades?: Record<string, TeamGrade>;
 }
 
 function CountUp({ value, decimals = 0 }: { value: number; decimals?: number }) {
@@ -33,8 +47,9 @@ function CountUp({ value, decimals = 0 }: { value: number; decimals?: number }) 
   return <span ref={ref}>{displayValue}</span>;
 }
 
-export function TradeCatalog({ trades, replacementFPW, nameMap = {} }: TradeCatalogProps) {
+export function TradeCatalog({ trades, replacementFPW, nameMap = {}, teamGrades }: TradeCatalogProps) {
   const n = (name: string) => nameMap[name] || name;
+  const { ref: gradesBatchRef } = useScrollBatch({ stagger: 0.05 });
   const [teamFilter, setTeamFilter] = useState<string | null>(null);
   const [playerSearch, setPlayerSearch] = useState('');
   const [sortBy, setSortBy] = useState<SortKey>('week');
@@ -122,48 +137,33 @@ export function TradeCatalog({ trades, replacementFPW, nameMap = {} }: TradeCata
         </div>
       </div>
 
-      {/* Team Trade Summary */}
-      <div>
-        <h3 className="font-mono text-sm font-medium text-foreground uppercase tracking-widest mb-4">
-          Team Trade Activity
-        </h3>
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
-          {(() => {
-            const teamStats = new Map<string, { trades: number; wins: number; net: number }>();
-            for (const t of trades) {
-              for (const [teamKey, ptsKey, sentKey] of [
-                ['team1', 'team2PtsROS', 'team1PtsROS'],
-                ['team2', 'team1PtsROS', 'team2PtsROS'],
-              ] as const) {
-                const name = t[teamKey];
-                const prev = teamStats.get(name) || { trades: 0, wins: 0, net: 0 };
-                const received = t[ptsKey];
-                const sent = t[sentKey];
-                teamStats.set(name, {
-                  trades: prev.trades + 1,
-                  wins: prev.wins + (t.winner === name ? 1 : 0),
-                  net: prev.net + received - sent,
-                });
-              }
-            }
-            return [...teamStats.entries()]
-              .sort((a, b) => b[1].net - a[1].net)
-              .map(([team, stats]) => (
-                <div key={team} className="border border-border/50 p-4 flex items-center justify-between">
+      {/* Team Trade Grades */}
+      {teamGrades && (
+        <div>
+          <h3 className="font-mono text-sm font-medium text-foreground uppercase tracking-widest mb-4">
+            Team Trade Grades
+          </h3>
+          <div ref={gradesBatchRef} className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
+            {Object.entries(teamGrades)
+              .sort(([, a], [, b]) => b.netPts - a.netPts)
+              .map(([tid, tg]) => (
+                <div key={tid} data-batch-item className="border border-border/50 p-4 flex items-center justify-between">
                   <div>
-                    <p className="font-mono text-sm font-bold text-foreground truncate max-w-[140px]">{n(team)}</p>
-                    <p className="font-mono text-xs text-muted-foreground mt-1">
-                      {stats.trades} trades &middot; {stats.wins}W-{stats.trades - stats.wins}L
+                    <p className="font-mono text-sm font-bold text-foreground truncate max-w-[140px]">
+                      {n(tg.team)}
+                    </p>
+                    <p className="font-mono text-xs text-muted-foreground">
+                      {tg.netPts >= 0 ? '+' : ''}{tg.netPts.toFixed(0)} net pts
                     </p>
                   </div>
-                  <span className={`font-mono text-xl font-bold ${stats.net >= 0 ? 'text-win' : 'text-loss'}`}>
-                    {stats.net >= 0 ? '+' : ''}{stats.net.toFixed(0)}
+                  <span className={`font-mono text-3xl font-bold ${GRADE_COLORS[tg.grade] || 'text-foreground'}`}>
+                    {tg.grade}
                   </span>
                 </div>
-              ));
-          })()}
+              ))}
+          </div>
         </div>
-      </div>
+      )}
 
       {/* Filters */}
       <div className="space-y-3">
@@ -204,7 +204,7 @@ export function TradeCatalog({ trades, replacementFPW, nameMap = {} }: TradeCata
             className="w-full font-mono text-sm bg-transparent border border-border/50 pl-9 pr-3 py-2 text-foreground placeholder:text-muted-foreground/50 focus:outline-none focus:border-gold/50"
           />
         </div>
-        <div className="flex gap-2">
+        <div className="flex flex-wrap gap-2">
           {(['week', 'value'] as SortKey[]).map((key) => {
             const active = sortBy === key;
             const defaultAsc = key === 'week';

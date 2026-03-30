@@ -4,6 +4,7 @@
     "manager": "Abhi Upadhyay",
     "record": "11-7",
     "seed": 3,
+    "finalPlacement": 6,
     "pointsFor": 19829.9,
     "pointsAgainst": 18508.7
   },
@@ -1670,10 +1671,10 @@
   },
   "grades": {
     "drafting": "B",
-    "trading": "C",
-    "waiverWire": "A+",
+    "trading": "C+",
+    "waiverWire": "A",
     "luck": "F",
-    "consistency": "F",
-    "overall": "C"
+    "coaching": "B+",
+    "overall": "B"
   }
 }

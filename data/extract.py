@@ -1643,25 +1643,38 @@ def compute_awards(weekly_results, heatmap, weekly_team_scores, team_id, reg_wee
 # ---------------------------------------------------------------------------
 
 
-def compute_grades(weekly_results, trades, pickups, all_play, reg_weeks, draft_grade_override=None):
-    def to_grade(score):
-        thresholds = [
-            (95, "A+"),
-            (90, "A"),
-            (85, "A-"),
-            (80, "B+"),
-            (75, "B"),
-            (70, "B-"),
-            (65, "C+"),
-            (60, "C"),
-            (55, "C-"),
-            (50, "D+"),
-            (45, "D"),
-        ]
-        for threshold, grade in thresholds:
-            if score >= threshold:
-                return grade
-        return "F"
+def _score_to_grade(score):
+    thresholds = [
+        (95, "A+"), (90, "A"), (85, "A-"), (80, "B+"), (75, "B"),
+        (70, "B-"), (65, "C+"), (60, "C"), (55, "C-"), (50, "D+"), (45, "D"),
+    ]
+    for threshold, grade in thresholds:
+        if score >= threshold:
+            return grade
+    return "F"
+
+
+def _z_score_to_grade(value, stats, center=70, scale=18):
+    if stats and stats["std"] > 0:
+        z = (value - stats["mean"]) / stats["std"]
+        score = min(100, max(0, center + z * scale))
+    else:
+        score = 50
+    return _score_to_grade(score)
+
+
+PLACEMENT_SCORES = {
+    1: 100, 2: 90, 3: 80, 4: 80, 5: 65, 6: 65,
+    7: 50, 8: 50, 9: 35, 10: 35, 11: 20, 12: 20,
+}
+
+
+def compute_grades(
+    weekly_results, trades, pickups, all_play, reg_weeks,
+    draft_grade_override=None, optimal=None, league_grade_stats=None,
+    pre_luck_diff=None, final_placement=None,
+):
+    to_grade = _score_to_grade
 
     reg = [w for w in weekly_results if w["week"] <= reg_weeks]
     total_games = len(reg)
@@ -1688,32 +1701,38 @@ def compute_grades(weekly_results, trades, pickups, all_play, reg_weeks, draft_g
         early_wins = sum(1 for w in reg[:4] if w["result"] == "W")
         drafting = 50 + early_wins * 12.5
 
+    def _z_score(value, stat_key, center=70, scale=18):
+        stats = (league_grade_stats or {}).get(stat_key)
+        if stats and stats["std"] > 0:
+            z = (value - stats["mean"]) / stats["std"]
+            return min(100, max(0, center + z * scale))
+        return 50
+
     trade_net = sum(t.get("net", 0) for t in trades)
-    trading = min(100, max(0, 60 + trade_net / 20))
+    trading = _z_score(trade_net, "trade_net")
 
-    top_pickup = max((p.get("ptsAfterAdd", 0) for p in pickups), default=0)
-    waiver = min(100, max(0, 40 + top_pickup / 10))
+    waiver_total = sum(p.get("ptsAfterAdd", 0) for p in pickups)
+    waiver = _z_score(waiver_total, "waiver_total")
 
-    ap_pct = all_play.get("winPct", 0.5)
-    luck_diff = win_pct - ap_pct
-    luck = min(100, max(0, 50 + luck_diff * 200))
-
-    scores = [w["score"] for w in reg]
-    if len(scores) > 1:
-        mean = sum(scores) / len(scores)
-        std = (sum((s - mean) ** 2 for s in scores) / len(scores)) ** 0.5
-        consistency = min(100, max(0, 100 - std / 2))
+    if pre_luck_diff is not None:
+        luck_diff = pre_luck_diff
     else:
-        consistency = 50
+        ap_pct = all_play.get("winPct", 0.5)
+        luck_diff = win_pct - ap_pct
+    luck = _z_score(luck_diff, "luck")
 
-    overall = drafting * 0.20 + trading * 0.20 + waiver * 0.20 + consistency * 0.20 + (win_pct * 100) * 0.20
+    efficiency = (optimal or {}).get("efficiency", 0.0)
+    consistency = _z_score(efficiency, "efficiency")
+
+    placement = PLACEMENT_SCORES.get(final_placement or 7, 50)
+    overall = drafting * 0.20 + trading * 0.20 + waiver * 0.20 + consistency * 0.20 + placement * 0.20
 
     return {
         "drafting": to_grade(drafting),
         "trading": to_grade(trading),
         "waiverWire": to_grade(waiver),
         "luck": to_grade(luck),
-        "consistency": to_grade(consistency),
+        "coaching": to_grade(consistency),
         "overall": to_grade(overall),
     }
 
@@ -1736,6 +1755,9 @@ def extract_team(
     replacement_ppg=0.0,
     nba_games=None,
     last_week=None,
+    league_grade_stats=None,
+    pre_luck_diff=None,
+    final_placement=None,
 ):
     last_week = last_week or total_weeks
     tid = team.team_id
@@ -1776,7 +1798,11 @@ def extract_team(
 
     print("  [11/11] Grades")
     team_draft_grade = (draft_grades or {}).get(str(tid), {}).get("grade")
-    grades = compute_grades(weekly_results, trades, pickups, all_play, reg_weeks, team_draft_grade)
+    grades = compute_grades(
+        weekly_results, trades, pickups, all_play, reg_weeks,
+        team_draft_grade, optimal, league_grade_stats,
+        pre_luck_diff, final_placement,
+    )
 
     reg_results = [w for w in weekly_results if w["week"] <= reg_weeks]
 
@@ -1786,6 +1812,7 @@ def extract_team(
             "manager": get_manager_name(team),
             "record": f"{team.wins}-{team.losses}",
             "seed": team.standing,
+            "finalPlacement": final_placement,
             "pointsFor": round(sum(w["score"] for w in reg_results), 1),
             "pointsAgainst": round(sum(w["oppScore"] for w in reg_results), 1),
         },
@@ -2265,6 +2292,41 @@ def do_extract(
     else:
         teams = league.teams
 
+    # Pre-compute league-wide stats for z-score grading
+    all_efficiencies = {}
+    all_trade_nets = {}
+    all_waiver_totals = {}
+    all_luck_diffs = {}
+    for t in league.teams:
+        tid = t.team_id
+        lw = last_week_map.get(tid, reg_weeks)
+        ol = extract_optimal_lineup(tid, box_cache, lw)
+        all_efficiencies[tid] = ol.get("efficiency", 0.0)
+        t_trades = extract_trades(
+            tid, activity, box_cache, lw,
+            repl_fpw, nba_games_by_week,
+        )
+        all_trade_nets[tid] = sum(tr.get("net", 0) for tr in t_trades)
+        t_pickups = extract_waiver_pickups(tid, activity, box_cache, lw)
+        all_waiver_totals[tid] = sum(p.get("ptsAfterAdd", 0) for p in t_pickups)
+        ap = extract_all_play(tid, weekly_scores, reg_weeks)
+        reg = [w for w in extract_weekly_results(tid, box_cache, standings, {}, lw) if w["week"] <= reg_weeks]
+        win_pct = sum(1 for w in reg if w["result"] == "W") / len(reg) if reg else 0
+        all_luck_diffs[tid] = win_pct - ap.get("winPct", 0.5)
+
+    def _league_stats(values):
+        vals = list(values.values())
+        mean = sum(vals) / len(vals) if vals else 0.0
+        std = (sum((v - mean) ** 2 for v in vals) / len(vals)) ** 0.5 if len(vals) > 1 else 1.0
+        return {"mean": mean, "std": std}
+
+    league_grade_stats = {
+        "efficiency": _league_stats(all_efficiencies),
+        "trade_net": _league_stats(all_trade_nets),
+        "waiver_total": _league_stats(all_waiver_totals),
+        "luck": _league_stats(all_luck_diffs),
+    }
+
     all_scoring_profiles = []
     for team in teams:
         last_week = last_week_map.get(team.team_id, reg_weeks)
@@ -2282,6 +2344,9 @@ def do_extract(
                 repl_fpw,
                 nba_games_by_week,
                 last_week=last_week,
+                league_grade_stats=league_grade_stats,
+                pre_luck_diff=all_luck_diffs.get(team.team_id),
+                final_placement=final_placement_map.get(team.team_id),
             )
             all_scoring_profiles.append(data.get("scoringProfile", {}))
             path = OUTPUT_DIR / f"team_{team.team_id}.json"
@@ -2322,6 +2387,22 @@ def do_extract(
         "draftAnalysis": draft_picks,
         "draftMeta": draft_meta,
         "draftGrades": draft_grades,
+        "tradeGrades": {
+            str(tid): {
+                "team": next(t.team_name for t in league.teams if t.team_id == tid),
+                "grade": _z_score_to_grade(net, league_grade_stats["trade_net"]),
+                "netPts": round(net, 1),
+            }
+            for tid, net in all_trade_nets.items()
+        },
+        "waiverGrades": {
+            str(tid): {
+                "team": next(t.team_name for t in league.teams if t.team_id == tid),
+                "grade": _z_score_to_grade(total, league_grade_stats["waiver_total"]),
+                "totalPts": round(total, 1),
+            }
+            for tid, total in all_waiver_totals.items()
+        },
         "teams": [
             {
                 "id": t.team_id,

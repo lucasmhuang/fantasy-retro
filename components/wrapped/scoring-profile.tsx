@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useCallback, useEffect, useRef } from 'react'
+import { useState, useCallback, useEffect } from 'react'
 import { useChartTooltip } from '@/hooks/use-chart-tooltip'
 import { ChartTooltipPortal } from '@/components/ui/chart-tooltip-portal'
 import { ScoringProfile as ScoringProfileType } from '@/lib/types'
@@ -18,13 +18,6 @@ export function ScoringProfile({ profile, leagueAvg }: ScoringProfileProps) {
   const [radarScale, setRadarScale] = useState(0)
   const [breakdownReveal, setBreakdownReveal] = useState(0)
   const [teamColor, setTeamColor] = useState('oklch(0.80 0.18 85)')
-  const colorRef = useRef<HTMLDivElement>(null)
-
-  useEffect(() => {
-    if (!colorRef.current) return
-    const raw = getComputedStyle(colorRef.current).getPropertyValue('--team-primary').trim()
-    if (raw) setTeamColor(raw)
-  }, [])
 
   const onProgress = useCallback((p: number) => {
     setRadarScale(Math.min(p / 0.5, 1))
@@ -35,7 +28,14 @@ export function ScoringProfile({ profile, leagueAvg }: ScoringProfileProps) {
     endOffset: '+=100%',
     onProgress,
   })
-  const { pos: tooltipPos, onMouseMove: onChartMouseMove } = useChartTooltip()
+
+  useEffect(() => {
+    if (!pinRef.current) return
+    const raw = getComputedStyle(pinRef.current).getPropertyValue('--team-primary').trim()
+    if (raw) setTeamColor(raw)
+  }, [pinRef])
+
+  const { pos: tooltipPos, onMouseMove: onChartMouseMove, isMobile } = useChartTooltip()
   const categories = ['PTS', 'REB', 'AST', 'STL', 'BLK'] // Exclude TO for radar
   
   const radarData = categories.map(cat => {
@@ -88,23 +88,23 @@ export function ScoringProfile({ profile, leagueAvg }: ScoringProfileProps) {
   const belowAvg = comparisons.filter(c => c.diff < -0.5 && c.category !== 'TO')
 
   return (
-    <section ref={(el) => { (pinRef as React.MutableRefObject<HTMLDivElement | null>).current = el; (colorRef as React.MutableRefObject<HTMLDivElement | null>).current = el; }} className="relative min-h-screen px-6 py-24 md:px-12 lg:px-24">
+    <section ref={pinRef} className="relative min-h-screen px-6 py-24 md:px-12 lg:px-24">
       {/* Section Header */}
       <div className="mb-16">
-        <ParallaxNumber gradient className="font-mono text-6xl md:text-8xl font-bold text-muted-foreground/10">
+        <ParallaxNumber gradient className="font-mono text-4xl md:text-6xl lg:text-8xl font-bold text-muted-foreground/10">
           05
         </ParallaxNumber>
         <h2 className="font-mono text-3xl md:text-4xl font-bold tracking-tight text-foreground uppercase -mt-8 md:-mt-12">
           Scoring Profile
         </h2>
         <p className="font-mono text-base text-muted-foreground mt-2">
-          Where your fantasy points came from, vs league average.
+          Your scoring DNA. What made your team tick and where you fell short.
         </p>
       </div>
 
       <div className="grid lg:grid-cols-2 gap-12" onMouseMove={onChartMouseMove}>
         {/* Radar Chart */}
-        <div className="h-[400px] lg:h-[500px]">
+        <div className="h-[280px] md:h-[400px] lg:h-[500px]">
           <ResponsiveContainer width="100%" height="100%">
             <RadarChart data={radarData} cx="50%" cy="50%" outerRadius="70%">
               <PolarGrid 
@@ -125,7 +125,7 @@ export function ScoringProfile({ profile, leagueAvg }: ScoringProfileProps) {
                   if (!active || !payload || !payload[0]) return null
                   const data = payload[0].payload
                   return (
-                    <ChartTooltipPortal active pos={tooltipPos}>
+                    <ChartTooltipPortal active pos={tooltipPos} isMobile={isMobile}>
                       <p className="font-mono text-sm text-foreground font-bold mb-2">{data.fullName}</p>
                       <div className="space-y-1">
                         <p className="font-mono text-xs">

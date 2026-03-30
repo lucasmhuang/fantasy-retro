@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useMemo } from 'react'
+import { useState, useMemo, useEffect } from 'react'
 import { createPortal } from 'react-dom'
 import { RosterRow, WeeklyResult } from '@/lib/types'
 import { ChevronDown, ChevronUp } from 'lucide-react'
@@ -26,6 +26,17 @@ export function RosterHeatmap({ heatmap, weeklyResults, nameMap = {} }: RosterHe
   const [hovered, setHovered] = useState<HoverData>(null)
   const [tooltipPos, setTooltipPos] = useState({ x: 0, y: 0 })
   const { ref: batchRef } = useScrollBatch({ childSelector: '[data-batch-item]', stagger: 0.04 })
+
+  useEffect(() => {
+    if (!hovered) return
+    const dismiss = () => setHovered(null)
+    window.addEventListener('scroll', dismiss, { passive: true, once: true })
+    window.addEventListener('touchmove', dismiss, { passive: true, once: true })
+    return () => {
+      window.removeEventListener('scroll', dismiss)
+      window.removeEventListener('touchmove', dismiss)
+    }
+  }, [hovered])
 
   const allValues = heatmap.flatMap(row => row.weeks.filter(v => v > 0))
   const maxValue = Math.max(...allValues)
@@ -67,14 +78,14 @@ export function RosterHeatmap({ heatmap, weeklyResults, nameMap = {} }: RosterHe
   return (
     <section className="relative min-h-screen px-6 py-24 md:px-12 lg:px-24">
       <div className="mb-16">
-        <ParallaxNumber gradient className="font-mono text-6xl md:text-8xl font-bold text-muted-foreground/10">
+        <ParallaxNumber gradient className="font-mono text-4xl md:text-6xl lg:text-8xl font-bold text-muted-foreground/10">
           04
         </ParallaxNumber>
         <h2 className="font-mono text-3xl md:text-4xl font-bold tracking-tight text-foreground uppercase -mt-8 md:-mt-12">
           Roster Heatmap
         </h2>
         <p className="font-mono text-base text-muted-foreground mt-2">
-          Every player, every week. Color intensity = fantasy points.
+          The whole squad under the microscope, week by week.
         </p>
       </div>
 
@@ -99,8 +110,8 @@ export function RosterHeatmap({ heatmap, weeklyResults, nameMap = {} }: RosterHe
 
       {hovered && typeof document !== 'undefined' && createPortal(
         <div
-          className="fixed z-50 pointer-events-none px-3 py-2 bg-card border border-border shadow-xl"
-          style={{ left: tooltipPos.x + 12, top: tooltipPos.y - 60 }}
+          className="fixed z-50 pointer-events-none px-4 py-3 bg-card border border-border shadow-xl"
+          style={{ left: tooltipPos.x + 14, top: tooltipPos.y - 14 }}
         >
           <p className="font-mono text-xs font-bold text-foreground">{hovered.player}</p>
           <p className="font-mono text-xs text-muted-foreground">Week {hovered.week} · {nameMap[hovered.opponent] || hovered.opponent}</p>
@@ -170,6 +181,15 @@ export function RosterHeatmap({ heatmap, weeklyResults, nameMap = {} }: RosterHe
                         }}
                         onMouseMove={(e) => setTooltipPos({ x: e.clientX, y: e.clientY })}
                         onMouseLeave={() => setHovered(null)}
+                        onTouchEnd={(e) => {
+                          if (hovered?.player === row.player && hovered?.week === week) {
+                            setHovered(null)
+                          } else {
+                            const touch = e.changedTouches[0]
+                            setHovered({ player: row.player, slot: row.slot, week, pts: value, opponent })
+                            setTooltipPos({ x: touch.clientX, y: touch.clientY })
+                          }
+                        }}
                       />
                     )
                   })}

@@ -26,7 +26,7 @@ export function SeasonTimeline({ weeklyResults, nameMap = {} }: SeasonTimelinePr
     onProgress,
   })
 
-  const { pos: tooltipPos, onMouseMove: onChartMouseMove } = useChartTooltip()
+  const { pos: tooltipPos, onMouseMove: onChartMouseMove, isMobile } = useChartTooltip()
 
   const rawData = weeklyResults.map((week) => ({
     week: week.week,
@@ -75,7 +75,7 @@ export function SeasonTimeline({ weeklyResults, nameMap = {} }: SeasonTimelinePr
     <section ref={pinRef} className="relative min-h-screen px-6 py-24 md:px-12 lg:px-24">
       {/* Section Header */}
       <div className="mb-16">
-        <ParallaxNumber gradient className="font-mono text-6xl md:text-8xl font-bold text-muted-foreground/10">
+        <ParallaxNumber gradient className="font-mono text-4xl md:text-6xl lg:text-8xl font-bold text-muted-foreground/10">
           01
         </ParallaxNumber>
         <h2 className="font-mono text-3xl md:text-4xl font-bold tracking-tight text-foreground uppercase -mt-8 md:-mt-12">
@@ -131,7 +131,7 @@ export function SeasonTimeline({ weeklyResults, nameMap = {} }: SeasonTimelinePr
                   const data = payload[0].payload
                   if (data.isBye) {
                     return (
-                      <ChartTooltipPortal active pos={tooltipPos}>
+                      <ChartTooltipPortal active pos={tooltipPos} isMobile={isMobile}>
                         <p className="font-mono text-xs text-muted-foreground mb-1">Week {data.week}</p>
                         <p className="font-mono text-lg font-bold text-gold">BYE</p>
                         <p className="font-mono text-xs text-muted-foreground mt-1">First-round bye</p>
@@ -139,7 +139,7 @@ export function SeasonTimeline({ weeklyResults, nameMap = {} }: SeasonTimelinePr
                     )
                   }
                   return (
-                    <ChartTooltipPortal active pos={tooltipPos}>
+                    <ChartTooltipPortal active pos={tooltipPos} isMobile={isMobile}>
                       <p className="font-mono text-xs text-muted-foreground mb-1">Week {data.week}</p>
                       <p className={`font-mono text-lg font-bold ${data.result === 'W' ? 'text-win' : 'text-loss'}`}>
                         {data.result === 'W' ? 'WIN' : 'LOSS'}
@@ -176,7 +176,7 @@ export function SeasonTimeline({ weeklyResults, nameMap = {} }: SeasonTimelinePr
         </div>
 
         {/* Standings Line Chart */}
-        <div className="h-[150px] mb-8" onMouseMove={onChartMouseMove}>
+        <div className="h-[100px] md:h-[150px] mb-8" onMouseMove={onChartMouseMove}>
           <p className="font-mono text-xs text-muted-foreground uppercase tracking-widest mb-4">Standing Over Time</p>
           <ResponsiveContainer width="100%" height="100%">
             <LineChart data={chartData.filter(d => d.standing > 0)}>
@@ -201,7 +201,7 @@ export function SeasonTimeline({ weeklyResults, nameMap = {} }: SeasonTimelinePr
                   if (!active || !payload || !payload[0]) return null
                   const data = payload[0].payload
                   return (
-                    <ChartTooltipPortal active pos={tooltipPos}>
+                    <ChartTooltipPortal active pos={tooltipPos} isMobile={isMobile}>
                       <p className="font-mono text-xs text-muted-foreground">Week {data.week}</p>
                       <p className="font-mono text-lg font-bold text-foreground">#{data.standing}</p>
                     </ChartTooltipPortal>

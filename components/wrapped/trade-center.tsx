@@ -37,7 +37,7 @@ interface TradeCenterProps {
 export function TradeCenter({ trades, replacementFPW, nameMap = {} }: TradeCenterProps) {
   const [expandedTrade, setExpandedTrade] = useState<number | null>(null);
   const { ref: batchRef } = useScrollBatch();
-  const { pos: tooltipPos, onMouseMove: onChartMouseMove } = useChartTooltip();
+  const { pos: tooltipPos, onMouseMove: onChartMouseMove, isMobile } = useChartTooltip();
 
   const totalNet = trades.reduce((acc, t) => acc + t.net, 0);
   const isPositiveOverall = totalNet >= 0;
@@ -46,7 +46,7 @@ export function TradeCenter({ trades, replacementFPW, nameMap = {} }: TradeCente
     return (
       <section className="relative min-h-[60vh] px-6 py-24 md:px-12 lg:px-24 flex flex-col justify-center">
         <div className="mb-16">
-          <ParallaxNumber gradient className="font-mono text-6xl md:text-8xl font-bold text-muted-foreground/10">
+          <ParallaxNumber gradient className="font-mono text-4xl md:text-6xl lg:text-8xl font-bold text-muted-foreground/10">
             02
           </ParallaxNumber>
           <h2 className="font-mono text-3xl md:text-4xl font-bold tracking-tight text-foreground uppercase -mt-8 md:-mt-12">
@@ -55,7 +55,7 @@ export function TradeCenter({ trades, replacementFPW, nameMap = {} }: TradeCente
         </div>
 
         <div className="flex flex-col items-center justify-center py-20">
-          <p className="font-mono text-6xl md:text-8xl font-bold text-muted-foreground/20">
+          <p className="font-mono text-4xl md:text-6xl lg:text-8xl font-bold text-muted-foreground/20">
             0
           </p>
           <p className="font-mono text-lg text-muted-foreground mt-4">
@@ -73,15 +73,14 @@ export function TradeCenter({ trades, replacementFPW, nameMap = {} }: TradeCente
     <section className="relative min-h-screen px-6 py-24 md:px-12 lg:px-24">
       {/* Section Header */}
       <div className="mb-16">
-        <ParallaxNumber gradient className="font-mono text-6xl md:text-8xl font-bold text-muted-foreground/10">
+        <ParallaxNumber gradient className="font-mono text-4xl md:text-6xl lg:text-8xl font-bold text-muted-foreground/10">
           02
         </ParallaxNumber>
         <h2 className="font-mono text-3xl md:text-4xl font-bold tracking-tight text-foreground uppercase -mt-8 md:-mt-12">
           Trade Center
         </h2>
         <p className="font-mono text-base text-muted-foreground mt-2">
-          {trades.length} trade{trades.length !== 1 ? 's' : ''} executed this
-          season.
+          {trades.length} deal{trades.length !== 1 ? 's' : ''} made. Did you buy low and sell high?
         </p>
       </div>
 
@@ -295,7 +294,7 @@ export function TradeCenter({ trades, replacementFPW, nameMap = {} }: TradeCente
                   <p className="font-mono text-xs text-muted-foreground uppercase tracking-widest mt-6 mb-4">
                     Cumulative Net Impact
                   </p>
-                  <div className="h-[200px]" onMouseMove={onChartMouseMove}>
+                  <div className="h-[150px] md:h-[200px]" onMouseMove={onChartMouseMove}>
                     <ResponsiveContainer width="100%" height="100%">
                       <LineChart data={cumulativeData}>
                         <XAxis
@@ -323,7 +322,7 @@ export function TradeCenter({ trades, replacementFPW, nameMap = {} }: TradeCente
                             if (!active || !payload || !payload[0]) return null;
                             const data = payload[0].payload;
                             return (
-                              <ChartTooltipPortal active pos={tooltipPos}>
+                              <ChartTooltipPortal active pos={tooltipPos} isMobile={isMobile}>
                                 <p className="font-mono text-xs text-muted-foreground mb-1">
                                   Week {data.week}
                                 </p>

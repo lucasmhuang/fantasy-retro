@@ -5690,6 +5690,130 @@
       "avgValueOverDraft": -5.2
     }
   },
+  "tradeGrades": {
+    "1": {
+      "team": "The Commish",
+      "grade": "F",
+      "netPts": -1597.0
+    },
+    "2": {
+      "team": "enchant",
+      "grade": "B",
+      "netPts": 758.5
+    },
+    "3": {
+      "team": "It's Teague Time",
+      "grade": "C+",
+      "netPts": 0
+    },
+    "4": {
+      "team": "superbum",
+      "grade": "C+",
+      "netPts": 23.6
+    },
+    "5": {
+      "team": "Siddus Squad",
+      "grade": "A+",
+      "netPts": 3471.1
+    },
+    "6": {
+      "team": "paddington bear",
+      "grade": "B",
+      "netPts": 591.4
+    },
+    "7": {
+      "team": " SPLASH \ud83d\udc4c",
+      "grade": "C-",
+      "netPts": -513.8
+    },
+    "8": {
+      "team": "May Not Need Minott",
+      "grade": "C",
+      "netPts": -156.6
+    },
+    "9": {
+      "team": "my left nuts",
+      "grade": "C+",
+      "netPts": 0
+    },
+    "10": {
+      "team": "White Cowards",
+      "grade": "C-",
+      "netPts": -506.0
+    },
+    "11": {
+      "team": "Team Patel",
+      "grade": "C+",
+      "netPts": 179.5
+    },
+    "12": {
+      "team": "Yash's Stout Team",
+      "grade": "C+",
+      "netPts": 0
+    }
+  },
+  "waiverGrades": {
+    "1": {
+      "team": "The Commish",
+      "grade": "B",
+      "totalPts": 5049.5
+    },
+    "2": {
+      "team": "enchant",
+      "grade": "D",
+      "totalPts": 1807.4
+    },
+    "3": {
+      "team": "It's Teague Time",
+      "grade": "D+",
+      "totalPts": 2351.8
+    },
+    "4": {
+      "team": "superbum",
+      "grade": "A",
+      "totalPts": 6203.9
+    },
+    "5": {
+      "team": "Siddus Squad",
+      "grade": "B",
+      "totalPts": 4817.1
+    },
+    "6": {
+      "team": "paddington bear",
+      "grade": "B",
+      "totalPts": 4765.4
+    },
+    "7": {
+      "team": " SPLASH \ud83d\udc4c",
+      "grade": "C+",
+      "totalPts": 4058.2
+    },
+    "8": {
+      "team": "May Not Need Minott",
+      "grade": "A",
+      "totalPts": 6288.9
+    },
+    "9": {
+      "team": "my left nuts",
+      "grade": "F",
+      "totalPts": 0
+    },
+    "10": {
+      "team": "White Cowards",
+      "grade": "B+",
+      "totalPts": 5373.5
+    },
+    "11": {
+      "team": "Team Patel",
+      "grade": "B+",
+      "totalPts": 5441.0
+    },
+    "12": {
+      "team": "Yash's Stout Team",
+      "grade": "C",
+      "totalPts": 3156.3
+    }
+  },
   "teams": [
     {
       "id": 8,

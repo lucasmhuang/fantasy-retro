@@ -22,21 +22,38 @@ export function useScrollPin(options: UseScrollPinOptions = {}) {
     const el = ref.current
     if (!el) return
 
-    const trigger = ScrollTrigger.create({
-      trigger: el,
-      start: 'top top',
-      end: endOffset,
-      pin: true,
-      pinType: 'transform',
-      anticipatePin: 1,
-      scrub: scrub,
-      onUpdate: (self) => {
-        progressRef.current?.(self.progress)
-      },
+    const ctx = gsap.context(() => {
+      ScrollTrigger.matchMedia({
+        '(min-width: 768px)': () => {
+          ScrollTrigger.create({
+            trigger: el,
+            start: 'top top',
+            end: endOffset,
+            pin: true,
+            pinType: 'transform',
+            anticipatePin: 1,
+            scrub: scrub,
+            onUpdate: (self) => {
+              progressRef.current?.(self.progress)
+            },
+          })
+        },
+        '(max-width: 767px)': () => {
+          ScrollTrigger.create({
+            trigger: el,
+            start: 'top bottom',
+            end: 'bottom top',
+            scrub: scrub,
+            onUpdate: (self) => {
+              progressRef.current?.(self.progress)
+            },
+          })
+        },
+      })
     })
 
     return () => {
-      trigger.kill()
+      ctx.revert()
     }
   }, [endOffset, scrub])
 

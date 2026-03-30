@@ -6,10 +6,19 @@ interface ChartTooltipPortalProps {
   active?: boolean
   pos: { x: number; y: number }
   children: React.ReactNode
+  isMobile?: boolean
 }
 
-export function ChartTooltipPortal({ active, pos, children }: ChartTooltipPortalProps) {
+export function ChartTooltipPortal({ active, pos, children, isMobile }: ChartTooltipPortalProps) {
   if (!active || typeof document === 'undefined') return null
+
+  if (isMobile) {
+    return (
+      <div className="bg-card border border-border px-4 py-3 shadow-xl">
+        {children}
+      </div>
+    )
+  }
 
   return createPortal(
     <div
