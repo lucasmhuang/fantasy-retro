@@ -9,12 +9,9 @@ import {
 } from 'lucide-react';
 import { useMemo, useState } from 'react';
 import { useScrollBatch } from '@/hooks/use-scroll-batch';
-import { useCountUp } from '@/hooks/use-count-up';
-
-function CountUp({ value, decimals = 0 }: { value: number; decimals?: number }) {
-  const { ref, displayValue } = useCountUp(value, { decimals });
-  return <span ref={ref}>{displayValue}</span>;
-}
+import { CountUp } from '@/components/ui/count-up';
+import { GRADE_COLORS } from '@/lib/chart';
+import { resolveDisplayName } from '@/lib/team-colors';
 import type { DraftMeta, DraftPick, DraftTeamGrade } from '@/lib/types';
 
 interface DraftRetrospectiveProps {
@@ -33,21 +30,6 @@ const LABEL_CONFIG: Record<string, { color: string; bg: string }> = {
   bust: { color: 'text-loss', bg: 'bg-loss/20' },
 };
 
-const GRADE_COLORS: Record<string, string> = {
-  'A+': 'text-win',
-  A: 'text-win',
-  'A-': 'text-win',
-  'B+': 'text-win/70',
-  B: 'text-win/70',
-  'B-': 'text-win/70',
-  'C+': 'text-muted-foreground',
-  C: 'text-muted-foreground',
-  'C-': 'text-muted-foreground',
-  'D+': 'text-loss/70',
-  D: 'text-loss/70',
-  F: 'text-loss',
-};
-
 type BoardView = 'round' | 'value';
 type SortKey = 'value' | 'grade' | 'seasonPts' | 'ppg' | 'overall';
 
@@ -59,7 +41,7 @@ export function DraftRetrospective({
   enabled = true,
   batchKey,
 }: DraftRetrospectiveProps & { nameMap?: Record<string, string> }) {
-  const n = (name: string) => nameMap[name] || name;
+  const n = resolveDisplayName(nameMap);
   const [expandedRound, setExpandedRound] = useState<number | null>(1);
   const [showMethodology, setShowMethodology] = useState(false);
   const [boardView, setBoardView] = useState<BoardView>('round');
@@ -400,7 +382,7 @@ function PickList({
   variant: 'win' | 'loss';
   nameMap?: Record<string, string>;
 }) {
-  const n = (name: string) => nameMap[name] || name;
+  const n = resolveDisplayName(nameMap);
   const { ref: listBatchRef } = useScrollBatch({ stagger: 0.06 });
   return (
     <div
@@ -449,7 +431,7 @@ function PickList({
 }
 
 function DraftPickRow({ pick, nameMap = {} }: { pick: DraftPick; nameMap?: Record<string, string> }) {
-  const n = (name: string) => nameMap[name] || name;
+  const n = resolveDisplayName(nameMap);
   const labelCfg = LABEL_CONFIG[pick.label] || LABEL_CONFIG.fair;
   const delta = pick.valueOverDraft;
 

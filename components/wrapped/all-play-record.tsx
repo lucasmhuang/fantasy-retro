@@ -2,7 +2,7 @@
 
 import { AllPlayRecord as AllPlayRecordType } from '@/lib/types'
 import { Sparkles, Target, Scale } from 'lucide-react'
-import { ParallaxNumber } from '@/components/ui/parallax-number'
+import { SectionHeader } from '@/components/wrapped/section-header'
 
 interface AllPlayRecordProps {
   allPlay: AllPlayRecordType
@@ -44,18 +44,11 @@ export function AllPlayRecord({ allPlay, actualRecord }: AllPlayRecordProps) {
 
   return (
     <section className="relative min-h-screen px-6 py-24 md:px-12 lg:px-24">
-      {/* Section Header */}
-      <div className="mb-16">
-        <ParallaxNumber gradient className="font-mono text-4xl md:text-6xl lg:text-8xl font-bold text-muted-foreground/10">
-          06
-        </ParallaxNumber>
-        <h2 className="font-mono text-3xl md:text-4xl font-bold tracking-tight text-foreground uppercase -mt-8 md:-mt-12">
-          Luck
-        </h2>
-        <p className="font-mono text-base text-muted-foreground mt-2">
-          If you played all 11 other teams every week, how would you really stack up?
-        </p>
-      </div>
+      <SectionHeader
+        number="06"
+        title="Luck"
+        description="If you played all 11 other teams every week, how would you really stack up?"
+      />
 
       {/* Three Cards */}
       <div className="grid md:grid-cols-3 gap-6">

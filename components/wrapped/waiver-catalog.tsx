@@ -2,14 +2,11 @@
 
 import { ArrowDown, ArrowUp, Search } from 'lucide-react';
 import { useMemo, useState } from 'react';
-import { useCountUp } from '@/hooks/use-count-up';
+import { CountUp } from '@/components/ui/count-up';
 import { useScrollBatch } from '@/hooks/use-scroll-batch';
+import { GRADE_COLORS } from '@/lib/chart';
+import { resolveDisplayName } from '@/lib/team-colors';
 import type { LeaguePickup } from '@/lib/types';
-
-function CountUp({ value, decimals = 0 }: { value: number; decimals?: number }) {
-  const { ref, displayValue } = useCountUp(value, { decimals });
-  return <span ref={ref}>{displayValue}</span>;
-}
 
 type SortKey = 'ppg' | 'pts';
 
@@ -18,13 +15,6 @@ interface WaiverGrade {
   grade: string;
   totalPts: number;
 }
-
-const GRADE_COLORS: Record<string, string> = {
-  'A+': 'text-win', A: 'text-win', 'A-': 'text-win',
-  'B+': 'text-win/70', B: 'text-win/70', 'B-': 'text-win/70',
-  'C+': 'text-muted-foreground', C: 'text-muted-foreground', 'C-': 'text-muted-foreground',
-  'D+': 'text-loss/70', D: 'text-loss/70', F: 'text-loss',
-};
 
 interface WaiverCatalogProps {
   pickups: LeaguePickup[];
@@ -35,7 +25,7 @@ interface WaiverCatalogProps {
 }
 
 export function WaiverCatalog({ pickups, nameMap = {}, teamGrades, enabled = true, batchKey }: WaiverCatalogProps) {
-  const n = (name: string) => nameMap[name] || name;
+  const n = resolveDisplayName(nameMap);
   const { ref: gradesBatchRef } = useScrollBatch({ stagger: 0.05, enabled, key: batchKey });
   const [teamFilter, setTeamFilter] = useState<string | null>(null);
   const [filterTick, setFilterTick] = useState(0);

@@ -29,8 +29,6 @@
   --win: oklch(0.65 0.20 145);
   --loss: oklch(0.55 0.22 25);
   --gold: oklch(0.80 0.18 85);
-  --gold-dim: oklch(0.65 0.15 85);
-  
   /* Chart colors */
   --chart-1: oklch(0.65 0.20 145);
   --chart-2: oklch(0.55 0.22 25);
@@ -70,8 +68,6 @@
   --win: oklch(0.65 0.20 145);
   --loss: oklch(0.55 0.22 25);
   --gold: oklch(0.80 0.18 85);
-  --gold-dim: oklch(0.65 0.15 85);
-  
   --chart-1: oklch(0.65 0.20 145);
   --chart-2: oklch(0.55 0.22 25);
   --chart-3: oklch(0.80 0.18 85);
@@ -111,7 +107,6 @@
   --color-win: var(--win);
   --color-loss: var(--loss);
   --color-gold: var(--gold);
-  --color-gold-dim: var(--gold-dim);
   --color-chart-1: var(--chart-1);
   --color-chart-2: var(--chart-2);
   --color-chart-3: var(--chart-3);
@@ -179,27 +174,6 @@ html.lenis, html.lenis body {
   }
 }
 
-/* Animation utilities */
-@keyframes count-up {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes shimmer {
-  0% {
-    background-position: -200% 0;
-  }
-  100% {
-    background-position: 200% 0;
-  }
-}
-
 @keyframes pulse-gold {
   0%, 100% {
     box-shadow: 0 0 0 0 oklch(0.80 0.18 85 / 0.4);
@@ -209,38 +183,15 @@ html.lenis, html.lenis body {
   }
 }
 
-.animate-count-up {
-  animation: count-up 0.5s ease-out forwards;
-}
-
-.animate-shimmer {
-  background: linear-gradient(
-    90deg,
-    transparent 0%,
-    oklch(0.80 0.18 85 / 0.1) 50%,
-    transparent 100%
-  );
-  background-size: 200% 100%;
-  animation: shimmer 2s infinite;
-}
-
 .animate-pulse-gold {
   animation: pulse-gold 2s ease-in-out infinite;
 }
 
 /* Grade colors */
-.grade-a-plus { color: oklch(0.80 0.18 85); }
 .grade-a { color: oklch(0.75 0.16 85); }
-.grade-a-minus { color: oklch(0.70 0.14 90); }
-.grade-b-plus { color: oklch(0.70 0.15 145); }
 .grade-b { color: oklch(0.65 0.13 145); }
-.grade-b-minus { color: oklch(0.60 0.11 145); }
-.grade-c-plus { color: oklch(0.65 0.10 200); }
 .grade-c { color: oklch(0.60 0.08 200); }
-.grade-c-minus { color: oklch(0.55 0.06 200); }
-.grade-d-plus { color: oklch(0.60 0.15 40); }
 .grade-d { color: oklch(0.55 0.18 35); }
-.grade-d-minus { color: oklch(0.50 0.20 30); }
 .grade-f { color: oklch(0.55 0.22 25); }
 
 /* Frosted panel */
@@ -257,11 +208,3 @@ html.lenis, html.lenis body {
   background-clip: text;
 }
 
-/* Text utilities */
-.text-balance {
-  text-wrap: balance;
-}
-
-.text-pretty {
-  text-wrap: pretty;
-}

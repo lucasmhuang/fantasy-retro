@@ -4,7 +4,8 @@ import { useState } from 'react'
 import { WaiverPickup } from '@/lib/types'
 import { ChevronDown, ChevronUp, Star } from 'lucide-react'
 import { BarChart, Bar, XAxis, YAxis, ResponsiveContainer, Cell, Tooltip } from 'recharts'
-import { ParallaxNumber } from '@/components/ui/parallax-number'
+import { SectionHeader } from '@/components/wrapped/section-header'
+import { AXIS_TICK, COLORS } from '@/lib/chart'
 import { useChartTooltip } from '@/hooks/use-chart-tooltip'
 import { ChartTooltipPortal } from '@/components/ui/chart-tooltip-portal'
 
@@ -19,14 +20,7 @@ export function WaiverWire({ pickups }: WaiverWireProps) {
   if (pickups.length === 0) {
     return (
       <section className="relative min-h-[60vh] px-6 py-24 md:px-12 lg:px-24 flex flex-col justify-center">
-        <div className="mb-16">
-          <ParallaxNumber gradient className="font-mono text-4xl md:text-6xl lg:text-8xl font-bold text-muted-foreground/10">
-            03
-          </ParallaxNumber>
-          <h2 className="font-mono text-3xl md:text-4xl font-bold tracking-tight text-foreground uppercase -mt-8 md:-mt-12">
-            Waiver Wire
-          </h2>
-        </div>
+        <SectionHeader number="03" title="Waiver Wire" />
 
         <div className="flex flex-col items-center justify-center py-20">
           <p className="font-mono text-4xl md:text-6xl lg:text-8xl font-bold text-muted-foreground/20">0</p>
@@ -48,18 +42,11 @@ export function WaiverWire({ pickups }: WaiverWireProps) {
 
   return (
     <section className="relative min-h-screen px-6 py-24 md:px-12 lg:px-24">
-      {/* Section Header */}
-      <div className="mb-16">
-        <ParallaxNumber gradient className="font-mono text-4xl md:text-6xl lg:text-8xl font-bold text-muted-foreground/10">
-          03
-        </ParallaxNumber>
-        <h2 className="font-mono text-3xl md:text-4xl font-bold tracking-tight text-foreground uppercase -mt-8 md:-mt-12">
-          Waiver Wire
-        </h2>
-        <p className="font-mono text-base text-muted-foreground mt-2">
-          The hidden gems you found on the wire. {pickups.length} pickup{pickups.length !== 1 ? "s" : ""} that moved the needle.
-        </p>
-      </div>
+      <SectionHeader
+        number="03"
+        title="Waiver Wire"
+        description={<>The hidden gems you found on the wire. {pickups.length} pickup{pickups.length !== 1 ? "s" : ""} that moved the needle.</>}
+      />
 
       {/* Stats */}
       <div className="grid grid-cols-2 gap-6 mb-12">
@@ -111,13 +98,13 @@ export function WaiverWire({ pickups }: WaiverWireProps) {
                 dataKey="week"
                 axisLine={false}
                 tickLine={false}
-                tick={{ fill: 'oklch(0.60 0 0)', fontSize: 12, fontFamily: 'var(--font-barlow-condensed)' }}
+                tick={AXIS_TICK}
                 tickFormatter={(value) => `W${value}`}
               />
               <YAxis
                 axisLine={false}
                 tickLine={false}
-                tick={{ fill: 'oklch(0.60 0 0)', fontSize: 12, fontFamily: 'var(--font-barlow-condensed)' }}
+                tick={AXIS_TICK}
               />
               <Tooltip
                 content={({ active, payload }) => {
@@ -131,7 +118,7 @@ export function WaiverWire({ pickups }: WaiverWireProps) {
                   )
                 }}
               />
-              <Bar dataKey="pts" fill="oklch(0.80 0.18 85)" radius={[2, 2, 0, 0]} />
+              <Bar dataKey="pts" fill={COLORS.gold} radius={[2, 2, 0, 0]} />
             </BarChart>
           </ResponsiveContainer>
         </div>
@@ -187,7 +174,7 @@ export function WaiverWire({ pickups }: WaiverWireProps) {
                         <span className="font-mono text-xs text-muted-foreground">Above avg</span>
                       </div>
                       <div className="flex items-center gap-1.5">
-                        <div className="w-3 h-3" style={{ background: 'oklch(0.40 0 0)' }} />
+                        <div className="w-3 h-3" style={{ background: COLORS.muted }} />
                         <span className="font-mono text-xs text-muted-foreground">Below avg</span>
                       </div>
                     </div>
@@ -198,13 +185,13 @@ export function WaiverWire({ pickups }: WaiverWireProps) {
                             dataKey="week"
                             axisLine={false}
                             tickLine={false}
-                            tick={{ fill: 'oklch(0.60 0 0)', fontSize: 12, fontFamily: 'var(--font-barlow-condensed)' }}
+                            tick={AXIS_TICK}
                             tickFormatter={(value) => `W${value}`}
                           />
                           <YAxis
                             axisLine={false}
                             tickLine={false}
-                            tick={{ fill: 'oklch(0.60 0 0)', fontSize: 12, fontFamily: 'var(--font-barlow-condensed)' }}
+                            tick={AXIS_TICK}
                           />
                           <Tooltip
                             content={({ active, payload }) => {
@@ -222,7 +209,7 @@ export function WaiverWire({ pickups }: WaiverWireProps) {
                             {pickup.weeklyPoints.map((entry, i) => (
                               <Cell
                                 key={`cell-${i}`}
-                                fill={entry.pts >= avgPts ? 'oklch(0.65 0.20 145)' : 'oklch(0.40 0 0)'}
+                                fill={entry.pts >= avgPts ? COLORS.win : COLORS.muted}
                               />
                             ))}
                           </Bar>

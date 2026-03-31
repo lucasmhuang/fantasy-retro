@@ -3,7 +3,7 @@
 import { Awards } from '@/lib/types'
 import { Star, Armchair, HeartCrack, Zap, Clover, CloudLightning } from 'lucide-react'
 import { motion } from 'framer-motion'
-import { ParallaxNumber } from '@/components/ui/parallax-number'
+import { SectionHeader } from '@/components/wrapped/section-header'
 
 interface AwardsSectionProps {
   awards: Awards
@@ -126,17 +126,11 @@ export function AwardsSection({ awards, nameMap = {} }: AwardsSectionProps) {
 
   return (
     <section className="relative min-h-screen px-6 py-24 md:px-12 lg:px-24">
-      <div className="mb-16">
-        <ParallaxNumber gradient className="font-mono text-4xl md:text-6xl lg:text-8xl font-bold text-muted-foreground/10">
-          09
-        </ParallaxNumber>
-        <h2 className="font-mono text-3xl md:text-4xl font-bold tracking-tight text-foreground uppercase -mt-8 md:-mt-12">
-          Awards
-        </h2>
-        <p className="font-mono text-base text-muted-foreground mt-2">
-          The highs, the lows, and everything in between.
-        </p>
-      </div>
+      <SectionHeader
+        number="09"
+        title="Awards"
+        description="The highs, the lows, and everything in between."
+      />
 
       <motion.div
         className="grid md:grid-cols-2 lg:grid-cols-3 gap-6"

@@ -3,16 +3,11 @@
 import { useRef } from 'react'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import { Team, League } from '@/lib/types'
-import { useCountUp } from '@/hooks/use-count-up'
+import { CountUp } from '@/components/ui/count-up'
 
 interface HeroSectionProps {
   team: Team
   league: League
-}
-
-function CountUp({ value, decimals = 1, prefix = '' }: { value: number; decimals?: number; prefix?: string }) {
-  const { ref, displayValue } = useCountUp(value, { decimals })
-  return <span ref={ref}>{prefix}{displayValue}</span>
 }
 
 export function HeroSection({ team, league }: HeroSectionProps) {
@@ -93,7 +88,7 @@ export function HeroSection({ team, league }: HeroSectionProps) {
               Points For
             </p>
             <p className="font-mono text-5xl md:text-6xl font-bold tracking-tight text-foreground">
-              <CountUp value={team.pointsFor} />
+              <CountUp value={team.pointsFor} decimals={1} />
             </p>
           </div>
 
@@ -103,7 +98,7 @@ export function HeroSection({ team, league }: HeroSectionProps) {
               Point Diff
             </p>
             <p className={`font-mono text-5xl md:text-6xl font-bold tracking-tight ${isPositive ? 'text-win' : 'text-loss'}`}>
-              <CountUp value={pointDiff} prefix={isPositive ? '+' : ''} />
+              <CountUp value={pointDiff} decimals={1} prefix={isPositive ? '+' : ''} />
             </p>
           </div>
 
@@ -113,7 +108,7 @@ export function HeroSection({ team, league }: HeroSectionProps) {
               Per Week
             </p>
             <p className={`font-mono text-5xl md:text-6xl font-bold tracking-tight ${isPositive ? 'text-win' : 'text-loss'}`}>
-              <CountUp value={weeklyAvgDiff} prefix={isPositive ? '+' : ''} />
+              <CountUp value={weeklyAvgDiff} decimals={1} prefix={isPositive ? '+' : ''} />
             </p>
           </div>
         </div>

@@ -1,7 +1,7 @@
 'use client'
 
-import { Grades, AllPlayRecord, Team } from '@/lib/types'
-import { ParallaxNumber } from '@/components/ui/parallax-number'
+import { Grades, AllPlayRecord } from '@/lib/types'
+import { SectionHeader } from '@/components/wrapped/section-header'
 
 interface ReportCardProps {
   grades: Grades
@@ -85,18 +85,11 @@ export function ReportCard({ grades, allPlay, finalPlacement }: ReportCardProps)
 
   return (
     <section className="relative min-h-screen px-6 py-24 md:px-12 lg:px-24">
-      {/* Section Header */}
-      <div className="mb-16">
-        <ParallaxNumber gradient className="font-mono text-4xl md:text-6xl lg:text-8xl font-bold text-muted-foreground/10">
-          11
-        </ParallaxNumber>
-        <h2 className="font-mono text-3xl md:text-4xl font-bold tracking-tight text-foreground uppercase -mt-8 md:-mt-12">
-          Report Card
-        </h2>
-        <p className="font-mono text-base text-muted-foreground mt-2">
-          The verdict is in. Here's how your season stacks up.
-        </p>
-      </div>
+      <SectionHeader
+        number="11"
+        title="Report Card"
+        description="The verdict is in. Here's how your season stacks up."
+      />
 
       {/* Overall Grade - Hero */}
       <div className="flex flex-col items-center justify-center py-16 mb-12 border border-gold/50 bg-gold/5">

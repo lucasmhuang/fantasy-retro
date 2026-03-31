@@ -1,10 +1,10 @@
 'use client'
 
-import { useEffect, useState } from 'react'
 import { useParams } from 'next/navigation'
 import Link from 'next/link'
-import { TeamData, LeagueMeta } from '@/lib/types'
 import { getTeamCSSVars, buildNameLookup } from '@/lib/team-colors'
+import { useTeamData } from '@/hooks/use-team-data'
+import { useActiveSection } from '@/hooks/use-active-section'
 import { AmbientHalo } from '@/components/ui/ambient-halo'
 import { SmoothScrollProvider } from '@/components/providers/smooth-scroll-provider'
 import { ScrollReveal } from '@/components/ui/scroll-reveal'
@@ -22,47 +22,20 @@ import { HeadToHead } from '@/components/wrapped/head-to-head'
 import { ReportCard } from '@/components/wrapped/report-card'
 import { WrappedFooter } from '@/components/wrapped/wrapped-footer'
 import { SectionNav } from '@/components/wrapped/section-nav'
+import { ErrorState } from '@/components/ui/error-state'
 import { ArrowLeft } from 'lucide-react'
 
 export default function TeamWrappedPage() {
   const params = useParams()
   const teamId = params.id as string
-  const [teamData, setTeamData] = useState<TeamData | null>(null)
-  const [leagueMeta, setLeagueMeta] = useState<LeagueMeta | null>(null)
-  const [activeSection, setActiveSection] = useState(0)
+  const { teamData, leagueMeta, isLoading, error } = useTeamData(teamId)
+  const activeSection = useActiveSection()
 
-  useEffect(() => {
-    Promise.all([
-      fetch(`/data/team_${teamId}.json`).then(res => res.json()),
-      fetch('/data/league_meta.json').then(res => res.json())
-    ]).then(([team, league]) => {
-      setTeamData(team)
-      setLeagueMeta(league)
-    }).catch(err => {
-      console.error('Failed to load team data:', err)
-    })
-  }, [teamId])
+  if (error) {
+    return <ErrorState message={error} onRetry={() => window.location.reload()} />
+  }
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const sections = document.querySelectorAll('[data-section]')
-      let current = 0
-
-      sections.forEach((section, index) => {
-        const rect = section.getBoundingClientRect()
-        if (rect.top <= window.innerHeight * 0.4) {
-          current = index
-        }
-      })
-
-      setActiveSection(current)
-    }
-
-    window.addEventListener('scroll', handleScroll, { passive: true })
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
-
-  if (!teamData || !leagueMeta) {
+  if (isLoading || !teamData || !leagueMeta) {
     return (
       <div className="min-h-screen bg-background flex items-center justify-center">
         <div className="font-mono text-muted-foreground tracking-widest text-sm uppercase animate-pulse">

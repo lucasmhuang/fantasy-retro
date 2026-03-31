@@ -2,12 +2,14 @@
 
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
-import { useCallback, useEffect, useRef, useState } from 'react';
+import { useCallback, useRef, useState } from 'react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { Users, ArrowLeftRight, Gavel, ClipboardList } from 'lucide-react';
 import { useScrollBatch } from '@/hooks/use-scroll-batch';
-import { useCountUp } from '@/hooks/use-count-up';
+import { CountUp } from '@/components/ui/count-up';
+import { ErrorState } from '@/components/ui/error-state';
+import { useLeagueData } from '@/hooks/use-league-data';
 import { buildNameLookup } from '@/lib/team-colors';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Marquee } from '@/components/ui/marquee';
@@ -20,7 +22,7 @@ import type { LeagueMeta } from '@/lib/types';
 type Tab = 'teams' | 'trades' | 'waivers' | 'draft';
 
 export default function HomePage() {
-  const [league, setLeague] = useState<LeagueMeta | null>(null);
+  const { data: league, isLoading, error } = useLeagueData();
   const [hoveredTeam, setHoveredTeam] = useState<number | null>(null);
   const [activeTab, setActiveTab] = useState<Tab>('teams');
   const [activatedTabs, setActivatedTabs] = useState<Set<Tab>>(new Set(['teams']));
@@ -42,13 +44,11 @@ export default function HomePage() {
     });
   }, []);
 
-  useEffect(() => {
-    fetch('/data/league_meta.json')
-      .then((res) => res.json())
-      .then((data) => setLeague(data));
-  }, []);
+  if (error) {
+    return <ErrorState message={error} onRetry={() => window.location.reload()} />;
+  }
 
-  if (!league) {
+  if (isLoading || !league) {
     return (
       <div className="min-h-screen bg-background flex items-center justify-center">
         <div className="font-mono text-muted-foreground tracking-widest text-sm uppercase">
@@ -171,11 +171,6 @@ export default function HomePage() {
   );
 }
 
-function CountUpDisplay({ value, decimals = 0, prefix = '' }: { value: number; decimals?: number; prefix?: string }) {
-  const { ref, displayValue } = useCountUp(value, { decimals })
-  return <span ref={ref}>{prefix}{displayValue}</span>
-}
-
 function HeroSection({ league }: { league: LeagueMeta }) {
   const heroRef = useRef(null)
   const router = useRouter()
@@ -201,19 +196,19 @@ function HeroSection({ league }: { league: LeagueMeta }) {
         <div className="mt-8 flex items-center gap-8">
           <div>
             <p className="font-mono text-3xl md:text-4xl font-bold text-foreground">
-              <CountUpDisplay value={league.teams.length} decimals={0} />
+              <CountUp value={league.teams.length} />
             </p>
             <p className="font-mono text-xs text-muted-foreground uppercase tracking-widest">Managers</p>
           </div>
           <div>
             <p className="font-mono text-3xl md:text-4xl font-bold text-foreground">
-              <CountUpDisplay value={21} decimals={0} />
+              <CountUp value={21} />
             </p>
             <p className="font-mono text-xs text-muted-foreground uppercase tracking-widest">Weeks</p>
           </div>
           <div>
             <p className="font-mono text-3xl md:text-4xl font-bold text-gold">
-              <CountUpDisplay value={1} decimals={0} />
+              <CountUp value={1} />
             </p>
             <p className="font-mono text-xs text-muted-foreground uppercase tracking-widest">Champion</p>
           </div>

@@ -1,7 +1,8 @@
 'use client';
 
 import { Crosshair, Target } from 'lucide-react';
-import { ParallaxNumber } from '@/components/ui/parallax-number';
+import { SectionHeader } from '@/components/wrapped/section-header';
+import { resolveDisplayName } from '@/lib/team-colors';
 import { useScrollBatch } from '@/hooks/use-scroll-batch';
 import type { HeadToHeadRecord } from '@/lib/types';
 
@@ -23,7 +24,7 @@ function hasPlayoff(r: HeadToHeadRecord) {
 }
 
 export function HeadToHead({ records, nameMap = {} }: HeadToHeadProps) {
-  const n = (name: string) => nameMap[name] || name;
+  const n = resolveDisplayName(nameMap);
   const { ref: batchRef } = useScrollBatch({ childSelector: '[data-batch-item]' });
   const rival = records.reduce((worst, r) =>
     totalLosses(r) > totalLosses(worst) ||
@@ -61,18 +62,11 @@ export function HeadToHead({ records, nameMap = {} }: HeadToHeadProps) {
 
   return (
     <section className="relative min-h-screen px-6 py-24 md:px-12 lg:px-24">
-      {/* Section Header */}
-      <div className="mb-16">
-        <ParallaxNumber gradient className="font-mono text-4xl md:text-6xl lg:text-8xl font-bold text-muted-foreground/10">
-          10
-        </ParallaxNumber>
-        <h2 className="font-mono text-3xl md:text-4xl font-bold tracking-tight text-foreground uppercase -mt-8 md:-mt-12">
-          Head-to-Head
-        </h2>
-        <p className="font-mono text-base text-muted-foreground mt-2">
-          Every matchup tells a story. Here's yours.
-        </p>
-      </div>
+      <SectionHeader
+        number="10"
+        title="Head-to-Head"
+        description="Every matchup tells a story. Here's yours."
+      />
 
       {/* Rival & Punching Bag Cards */}
       <div className="grid md:grid-cols-2 gap-6 mb-12">

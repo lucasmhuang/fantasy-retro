@@ -11,6 +11,7 @@ import {
 import { useState } from 'react';
 import { useScrollBatch } from '@/hooks/use-scroll-batch';
 import { useChartTooltip } from '@/hooks/use-chart-tooltip';
+import { AXIS_TICK, COLORS } from '@/lib/chart';
 import { ChartTooltipPortal } from '@/components/ui/chart-tooltip-portal';
 import {
   Line,
@@ -20,7 +21,7 @@ import {
   XAxis,
   YAxis,
 } from 'recharts';
-import { ParallaxNumber } from '@/components/ui/parallax-number';
+import { SectionHeader } from '@/components/wrapped/section-header';
 import {
   Tooltip as InfoTooltip,
   TooltipContent,
@@ -45,14 +46,7 @@ export function TradeCenter({ trades, replacementFPW, nameMap = {} }: TradeCente
   if (trades.length === 0) {
     return (
       <section className="relative min-h-[60vh] px-6 py-24 md:px-12 lg:px-24 flex flex-col justify-center">
-        <div className="mb-16">
-          <ParallaxNumber gradient className="font-mono text-4xl md:text-6xl lg:text-8xl font-bold text-muted-foreground/10">
-            02
-          </ParallaxNumber>
-          <h2 className="font-mono text-3xl md:text-4xl font-bold tracking-tight text-foreground uppercase -mt-8 md:-mt-12">
-            Trade Center
-          </h2>
-        </div>
+        <SectionHeader number="02" title="Trade Center" />
 
         <div className="flex flex-col items-center justify-center py-20">
           <p className="font-mono text-4xl md:text-6xl lg:text-8xl font-bold text-muted-foreground/20">
@@ -71,18 +65,11 @@ export function TradeCenter({ trades, replacementFPW, nameMap = {} }: TradeCente
 
   return (
     <section className="relative min-h-screen px-6 py-24 md:px-12 lg:px-24">
-      {/* Section Header */}
-      <div className="mb-16">
-        <ParallaxNumber gradient className="font-mono text-4xl md:text-6xl lg:text-8xl font-bold text-muted-foreground/10">
-          02
-        </ParallaxNumber>
-        <h2 className="font-mono text-3xl md:text-4xl font-bold tracking-tight text-foreground uppercase -mt-8 md:-mt-12">
-          Trade Center
-        </h2>
-        <p className="font-mono text-base text-muted-foreground mt-2">
-          {trades.length} deal{trades.length !== 1 ? 's' : ''} made. Did you buy low and sell high?
-        </p>
-      </div>
+      <SectionHeader
+        number="02"
+        title="Trade Center"
+        description={<>{trades.length} deal{trades.length !== 1 ? 's' : ''} made. Did you buy low and sell high?</>}
+      />
 
       {/* Overall Stats */}
       <div className="grid grid-cols-2 md:grid-cols-3 gap-6 mb-12">
@@ -263,13 +250,22 @@ export function TradeCenter({ trades, replacementFPW, nameMap = {} }: TradeCente
                     </p>
                     {trade.slotAdjustment &&
                     trade.sent.length > trade.received.length ? (
-                      <span
-                        className="inline-flex items-center gap-1 font-mono text-xs text-muted-foreground/60 mt-1"
-                        title={`This trade was uneven — the freed roster spot is valued at replacement-level production (~${replacementFPW ?? '?'} fantasy points per week) for the remaining weeks.`}
-                      >
-                        <Info className="w-3 h-3" />+
-                        {trade.slotAdjustment.toFixed(1)} roster spot value
-                      </span>
+                      <InfoTooltip>
+                        <TooltipTrigger asChild>
+                          <span className="inline-flex items-center gap-1 font-mono text-xs text-muted-foreground/60 mt-1 cursor-help">
+                            <Info className="w-3 h-3" />+
+                            {trade.slotAdjustment.toFixed(1)} roster spot value
+                          </span>
+                        </TooltipTrigger>
+                        <TooltipContent className="max-w-xs">
+                          <p>
+                            This trade was uneven — the freed roster spot is
+                            valued at replacement-level production (~
+                            {replacementFPW ?? '?'} fantasy points per week) for
+                            the remaining weeks.
+                          </p>
+                        </TooltipContent>
+                      </InfoTooltip>
                     ) : null}
                   </div>
                 </div>
@@ -301,21 +297,13 @@ export function TradeCenter({ trades, replacementFPW, nameMap = {} }: TradeCente
                           dataKey="week"
                           axisLine={false}
                           tickLine={false}
-                          tick={{
-                            fill: 'oklch(0.60 0 0)',
-                            fontSize: 12,
-                            fontFamily: 'var(--font-barlow-condensed)',
-                          }}
+                          tick={AXIS_TICK}
                           tickFormatter={(value) => `W${value}`}
                         />
                         <YAxis
                           axisLine={false}
                           tickLine={false}
-                          tick={{
-                            fill: 'oklch(0.60 0 0)',
-                            fontSize: 12,
-                            fontFamily: 'var(--font-barlow-condensed)',
-                          }}
+                          tick={AXIS_TICK}
                         />
                         <Tooltip
                           content={({ active, payload }) => {
@@ -343,18 +331,9 @@ export function TradeCenter({ trades, replacementFPW, nameMap = {} }: TradeCente
                         <Line
                           type="monotone"
                           dataKey="cumulative"
-                          stroke={
-                            isPositive
-                              ? 'oklch(0.65 0.20 145)'
-                              : 'oklch(0.55 0.22 25)'
-                          }
+                          stroke={isPositive ? COLORS.win : COLORS.loss}
                           strokeWidth={2}
-                          dot={{
-                            fill: isPositive
-                              ? 'oklch(0.65 0.20 145)'
-                              : 'oklch(0.55 0.22 25)',
-                            r: 3,
-                          }}
+                          dot={{ fill: isPositive ? COLORS.win : COLORS.loss, r: 3 }}
                         />
                       </LineChart>
                     </ResponsiveContainer>

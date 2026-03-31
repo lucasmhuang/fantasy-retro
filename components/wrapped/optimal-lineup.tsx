@@ -2,7 +2,8 @@
 
 import { OptimalLineup as OptimalLineupType } from '@/lib/types'
 import { ComposedChart, Bar, Cell, Line, XAxis, YAxis, ResponsiveContainer, Tooltip, ReferenceLine } from 'recharts'
-import { ParallaxNumber } from '@/components/ui/parallax-number'
+import { SectionHeader } from '@/components/wrapped/section-header'
+import { AXIS_TICK, COLORS } from '@/lib/chart'
 import { useChartTooltip } from '@/hooks/use-chart-tooltip'
 import { ChartTooltipPortal } from '@/components/ui/chart-tooltip-portal'
 
@@ -27,18 +28,11 @@ export function OptimalLineup({ data }: OptimalLineupProps) {
 
   return (
     <section className="relative min-h-screen px-6 py-24 md:px-12 lg:px-24">
-      {/* Section Header */}
-      <div className="mb-16">
-        <ParallaxNumber gradient className="font-mono text-4xl md:text-6xl lg:text-8xl font-bold text-muted-foreground/10">
-          07
-        </ParallaxNumber>
-        <h2 className="font-mono text-3xl md:text-4xl font-bold tracking-tight text-foreground uppercase -mt-8 md:-mt-12">
-          Optimal Lineup
-        </h2>
-        <p className="font-mono text-base text-muted-foreground mt-2">
-          How close did you get to your ceiling each week?
-        </p>
-      </div>
+      <SectionHeader
+        number="07"
+        title="Optimal Lineup"
+        description="How close did you get to your ceiling each week?"
+      />
 
       {/* Stats Grid */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
@@ -88,13 +82,13 @@ export function OptimalLineup({ data }: OptimalLineupProps) {
               dataKey="week"
               axisLine={false}
               tickLine={false}
-              tick={{ fill: 'oklch(0.60 0 0)', fontSize: 12, fontFamily: 'var(--font-barlow-condensed)' }}
+              tick={AXIS_TICK}
               tickFormatter={(value) => `W${value}`}
             />
             <YAxis
               axisLine={false}
               tickLine={false}
-              tick={{ fill: 'oklch(0.60 0 0)', fontSize: 12, fontFamily: 'var(--font-barlow-condensed)' }}
+              tick={AXIS_TICK}
               domain={['dataMin - 100', 'dataMax + 50']}
             />
             <Tooltip
@@ -121,7 +115,7 @@ export function OptimalLineup({ data }: OptimalLineupProps) {
                 )
               }}
             />
-            <ReferenceLine y={avgDiff} stroke="oklch(0.55 0.22 25)" strokeDasharray="3 3" />
+            <ReferenceLine y={avgDiff} stroke={COLORS.loss} strokeDasharray="3 3" />
             <Bar
               dataKey="actual"
               radius={[2, 2, 0, 0]}
@@ -129,14 +123,14 @@ export function OptimalLineup({ data }: OptimalLineupProps) {
               {chartData.map((entry, index) => (
                 <Cell
                   key={index}
-                  fill={entry.isBigGap ? 'oklch(0.55 0.22 25)' : 'oklch(0.40 0 0)'}
+                  fill={entry.isBigGap ? COLORS.loss : COLORS.muted}
                 />
               ))}
             </Bar>
             <Line
               type="monotone"
               dataKey="optimal"
-              stroke="oklch(0.80 0.18 85)"
+              stroke={COLORS.gold}
               strokeWidth={2}
               strokeDasharray="5 5"
               dot={false}

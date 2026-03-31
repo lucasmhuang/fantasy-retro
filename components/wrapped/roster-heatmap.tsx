@@ -4,7 +4,7 @@ import { useState, useMemo, useEffect } from 'react'
 import { createPortal } from 'react-dom'
 import { RosterRow, WeeklyResult } from '@/lib/types'
 import { ChevronDown, ChevronUp } from 'lucide-react'
-import { ParallaxNumber } from '@/components/ui/parallax-number'
+import { SectionHeader } from '@/components/wrapped/section-header'
 import { useScrollBatch } from '@/hooks/use-scroll-batch'
 
 interface RosterHeatmapProps {
@@ -77,17 +77,11 @@ export function RosterHeatmap({ heatmap, weeklyResults, nameMap = {} }: RosterHe
 
   return (
     <section className="relative min-h-screen px-6 py-24 md:px-12 lg:px-24">
-      <div className="mb-16">
-        <ParallaxNumber gradient className="font-mono text-4xl md:text-6xl lg:text-8xl font-bold text-muted-foreground/10">
-          04
-        </ParallaxNumber>
-        <h2 className="font-mono text-3xl md:text-4xl font-bold tracking-tight text-foreground uppercase -mt-8 md:-mt-12">
-          Roster Heatmap
-        </h2>
-        <p className="font-mono text-base text-muted-foreground mt-2">
-          The whole squad under the microscope, week by week.
-        </p>
-      </div>
+      <SectionHeader
+        number="04"
+        title="Roster Heatmap"
+        description="The whole squad under the microscope, week by week."
+      />
 
       <div className="flex flex-wrap items-center gap-6 mb-8">
         <div className="flex items-center gap-2">

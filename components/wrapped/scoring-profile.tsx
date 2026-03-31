@@ -4,9 +4,10 @@ import { useState, useCallback, useEffect } from 'react'
 import { useChartTooltip } from '@/hooks/use-chart-tooltip'
 import { ChartTooltipPortal } from '@/components/ui/chart-tooltip-portal'
 import { ScoringProfile as ScoringProfileType } from '@/lib/types'
-import { RadarChart, PolarGrid, PolarAngleAxis, Radar, ResponsiveContainer, Tooltip } from 'recharts'
+import { RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, Radar, ResponsiveContainer, Tooltip } from 'recharts'
 import { TrendingUp, TrendingDown, Minus } from 'lucide-react'
-import { ParallaxNumber } from '@/components/ui/parallax-number'
+import { SectionHeader } from '@/components/wrapped/section-header'
+import { AXIS_TICK, COLORS } from '@/lib/chart'
 import { useScrollPin } from '@/hooks/use-scroll-pin'
 
 interface ScoringProfileProps {
@@ -42,8 +43,8 @@ export function ScoringProfile({ profile, leagueAvg }: ScoringProfileProps) {
     const youRaw = (profile[cat]?.pct ?? 0) * 100
     const leagueRaw = leagueAvg[cat] * 100
     const diff = youRaw - leagueRaw
-    const scaledYou = 50 + diff * 8
-    const finalYou = Math.max(5, Math.min(95, scaledYou))
+    const scaledYou = 50 + diff * 15
+    const finalYou = Math.max(10, Math.min(90, scaledYou))
     return {
       category: cat,
       you: 50 + (finalYou - 50) * radarScale,
@@ -89,18 +90,11 @@ export function ScoringProfile({ profile, leagueAvg }: ScoringProfileProps) {
 
   return (
     <section ref={pinRef} className="relative min-h-screen px-6 py-24 md:px-12 lg:px-24">
-      {/* Section Header */}
-      <div className="mb-16">
-        <ParallaxNumber gradient className="font-mono text-4xl md:text-6xl lg:text-8xl font-bold text-muted-foreground/10">
-          05
-        </ParallaxNumber>
-        <h2 className="font-mono text-3xl md:text-4xl font-bold tracking-tight text-foreground uppercase -mt-8 md:-mt-12">
-          Scoring Profile
-        </h2>
-        <p className="font-mono text-base text-muted-foreground mt-2">
-          Your scoring DNA. What made your team tick and where you fell short.
-        </p>
-      </div>
+      <SectionHeader
+        number="05"
+        title="Scoring Profile"
+        description="Your scoring DNA. What made your team tick and where you fell short."
+      />
 
       <div className="grid lg:grid-cols-2 gap-12" onMouseMove={onChartMouseMove}>
         {/* Radar Chart */}
@@ -108,15 +102,15 @@ export function ScoringProfile({ profile, leagueAvg }: ScoringProfileProps) {
           <ResponsiveContainer width="100%" height="100%">
             <RadarChart data={radarData} cx="50%" cy="50%" outerRadius="70%">
               <PolarGrid 
-                stroke="oklch(0.25 0 0)" 
+                stroke={COLORS.grid} 
                 strokeDasharray="3 3"
               />
+              <PolarRadiusAxis domain={[0, 100]} tick={false} axisLine={false} />
               <PolarAngleAxis 
                 dataKey="category" 
                 tick={{ 
-                  fill: 'oklch(0.98 0 0)', 
-                  fontSize: 12, 
-                  fontFamily: 'var(--font-barlow-condensed)',
+                  ...AXIS_TICK,
+                  fill: COLORS.foreground,
                   fontWeight: 600,
                 }}
               />
@@ -152,7 +146,7 @@ export function ScoringProfile({ profile, leagueAvg }: ScoringProfileProps) {
                 fillOpacity={0.15}
                 strokeWidth={2.5}
                 strokeDasharray="6 3"
-                dot={{ r: 4, fill: "oklch(0.65 0.12 25)", strokeWidth: 0 }}
+                dot={{ r: 4, fill: 'oklch(0.65 0.12 25)', strokeWidth: 0 }}
               />
               <Radar
                 name="You"

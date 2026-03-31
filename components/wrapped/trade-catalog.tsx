@@ -12,12 +12,14 @@ import {
 } from 'lucide-react';
 import { useMemo, useState } from 'react';
 import { useScrollBatch } from '@/hooks/use-scroll-batch';
-import { useCountUp } from '@/hooks/use-count-up';
+import { CountUp } from '@/components/ui/count-up';
 import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
 } from '@/components/ui/tooltip';
+import { GRADE_COLORS } from '@/lib/chart';
+import { resolveDisplayName } from '@/lib/team-colors';
 import type { LeagueTrade, PlayerTradeStats } from '@/lib/types';
 
 type SortKey = 'week' | 'value';
@@ -28,13 +30,6 @@ interface TeamGrade {
   netPts: number;
 }
 
-const GRADE_COLORS: Record<string, string> = {
-  'A+': 'text-win', A: 'text-win', 'A-': 'text-win',
-  'B+': 'text-win/70', B: 'text-win/70', 'B-': 'text-win/70',
-  'C+': 'text-muted-foreground', C: 'text-muted-foreground', 'C-': 'text-muted-foreground',
-  'D+': 'text-loss/70', D: 'text-loss/70', F: 'text-loss',
-};
-
 interface TradeCatalogProps {
   trades: LeagueTrade[];
   replacementFPW?: number;
@@ -44,13 +39,8 @@ interface TradeCatalogProps {
   batchKey?: number;
 }
 
-function CountUp({ value, decimals = 0 }: { value: number; decimals?: number }) {
-  const { ref, displayValue } = useCountUp(value, { decimals });
-  return <span ref={ref}>{displayValue}</span>;
-}
-
 export function TradeCatalog({ trades, replacementFPW, nameMap = {}, teamGrades, enabled = true, batchKey }: TradeCatalogProps) {
-  const n = (name: string) => nameMap[name] || name;
+  const n = resolveDisplayName(nameMap);
   const { ref: gradesBatchRef } = useScrollBatch({ stagger: 0.05, enabled, key: batchKey });
   const [teamFilter, setTeamFilter] = useState<string | null>(null);
   const [playerSearch, setPlayerSearch] = useState('');
@@ -286,7 +276,7 @@ function TradeCard({
   replacementFPW?: number;
   nameMap?: Record<string, string>;
 }) {
-  const n = (name: string) => nameMap[name] || name;
+  const n = resolveDisplayName(nameMap);
   const team1ReceivedPts = trade.team2PtsROS;
   const team2ReceivedPts = trade.team1PtsROS;
   const team1Won = team1ReceivedPts > team2ReceivedPts;

@@ -6,7 +6,7 @@ interface TeamColor {
   glow: number
 }
 
-export const TEAM_COLORS: Record<number, TeamColor> = {
+const TEAM_COLORS: Record<number, TeamColor> = {
   8:  { primary: '#D4A017', secondary: '#1A6B4F', glow: 1.0  },
   6:  { primary: '#C75B3A', secondary: '#F5DEB3', glow: 0.8  },
   2:  { primary: '#7B2D5F', secondary: '#2D1B40', glow: 0.8  },
@@ -42,6 +42,10 @@ export function buildNameLookup(teams: TeamEntry[]): { byId: Record<number, stri
     byName[t.name] = first
   }
   return { byId, byName }
+}
+
+export function resolveDisplayName(nameMap: Record<string, string>) {
+  return (name: string) => nameMap[name] || name
 }
 
 export function getTeamCSSVars(teamId: number): CSSProperties {

@@ -3,7 +3,8 @@
 import { useState, useCallback } from 'react'
 import { WeeklyResult } from '@/lib/types'
 import { BarChart, Bar, XAxis, YAxis, ResponsiveContainer, Cell, ReferenceLine, Tooltip, LineChart, Line } from 'recharts'
-import { ParallaxNumber } from '@/components/ui/parallax-number'
+import { SectionHeader } from '@/components/wrapped/section-header'
+import { AXIS_TICK, COLORS } from '@/lib/chart'
 import { useScrollPin } from '@/hooks/use-scroll-pin'
 import { useChartTooltip } from '@/hooks/use-chart-tooltip'
 import { ChartTooltipPortal } from '@/components/ui/chart-tooltip-portal'
@@ -73,18 +74,11 @@ export function SeasonTimeline({ weeklyResults, nameMap = {} }: SeasonTimelinePr
 
   return (
     <section ref={pinRef} className="relative min-h-screen px-6 py-24 md:px-12 lg:px-24">
-      {/* Section Header */}
-      <div className="mb-16">
-        <ParallaxNumber gradient className="font-mono text-4xl md:text-6xl lg:text-8xl font-bold text-muted-foreground/10">
-          01
-        </ParallaxNumber>
-        <h2 className="font-mono text-3xl md:text-4xl font-bold tracking-tight text-foreground uppercase -mt-8 md:-mt-12">
-          Season Timeline
-        </h2>
-        <p className="font-mono text-base text-muted-foreground mt-2">
-          {weeklyResults.length} weeks of battle. Every win and loss.
-        </p>
-      </div>
+      <SectionHeader
+        number="01"
+        title="Season Timeline"
+        description={<>{weeklyResults.length} weeks of battle. Every win and loss.</>}
+      />
 
       {/* Quick Stats */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
@@ -115,13 +109,13 @@ export function SeasonTimeline({ weeklyResults, nameMap = {} }: SeasonTimelinePr
                 dataKey="week"
                 axisLine={false}
                 tickLine={false}
-                tick={{ fill: 'oklch(0.60 0 0)', fontSize: 12, fontFamily: 'var(--font-barlow-condensed)' }}
+                tick={AXIS_TICK}
                 tickFormatter={(value) => `W${value}`}
               />
               <YAxis
                 axisLine={false}
                 tickLine={false}
-                tick={{ fill: 'oklch(0.60 0 0)', fontSize: 12, fontFamily: 'var(--font-barlow-condensed)' }}
+                tick={AXIS_TICK}
                 domain={['dataMin - 50', 'dataMax + 50']}
               />
               <Tooltip
@@ -153,21 +147,21 @@ export function SeasonTimeline({ weeklyResults, nameMap = {} }: SeasonTimelinePr
                   )
                 }}
               />
-              <ReferenceLine y={avgScore} stroke="oklch(0.60 0 0)" strokeDasharray="3 3" />
+              <ReferenceLine y={avgScore} stroke={COLORS.tick} strokeDasharray="3 3" />
               <Bar
                 dataKey="yourScore"
                 radius={[2, 2, 0, 0]}
                 cursor="pointer"
-                activeBar={{ stroke: 'oklch(0.98 0 0)', strokeWidth: 2, strokeOpacity: 0.6 }}
+                activeBar={{ stroke: COLORS.foreground, strokeWidth: 2, strokeOpacity: 0.6 }}
                 onClick={(data) => !data.isBye && setSelectedWeek(data.week)}
               >
                 {chartData.map((entry, index) => (
                   <Cell
                     key={`cell-${index}`}
-                    fill={entry.isBye ? 'oklch(0.25 0 0)' : entry.result === 'W' ? 'oklch(0.65 0.20 145)' : 'oklch(0.55 0.22 25)'}
+                    fill={entry.isBye ? COLORS.dim : entry.result === 'W' ? COLORS.win : COLORS.loss}
                     fillOpacity={entry.isBye ? 0.4 : selectedWeek === entry.week ? 1 : 0.8}
                     strokeDasharray={entry.isBye ? '4 2' : undefined}
-                    stroke={entry.isBye ? 'oklch(0.40 0 0)' : undefined}
+                    stroke={entry.isBye ? COLORS.muted : undefined}
                   />
                 ))}
               </Bar>
@@ -184,7 +178,7 @@ export function SeasonTimeline({ weeklyResults, nameMap = {} }: SeasonTimelinePr
                 dataKey="week"
                 axisLine={false}
                 tickLine={false}
-                tick={{ fill: 'oklch(0.60 0 0)', fontSize: 12, fontFamily: 'var(--font-barlow-condensed)' }}
+                tick={AXIS_TICK}
                 tickFormatter={(value) => `W${value}`}
               />
               <YAxis
@@ -192,7 +186,7 @@ export function SeasonTimeline({ weeklyResults, nameMap = {} }: SeasonTimelinePr
                 domain={[1, 12]}
                 axisLine={false}
                 tickLine={false}
-                tick={{ fill: 'oklch(0.60 0 0)', fontSize: 12, fontFamily: 'var(--font-barlow-condensed)' }}
+                tick={AXIS_TICK}
                 ticks={[1, 4, 8, 12]}
               />
               <Tooltip
@@ -211,10 +205,10 @@ export function SeasonTimeline({ weeklyResults, nameMap = {} }: SeasonTimelinePr
               <Line 
                 type="stepAfter"
                 dataKey="standing" 
-                stroke="oklch(0.80 0.18 85)"
+                stroke={COLORS.gold}
                 strokeWidth={2}
                 dot={false}
-                activeDot={{ r: 4, fill: 'oklch(0.80 0.18 85)' }}
+                activeDot={{ r: 4, fill: COLORS.gold }}
               />
             </LineChart>
           </ResponsiveContainer>
