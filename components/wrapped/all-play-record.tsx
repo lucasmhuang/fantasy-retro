@@ -18,28 +18,45 @@ export function AllPlayRecord({ allPlay, actualRecord }: AllPlayRecordProps) {
   const luckDiff = actualWinPct - allPlay.winPct
   const luckPctDiff = (luckDiff * 100).toFixed(1)
   
-  let luckStatus: 'lucky' | 'unlucky' | 'fair'
+  type LuckStatus = 'very_lucky' | 'lucky' | 'fair' | 'unlucky' | 'very_unlucky'
+  let luckStatus: LuckStatus
   let luckColor: string
   let luckIcon: React.ReactNode
-  
-  if (luckDiff > 0.02) {
+  let luckLabel: string
+
+  if (luckDiff > 0.06) {
+    luckStatus = 'very_lucky'
+    luckColor = 'text-win'
+    luckIcon = <Sparkles className="w-8 h-8 text-win" />
+    luckLabel = 'VERY LUCKY'
+  } else if (luckDiff > 0.02) {
     luckStatus = 'lucky'
     luckColor = 'text-win'
     luckIcon = <Sparkles className="w-8 h-8 text-win" />
+    luckLabel = 'LUCKY'
+  } else if (luckDiff < -0.06) {
+    luckStatus = 'very_unlucky'
+    luckColor = 'text-loss'
+    luckIcon = <Target className="w-8 h-8 text-loss" />
+    luckLabel = 'VERY UNLUCKY'
   } else if (luckDiff < -0.02) {
     luckStatus = 'unlucky'
     luckColor = 'text-loss'
     luckIcon = <Target className="w-8 h-8 text-loss" />
+    luckLabel = 'UNLUCKY'
   } else {
     luckStatus = 'fair'
     luckColor = 'text-muted-foreground'
     luckIcon = <Scale className="w-8 h-8 text-muted-foreground" />
+    luckLabel = 'FAIR'
   }
 
-  const luckMessages = {
-    lucky: 'You caught breaks all year. Easy matchups, opponent off-weeks, no matter what the schedule had your back.',
-    unlucky: 'You ran into buzzsaw after buzzsaw. Better team than your record shows.',
+  const luckMessages: Record<LuckStatus, string> = {
+    very_lucky: 'The fantasy gods chose violence \u2014 for everyone else. Your schedule was a cheat code.',
+    lucky: 'A few bounces went your way. Your record got a nice bump from favorable scheduling.',
     fair: 'No luck to blame, no luck to thank. Your record is your resume.',
+    unlucky: 'You drew some tough matchups. Your all-play says you were better than your record.',
+    very_unlucky: 'You ran into buzzsaw after buzzsaw. Way better team than your record shows.',
   }
 
   return (
@@ -89,8 +106,8 @@ export function AllPlayRecord({ allPlay, actualRecord }: AllPlayRecordProps) {
 
         {/* Luck Factor */}
         <div className={`p-8 border ${
-          luckStatus === 'lucky' ? 'border-win/50 bg-win/5' :
-          luckStatus === 'unlucky' ? 'border-loss/50 bg-loss/5' :
+          luckStatus === 'very_lucky' || luckStatus === 'lucky' ? 'border-win/50 bg-win/5' :
+          luckStatus === 'very_unlucky' || luckStatus === 'unlucky' ? 'border-loss/50 bg-loss/5' :
           'border-border'
         }`}>
           <p className={`font-mono text-xs uppercase tracking-widest mb-4 ${luckColor}`}>
@@ -99,7 +116,7 @@ export function AllPlayRecord({ allPlay, actualRecord }: AllPlayRecordProps) {
           <div className="flex items-center gap-4 mb-4">
             {luckIcon}
             <p className={`font-mono text-5xl md:text-6xl font-bold uppercase ${luckColor}`}>
-              {luckStatus}
+              {luckLabel}
             </p>
           </div>
           <p className={`font-mono text-2xl font-bold ${luckColor}`}>
