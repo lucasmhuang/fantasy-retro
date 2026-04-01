@@ -1,7 +1,7 @@
 {
   "team": {
     "name": "White Cowards",
-    "manager": "Michael Bettencourt",
+    "manager": "Mike B",
     "record": "9-9",
     "seed": 7,
     "finalPlacement": 7,
@@ -2956,11 +2956,11 @@
     }
   },
   "grades": {
-    "drafting": "C",
-    "trading": "C-",
-    "waiverWire": "B+",
-    "luck": "B+",
-    "coaching": "A-",
+    "drafting": "D+",
+    "trading": "D+",
+    "waiverWire": "A-",
+    "luck": "A-",
+    "coaching": "A+",
     "overall": "C+"
   }
 }

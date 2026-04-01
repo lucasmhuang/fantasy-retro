@@ -5698,17 +5698,17 @@
     },
     "2": {
       "team": "enchant",
-      "grade": "B",
+      "grade": "A",
       "netPts": 758.5
     },
     "3": {
       "team": "It's Teague Time",
-      "grade": "C+",
+      "grade": "B+",
       "netPts": 0
     },
     "4": {
       "team": "superbum",
-      "grade": "C+",
+      "grade": "B+",
       "netPts": 23.6
     },
     "5": {
@@ -5718,44 +5718,44 @@
     },
     "6": {
       "team": "paddington bear",
-      "grade": "B",
+      "grade": "A",
       "netPts": 591.4
     },
     "7": {
       "team": " SPLASH \ud83d\udc4c",
-      "grade": "C-",
+      "grade": "D+",
       "netPts": -513.8
     },
     "8": {
       "team": "May Not Need Minott",
-      "grade": "C",
+      "grade": "C-",
       "netPts": -156.6
     },
     "9": {
       "team": "my left nuts",
-      "grade": "C+",
+      "grade": "B+",
       "netPts": 0
     },
     "10": {
       "team": "White Cowards",
-      "grade": "C-",
+      "grade": "D+",
       "netPts": -506.0
     },
     "11": {
       "team": "Team Patel",
-      "grade": "C+",
+      "grade": "B+",
       "netPts": 179.5
     },
     "12": {
       "team": "Yash's Stout Team",
-      "grade": "C+",
+      "grade": "B+",
       "netPts": 0
     }
   },
   "waiverGrades": {
     "1": {
       "team": "The Commish",
-      "grade": "B",
+      "grade": "A-",
       "totalPts": 5049.5
     },
     "2": {
@@ -5770,27 +5770,27 @@
     },
     "4": {
       "team": "superbum",
-      "grade": "A",
+      "grade": "A+",
       "totalPts": 6203.9
     },
     "5": {
       "team": "Siddus Squad",
-      "grade": "B",
+      "grade": "B-",
       "totalPts": 4817.1
     },
     "6": {
       "team": "paddington bear",
-      "grade": "B",
+      "grade": "B-",
       "totalPts": 4765.4
     },
     "7": {
       "team": " SPLASH \ud83d\udc4c",
-      "grade": "C+",
+      "grade": "C",
       "totalPts": 4058.2
     },
     "8": {
       "team": "May Not Need Minott",
-      "grade": "A",
+      "grade": "A+",
       "totalPts": 6288.9
     },
     "9": {
@@ -5800,17 +5800,17 @@
     },
     "10": {
       "team": "White Cowards",
-      "grade": "B+",
+      "grade": "A-",
       "totalPts": 5373.5
     },
     "11": {
       "team": "Team Patel",
-      "grade": "B+",
+      "grade": "A-",
       "totalPts": 5441.0
     },
     "12": {
       "team": "Yash's Stout Team",
-      "grade": "C",
+      "grade": "C-",
       "totalPts": 3156.3
     }
   },
@@ -5822,8 +5822,8 @@
       "record": "14-4",
       "standing": 1,
       "finalPlacement": 1,
-      "pointsFor": 20770.8,
-      "pointsAgainst": 18230.3
+      "pointsFor": 20926.6,
+      "pointsAgainst": 18245.3
     },
     {
       "id": 6,
@@ -5832,8 +5832,8 @@
       "record": "10-8",
       "standing": 6,
       "finalPlacement": 2,
-      "pointsFor": 18250.5,
-      "pointsAgainst": 18193.8
+      "pointsFor": 18376.6,
+      "pointsAgainst": 18466.3
     },
     {
       "id": 2,
@@ -5842,8 +5842,8 @@
       "record": "10-8",
       "standing": 5,
       "finalPlacement": 3,
-      "pointsFor": 19890.9,
-      "pointsAgainst": 18473.1
+      "pointsFor": 19885.4,
+      "pointsAgainst": 18497.6
     },
     {
       "id": 11,
@@ -5852,8 +5852,8 @@
       "record": "12-6",
       "standing": 2,
       "finalPlacement": 4,
-      "pointsFor": 19519.7,
-      "pointsAgainst": 17946.6
+      "pointsFor": 19711.7,
+      "pointsAgainst": 18083.6
     },
     {
       "id": 1,
@@ -5862,8 +5862,8 @@
       "record": "11-7",
       "standing": 4,
       "finalPlacement": 5,
-      "pointsFor": 19520.3,
-      "pointsAgainst": 18577.0
+      "pointsFor": 19831.0,
+      "pointsAgainst": 18787.2
     },
     {
       "id": 4,
@@ -5872,18 +5872,18 @@
       "record": "11-7",
       "standing": 3,
       "finalPlacement": 6,
-      "pointsFor": 19829.9,
-      "pointsAgainst": 18508.7
+      "pointsFor": 19913.3,
+      "pointsAgainst": 18745.8
     },
     {
       "id": 10,
       "name": "White Cowards",
-      "manager": "Michael Bettencourt",
+      "manager": "Mike B",
       "record": "9-9",
       "standing": 7,
       "finalPlacement": 7,
       "pointsFor": 18129.3,
-      "pointsAgainst": 18079.2
+      "pointsAgainst": 18253.5
     },
     {
       "id": 3,
@@ -5892,8 +5892,8 @@
       "record": "8-10",
       "standing": 8,
       "finalPlacement": 8,
-      "pointsFor": 17138.7,
-      "pointsAgainst": 17940.9
+      "pointsFor": 17184.9,
+      "pointsAgainst": 18095.0
     },
     {
       "id": 12,
@@ -5903,7 +5903,7 @@
       "standing": 9,
       "finalPlacement": 9,
       "pointsFor": 17211.1,
-      "pointsAgainst": 17747.8
+      "pointsAgainst": 17933.9
     },
     {
       "id": 9,
@@ -5912,8 +5912,8 @@
       "record": "6-12",
       "standing": 10,
       "finalPlacement": 10,
-      "pointsFor": 16018.8,
-      "pointsAgainst": 18007.5
+      "pointsFor": 16240.9,
+      "pointsAgainst": 18020.5
     },
     {
       "id": 7,
@@ -5922,8 +5922,8 @@
       "record": "5-13",
       "standing": 11,
       "finalPlacement": 11,
-      "pointsFor": 16041.0,
-      "pointsAgainst": 18591.7
+      "pointsFor": 16060.8,
+      "pointsAgainst": 18628.0
     },
     {
       "id": 5,
@@ -5932,8 +5932,8 @@
       "record": "5-13",
       "standing": 12,
       "finalPlacement": 12,
-      "pointsFor": 16344.3,
-      "pointsAgainst": 18368.7
+      "pointsFor": 16692.1,
+      "pointsAgainst": 18407.0
     }
   ]
 }

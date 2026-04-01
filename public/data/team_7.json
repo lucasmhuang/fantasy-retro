@@ -1801,11 +1801,11 @@
     }
   },
   "grades": {
-    "drafting": "C+",
-    "trading": "C-",
-    "waiverWire": "C+",
-    "luck": "C",
-    "coaching": "F",
+    "drafting": "B-",
+    "trading": "D+",
+    "waiverWire": "C",
+    "luck": "B-",
+    "coaching": "D",
     "overall": "D+"
   }
 }

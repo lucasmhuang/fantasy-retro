@@ -2370,11 +2370,11 @@
     }
   },
   "grades": {
-    "drafting": "A-",
-    "trading": "C",
-    "waiverWire": "A",
-    "luck": "C+",
+    "drafting": "A+",
+    "trading": "C-",
+    "waiverWire": "A+",
+    "luck": "B-",
     "coaching": "B",
-    "overall": "B+"
+    "overall": "A+"
   }
 }

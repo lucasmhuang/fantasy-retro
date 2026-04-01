@@ -2410,11 +2410,11 @@
     }
   },
   "grades": {
-    "drafting": "B+",
+    "drafting": "A",
     "trading": "F",
-    "waiverWire": "B",
+    "waiverWire": "A-",
     "luck": "C",
-    "coaching": "B-",
-    "overall": "C+"
+    "coaching": "B",
+    "overall": "B-"
   }
 }
