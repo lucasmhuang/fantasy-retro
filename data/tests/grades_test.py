@@ -18,7 +18,7 @@ class TestRankWithClustering:
         assert grades[1] == "A+"
 
     def test_clustering_within_threshold(self):
-        values = {1: 100, 2: 99, 3: 50}
+        values = {1: 100, 2: 99, 3: 80, 4: 20}
         grades = _rank_with_clustering(values)
         assert grades[1] == grades[2] == "A+"
 

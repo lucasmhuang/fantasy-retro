@@ -184,24 +184,24 @@
       "received": [
         "Immanuel Quickley"
       ],
-      "sentPtsROS": 720.3,
-      "receivedPtsROS": 743.9,
-      "net": 23.6,
+      "sentPtsROS": 579.7,
+      "receivedPtsROS": 639.8,
+      "net": 60.1,
       "slotAdjustment": 0.0,
       "sentStats": [
         {
           "player": "OG Anunoby",
-          "ptsROS": 720.3,
-          "gamesROS": 22,
-          "ppgROS": 32.7
+          "ptsROS": 579.7,
+          "gamesROS": 18,
+          "ppgROS": 32.2
         }
       ],
       "receivedStats": [
         {
           "player": "Immanuel Quickley",
-          "ptsROS": 743.9,
-          "gamesROS": 21,
-          "ppgROS": 35.4
+          "ptsROS": 639.8,
+          "gamesROS": 18,
+          "ppgROS": 35.5
         }
       ],
       "weeklyBreakdown": [
@@ -234,93 +234,16 @@
           "week": 18,
           "sentPts": 75.2,
           "receivedPts": 95.3
-        },
-        {
-          "week": 19,
-          "sentPts": 140.6,
-          "receivedPts": 104.1
         }
       ]
     }
   ],
   "waiverPickups": [
     {
-      "player": "Saddiq Bey",
-      "weekAdded": 4,
-      "addDate": 1763053213354,
-      "ptsAfterAdd": 1489.3,
-      "weeklyPoints": [
-        {
-          "week": 4,
-          "pts": 0
-        },
-        {
-          "week": 5,
-          "pts": 62.2
-        },
-        {
-          "week": 6,
-          "pts": 171.7
-        },
-        {
-          "week": 7,
-          "pts": 96.4
-        },
-        {
-          "week": 8,
-          "pts": 83.0
-        },
-        {
-          "week": 9,
-          "pts": 76.8
-        },
-        {
-          "week": 10,
-          "pts": 92.8
-        },
-        {
-          "week": 11,
-          "pts": 71.5
-        },
-        {
-          "week": 12,
-          "pts": 0
-        },
-        {
-          "week": 13,
-          "pts": 93.2
-        },
-        {
-          "week": 14,
-          "pts": 124.4
-        },
-        {
-          "week": 15,
-          "pts": 130.4
-        },
-        {
-          "week": 16,
-          "pts": 101.0
-        },
-        {
-          "week": 17,
-          "pts": 112.6
-        },
-        {
-          "week": 18,
-          "pts": 144.4
-        },
-        {
-          "week": 19,
-          "pts": 128.9
-        }
-      ]
-    },
-    {
       "player": "Naji Marshall",
       "weekAdded": 4,
       "addDate": 1762794017564,
-      "ptsAfterAdd": 1444.4,
+      "ptsAfterAdd": 1395.9,
       "weeklyPoints": [
         {
           "week": 4,
@@ -381,10 +304,74 @@
         {
           "week": 18,
           "pts": 105.9
+        }
+      ]
+    },
+    {
+      "player": "Saddiq Bey",
+      "weekAdded": 4,
+      "addDate": 1763053213354,
+      "ptsAfterAdd": 1360.4,
+      "weeklyPoints": [
+        {
+          "week": 4,
+          "pts": 0
         },
         {
-          "week": 19,
-          "pts": 48.5
+          "week": 5,
+          "pts": 62.2
+        },
+        {
+          "week": 6,
+          "pts": 171.7
+        },
+        {
+          "week": 7,
+          "pts": 96.4
+        },
+        {
+          "week": 8,
+          "pts": 83.0
+        },
+        {
+          "week": 9,
+          "pts": 76.8
+        },
+        {
+          "week": 10,
+          "pts": 92.8
+        },
+        {
+          "week": 11,
+          "pts": 71.5
+        },
+        {
+          "week": 12,
+          "pts": 0
+        },
+        {
+          "week": 13,
+          "pts": 93.2
+        },
+        {
+          "week": 14,
+          "pts": 124.4
+        },
+        {
+          "week": 15,
+          "pts": 130.4
+        },
+        {
+          "week": 16,
+          "pts": 101.0
+        },
+        {
+          "week": 17,
+          "pts": 112.6
+        },
+        {
+          "week": 18,
+          "pts": 144.4
         }
       ]
     },
@@ -392,7 +379,7 @@
       "player": "Ayo Dosunmu",
       "weekAdded": 5,
       "addDate": 1763398815198,
-      "ptsAfterAdd": 1112.0,
+      "ptsAfterAdd": 1054.3,
       "weeklyPoints": [
         {
           "week": 5,
@@ -449,70 +436,6 @@
         {
           "week": 18,
           "pts": 49.5
-        },
-        {
-          "week": 19,
-          "pts": 57.7
-        }
-      ]
-    },
-    {
-      "player": "Robert Williams III",
-      "weekAdded": 7,
-      "addDate": 1764608414532,
-      "ptsAfterAdd": 763.7,
-      "weeklyPoints": [
-        {
-          "week": 7,
-          "pts": 59.1
-        },
-        {
-          "week": 8,
-          "pts": 28.7
-        },
-        {
-          "week": 9,
-          "pts": 44.5
-        },
-        {
-          "week": 10,
-          "pts": 39.9
-        },
-        {
-          "week": 11,
-          "pts": 60.9
-        },
-        {
-          "week": 12,
-          "pts": 56.1
-        },
-        {
-          "week": 13,
-          "pts": 72.0
-        },
-        {
-          "week": 14,
-          "pts": 28.0
-        },
-        {
-          "week": 15,
-          "pts": 78.5
-        },
-        {
-          "week": 16,
-          "pts": 68.5
-        },
-        {
-          "week": 17,
-          "pts": 65.8
-        },
-        {
-          "week": 18,
-          "pts": 67.5
-        },
-        {
-          "week": 19,
-          "pts": 94.2
         }
       ]
     },
@@ -577,10 +500,62 @@
         {
           "week": 18,
           "pts": 44.0
+        }
+      ]
+    },
+    {
+      "player": "Robert Williams III",
+      "weekAdded": 7,
+      "addDate": 1764608414532,
+      "ptsAfterAdd": 669.5,
+      "weeklyPoints": [
+        {
+          "week": 7,
+          "pts": 59.1
         },
         {
-          "week": 19,
-          "pts": 0
+          "week": 8,
+          "pts": 28.7
+        },
+        {
+          "week": 9,
+          "pts": 44.5
+        },
+        {
+          "week": 10,
+          "pts": 39.9
+        },
+        {
+          "week": 11,
+          "pts": 60.9
+        },
+        {
+          "week": 12,
+          "pts": 56.1
+        },
+        {
+          "week": 13,
+          "pts": 72.0
+        },
+        {
+          "week": 14,
+          "pts": 28.0
+        },
+        {
+          "week": 15,
+          "pts": 78.5
+        },
+        {
+          "week": 16,
+          "pts": 68.5
+        },
+        {
+          "week": 17,
+          "pts": 65.8
+        },
+        {
+          "week": 18,
+          "pts": 67.5
         }
       ]
     },
@@ -644,10 +619,6 @@
         },
         {
           "week": 18,
-          "pts": 0
-        },
-        {
-          "week": 19,
           "pts": 0
         }
       ]
@@ -725,10 +696,6 @@
         {
           "week": 18,
           "pts": 0
-        },
-        {
-          "week": 19,
-          "pts": 0
         }
       ]
     },
@@ -804,10 +771,6 @@
         },
         {
           "week": 18,
-          "pts": 0
-        },
-        {
-          "week": 19,
           "pts": 0
         }
       ]
@@ -888,10 +851,6 @@
         },
         {
           "week": 18,
-          "pts": 0
-        },
-        {
-          "week": 19,
           "pts": 0
         }
       ]
@@ -1935,7 +1894,7 @@
   },
   "grades": {
     "drafting": "A-",
-    "trading": "A",
+    "trading": "B+",
     "waiverWire": "B+",
     "luck": "D",
     "coaching": "A+",

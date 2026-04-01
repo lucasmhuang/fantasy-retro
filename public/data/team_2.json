@@ -195,23 +195,23 @@
         "Isaiah Hartenstein"
       ],
       "sentPtsROS": 1222.5,
-      "receivedPtsROS": 453.7,
-      "net": -768.8,
+      "receivedPtsROS": 421.8,
+      "net": -800.7,
       "slotAdjustment": 0.0,
       "sentStats": [
         {
           "player": "Nikola Vucevic",
           "ptsROS": 1222.5,
-          "gamesROS": 37,
-          "ppgROS": 33.0
+          "gamesROS": 35,
+          "ppgROS": 34.9
         }
       ],
       "receivedStats": [
         {
           "player": "Isaiah Hartenstein",
-          "ptsROS": 453.7,
-          "gamesROS": 18,
-          "ppgROS": 25.2
+          "ptsROS": 421.8,
+          "gamesROS": 16,
+          "ppgROS": 26.4
         }
       ],
       "weeklyBreakdown": [
@@ -269,16 +269,6 @@
           "week": 18,
           "sentPts": 107.5,
           "receivedPts": 94.9
-        },
-        {
-          "week": 19,
-          "sentPts": 0.0,
-          "receivedPts": 8.0
-        },
-        {
-          "week": 20,
-          "sentPts": 0.0,
-          "receivedPts": 23.9
         }
       ]
     },
@@ -294,15 +284,15 @@
         "Cedric Coward"
       ],
       "sentPtsROS": 709.9,
-      "receivedPtsROS": 1495.5,
-      "net": 785.6,
+      "receivedPtsROS": 1152.2,
+      "net": 442.3,
       "slotAdjustment": 0.0,
       "sentStats": [
         {
           "player": "Josh Hart",
           "ptsROS": 609.0,
-          "gamesROS": 27,
-          "ppgROS": 22.6
+          "gamesROS": 21,
+          "ppgROS": 29.0
         },
         {
           "player": "Ja Morant",
@@ -314,15 +304,15 @@
       "receivedStats": [
         {
           "player": "Brandon Ingram",
-          "ptsROS": 1053.7,
-          "gamesROS": 29,
-          "ppgROS": 36.3
+          "ptsROS": 811.0,
+          "gamesROS": 22,
+          "ppgROS": 36.9
         },
         {
           "player": "Cedric Coward",
-          "ptsROS": 441.8,
-          "gamesROS": 18,
-          "ppgROS": 24.5
+          "ptsROS": 341.2,
+          "gamesROS": 14,
+          "ppgROS": 24.4
         }
       ],
       "weeklyBreakdown": [
@@ -360,16 +350,6 @@
           "week": 18,
           "sentPts": 87.3,
           "receivedPts": 105.9
-        },
-        {
-          "week": 19,
-          "sentPts": 0.0,
-          "receivedPts": 141.9
-        },
-        {
-          "week": 20,
-          "sentPts": 0.0,
-          "receivedPts": 201.4
         }
       ]
     },
@@ -385,42 +365,42 @@
         "Scottie Barnes",
         "LaMelo Ball"
       ],
-      "sentPtsROS": 2060.7,
-      "receivedPtsROS": 2802.4,
-      "net": 741.7,
-      "slotAdjustment": 632.8,
+      "sentPtsROS": 1608.1,
+      "receivedPtsROS": 2202.0,
+      "net": 593.9,
+      "slotAdjustment": 474.6,
       "sentStats": [
         {
           "player": "Bilal Coulibaly",
           "ptsROS": 359.7,
-          "gamesROS": 19,
-          "ppgROS": 18.9
+          "gamesROS": 15,
+          "ppgROS": 24.0
         },
         {
           "player": "Nikola Jokic",
-          "ptsROS": 1068.2,
-          "gamesROS": 20,
-          "ppgROS": 53.4
+          "ptsROS": 773.8,
+          "gamesROS": 13,
+          "ppgROS": 59.5
         }
       ],
       "receivedStats": [
         {
           "player": "Nic Claxton",
-          "ptsROS": 693.7,
-          "gamesROS": 26,
-          "ppgROS": 26.7
+          "ptsROS": 584.7,
+          "gamesROS": 20,
+          "ppgROS": 29.2
         },
         {
           "player": "Scottie Barnes",
-          "ptsROS": 1071.1,
-          "gamesROS": 26,
-          "ppgROS": 41.2
+          "ptsROS": 834.2,
+          "gamesROS": 19,
+          "ppgROS": 43.9
         },
         {
           "player": "LaMelo Ball",
-          "ptsROS": 1037.6,
-          "gamesROS": 29,
-          "ppgROS": 35.8
+          "ptsROS": 783.1,
+          "gamesROS": 22,
+          "ppgROS": 35.6
         }
       ],
       "weeklyBreakdown": [
@@ -453,16 +433,6 @@
           "week": 18,
           "sentPts": 270.6,
           "receivedPts": 303.4
-        },
-        {
-          "week": 19,
-          "sentPts": 0.0,
-          "receivedPts": 290.0
-        },
-        {
-          "week": 20,
-          "sentPts": 294.4,
-          "receivedPts": 310.4
         }
       ]
     }
@@ -520,14 +490,6 @@
         },
         {
           "week": 18,
-          "pts": 0
-        },
-        {
-          "week": 19,
-          "pts": 0
-        },
-        {
-          "week": 20,
           "pts": 0
         }
       ]
@@ -593,14 +555,6 @@
         {
           "week": 18,
           "pts": 0
-        },
-        {
-          "week": 19,
-          "pts": 0
-        },
-        {
-          "week": 20,
-          "pts": 0
         }
       ]
     },
@@ -629,14 +583,6 @@
         {
           "week": 18,
           "pts": 46.5
-        },
-        {
-          "week": 19,
-          "pts": 0
-        },
-        {
-          "week": 20,
-          "pts": 0
         }
       ]
     },
@@ -712,14 +658,6 @@
         },
         {
           "week": 18,
-          "pts": 0
-        },
-        {
-          "week": 19,
-          "pts": 0
-        },
-        {
-          "week": 20,
           "pts": 0
         }
       ]

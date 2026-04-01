@@ -201,29 +201,29 @@
         "Nic Claxton"
       ],
       "sentPtsROS": 1939.5,
-      "receivedPtsROS": 2446.8,
-      "net": 507.3,
-      "slotAdjustment": 1186.5,
+      "receivedPtsROS": 2039.7,
+      "net": 100.2,
+      "slotAdjustment": 949.2,
       "sentStats": [
         {
           "player": "Devin Vassell",
           "ptsROS": 680.2,
-          "gamesROS": 37,
-          "ppgROS": 18.4
+          "gamesROS": 28,
+          "ppgROS": 24.3
         },
         {
           "player": "Derik Queen",
           "ptsROS": 1259.3,
-          "gamesROS": 50,
-          "ppgROS": 25.2
+          "gamesROS": 40,
+          "ppgROS": 31.5
         }
       ],
       "receivedStats": [
         {
           "player": "Nic Claxton",
-          "ptsROS": 1260.3,
-          "gamesROS": 44,
-          "ppgROS": 28.6
+          "ptsROS": 1090.5,
+          "gamesROS": 35,
+          "ppgROS": 31.2
         }
       ],
       "weeklyBreakdown": [
@@ -286,21 +286,6 @@
           "week": 18,
           "sentPts": 230.8,
           "receivedPts": 85.0
-        },
-        {
-          "week": 19,
-          "sentPts": 0.0,
-          "receivedPts": 51.3
-        },
-        {
-          "week": 20,
-          "sentPts": 0.0,
-          "receivedPts": 57.7
-        },
-        {
-          "week": 21,
-          "sentPts": 0.0,
-          "receivedPts": 60.8
         }
       ]
     },
@@ -316,42 +301,42 @@
         "Bilal Coulibaly",
         "Nikola Jokic"
       ],
-      "sentPtsROS": 3121.7,
-      "receivedPtsROS": 2457.8,
-      "net": -663.9,
-      "slotAdjustment": 711.9,
+      "sentPtsROS": 2202.0,
+      "receivedPtsROS": 1608.1,
+      "net": -593.9,
+      "slotAdjustment": 474.6,
       "sentStats": [
         {
           "player": "Nic Claxton",
-          "ptsROS": 754.5,
-          "gamesROS": 29,
-          "ppgROS": 26.0
+          "ptsROS": 584.7,
+          "gamesROS": 20,
+          "ppgROS": 29.2
         },
         {
           "player": "Scottie Barnes",
-          "ptsROS": 1183.6,
-          "gamesROS": 29,
-          "ppgROS": 40.8
+          "ptsROS": 834.2,
+          "gamesROS": 19,
+          "ppgROS": 43.9
         },
         {
           "player": "LaMelo Ball",
-          "ptsROS": 1183.6,
-          "gamesROS": 32,
-          "ppgROS": 37.0
+          "ptsROS": 783.1,
+          "gamesROS": 22,
+          "ppgROS": 35.6
         }
       ],
       "receivedStats": [
         {
           "player": "Bilal Coulibaly",
-          "ptsROS": 471.1,
-          "gamesROS": 22,
-          "ppgROS": 21.4
+          "ptsROS": 359.7,
+          "gamesROS": 15,
+          "ppgROS": 24.0
         },
         {
           "player": "Nikola Jokic",
-          "ptsROS": 1274.8,
-          "gamesROS": 24,
-          "ppgROS": 53.1
+          "ptsROS": 773.8,
+          "gamesROS": 13,
+          "ppgROS": 59.5
         }
       ],
       "weeklyBreakdown": [
@@ -384,21 +369,6 @@
           "week": 18,
           "sentPts": 303.4,
           "receivedPts": 270.6
-        },
-        {
-          "week": 19,
-          "sentPts": 290.0,
-          "receivedPts": 0.0
-        },
-        {
-          "week": 20,
-          "sentPts": 310.4,
-          "receivedPts": 294.4
-        },
-        {
-          "week": 21,
-          "sentPts": 319.3,
-          "receivedPts": 318.0
         }
       ]
     }
@@ -408,7 +378,7 @@
       "player": "Nickeil Alexander-Walker",
       "weekAdded": 1,
       "addDate": 1761494408263,
-      "ptsAfterAdd": 2114.6,
+      "ptsAfterAdd": 1855.4,
       "weeklyPoints": [
         {
           "week": 1,
@@ -481,18 +451,6 @@
         {
           "week": 18,
           "pts": 56.7
-        },
-        {
-          "week": 19,
-          "pts": 0
-        },
-        {
-          "week": 20,
-          "pts": 106.4
-        },
-        {
-          "week": 21,
-          "pts": 152.8
         }
       ]
     },
@@ -561,18 +519,6 @@
         {
           "week": 18,
           "pts": 94.6
-        },
-        {
-          "week": 19,
-          "pts": 0
-        },
-        {
-          "week": 20,
-          "pts": 0
-        },
-        {
-          "week": 21,
-          "pts": 0
         }
       ]
     },
@@ -580,7 +526,7 @@
       "player": "Noah Clowney",
       "weekAdded": 4,
       "addDate": 1763053213354,
-      "ptsAfterAdd": 1068.7,
+      "ptsAfterAdd": 1000.5,
       "weeklyPoints": [
         {
           "week": 4,
@@ -641,18 +587,6 @@
         {
           "week": 18,
           "pts": 74.0
-        },
-        {
-          "week": 19,
-          "pts": 0
-        },
-        {
-          "week": 20,
-          "pts": 68.2
-        },
-        {
-          "week": 21,
-          "pts": 0
         }
       ]
     },
@@ -660,7 +594,7 @@
       "player": "Brandin Podziemski",
       "weekAdded": 14,
       "addDate": 1768842031307,
-      "ptsAfterAdd": 742.8,
+      "ptsAfterAdd": 518.1,
       "weeklyPoints": [
         {
           "week": 14,
@@ -681,46 +615,6 @@
         {
           "week": 18,
           "pts": 104.5
-        },
-        {
-          "week": 19,
-          "pts": 0
-        },
-        {
-          "week": 20,
-          "pts": 143.5
-        },
-        {
-          "week": 21,
-          "pts": 81.2
-        }
-      ]
-    },
-    {
-      "player": "Gui Santos",
-      "weekAdded": 17,
-      "addDate": 1770656428746,
-      "ptsAfterAdd": 450.4,
-      "weeklyPoints": [
-        {
-          "week": 17,
-          "pts": 129.3
-        },
-        {
-          "week": 18,
-          "pts": 96.8
-        },
-        {
-          "week": 19,
-          "pts": 0
-        },
-        {
-          "week": 20,
-          "pts": 137.1
-        },
-        {
-          "week": 21,
-          "pts": 87.2
         }
       ]
     },
@@ -761,18 +655,6 @@
         {
           "week": 18,
           "pts": 135.5
-        },
-        {
-          "week": 19,
-          "pts": 0
-        },
-        {
-          "week": 20,
-          "pts": 0
-        },
-        {
-          "week": 21,
-          "pts": 0
         }
       ]
     },
@@ -805,34 +687,6 @@
       ]
     },
     {
-      "player": "Nique Clifford",
-      "weekAdded": 17,
-      "addDate": 1771261230239,
-      "ptsAfterAdd": 267.5,
-      "weeklyPoints": [
-        {
-          "week": 17,
-          "pts": 0
-        },
-        {
-          "week": 18,
-          "pts": 154.1
-        },
-        {
-          "week": 19,
-          "pts": 0
-        },
-        {
-          "week": 20,
-          "pts": 113.4
-        },
-        {
-          "week": 21,
-          "pts": 0
-        }
-      ]
-    },
-    {
       "player": "Peyton Watson",
       "weekAdded": 5,
       "addDate": 1763658016118,
@@ -860,6 +714,54 @@
         },
         {
           "week": 10,
+          "pts": 0
+        }
+      ]
+    },
+    {
+      "player": "Gui Santos",
+      "weekAdded": 17,
+      "addDate": 1770656428746,
+      "ptsAfterAdd": 226.1,
+      "weeklyPoints": [
+        {
+          "week": 17,
+          "pts": 129.3
+        },
+        {
+          "week": 18,
+          "pts": 96.8
+        }
+      ]
+    },
+    {
+      "player": "Tre Johnson",
+      "weekAdded": 13,
+      "addDate": 1768237229316,
+      "ptsAfterAdd": 166.9,
+      "weeklyPoints": [
+        {
+          "week": 13,
+          "pts": 42.3
+        },
+        {
+          "week": 14,
+          "pts": 84.8
+        },
+        {
+          "week": 15,
+          "pts": 39.8
+        },
+        {
+          "week": 16,
+          "pts": 0
+        },
+        {
+          "week": 17,
+          "pts": 0
+        },
+        {
+          "week": 18,
           "pts": 0
         }
       ]

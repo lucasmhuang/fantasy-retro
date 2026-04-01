@@ -10,7 +10,7 @@ LEAGUE_ID = int(os.getenv("ESPN_LEAGUE_ID", "0"))
 YEAR = int(os.getenv("ESPN_YEAR", "2026"))
 ESPN_S2 = os.getenv("ESPN_S2", "")
 SWID = os.getenv("ESPN_SWID", "")
-OUTPUT_DIR = Path(__file__).parent / "output"
+OUTPUT_DIR = Path(__file__).parent.parent / "public" / "data"
 CACHE_DIR = Path(__file__).parent / "cache"
 
 MATCHUP_DATES = [

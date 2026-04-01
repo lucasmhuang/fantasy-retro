@@ -201,8 +201,8 @@
         {
           "player": "Jalen Duren",
           "ptsROS": 1259.5,
-          "gamesROS": 39,
-          "ppgROS": 32.3
+          "gamesROS": 35,
+          "ppgROS": 36.0
         }
       ],
       "receivedStats": [
@@ -278,11 +278,6 @@
           "week": 18,
           "sentPts": 205.5,
           "receivedPts": 0.0
-        },
-        {
-          "week": 19,
-          "sentPts": 0.0,
-          "receivedPts": 0.0
         }
       ]
     },
@@ -296,24 +291,24 @@
         "Jabari Smith Jr.",
         "Stephen Curry"
       ],
-      "sentPtsROS": 1853.0,
+      "sentPtsROS": 1773.9,
       "receivedPtsROS": 2195.7,
-      "net": 342.7,
-      "slotAdjustment": 1028.3,
+      "net": 421.8,
+      "slotAdjustment": 949.2,
       "sentStats": [
         {
           "player": "Josh Giddey",
           "ptsROS": 824.7,
-          "gamesROS": 25,
-          "ppgROS": 33.0
+          "gamesROS": 23,
+          "ppgROS": 35.9
         }
       ],
       "receivedStats": [
         {
           "player": "Jabari Smith Jr.",
           "ptsROS": 1269.4,
-          "gamesROS": 43,
-          "ppgROS": 29.5
+          "gamesROS": 41,
+          "ppgROS": 31.0
         },
         {
           "player": "Stephen Curry",
@@ -382,11 +377,6 @@
           "week": 18,
           "sentPts": 110.4,
           "receivedPts": 93.4
-        },
-        {
-          "week": 19,
-          "sentPts": 0.0,
-          "receivedPts": 0.0
         }
       ]
     },
@@ -401,30 +391,30 @@
         "RJ Barrett",
         "Domantas Sabonis"
       ],
-      "sentPtsROS": 2107.4,
+      "sentPtsROS": 2029.3,
       "receivedPtsROS": 843.6,
-      "net": -1263.8,
+      "net": -1185.7,
       "slotAdjustment": 0.0,
       "sentStats": [
         {
           "player": "Evan Mobley",
-          "ptsROS": 953.5,
-          "gamesROS": 25,
+          "ptsROS": 875.4,
+          "gamesROS": 23,
           "ppgROS": 38.1
         },
         {
           "player": "Jabari Smith Jr.",
           "ptsROS": 1153.9,
-          "gamesROS": 39,
-          "ppgROS": 29.6
+          "gamesROS": 37,
+          "ppgROS": 31.2
         }
       ],
       "receivedStats": [
         {
           "player": "RJ Barrett",
           "ptsROS": 580.9,
-          "gamesROS": 22,
-          "ppgROS": 26.4
+          "gamesROS": 19,
+          "ppgROS": 30.6
         },
         {
           "player": "Domantas Sabonis",
@@ -488,11 +478,6 @@
           "week": 18,
           "sentPts": 203.8,
           "receivedPts": 97.0
-        },
-        {
-          "week": 19,
-          "sentPts": 78.1,
-          "receivedPts": 0.0
         }
       ]
     },
@@ -510,47 +495,47 @@
         "Mark Williams"
       ],
       "sentPtsROS": 1889.5,
-      "receivedPtsROS": 2189.2,
-      "net": 299.7,
+      "receivedPtsROS": 1981.5,
+      "net": 92.0,
       "slotAdjustment": 0.0,
       "sentStats": [
         {
           "player": "Keyonte George",
           "ptsROS": 575.0,
-          "gamesROS": 19,
-          "ppgROS": 30.3
+          "gamesROS": 16,
+          "ppgROS": 35.9
         },
         {
           "player": "RJ Barrett",
           "ptsROS": 492.5,
-          "gamesROS": 19,
-          "ppgROS": 25.9
+          "gamesROS": 16,
+          "ppgROS": 30.8
         },
         {
           "player": "Matas Buzelis",
           "ptsROS": 822.0,
-          "gamesROS": 28,
-          "ppgROS": 29.4
+          "gamesROS": 26,
+          "ppgROS": 31.6
         }
       ],
       "receivedStats": [
         {
           "player": "James Harden",
-          "ptsROS": 915.1,
-          "gamesROS": 22,
-          "ppgROS": 41.6
+          "ptsROS": 846.8,
+          "gamesROS": 20,
+          "ppgROS": 42.3
         },
         {
           "player": "Collin Gillespie",
-          "ptsROS": 633.9,
-          "gamesROS": 23,
-          "ppgROS": 27.6
+          "ptsROS": 517.3,
+          "gamesROS": 19,
+          "ppgROS": 27.2
         },
         {
           "player": "Mark Williams",
-          "ptsROS": 640.2,
-          "gamesROS": 26,
-          "ppgROS": 24.6
+          "ptsROS": 617.4,
+          "gamesROS": 25,
+          "ppgROS": 24.7
         }
       ],
       "weeklyBreakdown": [
@@ -588,11 +573,6 @@
           "week": 18,
           "sentPts": 245.1,
           "receivedPts": 148.9
-        },
-        {
-          "week": 19,
-          "sentPts": 0.0,
-          "receivedPts": 207.7
         }
       ]
     },
@@ -605,24 +585,24 @@
       "received": [
         "OG Anunoby"
       ],
-      "sentPtsROS": 743.9,
-      "receivedPtsROS": 720.3,
-      "net": -23.6,
+      "sentPtsROS": 639.8,
+      "receivedPtsROS": 579.7,
+      "net": -60.1,
       "slotAdjustment": 0.0,
       "sentStats": [
         {
           "player": "Immanuel Quickley",
-          "ptsROS": 743.9,
-          "gamesROS": 21,
-          "ppgROS": 35.4
+          "ptsROS": 639.8,
+          "gamesROS": 18,
+          "ppgROS": 35.5
         }
       ],
       "receivedStats": [
         {
           "player": "OG Anunoby",
-          "ptsROS": 720.3,
-          "gamesROS": 22,
-          "ppgROS": 32.7
+          "ptsROS": 579.7,
+          "gamesROS": 18,
+          "ppgROS": 32.2
         }
       ],
       "weeklyBreakdown": [
@@ -655,11 +635,6 @@
           "week": 18,
           "sentPts": 95.3,
           "receivedPts": 75.2
-        },
-        {
-          "week": 19,
-          "sentPts": 104.1,
-          "receivedPts": 140.6
         }
       ]
     }
@@ -805,7 +780,7 @@
       "player": "De'Anthony Melton",
       "weekAdded": 12,
       "addDate": 1767632416822,
-      "ptsAfterAdd": 603.4,
+      "ptsAfterAdd": 541.4,
       "weeklyPoints": [
         {
           "week": 12,
@@ -834,10 +809,6 @@
         {
           "week": 18,
           "pts": 57.5
-        },
-        {
-          "week": 19,
-          "pts": 62.0
         }
       ]
     },
@@ -966,34 +937,6 @@
         {
           "week": 18,
           "pts": 0
-        },
-        {
-          "week": 19,
-          "pts": 0
-        }
-      ]
-    },
-    {
-      "player": "Daniel Gafford",
-      "weekAdded": 16,
-      "addDate": 1770310822317,
-      "ptsAfterAdd": 245.9,
-      "weeklyPoints": [
-        {
-          "week": 16,
-          "pts": 0
-        },
-        {
-          "week": 17,
-          "pts": 76.2
-        },
-        {
-          "week": 18,
-          "pts": 66.7
-        },
-        {
-          "week": 19,
-          "pts": 103.0
         }
       ]
     },
@@ -1061,6 +1004,30 @@
         },
         {
           "week": 13,
+          "pts": 0
+        }
+      ]
+    },
+    {
+      "player": "Kyle Kuzma",
+      "weekAdded": 15,
+      "addDate": 1769706042786,
+      "ptsAfterAdd": 164.8,
+      "weeklyPoints": [
+        {
+          "week": 15,
+          "pts": 0
+        },
+        {
+          "week": 16,
+          "pts": 78.7
+        },
+        {
+          "week": 17,
+          "pts": 86.1
+        },
+        {
+          "week": 18,
           "pts": 0
         }
       ]
@@ -2445,7 +2412,7 @@
     "drafting": "A",
     "trading": "F",
     "waiverWire": "B",
-    "luck": "C",
+    "luck": "C+",
     "coaching": "B+",
     "overall": "C+"
   }

@@ -4,10 +4,10 @@ from constants import RANK_GRADES
 def _rank_with_clustering(values_by_id, threshold_pct=0.25, max_cluster=3):
     if not values_by_id:
         return {}
-    vals = list(values_by_id.values())
-    mean = sum(vals) / len(vals)
-    std = (sum((v - mean) ** 2 for v in vals) / len(vals)) ** 0.5 if len(vals) > 1 else 0
-    threshold = threshold_pct * std
+    vals = sorted(values_by_id.values())
+    median = (vals[len(vals) // 2] + vals[(len(vals) - 1) // 2]) / 2
+    mad = sorted(abs(v - median) for v in vals)[len(vals) // 2] if len(vals) > 1 else 0
+    threshold = threshold_pct * mad
 
     sorted_teams = sorted(values_by_id.items(), key=lambda x: x[1], reverse=True)
 

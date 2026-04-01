@@ -339,10 +339,10 @@ def extract_team(
     weekly_results = extract_weekly_results(tid, box_cache, standings, events, last_week)
 
     print("  [ 2/11] Trades")
-    trades = extract_trades(tid, activity, box_cache, last_week, replacement_ppg, nba_games)
+    trades = extract_trades(tid, activity, box_cache, reg_weeks, replacement_ppg, nba_games)
 
     print("  [ 3/11] Waiver pickups")
-    pickups = extract_waiver_pickups(tid, activity, box_cache, last_week)
+    pickups = extract_waiver_pickups(tid, activity, box_cache, reg_weeks)
 
     print("  [ 4/11] Scoring profile")
     scoring_profile = extract_scoring_profile(tid, box_cache, reg_weeks)

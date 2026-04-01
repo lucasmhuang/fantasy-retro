@@ -52,7 +52,7 @@ export function AllPlayRecord({ allPlay, actualRecord }: AllPlayRecordProps) {
   }
 
   const luckMessages: Record<LuckStatus, string> = {
-    very_lucky: 'The fantasy gods chose violence \u2014 for everyone else. Your schedule was a cheat code.',
+    very_lucky: 'Your wins came gift-wrapped. The schedule carried you harder than your roster did.',
     lucky: 'A few bounces went your way. Your record got a nice bump from favorable scheduling.',
     fair: 'No luck to blame, no luck to thank. Your record is your resume.',
     unlucky: 'You drew some tough matchups. Your all-play says you were better than your record.',

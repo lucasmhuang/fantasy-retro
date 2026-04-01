@@ -99,7 +99,7 @@ export function TradeCenter({ trades, replacementFPW, nameMap = {} }: TradeCente
           <p
             className={`font-mono text-2xl font-bold ${isPositiveOverall ? 'text-win' : 'text-loss'}`}
           >
-            {totalNet > 50 ? 'Trade Shark' : totalNet >= 0 ? 'Trade Winner' : totalNet > -50 ? 'Trade Loser' : 'Got Fleeced'}
+            {totalNet > 200 ? 'Trade Shark' : totalNet >= 0 ? 'Survived' : totalNet > -200 ? 'Took Some L\'s' : 'Got Fleeced'}
           </p>
         </div>
       </div>
