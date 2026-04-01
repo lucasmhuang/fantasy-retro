@@ -738,7 +738,7 @@
       "player": "Ryan Rollins",
       "weekAdded": 2,
       "addDate": 1761580801105,
-      "ptsAfterAdd": 824.0,
+      "ptsAfterAdd": 1838.7,
       "weeklyPoints": [
         {
           "week": 2,
@@ -770,51 +770,123 @@
         },
         {
           "week": 9,
-          "pts": 0.0
+          "pts": 66.6
         },
         {
           "week": 10,
-          "pts": 0.0
+          "pts": 118.6
         },
         {
           "week": 11,
-          "pts": 0.0
+          "pts": 139.0
         },
         {
           "week": 12,
-          "pts": 0.0
+          "pts": 72.8
         },
         {
           "week": 13,
-          "pts": 0.0
+          "pts": 54.8
         },
         {
           "week": 14,
-          "pts": 0.0
+          "pts": 94.5
         },
         {
           "week": 15,
-          "pts": 0.0
+          "pts": 131.9
         },
         {
           "week": 16,
-          "pts": 0.0
+          "pts": 103.0
         },
         {
           "week": 17,
-          "pts": 0.0
+          "pts": 114.4
         },
         {
           "week": 18,
-          "pts": 0.0
+          "pts": 119.1
         },
         {
           "week": 19,
-          "pts": 0.0
+          "pts": 0
         },
         {
           "week": 20,
-          "pts": 0.0
+          "pts": 0
+        }
+      ]
+    },
+    {
+      "player": "Kyle Filipowski",
+      "weekAdded": 5,
+      "addDate": 1763398815198,
+      "ptsAfterAdd": 1390.7,
+      "weeklyPoints": [
+        {
+          "week": 5,
+          "pts": 44.0
+        },
+        {
+          "week": 6,
+          "pts": 73.3
+        },
+        {
+          "week": 7,
+          "pts": 110.2
+        },
+        {
+          "week": 8,
+          "pts": 8.3
+        },
+        {
+          "week": 9,
+          "pts": 73.2
+        },
+        {
+          "week": 10,
+          "pts": 94.9
+        },
+        {
+          "week": 11,
+          "pts": 42.0
+        },
+        {
+          "week": 12,
+          "pts": 70.8
+        },
+        {
+          "week": 13,
+          "pts": 103.7
+        },
+        {
+          "week": 14,
+          "pts": 86.1
+        },
+        {
+          "week": 15,
+          "pts": 96.2
+        },
+        {
+          "week": 16,
+          "pts": 98.6
+        },
+        {
+          "week": 17,
+          "pts": 128.6
+        },
+        {
+          "week": 18,
+          "pts": 81.9
+        },
+        {
+          "week": 19,
+          "pts": 162.8
+        },
+        {
+          "week": 20,
+          "pts": 116.1
         }
       ]
     },
@@ -862,7 +934,7 @@
         },
         {
           "week": 19,
-          "pts": 0.0
+          "pts": 0
         },
         {
           "week": 20,
@@ -871,42 +943,50 @@
       ]
     },
     {
-      "player": "Ausar Thompson",
-      "weekAdded": 13,
-      "addDate": 1768282385502,
-      "ptsAfterAdd": 646.4,
+      "player": "Peyton Watson",
+      "weekAdded": 11,
+      "addDate": 1767027614327,
+      "ptsAfterAdd": 730.7,
       "weeklyPoints": [
         {
+          "week": 11,
+          "pts": 122.6
+        },
+        {
+          "week": 12,
+          "pts": 178.4
+        },
+        {
           "week": 13,
-          "pts": 43.1
+          "pts": 138.7
         },
         {
           "week": 14,
-          "pts": 122.8
+          "pts": 103.6
         },
         {
           "week": 15,
-          "pts": 129.8
+          "pts": 127.8
         },
         {
           "week": 16,
-          "pts": 96.1
+          "pts": 59.6
         },
         {
           "week": 17,
-          "pts": 103.0
+          "pts": 0
         },
         {
           "week": 18,
-          "pts": 136.9
+          "pts": 0
         },
         {
           "week": 19,
-          "pts": 0.0
+          "pts": 0
         },
         {
           "week": 20,
-          "pts": 14.7
+          "pts": 0
         }
       ]
     },
@@ -914,7 +994,7 @@
       "player": "Cam Spencer",
       "weekAdded": 8,
       "addDate": 1765213212108,
-      "ptsAfterAdd": 610.4,
+      "ptsAfterAdd": 686.4,
       "weeklyPoints": [
         {
           "week": 8,
@@ -950,7 +1030,63 @@
         },
         {
           "week": 16,
-          "pts": 0.0
+          "pts": 0
+        },
+        {
+          "week": 17,
+          "pts": 0
+        },
+        {
+          "week": 18,
+          "pts": 0
+        },
+        {
+          "week": 19,
+          "pts": 0
+        },
+        {
+          "week": 20,
+          "pts": 76.0
+        }
+      ]
+    },
+    {
+      "player": "Ausar Thompson",
+      "weekAdded": 13,
+      "addDate": 1768282385502,
+      "ptsAfterAdd": 646.4,
+      "weeklyPoints": [
+        {
+          "week": 13,
+          "pts": 43.1
+        },
+        {
+          "week": 14,
+          "pts": 122.8
+        },
+        {
+          "week": 15,
+          "pts": 129.8
+        },
+        {
+          "week": 16,
+          "pts": 96.1
+        },
+        {
+          "week": 17,
+          "pts": 103.0
+        },
+        {
+          "week": 18,
+          "pts": 136.9
+        },
+        {
+          "week": 19,
+          "pts": 0
+        },
+        {
+          "week": 20,
+          "pts": 14.7
         }
       ]
     },
@@ -974,7 +1110,7 @@
         },
         {
           "week": 19,
-          "pts": 0.0
+          "pts": 0
         },
         {
           "week": 20,
@@ -1006,7 +1142,7 @@
         },
         {
           "week": 19,
-          "pts": 0.0
+          "pts": 0
         },
         {
           "week": 20,
@@ -1022,7 +1158,7 @@
       "weeklyPoints": [
         {
           "week": 1,
-          "pts": 0.0
+          "pts": 0
         },
         {
           "week": 2,
@@ -1051,6 +1187,14 @@
         {
           "week": 8,
           "pts": 42.8
+        },
+        {
+          "week": 9,
+          "pts": 0
+        },
+        {
+          "week": 10,
+          "pts": 0
         }
       ]
     },
@@ -1078,91 +1222,11 @@
         },
         {
           "week": 19,
-          "pts": 0.0
+          "pts": 0
         },
         {
           "week": 20,
-          "pts": 0.0
-        }
-      ]
-    },
-    {
-      "player": "Peyton Watson",
-      "weekAdded": 11,
-      "addDate": 1767027614327,
-      "ptsAfterAdd": 439.7,
-      "weeklyPoints": [
-        {
-          "week": 11,
-          "pts": 122.6
-        },
-        {
-          "week": 12,
-          "pts": 178.4
-        },
-        {
-          "week": 13,
-          "pts": 138.7
-        },
-        {
-          "week": 14,
-          "pts": 0.0
-        },
-        {
-          "week": 15,
-          "pts": 0.0
-        },
-        {
-          "week": 16,
-          "pts": 0.0
-        },
-        {
-          "week": 17,
-          "pts": 0.0
-        },
-        {
-          "week": 18,
-          "pts": 0.0
-        },
-        {
-          "week": 19,
-          "pts": 0.0
-        },
-        {
-          "week": 20,
-          "pts": 0.0
-        }
-      ]
-    },
-    {
-      "player": "Jaylen Wells",
-      "weekAdded": 8,
-      "addDate": 1765213212108,
-      "ptsAfterAdd": 321.0,
-      "weeklyPoints": [
-        {
-          "week": 8,
-          "pts": 27.5
-        },
-        {
-          "week": 9,
-          "pts": 76.8
-        },
-        {
-          "week": 10,
-          "pts": 99.8
-        },
-        {
-          "week": 11,
-          "pts": 60.2
-        },
-        {
-          "week": 12,
-          "pts": 56.7
-        },
-        {
-          "week": 13,
-          "pts": 0.0
+          "pts": 0
         }
       ]
     }
@@ -2844,11 +2908,11 @@
     }
   },
   "grades": {
-    "drafting": "B",
+    "drafting": "B-",
     "trading": "A",
-    "waiverWire": "A",
-    "luck": "B",
-    "coaching": "B+",
+    "waiverWire": "A+",
+    "luck": "C",
+    "coaching": "C+",
     "overall": "A-"
   }
 }

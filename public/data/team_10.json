@@ -756,7 +756,7 @@
       "weeklyPoints": [
         {
           "week": 5,
-          "pts": 0.0
+          "pts": 0
         },
         {
           "week": 6,
@@ -813,82 +813,62 @@
       ]
     },
     {
-      "player": "Cedric Coward",
-      "weekAdded": 1,
-      "addDate": 1761494408263,
-      "ptsAfterAdd": 879.8,
+      "player": "Jay Huff",
+      "weekAdded": 6,
+      "addDate": 1764003613355,
+      "ptsAfterAdd": 1042.8,
       "weeklyPoints": [
         {
-          "week": 1,
-          "pts": 0.0
-        },
-        {
-          "week": 2,
-          "pts": 100.1
-        },
-        {
-          "week": 3,
-          "pts": 121.8
-        },
-        {
-          "week": 4,
-          "pts": 77.4
-        },
-        {
-          "week": 5,
-          "pts": 72.4
-        },
-        {
           "week": 6,
-          "pts": 73.1
+          "pts": 123.1
         },
         {
           "week": 7,
-          "pts": 81.6
+          "pts": 85.6
         },
         {
           "week": 8,
-          "pts": 39.4
+          "pts": 96.0
         },
         {
           "week": 9,
-          "pts": 66.6
+          "pts": 47.7
         },
         {
           "week": 10,
-          "pts": 85.3
+          "pts": 84.9
         },
         {
           "week": 11,
-          "pts": 104.2
+          "pts": 54.5
         },
         {
           "week": 12,
-          "pts": 57.9
+          "pts": 71.2
         },
         {
           "week": 13,
-          "pts": 0.0
+          "pts": 78.8
         },
         {
           "week": 14,
-          "pts": 0.0
+          "pts": 41.8
         },
         {
           "week": 15,
-          "pts": 0.0
+          "pts": 63.8
         },
         {
           "week": 16,
-          "pts": 0.0
+          "pts": 96.3
         },
         {
           "week": 17,
-          "pts": 0.0
+          "pts": 138.2
         },
         {
           "week": 18,
-          "pts": 0.0
+          "pts": 60.9
         }
       ]
     },
@@ -900,19 +880,19 @@
       "weeklyPoints": [
         {
           "week": 5,
-          "pts": 0.0
+          "pts": 0
         },
         {
           "week": 6,
-          "pts": 0.0
+          "pts": 0
         },
         {
           "week": 7,
-          "pts": 0.0
+          "pts": 0
         },
         {
           "week": 8,
-          "pts": 0.0
+          "pts": 0
         },
         {
           "week": 9,
@@ -932,7 +912,7 @@
         },
         {
           "week": 13,
-          "pts": 0.0
+          "pts": 0
         },
         {
           "week": 14,
@@ -957,6 +937,106 @@
       ]
     },
     {
+      "player": "Jeremiah Fears",
+      "weekAdded": 7,
+      "addDate": 1764867612974,
+      "ptsAfterAdd": 659.7,
+      "weeklyPoints": [
+        {
+          "week": 7,
+          "pts": 0
+        },
+        {
+          "week": 8,
+          "pts": 78.9
+        },
+        {
+          "week": 9,
+          "pts": 23.7
+        },
+        {
+          "week": 10,
+          "pts": 95.0
+        },
+        {
+          "week": 11,
+          "pts": 87.4
+        },
+        {
+          "week": 12,
+          "pts": 111.4
+        },
+        {
+          "week": 13,
+          "pts": 85.8
+        },
+        {
+          "week": 14,
+          "pts": 59.0
+        },
+        {
+          "week": 15,
+          "pts": 68.5
+        },
+        {
+          "week": 16,
+          "pts": 50.0
+        }
+      ]
+    },
+    {
+      "player": "Cedric Coward",
+      "weekAdded": 8,
+      "addDate": 1765213212108,
+      "ptsAfterAdd": 636.7,
+      "weeklyPoints": [
+        {
+          "week": 8,
+          "pts": 39.4
+        },
+        {
+          "week": 9,
+          "pts": 66.6
+        },
+        {
+          "week": 10,
+          "pts": 85.3
+        },
+        {
+          "week": 11,
+          "pts": 104.2
+        },
+        {
+          "week": 12,
+          "pts": 57.9
+        },
+        {
+          "week": 13,
+          "pts": 48.9
+        },
+        {
+          "week": 14,
+          "pts": 57.0
+        },
+        {
+          "week": 15,
+          "pts": 96.5
+        },
+        {
+          "week": 16,
+          "pts": 70.8
+        },
+        {
+          "week": 17,
+          "pts": 10.1
+        },
+        {
+          "week": 18,
+          "pts": 0
+        }
+      ]
+    },
+    {
       "player": "Ryan Kalkbrenner",
       "weekAdded": 1,
       "addDate": 1761235216615,
@@ -964,7 +1044,7 @@
       "weeklyPoints": [
         {
           "week": 1,
-          "pts": 0.0
+          "pts": 0
         },
         {
           "week": 2,
@@ -1000,7 +1080,51 @@
         },
         {
           "week": 10,
-          "pts": 0.0
+          "pts": 0
+        },
+        {
+          "week": 11,
+          "pts": 0
+        },
+        {
+          "week": 12,
+          "pts": 0
+        }
+      ]
+    },
+    {
+      "player": "Cedric Coward",
+      "weekAdded": 1,
+      "addDate": 1761494408263,
+      "ptsAfterAdd": 526.4,
+      "weeklyPoints": [
+        {
+          "week": 1,
+          "pts": 0
+        },
+        {
+          "week": 2,
+          "pts": 100.1
+        },
+        {
+          "week": 3,
+          "pts": 121.8
+        },
+        {
+          "week": 4,
+          "pts": 77.4
+        },
+        {
+          "week": 5,
+          "pts": 72.4
+        },
+        {
+          "week": 6,
+          "pts": 73.1
+        },
+        {
+          "week": 7,
+          "pts": 81.6
         }
       ]
     },
@@ -1040,7 +1164,11 @@
         },
         {
           "week": 12,
-          "pts": 0.0
+          "pts": 0
+        },
+        {
+          "week": 13,
+          "pts": 0
         }
       ]
     },
@@ -1052,7 +1180,7 @@
       "weeklyPoints": [
         {
           "week": 12,
-          "pts": 0.0
+          "pts": 0
         },
         {
           "week": 13,
@@ -1060,7 +1188,7 @@
         },
         {
           "week": 14,
-          "pts": 0.0
+          "pts": 0
         },
         {
           "week": 15,
@@ -1077,58 +1205,6 @@
         {
           "week": 18,
           "pts": 35.3
-        }
-      ]
-    },
-    {
-      "player": "Cedric Coward",
-      "weekAdded": 8,
-      "addDate": 1765213212108,
-      "ptsAfterAdd": 353.4,
-      "weeklyPoints": [
-        {
-          "week": 8,
-          "pts": 39.4
-        },
-        {
-          "week": 9,
-          "pts": 66.6
-        },
-        {
-          "week": 10,
-          "pts": 85.3
-        },
-        {
-          "week": 11,
-          "pts": 104.2
-        },
-        {
-          "week": 12,
-          "pts": 57.9
-        },
-        {
-          "week": 13,
-          "pts": 0.0
-        },
-        {
-          "week": 14,
-          "pts": 0.0
-        },
-        {
-          "week": 15,
-          "pts": 0.0
-        },
-        {
-          "week": 16,
-          "pts": 0.0
-        },
-        {
-          "week": 17,
-          "pts": 0.0
-        },
-        {
-          "week": 18,
-          "pts": 0.0
         }
       ]
     },
@@ -1153,106 +1229,26 @@
         {
           "week": 5,
           "pts": 60.2
-        }
-      ]
-    },
-    {
-      "player": "Jaden Ivey",
-      "weekAdded": 1,
-      "addDate": 1761062406362,
-      "ptsAfterAdd": 183.0,
-      "weeklyPoints": [
-        {
-          "week": 1,
-          "pts": 0.0
-        },
-        {
-          "week": 2,
-          "pts": 0.0
-        },
-        {
-          "week": 3,
-          "pts": 0.0
-        },
-        {
-          "week": 4,
-          "pts": 0.0
-        },
-        {
-          "week": 5,
-          "pts": 16.2
         },
         {
           "week": 6,
-          "pts": 42.8
+          "pts": 0
         },
         {
           "week": 7,
-          "pts": 51.8
+          "pts": 0
         },
         {
           "week": 8,
-          "pts": 23.4
+          "pts": 0
         },
         {
           "week": 9,
-          "pts": 48.8
+          "pts": 0
         },
         {
           "week": 10,
-          "pts": 0.0
-        },
-        {
-          "week": 11,
-          "pts": 0.0
-        },
-        {
-          "week": 12,
-          "pts": 0.0
-        },
-        {
-          "week": 13,
-          "pts": 0.0
-        },
-        {
-          "week": 14,
-          "pts": 0.0
-        },
-        {
-          "week": 15,
-          "pts": 0.0
-        },
-        {
-          "week": 16,
-          "pts": 0.0
-        },
-        {
-          "week": 17,
-          "pts": 0.0
-        },
-        {
-          "week": 18,
-          "pts": 0.0
-        }
-      ]
-    },
-    {
-      "player": "Sandro Mamukelashvili",
-      "weekAdded": 11,
-      "addDate": 1767027614327,
-      "ptsAfterAdd": 165.6,
-      "weeklyPoints": [
-        {
-          "week": 11,
-          "pts": 88.0
-        },
-        {
-          "week": 12,
-          "pts": 77.6
-        },
-        {
-          "week": 13,
-          "pts": 0.0
+          "pts": 0
         }
       ]
     }
@@ -2956,11 +2952,11 @@
     }
   },
   "grades": {
-    "drafting": "C+",
-    "trading": "B+",
+    "drafting": "D+",
+    "trading": "C",
     "waiverWire": "A",
     "luck": "A-",
     "coaching": "A+",
-    "overall": "B+"
+    "overall": "B"
   }
 }

@@ -180,11 +180,11 @@
         },
         {
           "week": 4,
-          "pts": 0.0
+          "pts": 0
         },
         {
           "week": 5,
-          "pts": 0.0
+          "pts": 0
         },
         {
           "week": 6,
@@ -248,7 +248,7 @@
       "weeklyPoints": [
         {
           "week": 3,
-          "pts": 0.0
+          "pts": 0
         },
         {
           "week": 4,
@@ -260,7 +260,7 @@
         },
         {
           "week": 6,
-          "pts": 0.0
+          "pts": 0
         },
         {
           "week": 7,
@@ -344,7 +344,7 @@
         },
         {
           "week": 7,
-          "pts": 0.0
+          "pts": 0
         },
         {
           "week": 8,
@@ -376,7 +376,7 @@
         },
         {
           "week": 15,
-          "pts": 0.0
+          "pts": 0
         },
         {
           "week": 16,
@@ -404,7 +404,67 @@
         },
         {
           "week": 3,
-          "pts": 0.0
+          "pts": 0
+        },
+        {
+          "week": 4,
+          "pts": 0
+        },
+        {
+          "week": 5,
+          "pts": 0
+        },
+        {
+          "week": 6,
+          "pts": 0
+        },
+        {
+          "week": 7,
+          "pts": 0
+        },
+        {
+          "week": 8,
+          "pts": 0
+        },
+        {
+          "week": 9,
+          "pts": 0
+        },
+        {
+          "week": 10,
+          "pts": 0
+        },
+        {
+          "week": 11,
+          "pts": 0
+        },
+        {
+          "week": 12,
+          "pts": 0
+        },
+        {
+          "week": 13,
+          "pts": 0
+        },
+        {
+          "week": 14,
+          "pts": 0
+        },
+        {
+          "week": 15,
+          "pts": 0
+        },
+        {
+          "week": 16,
+          "pts": 0
+        },
+        {
+          "week": 17,
+          "pts": 0
+        },
+        {
+          "week": 18,
+          "pts": 0
         }
       ]
     }
@@ -1166,11 +1226,11 @@
     }
   },
   "grades": {
-    "drafting": "B+",
-    "trading": "A-",
-    "waiverWire": "B-",
+    "drafting": "B",
+    "trading": "B",
+    "waiverWire": "D+",
     "luck": "A-",
-    "coaching": "B",
-    "overall": "B-"
+    "coaching": "D+",
+    "overall": "C-"
   }
 }

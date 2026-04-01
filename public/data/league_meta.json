@@ -884,6 +884,16 @@
       "faabBid": 70
     },
     {
+      "player": "Ryan Rollins",
+      "team": "Team Patel",
+      "teamId": 11,
+      "weekAdded": 2,
+      "ptsAfterAdd": 1838.7,
+      "gamesPlayed": 54,
+      "ppg": 34.1,
+      "faabBid": 5
+    },
+    {
       "player": "Naji Marshall",
       "team": "superbum",
       "teamId": 4,
@@ -894,14 +904,14 @@
       "faabBid": 24
     },
     {
-      "player": "Wendell Carter Jr.",
-      "team": "The Commish",
-      "teamId": 1,
+      "player": "Dillon Brooks",
+      "team": "paddington bear",
+      "teamId": 6,
       "weekAdded": 1,
-      "ptsAfterAdd": 1361.3,
-      "gamesPlayed": 51,
-      "ppg": 26.7,
-      "faabBid": 15
+      "ptsAfterAdd": 1383.1,
+      "gamesPlayed": 47,
+      "ppg": 29.4,
+      "faabBid": 3
     },
     {
       "player": "Saddiq Bey",
@@ -924,6 +934,26 @@
       "faabBid": 8
     },
     {
+      "player": "Collin Gillespie",
+      "team": " SPLASH \ud83d\udc4c",
+      "teamId": 7,
+      "weekAdded": 3,
+      "ptsAfterAdd": 1295.8,
+      "gamesPlayed": 45,
+      "ppg": 28.8,
+      "faabBid": 60
+    },
+    {
+      "player": "Wendell Carter Jr.",
+      "team": "The Commish",
+      "teamId": 1,
+      "weekAdded": 1,
+      "ptsAfterAdd": 1239.9,
+      "gamesPlayed": 46,
+      "ppg": 27.0,
+      "faabBid": 15
+    },
+    {
       "player": "Jaylon Tyson",
       "team": "Siddus Squad",
       "teamId": 5,
@@ -934,6 +964,16 @@
       "faabBid": 21
     },
     {
+      "player": "Collin Sexton",
+      "team": "Siddus Squad",
+      "teamId": 5,
+      "weekAdded": 1,
+      "ptsAfterAdd": 1151.0,
+      "gamesPlayed": 51,
+      "ppg": 22.6,
+      "faabBid": 29
+    },
+    {
       "player": "Grayson Allen",
       "team": "paddington bear",
       "teamId": 6,
@@ -942,6 +982,16 @@
       "gamesPlayed": 38,
       "ppg": 29.5,
       "faabBid": 1
+    },
+    {
+      "player": "Kyle Filipowski",
+      "team": "Team Patel",
+      "teamId": 11,
+      "weekAdded": 5,
+      "ptsAfterAdd": 1111.8,
+      "gamesPlayed": 46,
+      "ppg": 24.2,
+      "faabBid": 0
     },
     {
       "player": "Royce O'Neale",
@@ -974,16 +1024,6 @@
       "faabBid": 21
     },
     {
-      "player": "Collin Sexton",
-      "team": "Siddus Squad",
-      "teamId": 5,
-      "weekAdded": 1,
-      "ptsAfterAdd": 1062.5,
-      "gamesPlayed": 48,
-      "ppg": 22.1,
-      "faabBid": 29
-    },
-    {
       "player": "Ayo Dosunmu",
       "team": "superbum",
       "teamId": 4,
@@ -992,6 +1032,16 @@
       "gamesPlayed": 43,
       "ppg": 24.5,
       "faabBid": 0
+    },
+    {
+      "player": "Jay Huff",
+      "team": "White Cowards",
+      "teamId": 10,
+      "weekAdded": 6,
+      "ptsAfterAdd": 1042.8,
+      "gamesPlayed": 44,
+      "ppg": 23.7,
+      "faabBid": 3
     },
     {
       "player": "Noah Clowney",
@@ -1024,26 +1074,6 @@
       "faabBid": 5
     },
     {
-      "player": "Collin Gillespie",
-      "team": " SPLASH \ud83d\udc4c",
-      "teamId": 7,
-      "weekAdded": 3,
-      "ptsAfterAdd": 925.1,
-      "gamesPlayed": 32,
-      "ppg": 28.9,
-      "faabBid": 60
-    },
-    {
-      "player": "Cedric Coward",
-      "team": "White Cowards",
-      "teamId": 10,
-      "weekAdded": 1,
-      "ptsAfterAdd": 879.8,
-      "gamesPlayed": 33,
-      "ppg": 26.7,
-      "faabBid": 3
-    },
-    {
       "player": "Aaron Wiggins",
       "team": "It's Teague Time",
       "teamId": 3,
@@ -1061,16 +1091,6 @@
       "ptsAfterAdd": 873.6,
       "gamesPlayed": 37,
       "ppg": 23.6,
-      "faabBid": 5
-    },
-    {
-      "player": "Ryan Rollins",
-      "team": "Team Patel",
-      "teamId": 11,
-      "weekAdded": 2,
-      "ptsAfterAdd": 824.0,
-      "gamesPlayed": 24,
-      "ppg": 34.3,
       "faabBid": 5
     },
     {
@@ -1092,6 +1112,16 @@
       "gamesPlayed": 43,
       "ppg": 17.2,
       "faabBid": 0
+    },
+    {
+      "player": "Peyton Watson",
+      "team": "Team Patel",
+      "teamId": 11,
+      "weekAdded": 11,
+      "ptsAfterAdd": 730.7,
+      "gamesPlayed": 20,
+      "ppg": 36.5,
+      "faabBid": 2
     },
     {
       "player": "John Collins",
@@ -1144,6 +1174,26 @@
       "faabBid": 2
     },
     {
+      "player": "Jeremiah Fears",
+      "team": "White Cowards",
+      "teamId": 10,
+      "weekAdded": 7,
+      "ptsAfterAdd": 659.7,
+      "gamesPlayed": 30,
+      "ppg": 22.0,
+      "faabBid": 111
+    },
+    {
+      "player": "Cedric Coward",
+      "team": "White Cowards",
+      "teamId": 10,
+      "weekAdded": 8,
+      "ptsAfterAdd": 636.7,
+      "gamesPlayed": 24,
+      "ppg": 26.5,
+      "faabBid": 23
+    },
+    {
       "player": "Ausar Thompson",
       "team": "Team Patel",
       "teamId": 11,
@@ -1192,6 +1242,16 @@
       "gamesPlayed": 21,
       "ppg": 25.8,
       "faabBid": 0
+    },
+    {
+      "player": "Cedric Coward",
+      "team": "White Cowards",
+      "teamId": 10,
+      "weekAdded": 1,
+      "ptsAfterAdd": 526.4,
+      "gamesPlayed": 21,
+      "ppg": 25.1,
+      "faabBid": 3
     },
     {
       "player": "Brandin Podziemski",
@@ -1252,16 +1312,6 @@
       "gamesPlayed": 14,
       "ppg": 31.5,
       "faabBid": 23
-    },
-    {
-      "player": "Peyton Watson",
-      "team": "Team Patel",
-      "teamId": 11,
-      "weekAdded": 11,
-      "ptsAfterAdd": 439.7,
-      "gamesPlayed": 12,
-      "ppg": 36.6,
-      "faabBid": 2
     },
     {
       "player": "Micah Potter",
@@ -1354,16 +1404,6 @@
       "faabBid": 3
     },
     {
-      "player": "Dillon Brooks",
-      "team": "paddington bear",
-      "teamId": 6,
-      "weekAdded": 1,
-      "ptsAfterAdd": 366.1,
-      "gamesPlayed": 12,
-      "ppg": 30.5,
-      "faabBid": 3
-    },
-    {
       "player": "Collin Murray-Boyles",
       "team": "White Cowards",
       "teamId": 10,
@@ -1374,16 +1414,6 @@
       "faabBid": 33
     },
     {
-      "player": "Cedric Coward",
-      "team": "White Cowards",
-      "teamId": 10,
-      "weekAdded": 8,
-      "ptsAfterAdd": 353.4,
-      "gamesPlayed": 12,
-      "ppg": 29.4,
-      "faabBid": 23
-    },
-    {
       "player": "Egor Demin",
       "team": "The Commish",
       "teamId": 1,
@@ -1392,16 +1422,6 @@
       "gamesPlayed": 15,
       "ppg": 22.6,
       "faabBid": 36
-    },
-    {
-      "player": "Luke Kornet",
-      "team": "enchant",
-      "teamId": 2,
-      "weekAdded": 12,
-      "ptsAfterAdd": 336.5,
-      "gamesPlayed": 20,
-      "ppg": 16.8,
-      "faabBid": 0
     },
     {
       "player": "Kevin Huerter",
@@ -1434,6 +1454,16 @@
       "faabBid": 55
     },
     {
+      "player": "Isaiah Stewart",
+      "team": "Team Patel",
+      "teamId": 11,
+      "weekAdded": 12,
+      "ptsAfterAdd": 318.4,
+      "gamesPlayed": 16,
+      "ppg": 19.9,
+      "faabBid": 3
+    },
+    {
       "player": "Cameron Johnson",
       "team": "Siddus Squad",
       "teamId": 5,
@@ -1442,16 +1472,6 @@
       "gamesPlayed": 14,
       "ppg": 22.5,
       "faabBid": 37
-    },
-    {
-      "player": "Kyle Filipowski",
-      "team": "Team Patel",
-      "teamId": 11,
-      "weekAdded": 5,
-      "ptsAfterAdd": 309.0,
-      "gamesPlayed": 13,
-      "ppg": 23.8,
-      "faabBid": 0
     },
     {
       "player": "Justin Champagnie",
@@ -1594,6 +1614,16 @@
       "faabBid": 44
     },
     {
+      "player": "Wendell Carter Jr.",
+      "team": "White Cowards",
+      "teamId": 10,
+      "weekAdded": 17,
+      "ptsAfterAdd": 205.1,
+      "gamesPlayed": 8,
+      "ppg": 25.6,
+      "faabBid": 33
+    },
+    {
       "player": "John Collins",
       "team": "The Commish",
       "teamId": 1,
@@ -1702,6 +1732,16 @@
       "gamesPlayed": 5,
       "ppg": 33.4,
       "faabBid": 5
+    },
+    {
+      "player": "Max Christie",
+      "team": "Siddus Squad",
+      "teamId": 5,
+      "weekAdded": 4,
+      "ptsAfterAdd": 166.5,
+      "gamesPlayed": 11,
+      "ppg": 15.1,
+      "faabBid": 66
     },
     {
       "player": "Cason Wallace",
@@ -1922,16 +1962,6 @@
       "gamesPlayed": 4,
       "ppg": 30.9,
       "faabBid": 6
-    },
-    {
-      "player": "Jay Huff",
-      "team": "White Cowards",
-      "teamId": 10,
-      "weekAdded": 6,
-      "ptsAfterAdd": 123.1,
-      "gamesPlayed": 4,
-      "ppg": 30.8,
-      "faabBid": 3
     },
     {
       "player": "Tristan Vukcevic",
@@ -2254,16 +2284,6 @@
       "faabBid": 23
     },
     {
-      "player": "Wendell Carter Jr.",
-      "team": "White Cowards",
-      "teamId": 10,
-      "weekAdded": 17,
-      "ptsAfterAdd": 83.7,
-      "gamesPlayed": 3,
-      "ppg": 27.9,
-      "faabBid": 33
-    },
-    {
       "player": "Pelle Larsson",
       "team": "Siddus Squad",
       "teamId": 5,
@@ -2272,6 +2292,16 @@
       "gamesPlayed": 6,
       "ppg": 13.8,
       "faabBid": 8
+    },
+    {
+      "player": "Luke Kornet",
+      "team": "enchant",
+      "teamId": 2,
+      "weekAdded": 12,
+      "ptsAfterAdd": 81.9,
+      "gamesPlayed": 4,
+      "ppg": 20.5,
+      "faabBid": 0
     },
     {
       "player": "Marcus Smart",
@@ -2314,16 +2344,6 @@
       "faabBid": 0
     },
     {
-      "player": "Jeremiah Fears",
-      "team": "White Cowards",
-      "teamId": 10,
-      "weekAdded": 7,
-      "ptsAfterAdd": 78.9,
-      "gamesPlayed": 3,
-      "ppg": 26.3,
-      "faabBid": 111
-    },
-    {
       "player": "Jaylen Wells",
       "team": "paddington bear",
       "teamId": 6,
@@ -2362,16 +2382,6 @@
       "gamesPlayed": 3,
       "ppg": 25.5,
       "faabBid": 0
-    },
-    {
-      "player": "Toumani Camara",
-      "team": "Team Patel",
-      "teamId": 11,
-      "weekAdded": 13,
-      "ptsAfterAdd": 75.6,
-      "gamesPlayed": 4,
-      "ppg": 18.9,
-      "faabBid": 33
     },
     {
       "player": "Toumani Camara",
@@ -2452,26 +2462,6 @@
       "gamesPlayed": 3,
       "ppg": 23.1,
       "faabBid": 0
-    },
-    {
-      "player": "Isaiah Stewart",
-      "team": "paddington bear",
-      "teamId": 6,
-      "weekAdded": 12,
-      "ptsAfterAdd": 68.9,
-      "gamesPlayed": 2,
-      "ppg": 34.5,
-      "faabBid": 16
-    },
-    {
-      "player": "Max Christie",
-      "team": "Siddus Squad",
-      "teamId": 5,
-      "weekAdded": 4,
-      "ptsAfterAdd": 68.6,
-      "gamesPlayed": 4,
-      "ppg": 17.1,
-      "faabBid": 66
     },
     {
       "player": "Dereck Lively II",
@@ -2634,6 +2624,16 @@
       "faabBid": 25
     },
     {
+      "player": "Moses Moody",
+      "team": "May Not Need Minott",
+      "teamId": 8,
+      "weekAdded": 4,
+      "ptsAfterAdd": 56.9,
+      "gamesPlayed": 3,
+      "ppg": 19.0,
+      "faabBid": 0
+    },
+    {
       "player": "Dylan Cardwell",
       "team": "paddington bear",
       "teamId": 6,
@@ -2682,6 +2682,16 @@
       "gamesPlayed": 3,
       "ppg": 18.1,
       "faabBid": 30
+    },
+    {
+      "player": "Jonathan Kuminga",
+      "team": "White Cowards",
+      "teamId": 10,
+      "weekAdded": 7,
+      "ptsAfterAdd": 54.0,
+      "gamesPlayed": 3,
+      "ppg": 18.0,
+      "faabBid": 71
     },
     {
       "player": "Zeke Nnaji",
@@ -5586,7 +5596,7 @@
     },
     "12": {
       "team": "Yash's Stout Team",
-      "grade": "B-",
+      "grade": "C-",
       "avgValueOverDraft": -0.2
     },
     "4": {
@@ -5596,7 +5606,7 @@
     },
     "11": {
       "team": "Team Patel",
-      "grade": "B",
+      "grade": "B-",
       "avgValueOverDraft": -3.8
     },
     "8": {
@@ -5606,12 +5616,12 @@
     },
     "5": {
       "team": "Siddus Squad",
-      "grade": "C",
+      "grade": "F",
       "avgValueOverDraft": -21.5
     },
     "3": {
       "team": "It's Teague Time",
-      "grade": "B+",
+      "grade": "B",
       "avgValueOverDraft": 2.6
     },
     "1": {
@@ -5621,29 +5631,29 @@
     },
     "9": {
       "team": "my left nuts",
-      "grade": "C+",
+      "grade": "D+",
       "avgValueOverDraft": -12.3
     },
     "7": {
       "team": " SPLASH \ud83d\udc4c",
-      "grade": "B",
+      "grade": "B-",
       "avgValueOverDraft": -7.4
     },
     "10": {
       "team": "White Cowards",
-      "grade": "C+",
+      "grade": "D+",
       "avgValueOverDraft": -12.8
     },
     "6": {
       "team": "paddington bear",
-      "grade": "B",
+      "grade": "B-",
       "avgValueOverDraft": -5.2
     }
   },
   "tradeGrades": {
     "1": {
       "team": "The Commish",
-      "grade": "B-",
+      "grade": "F",
       "netPts": -1684.0
     },
     "2": {
@@ -5653,7 +5663,7 @@
     },
     "3": {
       "team": "It's Teague Time",
-      "grade": "A-",
+      "grade": "B",
       "netPts": 0
     },
     "4": {
@@ -5668,27 +5678,27 @@
     },
     "6": {
       "team": "paddington bear",
-      "grade": "B",
+      "grade": "D",
       "netPts": -837.0
     },
     "7": {
       "team": " SPLASH \ud83d\udc4c",
-      "grade": "B+",
+      "grade": "C",
       "netPts": -513.8
     },
     "8": {
       "team": "May Not Need Minott",
-      "grade": "B+",
+      "grade": "C",
       "netPts": -493.7
     },
     "9": {
       "team": "my left nuts",
-      "grade": "A-",
+      "grade": "B",
       "netPts": 0
     },
     "10": {
       "team": "White Cowards",
-      "grade": "B+",
+      "grade": "C",
       "netPts": -506.0
     },
     "11": {
@@ -5698,69 +5708,69 @@
     },
     "12": {
       "team": "Yash's Stout Team",
-      "grade": "A-",
+      "grade": "B",
       "netPts": 0
     }
   },
   "waiverGrades": {
     "1": {
       "team": "The Commish",
-      "grade": "A-",
-      "totalPts": 4906.4
+      "grade": "B",
+      "totalPts": 4785.0
     },
     "2": {
       "team": "enchant",
-      "grade": "C+",
-      "totalPts": 1807.4
+      "grade": "D",
+      "totalPts": 1552.8
     },
     "3": {
       "team": "It's Teague Time",
-      "grade": "B-",
+      "grade": "D+",
       "totalPts": 2351.8
     },
     "4": {
       "team": "superbum",
-      "grade": "A+",
+      "grade": "B+",
       "totalPts": 5874.6
     },
     "5": {
       "team": "Siddus Squad",
-      "grade": "A-",
-      "totalPts": 4817.1
+      "grade": "B",
+      "totalPts": 4974.1
     },
     "6": {
       "team": "paddington bear",
-      "grade": "B+",
-      "totalPts": 4172.7
+      "grade": "B",
+      "totalPts": 5062.0
     },
     "7": {
       "team": " SPLASH \ud83d\udc4c",
-      "grade": "B+",
-      "totalPts": 4058.2
+      "grade": "C",
+      "totalPts": 4428.9
     },
     "8": {
       "team": "May Not Need Minott",
-      "grade": "A+",
-      "totalPts": 5580.7
+      "grade": "A",
+      "totalPts": 6577.0
     },
     "9": {
       "team": "my left nuts",
-      "grade": "C",
+      "grade": "F",
       "totalPts": 0
     },
     "10": {
       "team": "White Cowards",
       "grade": "A",
-      "totalPts": 5373.5
+      "totalPts": 6657.3
     },
     "11": {
       "team": "Team Patel",
-      "grade": "A",
-      "totalPts": 5253.5
+      "grade": "A+",
+      "totalPts": 7362.0
     },
     "12": {
       "team": "Yash's Stout Team",
-      "grade": "B",
+      "grade": "C-",
       "totalPts": 3156.3
     }
   },

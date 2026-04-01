@@ -240,7 +240,7 @@
       "weeklyPoints": [
         {
           "week": 1,
-          "pts": 0.0
+          "pts": 0
         },
         {
           "week": 2,
@@ -296,19 +296,19 @@
         },
         {
           "week": 15,
-          "pts": 0.0
+          "pts": 0
         },
         {
           "week": 16,
-          "pts": 0.0
+          "pts": 0
         },
         {
           "week": 17,
-          "pts": 0.0
+          "pts": 0
         },
         {
           "week": 18,
-          "pts": 0.0
+          "pts": 0
         }
       ]
     },
@@ -1108,11 +1108,11 @@
     }
   },
   "grades": {
-    "drafting": "B-",
-    "trading": "A-",
-    "waiverWire": "B",
+    "drafting": "C-",
+    "trading": "B",
+    "waiverWire": "C-",
     "luck": "A-",
-    "coaching": "C+",
-    "overall": "C+"
+    "coaching": "F",
+    "overall": "D+"
   }
 }

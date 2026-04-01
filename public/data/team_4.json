@@ -252,7 +252,7 @@
       "weeklyPoints": [
         {
           "week": 4,
-          "pts": 0.0
+          "pts": 0
         },
         {
           "week": 5,
@@ -284,7 +284,7 @@
         },
         {
           "week": 12,
-          "pts": 0.0
+          "pts": 0
         },
         {
           "week": 13,
@@ -408,7 +408,7 @@
         },
         {
           "week": 8,
-          "pts": 0.0
+          "pts": 0
         },
         {
           "week": 9,
@@ -524,7 +524,7 @@
       "weeklyPoints": [
         {
           "week": 5,
-          "pts": 0.0
+          "pts": 0
         },
         {
           "week": 6,
@@ -580,7 +580,7 @@
         },
         {
           "week": 19,
-          "pts": 0.0
+          "pts": 0
         }
       ]
     },
@@ -604,7 +604,51 @@
         },
         {
           "week": 8,
-          "pts": 0.0
+          "pts": 0
+        },
+        {
+          "week": 9,
+          "pts": 0
+        },
+        {
+          "week": 10,
+          "pts": 0
+        },
+        {
+          "week": 11,
+          "pts": 0
+        },
+        {
+          "week": 12,
+          "pts": 0
+        },
+        {
+          "week": 13,
+          "pts": 0
+        },
+        {
+          "week": 14,
+          "pts": 0
+        },
+        {
+          "week": 15,
+          "pts": 0
+        },
+        {
+          "week": 16,
+          "pts": 0
+        },
+        {
+          "week": 17,
+          "pts": 0
+        },
+        {
+          "week": 18,
+          "pts": 0
+        },
+        {
+          "week": 19,
+          "pts": 0
         }
       ]
     },
@@ -616,7 +660,7 @@
       "weeklyPoints": [
         {
           "week": 2,
-          "pts": 0.0
+          "pts": 0
         },
         {
           "week": 3,
@@ -625,6 +669,66 @@
         {
           "week": 4,
           "pts": 65.0
+        },
+        {
+          "week": 5,
+          "pts": 0
+        },
+        {
+          "week": 6,
+          "pts": 0
+        },
+        {
+          "week": 7,
+          "pts": 0
+        },
+        {
+          "week": 8,
+          "pts": 0
+        },
+        {
+          "week": 9,
+          "pts": 0
+        },
+        {
+          "week": 10,
+          "pts": 0
+        },
+        {
+          "week": 11,
+          "pts": 0
+        },
+        {
+          "week": 12,
+          "pts": 0
+        },
+        {
+          "week": 13,
+          "pts": 0
+        },
+        {
+          "week": 14,
+          "pts": 0
+        },
+        {
+          "week": 15,
+          "pts": 0
+        },
+        {
+          "week": 16,
+          "pts": 0
+        },
+        {
+          "week": 17,
+          "pts": 0
+        },
+        {
+          "week": 18,
+          "pts": 0
+        },
+        {
+          "week": 19,
+          "pts": 0
         }
       ]
     },
@@ -636,7 +740,7 @@
       "weeklyPoints": [
         {
           "week": 2,
-          "pts": 0.0
+          "pts": 0
         },
         {
           "week": 3,
@@ -645,6 +749,66 @@
         {
           "week": 4,
           "pts": 72.1
+        },
+        {
+          "week": 5,
+          "pts": 0
+        },
+        {
+          "week": 6,
+          "pts": 0
+        },
+        {
+          "week": 7,
+          "pts": 0
+        },
+        {
+          "week": 8,
+          "pts": 0
+        },
+        {
+          "week": 9,
+          "pts": 0
+        },
+        {
+          "week": 10,
+          "pts": 0
+        },
+        {
+          "week": 11,
+          "pts": 0
+        },
+        {
+          "week": 12,
+          "pts": 0
+        },
+        {
+          "week": 13,
+          "pts": 0
+        },
+        {
+          "week": 14,
+          "pts": 0
+        },
+        {
+          "week": 15,
+          "pts": 0
+        },
+        {
+          "week": 16,
+          "pts": 0
+        },
+        {
+          "week": 17,
+          "pts": 0
+        },
+        {
+          "week": 18,
+          "pts": 0
+        },
+        {
+          "week": 19,
+          "pts": 0
         }
       ]
     },
@@ -656,7 +820,7 @@
       "weeklyPoints": [
         {
           "week": 1,
-          "pts": 0.0
+          "pts": 0
         },
         {
           "week": 2,
@@ -668,7 +832,67 @@
         },
         {
           "week": 4,
-          "pts": 0.0
+          "pts": 0
+        },
+        {
+          "week": 5,
+          "pts": 0
+        },
+        {
+          "week": 6,
+          "pts": 0
+        },
+        {
+          "week": 7,
+          "pts": 0
+        },
+        {
+          "week": 8,
+          "pts": 0
+        },
+        {
+          "week": 9,
+          "pts": 0
+        },
+        {
+          "week": 10,
+          "pts": 0
+        },
+        {
+          "week": 11,
+          "pts": 0
+        },
+        {
+          "week": 12,
+          "pts": 0
+        },
+        {
+          "week": 13,
+          "pts": 0
+        },
+        {
+          "week": 14,
+          "pts": 0
+        },
+        {
+          "week": 15,
+          "pts": 0
+        },
+        {
+          "week": 16,
+          "pts": 0
+        },
+        {
+          "week": 17,
+          "pts": 0
+        },
+        {
+          "week": 18,
+          "pts": 0
+        },
+        {
+          "week": 19,
+          "pts": 0
         }
       ]
     },
@@ -684,7 +908,47 @@
         },
         {
           "week": 7,
-          "pts": 0.0
+          "pts": 0
+        },
+        {
+          "week": 8,
+          "pts": 0
+        },
+        {
+          "week": 9,
+          "pts": 0
+        },
+        {
+          "week": 10,
+          "pts": 0
+        },
+        {
+          "week": 11,
+          "pts": 0
+        },
+        {
+          "week": 12,
+          "pts": 0
+        },
+        {
+          "week": 13,
+          "pts": 0
+        },
+        {
+          "week": 14,
+          "pts": 0
+        },
+        {
+          "week": 15,
+          "pts": 0
+        },
+        {
+          "week": 16,
+          "pts": 0
+        },
+        {
+          "week": 17,
+          "pts": 0
         }
       ]
     }
@@ -1672,8 +1936,8 @@
   "grades": {
     "drafting": "A-",
     "trading": "A",
-    "waiverWire": "A+",
-    "luck": "B-",
+    "waiverWire": "B+",
+    "luck": "D",
     "coaching": "A+",
     "overall": "A+"
   }

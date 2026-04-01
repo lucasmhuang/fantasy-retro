@@ -513,6 +513,22 @@
         {
           "week": 16,
           "pts": 56.5
+        },
+        {
+          "week": 17,
+          "pts": 0
+        },
+        {
+          "week": 18,
+          "pts": 0
+        },
+        {
+          "week": 19,
+          "pts": 0
+        },
+        {
+          "week": 20,
+          "pts": 0
         }
       ]
     },
@@ -524,7 +540,7 @@
       "weeklyPoints": [
         {
           "week": 5,
-          "pts": 0.0
+          "pts": 0
         },
         {
           "week": 6,
@@ -556,75 +572,35 @@
         },
         {
           "week": 13,
-          "pts": 0.0
+          "pts": 0
         },
         {
           "week": 14,
-          "pts": 0.0
+          "pts": 0
         },
         {
           "week": 15,
-          "pts": 0.0
+          "pts": 0
         },
         {
           "week": 16,
-          "pts": 0.0
+          "pts": 0
         },
         {
           "week": 17,
-          "pts": 0.0
+          "pts": 0
         },
         {
           "week": 18,
-          "pts": 0.0
+          "pts": 0
         },
         {
           "week": 19,
-          "pts": 0.0
+          "pts": 0
         },
         {
           "week": 20,
-          "pts": 0.0
-        }
-      ]
-    },
-    {
-      "player": "Luke Kornet",
-      "weekAdded": 12,
-      "addDate": 1767632416822,
-      "ptsAfterAdd": 336.5,
-      "weeklyPoints": [
-        {
-          "week": 12,
-          "pts": 81.9
-        },
-        {
-          "week": 13,
-          "pts": 0.0
-        },
-        {
-          "week": 14,
-          "pts": 41.8
-        },
-        {
-          "week": 15,
-          "pts": 39.6
-        },
-        {
-          "week": 16,
-          "pts": 43.3
-        },
-        {
-          "week": 17,
-          "pts": 83.4
-        },
-        {
-          "week": 18,
-          "pts": 46.5
-        },
-        {
-          "week": 19,
-          "pts": 0.0
+          "pts": 0
         }
       ]
     },
@@ -656,7 +632,11 @@
         },
         {
           "week": 19,
-          "pts": 0.0
+          "pts": 0
+        },
+        {
+          "week": 20,
+          "pts": 0
         }
       ]
     },
@@ -668,7 +648,7 @@
       "weeklyPoints": [
         {
           "week": 2,
-          "pts": 0.0
+          "pts": 0
         },
         {
           "week": 3,
@@ -680,7 +660,83 @@
         },
         {
           "week": 5,
-          "pts": 0.0
+          "pts": 0
+        },
+        {
+          "week": 6,
+          "pts": 0
+        },
+        {
+          "week": 7,
+          "pts": 0
+        },
+        {
+          "week": 8,
+          "pts": 0
+        },
+        {
+          "week": 9,
+          "pts": 0
+        },
+        {
+          "week": 10,
+          "pts": 0
+        },
+        {
+          "week": 11,
+          "pts": 0
+        },
+        {
+          "week": 12,
+          "pts": 0
+        },
+        {
+          "week": 13,
+          "pts": 0
+        },
+        {
+          "week": 14,
+          "pts": 0
+        },
+        {
+          "week": 15,
+          "pts": 0
+        },
+        {
+          "week": 16,
+          "pts": 0
+        },
+        {
+          "week": 17,
+          "pts": 0
+        },
+        {
+          "week": 18,
+          "pts": 0
+        },
+        {
+          "week": 19,
+          "pts": 0
+        },
+        {
+          "week": 20,
+          "pts": 0
+        }
+      ]
+    },
+    {
+      "player": "Luke Kornet",
+      "weekAdded": 12,
+      "addDate": 1767632416822,
+      "ptsAfterAdd": 81.9,
+      "weeklyPoints": [
+        {
+          "week": 12,
+          "pts": 81.9
+        },
+        {
+          "week": 13,
+          "pts": 0
         }
       ]
     }
@@ -1656,9 +1712,9 @@
   "grades": {
     "drafting": "A-",
     "trading": "A",
-    "waiverWire": "C+",
-    "luck": "B-",
-    "coaching": "A",
-    "overall": "A"
+    "waiverWire": "D",
+    "luck": "D",
+    "coaching": "A-",
+    "overall": "A-"
   }
 }

@@ -412,7 +412,7 @@
       "weeklyPoints": [
         {
           "week": 1,
-          "pts": 0.0
+          "pts": 0
         },
         {
           "week": 2,
@@ -484,7 +484,7 @@
         },
         {
           "week": 19,
-          "pts": 0.0
+          "pts": 0
         },
         {
           "week": 20,
@@ -497,6 +497,86 @@
       ]
     },
     {
+      "player": "Derik Queen",
+      "weekAdded": 4,
+      "addDate": 1762794017564,
+      "ptsAfterAdd": 1639.8,
+      "weeklyPoints": [
+        {
+          "week": 4,
+          "pts": 121.0
+        },
+        {
+          "week": 5,
+          "pts": 170.1
+        },
+        {
+          "week": 6,
+          "pts": 89.4
+        },
+        {
+          "week": 7,
+          "pts": 94.2
+        },
+        {
+          "week": 8,
+          "pts": 123.6
+        },
+        {
+          "week": 9,
+          "pts": 76.9
+        },
+        {
+          "week": 10,
+          "pts": 144.0
+        },
+        {
+          "week": 11,
+          "pts": 101.9
+        },
+        {
+          "week": 12,
+          "pts": 154.4
+        },
+        {
+          "week": 13,
+          "pts": 113.5
+        },
+        {
+          "week": 14,
+          "pts": 61.4
+        },
+        {
+          "week": 15,
+          "pts": 91.4
+        },
+        {
+          "week": 16,
+          "pts": 94.3
+        },
+        {
+          "week": 17,
+          "pts": 109.1
+        },
+        {
+          "week": 18,
+          "pts": 94.6
+        },
+        {
+          "week": 19,
+          "pts": 0
+        },
+        {
+          "week": 20,
+          "pts": 0
+        },
+        {
+          "week": 21,
+          "pts": 0
+        }
+      ]
+    },
+    {
       "player": "Noah Clowney",
       "weekAdded": 4,
       "addDate": 1763053213354,
@@ -504,7 +584,7 @@
       "weeklyPoints": [
         {
           "week": 4,
-          "pts": 0.0
+          "pts": 0
         },
         {
           "week": 5,
@@ -548,7 +628,7 @@
         },
         {
           "week": 15,
-          "pts": 0.0
+          "pts": 0
         },
         {
           "week": 16,
@@ -564,11 +644,15 @@
         },
         {
           "week": 19,
-          "pts": 0.0
+          "pts": 0
         },
         {
           "week": 20,
           "pts": 68.2
+        },
+        {
+          "week": 21,
+          "pts": 0
         }
       ]
     },
@@ -600,7 +684,7 @@
         },
         {
           "week": 19,
-          "pts": 0.0
+          "pts": 0
         },
         {
           "week": 20,
@@ -609,86 +693,6 @@
         {
           "week": 21,
           "pts": 81.2
-        }
-      ]
-    },
-    {
-      "player": "Derik Queen",
-      "weekAdded": 4,
-      "addDate": 1762794017564,
-      "ptsAfterAdd": 474.7,
-      "weeklyPoints": [
-        {
-          "week": 4,
-          "pts": 121.0
-        },
-        {
-          "week": 5,
-          "pts": 170.1
-        },
-        {
-          "week": 6,
-          "pts": 89.4
-        },
-        {
-          "week": 7,
-          "pts": 94.2
-        },
-        {
-          "week": 8,
-          "pts": 0.0
-        },
-        {
-          "week": 9,
-          "pts": 0.0
-        },
-        {
-          "week": 10,
-          "pts": 0.0
-        },
-        {
-          "week": 11,
-          "pts": 0.0
-        },
-        {
-          "week": 12,
-          "pts": 0.0
-        },
-        {
-          "week": 13,
-          "pts": 0.0
-        },
-        {
-          "week": 14,
-          "pts": 0.0
-        },
-        {
-          "week": 15,
-          "pts": 0.0
-        },
-        {
-          "week": 16,
-          "pts": 0.0
-        },
-        {
-          "week": 17,
-          "pts": 0.0
-        },
-        {
-          "week": 18,
-          "pts": 0.0
-        },
-        {
-          "week": 19,
-          "pts": 0.0
-        },
-        {
-          "week": 20,
-          "pts": 0.0
-        },
-        {
-          "week": 21,
-          "pts": 0.0
         }
       ]
     },
@@ -708,7 +712,7 @@
         },
         {
           "week": 19,
-          "pts": 0.0
+          "pts": 0
         },
         {
           "week": 20,
@@ -760,7 +764,15 @@
         },
         {
           "week": 19,
-          "pts": 0.0
+          "pts": 0
+        },
+        {
+          "week": 20,
+          "pts": 0
+        },
+        {
+          "week": 21,
+          "pts": 0
         }
       ]
     },
@@ -788,7 +800,7 @@
         },
         {
           "week": 16,
-          "pts": 0.0
+          "pts": 0
         }
       ]
     },
@@ -800,7 +812,7 @@
       "weeklyPoints": [
         {
           "week": 17,
-          "pts": 0.0
+          "pts": 0
         },
         {
           "week": 18,
@@ -808,11 +820,15 @@
         },
         {
           "week": 19,
-          "pts": 0.0
+          "pts": 0
         },
         {
           "week": 20,
           "pts": 113.4
+        },
+        {
+          "week": 21,
+          "pts": 0
         }
       ]
     },
@@ -824,7 +840,7 @@
       "weeklyPoints": [
         {
           "week": 5,
-          "pts": 0.0
+          "pts": 0
         },
         {
           "week": 6,
@@ -841,6 +857,10 @@
         {
           "week": 9,
           "pts": 8.0
+        },
+        {
+          "week": 10,
+          "pts": 0
         }
       ]
     }
@@ -2371,10 +2391,10 @@
   },
   "grades": {
     "drafting": "A+",
-    "trading": "B+",
-    "waiverWire": "A+",
-    "luck": "B+",
-    "coaching": "B+",
+    "trading": "C",
+    "waiverWire": "A",
+    "luck": "B-",
+    "coaching": "C+",
     "overall": "A+"
   }
 }

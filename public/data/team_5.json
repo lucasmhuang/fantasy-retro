@@ -788,7 +788,7 @@
       "weeklyPoints": [
         {
           "week": 4,
-          "pts": 0.0
+          "pts": 0
         },
         {
           "week": 5,
@@ -852,11 +852,11 @@
       "player": "Collin Sexton",
       "weekAdded": 1,
       "addDate": 1761494408263,
-      "ptsAfterAdd": 1062.5,
+      "ptsAfterAdd": 1151.0,
       "weeklyPoints": [
         {
           "week": 1,
-          "pts": 0.0
+          "pts": 88.5
         },
         {
           "week": 2,
@@ -884,11 +884,11 @@
         },
         {
           "week": 8,
-          "pts": 0.0
+          "pts": 0
         },
         {
           "week": 9,
-          "pts": 0.0
+          "pts": 0
         },
         {
           "week": 10,
@@ -944,7 +944,7 @@
         },
         {
           "week": 7,
-          "pts": 0.0
+          "pts": 0
         },
         {
           "week": 8,
@@ -1000,7 +1000,7 @@
       "weeklyPoints": [
         {
           "week": 10,
-          "pts": 0.0
+          "pts": 0
         },
         {
           "week": 11,
@@ -1032,7 +1032,7 @@
         },
         {
           "week": 18,
-          "pts": 0.0
+          "pts": 0
         }
       ]
     },
@@ -1080,7 +1080,7 @@
       "weeklyPoints": [
         {
           "week": 8,
-          "pts": 0.0
+          "pts": 0
         },
         {
           "week": 9,
@@ -1092,23 +1092,23 @@
         },
         {
           "week": 11,
-          "pts": 0.0
+          "pts": 0
         },
         {
           "week": 12,
-          "pts": 0.0
+          "pts": 0
         },
         {
           "week": 13,
-          "pts": 0.0
+          "pts": 0
         },
         {
           "week": 14,
-          "pts": 0.0
+          "pts": 0
         },
         {
           "week": 15,
-          "pts": 0.0
+          "pts": 0
         },
         {
           "week": 16,
@@ -1125,6 +1125,46 @@
       ]
     },
     {
+      "player": "Max Christie",
+      "weekAdded": 4,
+      "addDate": 1763053213354,
+      "ptsAfterAdd": 166.5,
+      "weeklyPoints": [
+        {
+          "week": 4,
+          "pts": 0
+        },
+        {
+          "week": 5,
+          "pts": 68.6
+        },
+        {
+          "week": 6,
+          "pts": 46.6
+        },
+        {
+          "week": 7,
+          "pts": 51.3
+        },
+        {
+          "week": 8,
+          "pts": 0
+        },
+        {
+          "week": 9,
+          "pts": 0
+        },
+        {
+          "week": 10,
+          "pts": 0
+        },
+        {
+          "week": 11,
+          "pts": 0
+        }
+      ]
+    },
+    {
       "player": "Cason Wallace",
       "weekAdded": 3,
       "addDate": 1762189223276,
@@ -1137,6 +1177,54 @@
         {
           "week": 4,
           "pts": 47.1
+        },
+        {
+          "week": 5,
+          "pts": 0
+        },
+        {
+          "week": 6,
+          "pts": 0
+        },
+        {
+          "week": 7,
+          "pts": 0
+        },
+        {
+          "week": 8,
+          "pts": 0
+        },
+        {
+          "week": 9,
+          "pts": 0
+        },
+        {
+          "week": 10,
+          "pts": 0
+        },
+        {
+          "week": 11,
+          "pts": 0
+        },
+        {
+          "week": 12,
+          "pts": 0
+        },
+        {
+          "week": 13,
+          "pts": 0
+        },
+        {
+          "week": 14,
+          "pts": 0
+        },
+        {
+          "week": 15,
+          "pts": 0
+        },
+        {
+          "week": 16,
+          "pts": 0
         }
       ]
     },
@@ -1148,7 +1236,7 @@
       "weeklyPoints": [
         {
           "week": 2,
-          "pts": 0.0
+          "pts": 0
         },
         {
           "week": 3,
@@ -1157,6 +1245,46 @@
         {
           "week": 4,
           "pts": 49.6
+        },
+        {
+          "week": 5,
+          "pts": 0
+        },
+        {
+          "week": 6,
+          "pts": 0
+        },
+        {
+          "week": 7,
+          "pts": 0
+        },
+        {
+          "week": 8,
+          "pts": 0
+        },
+        {
+          "week": 9,
+          "pts": 0
+        },
+        {
+          "week": 10,
+          "pts": 0
+        },
+        {
+          "week": 11,
+          "pts": 0
+        },
+        {
+          "week": 12,
+          "pts": 0
+        },
+        {
+          "week": 13,
+          "pts": 0
+        },
+        {
+          "week": 14,
+          "pts": 0
         }
       ]
     },
@@ -1173,22 +1301,10 @@
         {
           "week": 8,
           "pts": 59.7
-        }
-      ]
-    },
-    {
-      "player": "Jared McCain",
-      "weekAdded": 7,
-      "addDate": 1764608414532,
-      "ptsAfterAdd": 98.0,
-      "weeklyPoints": [
-        {
-          "week": 7,
-          "pts": 72.7
         },
         {
-          "week": 8,
-          "pts": 25.3
+          "week": 9,
+          "pts": 0
         }
       ]
     }
@@ -2484,11 +2600,11 @@
     }
   },
   "grades": {
-    "drafting": "C",
+    "drafting": "F",
     "trading": "A+",
-    "waiverWire": "A-",
-    "luck": "B",
-    "coaching": "A-",
-    "overall": "B"
+    "waiverWire": "B",
+    "luck": "C",
+    "coaching": "B+",
+    "overall": "C"
   }
 }

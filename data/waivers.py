@@ -1,8 +1,9 @@
-from helpers import date_to_week, find_team_in_matchup
+from helpers import date_to_week
 
 
 def extract_waiver_pickups(team_id, activity, box_cache, total_weeks, max_pickups=10, timelines=None):
-    team_adds = sorted(activity["adds"].get(team_id, []), key=lambda a: a["date"] or 0)
+    all_adds = activity["adds"]
+    team_adds = sorted(all_adds.get(team_id, []), key=lambda a: a["date"] or 0)
 
     filtered_adds = []
     for add in team_adds:
@@ -18,28 +19,23 @@ def extract_waiver_pickups(team_id, activity, box_cache, total_weeks, max_pickup
         filtered_adds.append(add)
 
     pickups = []
-    for add in filtered_adds:
+    for i, add in enumerate(filtered_adds):
         name = add["player"]
         add_week = date_to_week(add["date"])
-        if timelines and name in timelines:
-            drop_week = timelines[name].drop_week_for_team(team_id, add["date"])
-        else:
-            drop_week = _find_team_drop_week(name, add["date"], team_id, activity)
-        end_week = drop_week if drop_week else total_weeks
+        next_other = _next_add_week(name, add["date"], all_adds, team_id)
+        next_same = None
+        for future in filtered_adds[i + 1 :]:
+            if future["player"] == name:
+                next_same = date_to_week(future["date"])
+                break
+        candidates = [w for w in (next_other, next_same) if w]
+        end_week = (min(candidates) - 1) if candidates else total_weeks
         pts = 0.0
         weekly_points = []
 
         if add_week:
             for week in range(add_week, end_week + 1):
-                week_pts = 0.0
-                for box in box_cache.get(week, []):
-                    lineup, _, _, _ = find_team_in_matchup(box, team_id)
-                    if not lineup:
-                        continue
-                    for player in lineup:
-                        if player.name == name:
-                            week_pts += player.points or 0
-                    break
+                week_pts = _player_week_pts(name, week, box_cache)
                 pts += week_pts
                 weekly_points.append({"week": week, "pts": round(week_pts, 1)})
 
@@ -87,26 +83,10 @@ def aggregate_league_pickups(
                 elif _is_simple_reclaim(name, tid, add_date, activity):
                     continue
 
-            if timelines and name in timelines:
-                free_week = timelines[name].next_free_agency_after(add_date or 0)
-            else:
-                free_week = _next_free_agency_week(name, add_date or 0, activity)
-
             cap = display_through_week or total_weeks
-
-            if free_week and p["weekAdded"]:
-                effective_cap = min(free_week, cap)
-                active_weeks = [wp["week"] for wp in p["weeklyPoints"] if wp["pts"] > 0 and wp["week"] <= effective_cap]
-                pts = sum(wp["pts"] for wp in p["weeklyPoints"] if wp["week"] <= effective_cap)
-                games = sum(nba_games.get(name, {}).get(w, 0) for w in active_weeks) if nba_games else 0
-            elif player_totals and p["weekAdded"]:
-                pts = sum(wp["pts"] for wp in p["weeklyPoints"] if wp["week"] <= cap)
-                active_weeks = [wp["week"] for wp in p["weeklyPoints"] if wp["pts"] > 0 and wp["week"] <= cap]
-                games = sum(nba_games.get(name, {}).get(w, 0) for w in active_weeks) if nba_games else 0
-            else:
-                active_weeks = [wp["week"] for wp in p["weeklyPoints"] if wp["pts"] > 0 and wp["week"] <= cap]
-                pts = sum(wp["pts"] for wp in p["weeklyPoints"] if wp["week"] <= cap)
-                games = sum(nba_games.get(name, {}).get(w, 0) for w in active_weeks) if nba_games else 0
+            pts = sum(wp["pts"] for wp in p["weeklyPoints"] if wp["week"] <= cap)
+            active_weeks = [wp["week"] for wp in p["weeklyPoints"] if wp["pts"] > 0 and wp["week"] <= cap]
+            games = sum(nba_games.get(name, {}).get(w, 0) for w in active_weeks) if nba_games else 0
 
             if pts < 10:
                 continue
@@ -144,39 +124,25 @@ def _is_lm_roster_move(player_name, add_date, team_id, activity):
     return False
 
 
-def _find_team_drop_week(player_name, add_date, team_id, activity):
+def _player_week_pts(name, week, box_cache):
+    for box in box_cache.get(week, []):
+        for lineup in (box.home_lineup or [], box.away_lineup or []):
+            for player in lineup:
+                if player.name == name:
+                    return player.points or 0
+    return 0
+
+
+def _next_add_week(player_name, after_date, all_adds, exclude_team_id):
     best = None
-    for drop in activity["drops"].get(team_id, []):
-        if drop["player"] == player_name and drop["date"] and drop["date"] > add_date:
-            if best is None or drop["date"] < best:
-                best = drop["date"]
-    return date_to_week(best) if best else None
-
-
-def _next_free_agency_week(player_name, after_date, activity):
-    all_drops = []
-    for tid, drops in activity["drops"].items():
-        for drop in drops:
-            if drop["player"] == player_name and drop["date"] and drop["date"] > after_date:
-                all_drops.append(drop["date"])
-    if not all_drops:
-        return None
-
-    all_adds_after = []
-    for tid, adds in activity["adds"].items():
+    for tid, adds in all_adds.items():
+        if int(tid) == exclude_team_id:
+            continue
         for add in adds:
             if add["player"] == player_name and add["date"] and add["date"] > after_date:
-                all_adds_after.append(add["date"])
-
-    for drop_date in sorted(all_drops):
-        readded = any(a > drop_date for a in all_adds_after)
-        if not readded:
-            return date_to_week(drop_date)
-        next_add = min(a for a in all_adds_after if a > drop_date)
-        gap_ms = next_add - drop_date
-        if gap_ms > 2 * 24 * 60 * 60 * 1000:
-            return date_to_week(drop_date)
-    return None
+                if best is None or add["date"] < best:
+                    best = add["date"]
+    return date_to_week(best) if best else None
 
 
 def _is_simple_reclaim(player_name, team_id, add_date, activity):

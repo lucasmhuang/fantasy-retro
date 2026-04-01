@@ -6,7 +6,8 @@ class TestRankWithClustering:
         values = {1: 100, 2: 80, 3: 60}
         grades = _rank_with_clustering(values)
         assert grades[1] == "A+"
-        assert grades[3] in ("A-", "B+", "B", "B-", "C+", "C", "C-")
+        assert grades[2] == "A"
+        assert grades[3] == "A-"
 
     def test_empty_input(self):
         assert _rank_with_clustering({}) == {}
@@ -26,6 +27,20 @@ class TestRankWithClustering:
         grades = _rank_with_clustering(values)
         assert grades[1] == "A+"
         assert grades[12] == "F"
+
+    def test_tight_values_still_spread(self):
+        values = {i: 100 - i * 2 for i in range(1, 13)}
+        grades = _rank_with_clustering(values)
+        grade_set = set(grades.values())
+        assert len(grade_set) >= 6
+        assert grades[1] == "A+"
+
+    def test_cluster_skips_to_position(self):
+        values = {1: 100, 2: 99, 3: 50, 4: 49}
+        grades = _rank_with_clustering(values)
+        assert grades[1] == grades[2] == "A+"
+        assert grades[3] == "A-"
+        assert grades[4] == "A-"
 
 
 class TestComputeLeagueGrades:

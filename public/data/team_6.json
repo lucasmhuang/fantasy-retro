@@ -826,6 +826,98 @@
   ],
   "waiverPickups": [
     {
+      "player": "Dillon Brooks",
+      "weekAdded": 1,
+      "addDate": 1761235216615,
+      "ptsAfterAdd": 1383.1,
+      "weeklyPoints": [
+        {
+          "week": 1,
+          "pts": 0
+        },
+        {
+          "week": 2,
+          "pts": 0
+        },
+        {
+          "week": 3,
+          "pts": 27.9
+        },
+        {
+          "week": 4,
+          "pts": 136.3
+        },
+        {
+          "week": 5,
+          "pts": 91.5
+        },
+        {
+          "week": 6,
+          "pts": 110.4
+        },
+        {
+          "week": 7,
+          "pts": 69.2
+        },
+        {
+          "week": 8,
+          "pts": 60.5
+        },
+        {
+          "week": 9,
+          "pts": 65.9
+        },
+        {
+          "week": 10,
+          "pts": 77.4
+        },
+        {
+          "week": 11,
+          "pts": 114.4
+        },
+        {
+          "week": 12,
+          "pts": 115.3
+        },
+        {
+          "week": 13,
+          "pts": 66.2
+        },
+        {
+          "week": 14,
+          "pts": 120.7
+        },
+        {
+          "week": 15,
+          "pts": 165.1
+        },
+        {
+          "week": 16,
+          "pts": 88.4
+        },
+        {
+          "week": 17,
+          "pts": 73.9
+        },
+        {
+          "week": 18,
+          "pts": 0
+        },
+        {
+          "week": 19,
+          "pts": 0
+        },
+        {
+          "week": 20,
+          "pts": 0
+        },
+        {
+          "week": 21,
+          "pts": 0
+        }
+      ]
+    },
+    {
       "player": "Grayson Allen",
       "weekAdded": 1,
       "addDate": 1761062406362,
@@ -849,7 +941,7 @@
         },
         {
           "week": 5,
-          "pts": 0.0
+          "pts": 0
         },
         {
           "week": 6,
@@ -865,15 +957,15 @@
         },
         {
           "week": 9,
-          "pts": 0.0
+          "pts": 0
         },
         {
           "week": 10,
-          "pts": 0.0
+          "pts": 0
         },
         {
           "week": 11,
-          "pts": 0.0
+          "pts": 0
         },
         {
           "week": 12,
@@ -925,7 +1017,7 @@
       "weeklyPoints": [
         {
           "week": 12,
-          "pts": 0.0
+          "pts": 0
         },
         {
           "week": 13,
@@ -961,7 +1053,7 @@
       "weeklyPoints": [
         {
           "week": 15,
-          "pts": 0.0
+          "pts": 0
         },
         {
           "week": 16,
@@ -997,7 +1089,7 @@
       "weeklyPoints": [
         {
           "week": 4,
-          "pts": 0.0
+          "pts": 0
         },
         {
           "week": 5,
@@ -1026,6 +1118,34 @@
         {
           "week": 11,
           "pts": 5.8
+        },
+        {
+          "week": 12,
+          "pts": 0
+        },
+        {
+          "week": 13,
+          "pts": 0
+        },
+        {
+          "week": 14,
+          "pts": 0
+        },
+        {
+          "week": 15,
+          "pts": 0
+        },
+        {
+          "week": 16,
+          "pts": 0
+        },
+        {
+          "week": 17,
+          "pts": 0
+        },
+        {
+          "week": 18,
+          "pts": 0
         }
       ]
     },
@@ -1037,7 +1157,7 @@
       "weeklyPoints": [
         {
           "week": 16,
-          "pts": 0.0
+          "pts": 0
         },
         {
           "week": 17,
@@ -1057,7 +1177,7 @@
         },
         {
           "week": 21,
-          "pts": 0.0
+          "pts": 0
         }
       ]
     },
@@ -1106,98 +1226,34 @@
         {
           "week": 14,
           "pts": 71.7
-        }
-      ]
-    },
-    {
-      "player": "Dillon Brooks",
-      "weekAdded": 1,
-      "addDate": 1761235216615,
-      "ptsAfterAdd": 366.1,
-      "weeklyPoints": [
-        {
-          "week": 1,
-          "pts": 0.0
-        },
-        {
-          "week": 2,
-          "pts": 0.0
-        },
-        {
-          "week": 3,
-          "pts": 27.9
-        },
-        {
-          "week": 4,
-          "pts": 136.3
-        },
-        {
-          "week": 5,
-          "pts": 91.5
-        },
-        {
-          "week": 6,
-          "pts": 110.4
-        },
-        {
-          "week": 7,
-          "pts": 0.0
-        },
-        {
-          "week": 8,
-          "pts": 0.0
-        },
-        {
-          "week": 9,
-          "pts": 0.0
-        },
-        {
-          "week": 10,
-          "pts": 0.0
-        },
-        {
-          "week": 11,
-          "pts": 0.0
-        },
-        {
-          "week": 12,
-          "pts": 0.0
-        },
-        {
-          "week": 13,
-          "pts": 0.0
-        },
-        {
-          "week": 14,
-          "pts": 0.0
         },
         {
           "week": 15,
-          "pts": 0.0
+          "pts": 0
         },
         {
           "week": 16,
-          "pts": 0.0
+          "pts": 0
         },
         {
           "week": 17,
-          "pts": 0.0
+          "pts": 0
         },
         {
           "week": 18,
-          "pts": 0.0
+          "pts": 0
         },
         {
           "week": 19,
-          "pts": 0.0
+          "pts": 0
         },
         {
           "week": 20,
-          "pts": 0.0
+          "pts": 0
         },
         {
           "week": 21,
-          "pts": 0.0
+          "pts": 0
         }
       ]
     },
@@ -1209,7 +1265,7 @@
       "weeklyPoints": [
         {
           "week": 10,
-          "pts": 0.0
+          "pts": 0
         },
         {
           "week": 11,
@@ -1233,7 +1289,7 @@
       "weeklyPoints": [
         {
           "week": 18,
-          "pts": 0.0
+          "pts": 0
         },
         {
           "week": 19,
@@ -3414,11 +3470,11 @@
     }
   },
   "grades": {
-    "drafting": "B",
-    "trading": "B",
-    "waiverWire": "B+",
+    "drafting": "B-",
+    "trading": "D",
+    "waiverWire": "B",
     "luck": "A",
-    "coaching": "A-",
-    "overall": "B+"
+    "coaching": "B+",
+    "overall": "B"
   }
 }

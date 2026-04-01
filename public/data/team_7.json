@@ -364,6 +364,74 @@
   ],
   "waiverPickups": [
     {
+      "player": "Collin Gillespie",
+      "weekAdded": 3,
+      "addDate": 1762189223276,
+      "ptsAfterAdd": 1295.8,
+      "weeklyPoints": [
+        {
+          "week": 3,
+          "pts": 65.7
+        },
+        {
+          "week": 4,
+          "pts": 87.8
+        },
+        {
+          "week": 5,
+          "pts": 99.6
+        },
+        {
+          "week": 6,
+          "pts": 122.3
+        },
+        {
+          "week": 7,
+          "pts": 63.2
+        },
+        {
+          "week": 8,
+          "pts": 75.1
+        },
+        {
+          "week": 9,
+          "pts": 72.7
+        },
+        {
+          "week": 10,
+          "pts": 114.8
+        },
+        {
+          "week": 11,
+          "pts": 132.5
+        },
+        {
+          "week": 12,
+          "pts": 91.4
+        },
+        {
+          "week": 13,
+          "pts": 83.5
+        },
+        {
+          "week": 14,
+          "pts": 109.3
+        },
+        {
+          "week": 15,
+          "pts": 78.7
+        },
+        {
+          "week": 16,
+          "pts": 99.2
+        },
+        {
+          "week": 17,
+          "pts": 0
+        }
+      ]
+    },
+    {
       "player": "Davion Mitchell",
       "weekAdded": 4,
       "addDate": 1762794017564,
@@ -432,78 +500,6 @@
       ]
     },
     {
-      "player": "Collin Gillespie",
-      "weekAdded": 3,
-      "addDate": 1762189223276,
-      "ptsAfterAdd": 925.1,
-      "weeklyPoints": [
-        {
-          "week": 3,
-          "pts": 65.7
-        },
-        {
-          "week": 4,
-          "pts": 87.8
-        },
-        {
-          "week": 5,
-          "pts": 99.6
-        },
-        {
-          "week": 6,
-          "pts": 122.3
-        },
-        {
-          "week": 7,
-          "pts": 63.2
-        },
-        {
-          "week": 8,
-          "pts": 75.1
-        },
-        {
-          "week": 9,
-          "pts": 72.7
-        },
-        {
-          "week": 10,
-          "pts": 114.8
-        },
-        {
-          "week": 11,
-          "pts": 132.5
-        },
-        {
-          "week": 12,
-          "pts": 91.4
-        },
-        {
-          "week": 13,
-          "pts": 0.0
-        },
-        {
-          "week": 14,
-          "pts": 0.0
-        },
-        {
-          "week": 15,
-          "pts": 0.0
-        },
-        {
-          "week": 16,
-          "pts": 0.0
-        },
-        {
-          "week": 17,
-          "pts": 0.0
-        },
-        {
-          "week": 18,
-          "pts": 0.0
-        }
-      ]
-    },
-    {
       "player": "Isaiah Stewart",
       "weekAdded": 1,
       "addDate": 1761235216615,
@@ -511,7 +507,7 @@
       "weeklyPoints": [
         {
           "week": 1,
-          "pts": 0.0
+          "pts": 0
         },
         {
           "week": 2,
@@ -563,7 +559,7 @@
       "weeklyPoints": [
         {
           "week": 4,
-          "pts": 0.0
+          "pts": 0
         },
         {
           "week": 5,
@@ -588,6 +584,10 @@
         {
           "week": 10,
           "pts": 62.9
+        },
+        {
+          "week": 11,
+          "pts": 0
         }
       ]
     },
@@ -620,10 +620,6 @@
         {
           "week": 18,
           "pts": 58.7
-        },
-        {
-          "week": 19,
-          "pts": 0.0
         }
       ]
     },
@@ -635,15 +631,15 @@
       "weeklyPoints": [
         {
           "week": 13,
-          "pts": 0.0
+          "pts": 0
         },
         {
           "week": 14,
-          "pts": 0.0
+          "pts": 0
         },
         {
           "week": 15,
-          "pts": 0.0
+          "pts": 0
         },
         {
           "week": 16,
@@ -667,7 +663,7 @@
       "weeklyPoints": [
         {
           "week": 13,
-          "pts": 0.0
+          "pts": 0
         },
         {
           "week": 14,
@@ -675,15 +671,15 @@
         },
         {
           "week": 15,
-          "pts": 0.0
+          "pts": 0
         },
         {
           "week": 16,
-          "pts": 0.0
+          "pts": 0
         },
         {
           "week": 17,
-          "pts": 0.0
+          "pts": 0
         },
         {
           "week": 18,
@@ -699,7 +695,7 @@
       "weeklyPoints": [
         {
           "week": 1,
-          "pts": 0.0
+          "pts": 0
         },
         {
           "week": 2,
@@ -708,6 +704,66 @@
         {
           "week": 3,
           "pts": 80.9
+        },
+        {
+          "week": 4,
+          "pts": 0
+        },
+        {
+          "week": 5,
+          "pts": 0
+        },
+        {
+          "week": 6,
+          "pts": 0
+        },
+        {
+          "week": 7,
+          "pts": 0
+        },
+        {
+          "week": 8,
+          "pts": 0
+        },
+        {
+          "week": 9,
+          "pts": 0
+        },
+        {
+          "week": 10,
+          "pts": 0
+        },
+        {
+          "week": 11,
+          "pts": 0
+        },
+        {
+          "week": 12,
+          "pts": 0
+        },
+        {
+          "week": 13,
+          "pts": 0
+        },
+        {
+          "week": 14,
+          "pts": 0
+        },
+        {
+          "week": 15,
+          "pts": 0
+        },
+        {
+          "week": 16,
+          "pts": 0
+        },
+        {
+          "week": 17,
+          "pts": 0
+        },
+        {
+          "week": 18,
+          "pts": 0
         }
       ]
     },
@@ -719,7 +775,7 @@
       "weeklyPoints": [
         {
           "week": 11,
-          "pts": 0.0
+          "pts": 0
         },
         {
           "week": 12,
@@ -727,7 +783,27 @@
         },
         {
           "week": 13,
-          "pts": 0.0
+          "pts": 0
+        },
+        {
+          "week": 14,
+          "pts": 0
+        },
+        {
+          "week": 15,
+          "pts": 0
+        },
+        {
+          "week": 16,
+          "pts": 0
+        },
+        {
+          "week": 17,
+          "pts": 0
+        },
+        {
+          "week": 18,
+          "pts": 0
         }
       ]
     },
@@ -739,7 +815,7 @@
       "weeklyPoints": [
         {
           "week": 1,
-          "pts": 0.0
+          "pts": 0
         },
         {
           "week": 2,
@@ -751,7 +827,19 @@
         },
         {
           "week": 4,
-          "pts": 0.0
+          "pts": 0
+        },
+        {
+          "week": 5,
+          "pts": 0
+        },
+        {
+          "week": 6,
+          "pts": 0
+        },
+        {
+          "week": 7,
+          "pts": 0
         }
       ]
     }
@@ -1801,11 +1889,11 @@
     }
   },
   "grades": {
-    "drafting": "B",
-    "trading": "B+",
-    "waiverWire": "B+",
-    "luck": "B+",
-    "coaching": "B-",
-    "overall": "C+"
+    "drafting": "B-",
+    "trading": "C",
+    "waiverWire": "C",
+    "luck": "B-",
+    "coaching": "D",
+    "overall": "D+"
   }
 }

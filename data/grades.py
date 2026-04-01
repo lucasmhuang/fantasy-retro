@@ -25,7 +25,7 @@ def _rank_with_clustering(values_by_id, threshold_pct=0.25, max_cluster=3):
             grades[tid] = RANK_GRADES[grade_idx]
             cluster_size += 1
         else:
-            grade_idx = min(grade_idx + 1, len(RANK_GRADES) - 1)
+            grade_idx = min(i, len(RANK_GRADES) - 1)
             grades[tid] = RANK_GRADES[grade_idx]
             cluster_anchor = value
             cluster_size = 1

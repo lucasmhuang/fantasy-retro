@@ -669,11 +669,11 @@
       "player": "Wendell Carter Jr.",
       "weekAdded": 1,
       "addDate": 1761494408263,
-      "ptsAfterAdd": 1361.3,
+      "ptsAfterAdd": 1239.9,
       "weeklyPoints": [
         {
           "week": 1,
-          "pts": 0.0
+          "pts": 0
         },
         {
           "week": 2,
@@ -734,10 +734,6 @@
         {
           "week": 16,
           "pts": 69.2
-        },
-        {
-          "week": 17,
-          "pts": 121.4
         }
       ]
     },
@@ -749,7 +745,7 @@
       "weeklyPoints": [
         {
           "week": 3,
-          "pts": 0.0
+          "pts": 0
         },
         {
           "week": 4,
@@ -802,10 +798,6 @@
         {
           "week": 16,
           "pts": 30.8
-        },
-        {
-          "week": 17,
-          "pts": 0.0
         }
       ]
     },
@@ -857,7 +849,7 @@
       "weeklyPoints": [
         {
           "week": 2,
-          "pts": 0.0
+          "pts": 0
         },
         {
           "week": 3,
@@ -874,10 +866,6 @@
         {
           "week": 6,
           "pts": 100.3
-        },
-        {
-          "week": 7,
-          "pts": 0.0
         }
       ]
     },
@@ -889,7 +877,7 @@
       "weeklyPoints": [
         {
           "week": 10,
-          "pts": 0.0
+          "pts": 0
         },
         {
           "week": 11,
@@ -934,6 +922,14 @@
         {
           "week": 13,
           "pts": 74.5
+        },
+        {
+          "week": 14,
+          "pts": 0
+        },
+        {
+          "week": 15,
+          "pts": 0
         }
       ]
     },
@@ -945,7 +941,7 @@
       "weeklyPoints": [
         {
           "week": 12,
-          "pts": 0.0
+          "pts": 0
         },
         {
           "week": 13,
@@ -962,6 +958,18 @@
         {
           "week": 16,
           "pts": 99.4
+        },
+        {
+          "week": 17,
+          "pts": 0
+        },
+        {
+          "week": 18,
+          "pts": 0
+        },
+        {
+          "week": 19,
+          "pts": 0
         }
       ]
     },
@@ -973,7 +981,7 @@
       "weeklyPoints": [
         {
           "week": 16,
-          "pts": 0.0
+          "pts": 0
         },
         {
           "week": 17,
@@ -1017,7 +1025,7 @@
       "weeklyPoints": [
         {
           "week": 4,
-          "pts": 0.0
+          "pts": 0
         },
         {
           "week": 5,
@@ -1029,7 +1037,31 @@
         },
         {
           "week": 7,
-          "pts": 0.0
+          "pts": 0
+        },
+        {
+          "week": 8,
+          "pts": 0
+        },
+        {
+          "week": 9,
+          "pts": 0
+        },
+        {
+          "week": 10,
+          "pts": 0
+        },
+        {
+          "week": 11,
+          "pts": 0
+        },
+        {
+          "week": 12,
+          "pts": 0
+        },
+        {
+          "week": 13,
+          "pts": 0
         }
       ]
     }
@@ -2411,10 +2443,10 @@
   },
   "grades": {
     "drafting": "A",
-    "trading": "B-",
-    "waiverWire": "A-",
-    "luck": "B",
-    "coaching": "A-",
-    "overall": "B+"
+    "trading": "F",
+    "waiverWire": "B",
+    "luck": "C",
+    "coaching": "B+",
+    "overall": "C+"
   }
 }
