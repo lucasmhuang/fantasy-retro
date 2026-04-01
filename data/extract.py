@@ -65,22 +65,48 @@ BENCH_SLOTS = frozenset({"BE", "Bench", "BN", "IR"})
 # These weeks are excluded from bench misplays and optimal lineup calculations
 # because the box_cache stores pre-adjustment scores that don't reflect the
 # actual final matchup result.
-ADJUSTED_WEEKS = frozenset({
-    (5, 2), (7, 2),                                     # Week 2
-    (3, 3), (5, 3), (6, 3),                              # Week 3
-    (1, 4), (5, 4), (6, 4),                              # Week 4
-    (2, 5), (5, 5), (6, 5), (11, 5),                     # Week 5
-    (5, 6), (6, 6),                                       # Week 6
-    (5, 7), (9, 7),                                       # Week 7
-    (1, 8), (6, 8), (9, 8),                               # Week 8
-    (1, 9), (4, 9), (8, 9), (11, 9),                      # Week 9
-    (1, 10), (5, 10), (6, 10), (8, 10), (9, 10),          # Week 10
-    (1, 11), (5, 11), (11, 11),                            # Week 11
-    (2, 12),                                               # Week 12
-    (2, 13),                                               # Week 13
-    (2, 14), (6, 14), (9, 14),                             # Week 14
-    (1, 15), (6, 15),                                      # Week 15
-})  # 38 (team_id, week) pairs across 14 weeks
+ADJUSTED_WEEKS = frozenset(
+    {
+        (5, 2),
+        (7, 2),  # Week 2
+        (3, 3),
+        (5, 3),
+        (6, 3),  # Week 3
+        (1, 4),
+        (5, 4),
+        (6, 4),  # Week 4
+        (2, 5),
+        (5, 5),
+        (6, 5),
+        (11, 5),  # Week 5
+        (5, 6),
+        (6, 6),  # Week 6
+        (5, 7),
+        (9, 7),  # Week 7
+        (1, 8),
+        (6, 8),
+        (9, 8),  # Week 8
+        (1, 9),
+        (4, 9),
+        (8, 9),
+        (11, 9),  # Week 9
+        (1, 10),
+        (5, 10),
+        (6, 10),
+        (8, 10),
+        (9, 10),  # Week 10
+        (1, 11),
+        (5, 11),
+        (11, 11),  # Week 11
+        (2, 12),  # Week 12
+        (2, 13),  # Week 13
+        (2, 14),
+        (6, 14),
+        (9, 14),  # Week 14
+        (1, 15),
+        (6, 15),  # Week 15
+    }
+)  # 38 (team_id, week) pairs across 14 weeks
 
 ESPN_STAT_ID_MAP = {
     0: "PTS",
@@ -520,8 +546,12 @@ def cache_exists():
     return all(
         (CACHE_DIR / f).exists()
         for f in [
-            "box_cache.json", "roster_by_week.json", "activity.json",
-            "league_info.json", "roster_totals.json", "faab.json",
+            "box_cache.json",
+            "roster_by_week.json",
+            "activity.json",
+            "league_info.json",
+            "roster_totals.json",
+            "faab.json",
         ]
     )
 
@@ -725,9 +755,7 @@ def fetch_faab(league):
         filters = {"transactions": {"filterType": {"value": ["WAIVER", "FREEAGENT"]}}}
         headers = {"x-fantasy-filter": _json.dumps(filters)}
         try:
-            data = _retry(
-                lambda p=params, h=headers: league.espn_request.league_get(params=p, headers=h)
-            )
+            data = _retry(lambda p=params, h=headers: league.espn_request.league_get(params=p, headers=h))
             all_txns.extend(data.get("transactions", []))
         except Exception:
             continue
@@ -1646,8 +1674,18 @@ def compute_awards(weekly_results, heatmap, weekly_team_scores, team_id, reg_wee
 RANK_GRADES = ["A+", "A", "A-", "B+", "B", "B-", "C+", "C", "C-", "D+", "D", "F"]
 
 DRAFT_GRADE_SCORES = {
-    "A+": 97, "A": 92, "A-": 87, "B+": 82, "B": 77,
-    "B-": 72, "C+": 67, "C": 62, "C-": 57, "D+": 52, "D": 47, "F": 30,
+    "A+": 97,
+    "A": 92,
+    "A-": 87,
+    "B+": 82,
+    "B": 77,
+    "B-": 72,
+    "C+": 67,
+    "C": 62,
+    "C-": 57,
+    "D+": 52,
+    "D": 47,
+    "F": 30,
 }
 
 
@@ -1961,25 +1999,20 @@ def aggregate_league_pickups(
 
             free_week = _next_free_agency_week(name, add_date or 0, activity)
 
+            cap = display_through_week or total_weeks
+
             if free_week and p["weekAdded"]:
-                active_weeks = [
-                    wp["week"] for wp in p["weeklyPoints"]
-                    if wp["pts"] > 0 and wp["week"] <= free_week
-                ]
-                pts = sum(wp["pts"] for wp in p["weeklyPoints"] if wp["week"] <= free_week)
+                effective_cap = min(free_week, cap)
+                active_weeks = [wp["week"] for wp in p["weeklyPoints"] if wp["pts"] > 0 and wp["week"] <= effective_cap]
+                pts = sum(wp["pts"] for wp in p["weeklyPoints"] if wp["week"] <= effective_cap)
                 games = sum(nba_games.get(name, {}).get(w, 0) for w in active_weeks) if nba_games else 0
             elif player_totals and p["weekAdded"]:
-                pre_pts = _compute_pre_event_points(name, p["weekAdded"], box_cache)
-                pts = max(player_totals.get(name, 0) - pre_pts, p["ptsAfterAdd"])
-                if nba_games_total and nba_games:
-                    pre_gp = _compute_pre_event_games(name, p["weekAdded"], nba_games)
-                    games = max(nba_games_total.get(name, 0) - pre_gp, 0)
-                else:
-                    active_weeks = [wp["week"] for wp in p["weeklyPoints"] if wp["pts"] > 0]
-                    games = sum(nba_games.get(name, {}).get(w, 0) for w in active_weeks) if nba_games else 0
+                pts = sum(wp["pts"] for wp in p["weeklyPoints"] if wp["week"] <= cap)
+                active_weeks = [wp["week"] for wp in p["weeklyPoints"] if wp["pts"] > 0 and wp["week"] <= cap]
+                games = sum(nba_games.get(name, {}).get(w, 0) for w in active_weeks) if nba_games else 0
             else:
-                pts = p["ptsAfterAdd"]
-                active_weeks = [wp["week"] for wp in p["weeklyPoints"] if wp["pts"] > 0]
+                active_weeks = [wp["week"] for wp in p["weeklyPoints"] if wp["pts"] > 0 and wp["week"] <= cap]
+                pts = sum(wp["pts"] for wp in p["weeklyPoints"] if wp["week"] <= cap)
                 games = sum(nba_games.get(name, {}).get(w, 0) for w in active_weeks) if nba_games else 0
 
             if pts < 10:
@@ -2190,8 +2223,15 @@ def do_fetch(league, total_weeks):
 
 
 def do_extract(
-    league, box_cache, roster_by_week, activity, reg_weeks, total_weeks,
-    roster_totals=None, faab=None, team_id=None,
+    league,
+    box_cache,
+    roster_by_week,
+    activity,
+    reg_weeks,
+    total_weeks,
+    roster_totals=None,
+    faab=None,
+    team_id=None,
 ):
     print("\n[Extract 1/4] Standings & scores...")
     standings = compute_standings_by_week(box_cache, league.teams, reg_weeks)
@@ -2277,8 +2317,12 @@ def do_extract(
         ol = extract_optimal_lineup(tid, box_cache, lw)
         all_efficiencies[tid] = ol.get("efficiency", 0.0)
         t_trades = extract_trades(
-            tid, activity, box_cache, lw,
-            repl_fpw, nba_games_by_week,
+            tid,
+            activity,
+            box_cache,
+            lw,
+            repl_fpw,
+            nba_games_by_week,
         )
         all_trade_nets[tid] = sum(tr.get("net", 0) for tr in t_trades)
         t_pickups = extract_waiver_pickups(tid, activity, box_cache, lw)
@@ -2304,6 +2348,11 @@ def do_extract(
         },
         final_placement_map,
     )
+
+    for tid_str, tg in draft_grades.items():
+        tid = int(tid_str)
+        if tid in league_grades:
+            tg["grade"] = league_grades[tid]["drafting"]
 
     all_scoring_profiles = []
     for team in teams:
