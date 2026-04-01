@@ -226,6 +226,25 @@ def do_extract(
             vals = [p[cat]["pct"] for p in all_scoring_profiles if cat in p]
             league_avg_profile[cat] = round(sum(vals) / len(vals), 3) if vals else 0
 
+    reg_points_for = {}
+    reg_points_against = {}
+    for t in league.teams:
+        tid = t.team_id
+        pf = 0.0
+        pa = 0.0
+        for w in range(1, reg_weeks + 1):
+            for box in box_cache.get(w, []):
+                if box.home_team and box.home_team.team_id == tid:
+                    pf += box.home_score or 0
+                    pa += box.away_score or 0
+                    break
+                if box.away_team and box.away_team.team_id == tid:
+                    pf += box.away_score or 0
+                    pa += box.home_score or 0
+                    break
+        reg_points_for[tid] = round(pf, 1)
+        reg_points_against[tid] = round(pa, 1)
+
     meta = {
         "name": league.settings.name,
         "season": f"{YEAR - 1}-{str(YEAR)[2:]}",
@@ -264,8 +283,8 @@ def do_extract(
                 "record": f"{t.wins}-{t.losses}",
                 "standing": t.standing,
                 "finalPlacement": final_placement_map.get(t.team_id, t.standing),
-                "pointsFor": round(t.points_for, 1),
-                "pointsAgainst": round(t.points_against, 1),
+                "pointsFor": reg_points_for.get(t.team_id, 0),
+                "pointsAgainst": reg_points_against.get(t.team_id, 0),
             }
             for t in sorted(league.teams, key=lambda t: final_placement_map.get(t.team_id, t.standing))
         ],

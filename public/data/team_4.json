@@ -1840,16 +1840,10 @@
         "actualPts": 1125.5,
         "optimalPts": 1195.8,
         "diff": 70.3
-      },
-      {
-        "week": 19,
-        "actualPts": 1317.4,
-        "optimalPts": 1406.0,
-        "diff": 88.6
       }
     ],
-    "totalActual": 20141.3,
-    "totalOptimal": 21274.0,
+    "totalActual": 18823.9,
+    "totalOptimal": 19868.0,
     "efficiency": 0.947
   },
   "awards": {

@@ -360,7 +360,7 @@ def extract_team(
     h2h = extract_head_to_head(weekly_results, reg_weeks)
 
     print("  [ 9/11] Optimal lineup")
-    optimal = extract_optimal_lineup(tid, box_cache, last_week)
+    optimal = extract_optimal_lineup(tid, box_cache, reg_weeks)
 
     print("  [10/11] Awards")
     awards = compute_awards(weekly_results, heatmap, weekly_team_scores, tid, reg_weeks)
