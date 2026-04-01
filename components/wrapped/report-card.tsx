@@ -10,6 +10,7 @@ interface ReportCardProps {
 }
 
 function getGradeClass(grade: string): string {
+  if (grade === 'N/A') return 'text-muted-foreground'
   const base = grade.replace('+', '').replace('-', '').toLowerCase()
   switch (base) {
     case 'a': return 'grade-a'
@@ -22,6 +23,7 @@ function getGradeClass(grade: string): string {
 }
 
 function getGradeProgress(grade: string): number {
+  if (grade === 'N/A') return 0
   const gradeMap: Record<string, number> = {
     'A+': 100, 'A': 95, 'A-': 90,
     'B+': 85, 'B': 80, 'B-': 75,
@@ -33,6 +35,14 @@ function getGradeProgress(grade: string): number {
 }
 
 function getGradeDescription(category: string, grade: string, allPlay?: AllPlayRecord): string {
+  if (grade === 'N/A') {
+    switch (category) {
+      case 'trading': return 'Didn\'t make a single trade all season. Bold strategy.'
+      case 'waiverWire': return 'The wire went completely untouched. Either your draft was perfect or you forgot the password.'
+      default: return 'No data to grade.'
+    }
+  }
+
   const isTop = grade === 'A+'
   const isElite = ['A', 'A-'].includes(grade)
   const isGood = ['B+', 'B'].includes(grade)

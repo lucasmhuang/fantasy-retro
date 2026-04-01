@@ -99,7 +99,7 @@ export function WaiverCatalog({ pickups, nameMap = {}, teamGrades, enabled = tru
           </h3>
           <div ref={gradesBatchRef} className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
             {Object.entries(teamGrades)
-              .sort(([, a], [, b]) => b.totalPts - a.totalPts)
+              .sort(([, a], [, b]) => (a.grade === 'N/A' ? 1 : 0) - (b.grade === 'N/A' ? 1 : 0) || b.totalPts - a.totalPts)
               .map(([tid, tg]) => (
                 <div key={tid} data-batch-item className="border border-border/50 p-4 flex items-center justify-between">
                   <div>

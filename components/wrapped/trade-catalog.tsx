@@ -138,7 +138,7 @@ export function TradeCatalog({ trades, replacementFPW, nameMap = {}, teamGrades,
           </h3>
           <div ref={gradesBatchRef} className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
             {Object.entries(teamGrades)
-              .sort(([, a], [, b]) => b.netPts - a.netPts)
+              .sort(([, a], [, b]) => (a.grade === 'N/A' ? 1 : 0) - (b.grade === 'N/A' ? 1 : 0) || b.netPts - a.netPts)
               .map(([tid, tg]) => (
                 <div key={tid} data-batch-item className="border border-border/50 p-4 flex items-center justify-between">
                   <div>

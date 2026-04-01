@@ -138,6 +138,7 @@ def do_extract(
 
     all_efficiencies = {}
     all_trade_nets = {}
+    all_trade_counts = {}
     all_waiver_totals = {}
     all_luck_diffs = {}
     all_draft_scores = {}
@@ -153,6 +154,7 @@ def do_extract(
             repl_fpw,
             nba_games_by_week,
         )
+        all_trade_counts[tid] = len(t_trades)
         all_trade_nets[tid] = sum(tr.get("net", 0) for tr in t_trades)
         t_pickups = extract_waiver_pickups(tid, activity, box_cache, reg_weeks)
         all_waiver_totals[tid] = sum(p.get("ptsAfterAdd", 0) for p in t_pickups)
@@ -176,6 +178,10 @@ def do_extract(
             "coaching": all_efficiencies,
         },
         final_placement_map,
+        exclude={
+            "trading": {tid for tid, c in all_trade_counts.items() if c == 0},
+            "waiverWire": {tid for tid, total in all_waiver_totals.items() if total == 0},
+        },
     )
 
     for tid_str, tg in draft_grades.items():

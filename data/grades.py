@@ -33,19 +33,26 @@ def _rank_with_clustering(values_by_id, threshold_pct=0.25, max_cluster=3):
     return grades
 
 
-def compute_league_grades(all_values, final_placement_map):
+def compute_league_grades(all_values, final_placement_map, exclude=None):
     grade_categories = ["drafting", "trading", "waiverWire", "luck", "coaching"]
     tids = list(next(iter(all_values.values())).keys())
+    exclude = exclude or {}
+    median_rank = (len(tids) + 1) / 2
 
     all_grades = {tid: {} for tid in tids}
     all_ranks = {tid: {} for tid in tids}
 
     for cat in grade_categories:
-        cat_grades = _rank_with_clustering(all_values[cat])
-        sorted_tids = sorted(tids, key=lambda t: all_values[cat][t], reverse=True)
-        for rank, tid in enumerate(sorted_tids):
+        excluded = exclude.get(cat, set())
+        eligible = {tid: v for tid, v in all_values[cat].items() if tid not in excluded}
+        cat_grades = _rank_with_clustering(eligible)
+        sorted_eligible = sorted(eligible, key=lambda t: eligible[t], reverse=True)
+        for rank, tid in enumerate(sorted_eligible):
             all_ranks[tid][cat] = rank + 1
-        for tid in tids:
+        for tid in excluded:
+            all_grades[tid][cat] = "N/A"
+            all_ranks[tid][cat] = median_rank
+        for tid in eligible:
             all_grades[tid][cat] = cat_grades[tid]
 
     overall_cats = [c for c in grade_categories if c != "luck"]

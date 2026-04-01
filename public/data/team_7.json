@@ -1890,10 +1890,10 @@
   },
   "grades": {
     "drafting": "B-",
-    "trading": "C",
+    "trading": "B",
     "waiverWire": "C",
     "luck": "C+",
     "coaching": "D",
-    "overall": "D+"
+    "overall": "D"
   }
 }

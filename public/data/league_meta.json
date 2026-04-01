@@ -5653,7 +5653,7 @@
   "tradeGrades": {
     "1": {
       "team": "The Commish",
-      "grade": "F",
+      "grade": "C-",
       "netPts": -1684.0
     },
     "2": {
@@ -5663,7 +5663,7 @@
     },
     "3": {
       "team": "It's Teague Time",
-      "grade": "B+",
+      "grade": "N/A",
       "netPts": 0
     },
     "4": {
@@ -5678,27 +5678,27 @@
     },
     "6": {
       "team": "paddington bear",
-      "grade": "D",
+      "grade": "C",
       "netPts": -837.0
     },
     "7": {
       "team": " SPLASH \ud83d\udc4c",
-      "grade": "C",
+      "grade": "B",
       "netPts": -513.8
     },
     "8": {
       "team": "May Not Need Minott",
-      "grade": "C",
+      "grade": "B",
       "netPts": -493.7
     },
     "9": {
       "team": "my left nuts",
-      "grade": "B+",
+      "grade": "N/A",
       "netPts": 0
     },
     "10": {
       "team": "White Cowards",
-      "grade": "C",
+      "grade": "B",
       "netPts": -506.0
     },
     "11": {
@@ -5708,7 +5708,7 @@
     },
     "12": {
       "team": "Yash's Stout Team",
-      "grade": "C+",
+      "grade": "N/A",
       "netPts": 0
     }
   },
@@ -5755,7 +5755,7 @@
     },
     "9": {
       "team": "my left nuts",
-      "grade": "F",
+      "grade": "N/A",
       "totalPts": 0
     },
     "10": {
