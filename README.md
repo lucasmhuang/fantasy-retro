@@ -8,7 +8,7 @@ The app has two halves: a Python data pipeline that pulls everything from ESPN's
 
 ### Data pipeline
 
-`data/extract.py` is a single script that authenticates against ESPN's private fantasy API (via `espn-api`) and produces one JSON file per team plus a `league_meta.json` with standings, trades, waivers, and draft analysis.
+The `data/` directory is a modular Python package that authenticates against ESPN's private fantasy API (via `espn-api`) and produces one JSON file per team plus a `league_meta.json` with standings, trades, waivers, and draft analysis. The entry point is `data/extract.py`, which delegates to `data/pipeline.py`.
 
 The extraction runs in two phases because ESPN's box score endpoint behaves differently depending on how you call it:
 
@@ -20,7 +20,7 @@ The script merges both: Phase 1 gives accurate weekly point totals per player, P
 Once the raw data is assembled, the script derives everything else:
 
 - **Trade analysis** uses `player_info()` to pull per-scoring-period breakdowns for every traded player, sums only the periods after the trade, and computes a net impact. Uneven trades (2-for-1) get a roster slot adjustment valued at replacement-level production.
-- **Draft grades** compare each pick's draft position against their end-of-season rank. Season rank uses adjusted totals (actual points plus replacement-level production for missed weeks, capped at the player's own rate) so injuries don't automatically make a pick a "bust."
+- **Draft grades** compare each pick's draft position against their end-of-season rank. Season rank uses adjusted totals (actual points plus replacement-level production for missed weeks, capped at the player's own rate) so injuries don't automatically make a pick a "bust." Team-level grades are relative (ranked against the league using capped clustering, max 3 teams per grade tier).
 - **All-play records** simulate every team against every other team each week to measure luck vs. skill.
 - **Scoring profiles** break down each team's fantasy points by statistical category (PTS, REB, AST, STL, BLK, TO) as a percentage of total output, then compare against the league average.
 
@@ -72,8 +72,23 @@ hooks/                     Custom hooks (scroll batch, pin, count-up, data fetch
 lib/                       Types, chart constants, team colors, utilities
 
 data/
-  extract.py               ESPN API → JSON pipeline
+  extract.py               Entry point (thin shim → pipeline.py)
+  pipeline.py              Orchestration (fetch, extract, main)
+  fetch.py                 ESPN API calls
+  standings.py             Standings, scores, player totals
+  trades.py                Trade extraction + league aggregation
+  waivers.py               Waiver pickup extraction + aggregation
+  lineup.py                Optimal lineup solver, bench misplays
+  draft.py                 Draft analysis + grading
+  grades.py                Rank clustering, league-wide grades
+  team.py                  Per-team assembly, awards, H2H
+  ownership.py             Player ownership timeline
+  models.py                Domain types (TeamRef, PlayerData, etc.)
+  constants.py             Config, matchup dates, ESPN maps
+  helpers.py               Shared utilities
+  cache.py                 Cache serialization/deserialization
   validate*.py             Data integrity checks
+  tests/                   pytest suite
 
 public/data/               Static JSON (league_meta + per-team files)
 ```
