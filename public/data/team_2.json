@@ -1656,9 +1656,9 @@
   "grades": {
     "drafting": "A-",
     "trading": "A",
-    "waiverWire": "D",
-    "luck": "D",
-    "coaching": "A+",
+    "waiverWire": "C+",
+    "luck": "B-",
+    "coaching": "A",
     "overall": "A"
   }
 }

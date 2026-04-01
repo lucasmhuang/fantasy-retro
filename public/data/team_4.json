@@ -1671,10 +1671,10 @@
   },
   "grades": {
     "drafting": "A-",
-    "trading": "B+",
+    "trading": "A",
     "waiverWire": "A+",
-    "luck": "D",
+    "luck": "B-",
     "coaching": "A+",
-    "overall": "A"
+    "overall": "A+"
   }
 }

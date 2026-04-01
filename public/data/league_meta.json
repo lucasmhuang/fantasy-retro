@@ -5596,7 +5596,7 @@
     },
     "11": {
       "team": "Team Patel",
-      "grade": "B-",
+      "grade": "B",
       "avgValueOverDraft": -3.8
     },
     "8": {
@@ -5606,12 +5606,12 @@
     },
     "5": {
       "team": "Siddus Squad",
-      "grade": "F",
+      "grade": "C",
       "avgValueOverDraft": -21.5
     },
     "3": {
       "team": "It's Teague Time",
-      "grade": "B",
+      "grade": "B+",
       "avgValueOverDraft": 2.6
     },
     "1": {
@@ -5621,45 +5621,45 @@
     },
     "9": {
       "team": "my left nuts",
-      "grade": "D+",
+      "grade": "C+",
       "avgValueOverDraft": -12.3
     },
     "7": {
       "team": " SPLASH \ud83d\udc4c",
-      "grade": "B-",
+      "grade": "B",
       "avgValueOverDraft": -7.4
     },
     "10": {
       "team": "White Cowards",
-      "grade": "D+",
+      "grade": "C+",
       "avgValueOverDraft": -12.8
     },
     "6": {
       "team": "paddington bear",
-      "grade": "B-",
+      "grade": "B",
       "avgValueOverDraft": -5.2
     }
   },
   "tradeGrades": {
     "1": {
       "team": "The Commish",
-      "grade": "F",
-      "netPts": -1597.0
+      "grade": "B-",
+      "netPts": -1684.0
     },
     "2": {
       "team": "enchant",
       "grade": "A",
-      "netPts": 758.5
+      "netPts": 235.5
     },
     "3": {
       "team": "It's Teague Time",
-      "grade": "B+",
+      "grade": "A-",
       "netPts": 0
     },
     "4": {
       "team": "superbum",
-      "grade": "B+",
-      "netPts": 23.6
+      "grade": "A",
+      "netPts": 60.1
     },
     "5": {
       "team": "Siddus Squad",
@@ -5668,37 +5668,37 @@
     },
     "6": {
       "team": "paddington bear",
-      "grade": "A",
-      "netPts": 591.4
+      "grade": "B",
+      "netPts": -837.0
     },
     "7": {
       "team": " SPLASH \ud83d\udc4c",
-      "grade": "D+",
+      "grade": "B+",
       "netPts": -513.8
     },
     "8": {
       "team": "May Not Need Minott",
-      "grade": "C-",
-      "netPts": -156.6
+      "grade": "B+",
+      "netPts": -493.7
     },
     "9": {
       "team": "my left nuts",
-      "grade": "B+",
+      "grade": "A-",
       "netPts": 0
     },
     "10": {
       "team": "White Cowards",
-      "grade": "D+",
+      "grade": "B+",
       "netPts": -506.0
     },
     "11": {
       "team": "Team Patel",
-      "grade": "B+",
-      "netPts": 179.5
+      "grade": "A",
+      "netPts": 267.8
     },
     "12": {
       "team": "Yash's Stout Team",
-      "grade": "B+",
+      "grade": "A-",
       "netPts": 0
     }
   },
@@ -5706,61 +5706,61 @@
     "1": {
       "team": "The Commish",
       "grade": "A-",
-      "totalPts": 5049.5
+      "totalPts": 4906.4
     },
     "2": {
       "team": "enchant",
-      "grade": "D",
+      "grade": "C+",
       "totalPts": 1807.4
     },
     "3": {
       "team": "It's Teague Time",
-      "grade": "D+",
+      "grade": "B-",
       "totalPts": 2351.8
     },
     "4": {
       "team": "superbum",
       "grade": "A+",
-      "totalPts": 6203.9
+      "totalPts": 5874.6
     },
     "5": {
       "team": "Siddus Squad",
-      "grade": "B-",
+      "grade": "A-",
       "totalPts": 4817.1
     },
     "6": {
       "team": "paddington bear",
-      "grade": "B-",
-      "totalPts": 4765.4
+      "grade": "B+",
+      "totalPts": 4172.7
     },
     "7": {
       "team": " SPLASH \ud83d\udc4c",
-      "grade": "C",
+      "grade": "B+",
       "totalPts": 4058.2
     },
     "8": {
       "team": "May Not Need Minott",
       "grade": "A+",
-      "totalPts": 6288.9
+      "totalPts": 5580.7
     },
     "9": {
       "team": "my left nuts",
-      "grade": "F",
+      "grade": "C",
       "totalPts": 0
     },
     "10": {
       "team": "White Cowards",
-      "grade": "A-",
+      "grade": "A",
       "totalPts": 5373.5
     },
     "11": {
       "team": "Team Patel",
-      "grade": "A-",
-      "totalPts": 5441.0
+      "grade": "A",
+      "totalPts": 5253.5
     },
     "12": {
       "team": "Yash's Stout Team",
-      "grade": "C-",
+      "grade": "B",
       "totalPts": 3156.3
     }
   },

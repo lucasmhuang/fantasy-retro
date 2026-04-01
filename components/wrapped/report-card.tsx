@@ -34,41 +34,41 @@ function getGradeProgress(grade: string): number {
 
 function getGradeDescription(category: string, grade: string, allPlay?: AllPlayRecord): string {
   const isElite = ['A+', 'A'].includes(grade)
-  const isGood = ['A-', 'B+', 'B'].includes(grade)
-  const isBelowAverage = ['C-', 'D+', 'D'].includes(grade)
-  const isBad = ['D-', 'F'].includes(grade)
+  const isGood = ['A-', 'B+'].includes(grade)
+  const isAverage = ['B', 'B-', 'C+'].includes(grade)
+  const isBelowAverage = ['C', 'C-', 'D+'].includes(grade)
 
   switch (category) {
     case 'drafting':
       if (isElite) return 'Your draft class carried you. Built different from day one.'
       if (isGood) return 'Not the flashiest draft, but your guys showed up. Quietly dangerous.'
+      if (isAverage) return 'Some hits, some misses. A draft you can live with.'
       if (isBelowAverage) return 'Your draft board lied to you. It happens to the best of us... and also to you.'
-      if (isBad) return 'The draft board wasn\'t kind. Rebuilding starts in October.'
-      return 'Some hits, some misses. A draft you can live with.'
+      return 'The draft board wasn\'t kind. Rebuilding starts in October.'
     case 'trading':
       if (isElite) return 'You fleeced the league. Next Sam Presti in the making.'
       if (isGood) return 'You worked the trade market. Not every deal was a heist, but the ledger\'s in your favor.'
+      if (isAverage) return 'Dealt some, got dealt some. The trade game was a wash.'
       if (isBelowAverage) return 'You left value on the table. The other GMs send their thanks.'
-      if (isBad) return 'The trade market ate you alive this year.'
-      return 'Dealt some, got dealt some. The trade game was a wash.'
+      return 'The trade market ate you alive this year.'
     case 'waiverWire':
       if (isElite) return 'Waiver wire assassin. You found gems nobody else saw coming.'
       if (isGood) return 'While they slept on the wire, you were making moves. Paid off.'
+      if (isAverage) return 'Decent pickups here and there. Nothing league-winning.'
       if (isBelowAverage) return 'The wire pickups didn\'t hit. Swinging but not connecting.'
-      if (isBad) return 'The wire was dry for you. Slim pickings all season.'
-      return 'Decent pickups here and there. Nothing league-winning.'
+      return 'The wire was dry for you. Slim pickings all season.'
     case 'luck':
       if (isElite) return 'The schedule smiled on you. You dodged the big guns when it counted.'
       if (isGood) return 'Lady luck gave you a nod. Nothing outrageous, but you\'ll take it.'
+      if (isAverage) return 'No excuses either way. Your record is what you earned.'
       if (isBelowAverage) return 'The matchup gods had a grudge. Not devastating, but you felt it.'
-      if (isBad) return 'You caught every team on their best week. Brutal scheduling.'
-      return 'No excuses either way. Your record is what you earned.'
+      return 'You caught every team on their best week. Brutal scheduling.'
     case 'coaching':
       if (isElite) return 'Your lineup instincts were sharp. Right starters, right matchups.'
       if (isGood) return 'You trusted your gut and it mostly delivered. More right calls than wrong ones.'
+      if (isAverage) return 'Some weeks you nailed it, some weeks you didn\'t. Par for the course.'
       if (isBelowAverage) return 'Too many wrong calls at the wrong time. Your bench was screaming.'
-      if (isBad) return 'Points rotted on your bench all season. Start your studs.'
-      return 'Some weeks you nailed it, some weeks you didn\'t. Par for the course.'
+      return 'Points rotted on your bench all season. Start your studs.'
     default:
       return ''
   }

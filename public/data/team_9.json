@@ -804,11 +804,11 @@
     }
   },
   "grades": {
-    "drafting": "D+",
-    "trading": "B+",
-    "waiverWire": "F",
+    "drafting": "C+",
+    "trading": "A-",
+    "waiverWire": "C",
     "luck": "A+",
-    "coaching": "C",
-    "overall": "D+"
+    "coaching": "B+",
+    "overall": "C+"
   }
 }
